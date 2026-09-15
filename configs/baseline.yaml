@@ -1,0 +1,55 @@
+constants:
+  earth_radius_m: 6.378137e6
+  mu_m3_s2: 3.986004418e14
+
+spacecraft:
+  mass_kg: 4.0
+  drag_coefficient: 2.2
+  area_low_m2: 0.01
+  area_high_m2: 0.03
+
+formation:
+  satellite_count: 21
+  reference_altitude_m: 4.0e5
+  target_spacing_m: 1.0e5
+  topology: open_path
+
+controller:
+  design_time_s: 21600.0
+  threshold_on_m_s2: 1.5e-7
+  threshold_off_m_s2: 1.4e-7
+  control_period_s: 10.0
+  command_delay_s: 0.0
+  slew_time_s: 120.0
+  dwell_time_s: 300.0
+
+atmosphere:
+  reference_density_kg_m3: 3.584968e-12
+  effective_scale_height_m: 5.8310e4
+
+disturbance:
+  enabled: true
+  type: single_pulse
+  start_time_s: 10800.0
+  duration_s: 3600.0
+  amplitude_fraction: 0.50
+  center_mode: center_of_train
+  center_s_m: 0.0
+  fwhm_m: 1.0e5
+  propagation_speed_m_s: 0.0
+
+simulation:
+  duration_s: 86400.0
+  integration_step_s: 2.0
+  output_step_s: 10.0
+  integrator: rk4
+
+recovery:
+  position_tolerance_m: 50.0
+  velocity_tolerance_m_s: 1.0e-3
+  hold_time_s: 1800.0
+
+visualization:
+  animation_enabled: true
+  animation_frame_step_s: 60.0
+  animation_fps: 30

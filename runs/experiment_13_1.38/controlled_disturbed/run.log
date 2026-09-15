@@ -1,0 +1,106 @@
+case=controlled_disturbed
+status=running
+control_enabled=True
+disturbance_enabled=True
+progress=5% simulated_time_s=4320 estimated_remaining_s=28.025
+progress=10% simulated_time_s=8640 estimated_remaining_s=36.407
+progress=15% simulated_time_s=12960 estimated_remaining_s=36.633
+t=16350 s satellite=12 command L->H; start=16350 complete=16470 s
+t=16450 s satellite=10 command L->H; start=16450 complete=16570 s
+t=16470 s satellite=12 transition completed; next command at t>=16770 s
+t=16570 s satellite=10 transition completed; next command at t>=16870 s
+t=16770 s satellite=12 command H->L; start=16770 complete=16890 s
+t=16810 s satellite=13 command L->H; start=16810 complete=16930 s
+t=16870 s satellite=10 command H->L; start=16870 complete=16990 s
+t=16890 s satellite=12 transition completed; next command at t>=17190 s
+t=16910 s satellite=9 command L->H; start=16910 complete=17030 s
+t=16930 s satellite=13 transition completed; next command at t>=17230 s
+t=16990 s satellite=10 transition completed; next command at t>=17290 s
+t=17030 s satellite=9 transition completed; next command at t>=17330 s
+t=17230 s satellite=13 command H->L; start=17230 complete=17350 s
+progress=20% simulated_time_s=17280 estimated_remaining_s=36.372
+t=17330 s satellite=9 command H->L; start=17330 complete=17450 s
+t=17350 s satellite=13 transition completed; next command at t>=17650 s
+t=17450 s satellite=9 transition completed; next command at t>=17750 s
+t=17940 s satellite=14 command L->H; start=17940 complete=18060 s
+t=18040 s satellite=8 command L->H; start=18040 complete=18160 s
+t=18060 s satellite=14 transition completed; next command at t>=18360 s
+t=18160 s satellite=8 transition completed; next command at t>=18460 s
+t=18360 s satellite=14 command H->L; start=18360 complete=18480 s
+t=18460 s satellite=8 command H->L; start=18460 complete=18580 s
+t=18480 s satellite=14 transition completed; next command at t>=18780 s
+t=18580 s satellite=8 transition completed; next command at t>=18880 s
+t=19070 s satellite=15 command L->H; start=19070 complete=19190 s
+t=19170 s satellite=7 command L->H; start=19170 complete=19290 s
+t=19190 s satellite=15 transition completed; next command at t>=19490 s
+t=19290 s satellite=7 transition completed; next command at t>=19590 s
+t=19490 s satellite=15 command H->L; start=19490 complete=19610 s
+t=19590 s satellite=7 command H->L; start=19590 complete=19710 s
+t=19610 s satellite=15 transition completed; next command at t>=19910 s
+t=19710 s satellite=7 transition completed; next command at t>=20010 s
+t=20200 s satellite=16 command L->H; start=20200 complete=20320 s
+t=20300 s satellite=6 command L->H; start=20300 complete=20420 s
+t=20320 s satellite=16 transition completed; next command at t>=20620 s
+t=20420 s satellite=6 transition completed; next command at t>=20720 s
+t=20620 s satellite=16 command H->L; start=20620 complete=20740 s
+t=20720 s satellite=6 command H->L; start=20720 complete=20840 s
+t=20740 s satellite=16 transition completed; next command at t>=21040 s
+t=20840 s satellite=6 transition completed; next command at t>=21140 s
+t=21330 s satellite=17 command L->H; start=21330 complete=21450 s
+t=21430 s satellite=5 command L->H; start=21430 complete=21550 s
+t=21450 s satellite=17 transition completed; next command at t>=21750 s
+t=21550 s satellite=5 transition completed; next command at t>=21850 s
+progress=25% simulated_time_s=21600 estimated_remaining_s=34.146
+t=21750 s satellite=17 command H->L; start=21750 complete=21870 s
+t=21850 s satellite=5 command H->L; start=21850 complete=21970 s
+t=21870 s satellite=17 transition completed; next command at t>=22170 s
+t=21970 s satellite=5 transition completed; next command at t>=22270 s
+t=22460 s satellite=18 command L->H; start=22460 complete=22580 s
+t=22560 s satellite=4 command L->H; start=22560 complete=22680 s
+t=22580 s satellite=18 transition completed; next command at t>=22880 s
+t=22680 s satellite=4 transition completed; next command at t>=22980 s
+t=22880 s satellite=18 command H->L; start=22880 complete=23000 s
+t=22980 s satellite=4 command H->L; start=22980 complete=23100 s
+t=23000 s satellite=18 transition completed; next command at t>=23300 s
+t=23100 s satellite=4 transition completed; next command at t>=23400 s
+t=23590 s satellite=19 command L->H; start=23590 complete=23710 s
+t=23690 s satellite=3 command L->H; start=23690 complete=23810 s
+t=23710 s satellite=19 transition completed; next command at t>=24010 s
+t=23810 s satellite=3 transition completed; next command at t>=24110 s
+t=24010 s satellite=19 command H->L; start=24010 complete=24130 s
+t=24110 s satellite=3 command H->L; start=24110 complete=24230 s
+t=24130 s satellite=19 transition completed; next command at t>=24430 s
+t=24230 s satellite=3 transition completed; next command at t>=24530 s
+t=24710 s satellite=20 command L->H; start=24710 complete=24830 s
+t=24810 s satellite=2 command L->H; start=24810 complete=24930 s
+t=24830 s satellite=20 transition completed; next command at t>=25130 s
+t=24930 s satellite=2 transition completed; next command at t>=25230 s
+t=25130 s satellite=20 command H->L; start=25130 complete=25250 s
+t=25230 s satellite=2 command H->L; start=25230 complete=25350 s
+t=25250 s satellite=20 transition completed; next command at t>=25550 s
+t=25350 s satellite=2 transition completed; next command at t>=25650 s
+t=25830 s satellite=21 command L->H; start=25830 complete=25950 s
+progress=30% simulated_time_s=25920 estimated_remaining_s=30.901
+t=25930 s satellite=1 command L->H; start=25930 complete=26050 s
+t=25950 s satellite=21 transition completed; next command at t>=26250 s
+t=26050 s satellite=1 transition completed; next command at t>=26350 s
+t=26250 s satellite=21 command H->L; start=26250 complete=26370 s
+t=26350 s satellite=1 command H->L; start=26350 complete=26470 s
+t=26370 s satellite=21 transition completed; next command at t>=26670 s
+t=26470 s satellite=1 transition completed; next command at t>=26770 s
+progress=35% simulated_time_s=30240 estimated_remaining_s=27.860
+progress=40% simulated_time_s=34560 estimated_remaining_s=27.201
+progress=45% simulated_time_s=38880 estimated_remaining_s=25.530
+progress=50% simulated_time_s=43200 estimated_remaining_s=24.412
+progress=55% simulated_time_s=47520 estimated_remaining_s=22.171
+progress=60% simulated_time_s=51840 estimated_remaining_s=19.883
+progress=65% simulated_time_s=56160 estimated_remaining_s=17.483
+progress=70% simulated_time_s=60480 estimated_remaining_s=15.012
+progress=75% simulated_time_s=64800 estimated_remaining_s=12.508
+progress=80% simulated_time_s=69120 estimated_remaining_s=10.041
+progress=85% simulated_time_s=73440 estimated_remaining_s=7.554
+progress=90% simulated_time_s=77760 estimated_remaining_s=4.987
+progress=95% simulated_time_s=82080 estimated_remaining_s=2.438
+progress=100% simulated_time_s=86400 estimated_remaining_s=0.000
+status=completed
+elapsed_s=50.896025

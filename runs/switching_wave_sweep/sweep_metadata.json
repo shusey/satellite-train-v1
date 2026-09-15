@@ -1,0 +1,48 @@
+{
+  "threshold_count": 19,
+  "threshold_on_values_m_s2": [
+    1.0000000000000001e-07,
+    1.1e-07,
+    1.2000000000000002e-07,
+    1.3e-07,
+    1.3200000000000002e-07,
+    1.34e-07,
+    1.36e-07,
+    1.3800000000000002e-07,
+    1.4e-07,
+    1.42e-07,
+    1.4400000000000002e-07,
+    1.46e-07,
+    1.48e-07,
+    1.5000000000000002e-07,
+    1.6e-07,
+    1.7000000000000001e-07,
+    1.8000000000000002e-07,
+    1.9e-07,
+    2.0000000000000002e-07
+  ],
+  "threshold_off_rule": "h_off = h_on - 1.0e-8",
+  "disturbance_time_s": 10800.0,
+  "center_satellite_id": 11,
+  "side_definition": {
+    "left": "satellite index i < i_center",
+    "right": "satellite index i > i_center"
+  },
+  "fit_exclusion": "abs(i - i_center) <= 3",
+  "fit_minimum_point_count": 3,
+  "adjacent_time_std_ddof": 0,
+  "representative_h_on_values_m_s2": [
+    1.0000000000000001e-07,
+    1.4e-07,
+    2.0000000000000002e-07
+  ],
+  "artifacts": [
+    "switching_wave_sweep.csv",
+    "h_on_vs_delay.png",
+    "h_on_vs_switching_speed.png",
+    "h_on_vs_r_squared.png",
+    "h_on_vs_rmse.png",
+    "h_on_vs_mean_adjacent_time.png",
+    "representative_distance_time_fits.png"
+  ]
+}

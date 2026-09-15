@@ -1,0 +1,26 @@
+case=all_low_drag_baseline
+status=running
+control_enabled=False
+disturbance_enabled=True
+progress=5% simulated_time_s=25200 estimated_remaining_s=132.961
+progress=10% simulated_time_s=50400 estimated_remaining_s=134.619
+progress=15% simulated_time_s=75600 estimated_remaining_s=124.408
+progress=20% simulated_time_s=100800 estimated_remaining_s=114.526
+progress=25% simulated_time_s=126000 estimated_remaining_s=103.973
+progress=30% simulated_time_s=151200 estimated_remaining_s=105.741
+progress=35% simulated_time_s=176400 estimated_remaining_s=104.593
+progress=40% simulated_time_s=201600 estimated_remaining_s=99.011
+progress=45% simulated_time_s=226800 estimated_remaining_s=90.490
+progress=50% simulated_time_s=252000 estimated_remaining_s=80.677
+progress=55% simulated_time_s=277200 estimated_remaining_s=71.110
+progress=60% simulated_time_s=302400 estimated_remaining_s=62.115
+progress=65% simulated_time_s=327600 estimated_remaining_s=53.650
+progress=70% simulated_time_s=352800 estimated_remaining_s=45.382
+progress=75% simulated_time_s=378000 estimated_remaining_s=37.248
+progress=80% simulated_time_s=403200 estimated_remaining_s=29.360
+progress=85% simulated_time_s=428400 estimated_remaining_s=21.722
+progress=90% simulated_time_s=453600 estimated_remaining_s=14.310
+progress=95% simulated_time_s=478800 estimated_remaining_s=7.083
+progress=100% simulated_time_s=504000 estimated_remaining_s=0.000
+status=completed
+elapsed_s=144.388346

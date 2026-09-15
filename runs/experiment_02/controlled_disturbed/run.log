@@ -1,0 +1,430 @@
+case=controlled_disturbed
+status=running
+control_enabled=True
+disturbance_enabled=True
+t=13130 s satellite=27 command L->H; start=13130 complete=13250 s
+t=13140 s satellite=25 command L->H; start=13140 complete=13260 s
+t=13250 s satellite=27 transition completed; next command at t>=13550 s
+t=13260 s satellite=25 transition completed; next command at t>=13560 s
+t=13470 s satellite=28 command L->H; start=13470 complete=13590 s
+t=13480 s satellite=24 command L->H; start=13480 complete=13600 s
+t=13550 s satellite=27 command H->L; start=13550 complete=13670 s
+t=13560 s satellite=25 command H->L; start=13560 complete=13680 s
+t=13590 s satellite=28 transition completed; next command at t>=13890 s
+t=13600 s satellite=24 transition completed; next command at t>=13900 s
+t=13670 s satellite=27 transition completed; next command at t>=13970 s
+t=13680 s satellite=25 transition completed; next command at t>=13980 s
+t=13840 s satellite=29 command L->H; start=13840 complete=13960 s
+t=13850 s satellite=23 command L->H; start=13850 complete=13970 s
+t=13890 s satellite=28 command H->L; start=13890 complete=14010 s
+t=13900 s satellite=24 command H->L; start=13900 complete=14020 s
+t=13960 s satellite=29 transition completed; next command at t>=14260 s
+t=13970 s satellite=23 transition completed; next command at t>=14270 s
+t=14010 s satellite=28 transition completed; next command at t>=14310 s
+t=14020 s satellite=24 transition completed; next command at t>=14320 s
+t=14210 s satellite=30 command L->H; start=14210 complete=14330 s
+t=14220 s satellite=22 command L->H; start=14220 complete=14340 s
+t=14260 s satellite=29 command H->L; start=14260 complete=14380 s
+t=14270 s satellite=23 command H->L; start=14270 complete=14390 s
+t=14330 s satellite=30 transition completed; next command at t>=14630 s
+t=14340 s satellite=22 transition completed; next command at t>=14640 s
+t=14380 s satellite=29 transition completed; next command at t>=14680 s
+t=14390 s satellite=23 transition completed; next command at t>=14690 s
+t=14580 s satellite=31 command L->H; start=14580 complete=14700 s
+t=14590 s satellite=21 command L->H; start=14590 complete=14710 s
+t=14630 s satellite=30 command H->L; start=14630 complete=14750 s
+t=14640 s satellite=22 command H->L; start=14640 complete=14760 s
+t=14700 s satellite=31 transition completed; next command at t>=15000 s
+t=14710 s satellite=21 transition completed; next command at t>=15010 s
+t=14750 s satellite=30 transition completed; next command at t>=15050 s
+t=14760 s satellite=22 transition completed; next command at t>=15060 s
+t=14950 s satellite=32 command L->H; start=14950 complete=15070 s
+t=14960 s satellite=20 command L->H; start=14960 complete=15080 s
+t=15000 s satellite=31 command H->L; start=15000 complete=15120 s
+t=15010 s satellite=21 command H->L; start=15010 complete=15130 s
+t=15070 s satellite=32 transition completed; next command at t>=15370 s
+t=15080 s satellite=20 transition completed; next command at t>=15380 s
+t=15120 s satellite=31 transition completed; next command at t>=15420 s
+t=15130 s satellite=21 transition completed; next command at t>=15430 s
+t=15320 s satellite=33 command L->H; start=15320 complete=15440 s
+t=15330 s satellite=19 command L->H; start=15330 complete=15450 s
+t=15370 s satellite=32 command H->L; start=15370 complete=15490 s
+t=15380 s satellite=20 command H->L; start=15380 complete=15500 s
+t=15440 s satellite=33 transition completed; next command at t>=15740 s
+t=15450 s satellite=19 transition completed; next command at t>=15750 s
+t=15490 s satellite=32 transition completed; next command at t>=15790 s
+t=15500 s satellite=20 transition completed; next command at t>=15800 s
+t=15690 s satellite=34 command L->H; start=15690 complete=15810 s
+t=15700 s satellite=18 command L->H; start=15700 complete=15820 s
+t=15740 s satellite=33 command H->L; start=15740 complete=15860 s
+t=15750 s satellite=19 command H->L; start=15750 complete=15870 s
+t=15810 s satellite=34 transition completed; next command at t>=16110 s
+t=15820 s satellite=18 transition completed; next command at t>=16120 s
+t=15860 s satellite=33 transition completed; next command at t>=16160 s
+t=15870 s satellite=19 transition completed; next command at t>=16170 s
+t=16060 s satellite=35 command L->H; start=16060 complete=16180 s
+t=16070 s satellite=17 command L->H; start=16070 complete=16190 s
+t=16110 s satellite=34 command H->L; start=16110 complete=16230 s
+t=16120 s satellite=18 command H->L; start=16120 complete=16240 s
+t=16180 s satellite=35 transition completed; next command at t>=16480 s
+t=16190 s satellite=17 transition completed; next command at t>=16490 s
+t=16230 s satellite=34 transition completed; next command at t>=16530 s
+t=16240 s satellite=18 transition completed; next command at t>=16540 s
+t=16430 s satellite=36 command L->H; start=16430 complete=16550 s
+t=16440 s satellite=16 command L->H; start=16440 complete=16560 s
+t=16480 s satellite=35 command H->L; start=16480 complete=16600 s
+t=16490 s satellite=17 command H->L; start=16490 complete=16610 s
+t=16550 s satellite=36 transition completed; next command at t>=16850 s
+t=16560 s satellite=16 transition completed; next command at t>=16860 s
+t=16600 s satellite=35 transition completed; next command at t>=16900 s
+t=16610 s satellite=17 transition completed; next command at t>=16910 s
+t=16800 s satellite=37 command L->H; start=16800 complete=16920 s
+t=16810 s satellite=15 command L->H; start=16810 complete=16930 s
+t=16850 s satellite=36 command H->L; start=16850 complete=16970 s
+t=16860 s satellite=16 command H->L; start=16860 complete=16980 s
+t=16920 s satellite=37 transition completed; next command at t>=17220 s
+t=16930 s satellite=15 transition completed; next command at t>=17230 s
+t=16970 s satellite=36 transition completed; next command at t>=17270 s
+t=16980 s satellite=16 transition completed; next command at t>=17280 s
+t=17170 s satellite=38 command L->H; start=17170 complete=17290 s
+t=17180 s satellite=14 command L->H; start=17180 complete=17300 s
+t=17220 s satellite=37 command H->L; start=17220 complete=17340 s
+t=17230 s satellite=15 command H->L; start=17230 complete=17350 s
+t=17290 s satellite=38 transition completed; next command at t>=17590 s
+t=17300 s satellite=14 transition completed; next command at t>=17600 s
+t=17340 s satellite=37 transition completed; next command at t>=17640 s
+t=17350 s satellite=15 transition completed; next command at t>=17650 s
+t=17540 s satellite=39 command L->H; start=17540 complete=17660 s
+t=17550 s satellite=13 command L->H; start=17550 complete=17670 s
+t=17590 s satellite=38 command H->L; start=17590 complete=17710 s
+t=17600 s satellite=14 command H->L; start=17600 complete=17720 s
+t=17660 s satellite=39 transition completed; next command at t>=17960 s
+t=17670 s satellite=13 transition completed; next command at t>=17970 s
+t=17710 s satellite=38 transition completed; next command at t>=18010 s
+t=17720 s satellite=14 transition completed; next command at t>=18020 s
+t=17910 s satellite=40 command L->H; start=17910 complete=18030 s
+t=17920 s satellite=12 command L->H; start=17920 complete=18040 s
+t=17960 s satellite=39 command H->L; start=17960 complete=18080 s
+t=17970 s satellite=13 command H->L; start=17970 complete=18090 s
+t=18030 s satellite=40 transition completed; next command at t>=18330 s
+t=18040 s satellite=12 transition completed; next command at t>=18340 s
+t=18080 s satellite=39 transition completed; next command at t>=18380 s
+t=18090 s satellite=13 transition completed; next command at t>=18390 s
+t=18280 s satellite=41 command L->H; start=18280 complete=18400 s
+t=18290 s satellite=11 command L->H; start=18290 complete=18410 s
+t=18330 s satellite=40 command H->L; start=18330 complete=18450 s
+t=18340 s satellite=12 command H->L; start=18340 complete=18460 s
+t=18400 s satellite=41 transition completed; next command at t>=18700 s
+t=18410 s satellite=11 transition completed; next command at t>=18710 s
+t=18450 s satellite=40 transition completed; next command at t>=18750 s
+t=18460 s satellite=12 transition completed; next command at t>=18760 s
+t=18650 s satellite=42 command L->H; start=18650 complete=18770 s
+t=18660 s satellite=10 command L->H; start=18660 complete=18780 s
+t=18700 s satellite=41 command H->L; start=18700 complete=18820 s
+t=18710 s satellite=11 command H->L; start=18710 complete=18830 s
+t=18770 s satellite=42 transition completed; next command at t>=19070 s
+t=18780 s satellite=10 transition completed; next command at t>=19080 s
+t=18820 s satellite=41 transition completed; next command at t>=19120 s
+t=18830 s satellite=11 transition completed; next command at t>=19130 s
+t=19020 s satellite=43 command L->H; start=19020 complete=19140 s
+t=19030 s satellite=9 command L->H; start=19030 complete=19150 s
+t=19070 s satellite=42 command H->L; start=19070 complete=19190 s
+t=19080 s satellite=10 command H->L; start=19080 complete=19200 s
+t=19140 s satellite=43 transition completed; next command at t>=19440 s
+t=19150 s satellite=9 transition completed; next command at t>=19450 s
+t=19190 s satellite=42 transition completed; next command at t>=19490 s
+t=19200 s satellite=10 transition completed; next command at t>=19500 s
+t=19390 s satellite=44 command L->H; start=19390 complete=19510 s
+t=19400 s satellite=8 command L->H; start=19400 complete=19520 s
+t=19440 s satellite=43 command H->L; start=19440 complete=19560 s
+t=19450 s satellite=9 command H->L; start=19450 complete=19570 s
+t=19510 s satellite=44 transition completed; next command at t>=19810 s
+t=19520 s satellite=8 transition completed; next command at t>=19820 s
+t=19560 s satellite=43 transition completed; next command at t>=19860 s
+t=19570 s satellite=9 transition completed; next command at t>=19870 s
+t=19760 s satellite=45 command L->H; start=19760 complete=19880 s
+t=19770 s satellite=7 command L->H; start=19770 complete=19890 s
+t=19810 s satellite=44 command H->L; start=19810 complete=19930 s
+t=19820 s satellite=8 command H->L; start=19820 complete=19940 s
+t=19880 s satellite=45 transition completed; next command at t>=20180 s
+t=19890 s satellite=7 transition completed; next command at t>=20190 s
+t=19930 s satellite=44 transition completed; next command at t>=20230 s
+t=19940 s satellite=8 transition completed; next command at t>=20240 s
+t=20130 s satellite=46 command L->H; start=20130 complete=20250 s
+t=20140 s satellite=6 command L->H; start=20140 complete=20260 s
+t=20180 s satellite=45 command H->L; start=20180 complete=20300 s
+t=20190 s satellite=7 command H->L; start=20190 complete=20310 s
+t=20250 s satellite=46 transition completed; next command at t>=20550 s
+t=20260 s satellite=6 transition completed; next command at t>=20560 s
+t=20300 s satellite=45 transition completed; next command at t>=20600 s
+t=20310 s satellite=7 transition completed; next command at t>=20610 s
+t=20500 s satellite=47 command L->H; start=20500 complete=20620 s
+t=20510 s satellite=5 command L->H; start=20510 complete=20630 s
+t=20550 s satellite=46 command H->L; start=20550 complete=20670 s
+t=20560 s satellite=6 command H->L; start=20560 complete=20680 s
+t=20620 s satellite=47 transition completed; next command at t>=20920 s
+t=20630 s satellite=5 transition completed; next command at t>=20930 s
+t=20670 s satellite=46 transition completed; next command at t>=20970 s
+t=20680 s satellite=6 transition completed; next command at t>=20980 s
+t=20870 s satellite=48 command L->H; start=20870 complete=20990 s
+t=20880 s satellite=4 command L->H; start=20880 complete=21000 s
+t=20920 s satellite=47 command H->L; start=20920 complete=21040 s
+t=20930 s satellite=5 command H->L; start=20930 complete=21050 s
+t=20990 s satellite=48 transition completed; next command at t>=21290 s
+t=21000 s satellite=4 transition completed; next command at t>=21300 s
+t=21040 s satellite=47 transition completed; next command at t>=21340 s
+t=21050 s satellite=5 transition completed; next command at t>=21350 s
+t=21240 s satellite=49 command L->H; start=21240 complete=21360 s
+t=21250 s satellite=3 command L->H; start=21250 complete=21370 s
+t=21290 s satellite=48 command H->L; start=21290 complete=21410 s
+t=21300 s satellite=4 command H->L; start=21300 complete=21420 s
+t=21360 s satellite=49 transition completed; next command at t>=21660 s
+t=21370 s satellite=3 transition completed; next command at t>=21670 s
+t=21410 s satellite=48 transition completed; next command at t>=21710 s
+t=21420 s satellite=4 transition completed; next command at t>=21720 s
+t=21610 s satellite=50 command L->H; start=21610 complete=21730 s
+t=21620 s satellite=2 command L->H; start=21620 complete=21740 s
+t=21660 s satellite=49 command H->L; start=21660 complete=21780 s
+t=21670 s satellite=3 command H->L; start=21670 complete=21790 s
+t=21730 s satellite=50 transition completed; next command at t>=22030 s
+t=21740 s satellite=2 transition completed; next command at t>=22040 s
+t=21780 s satellite=49 transition completed; next command at t>=22080 s
+t=21790 s satellite=3 transition completed; next command at t>=22090 s
+t=21980 s satellite=51 command L->H; start=21980 complete=22100 s
+t=21990 s satellite=1 command L->H; start=21990 complete=22110 s
+t=22030 s satellite=50 command H->L; start=22030 complete=22150 s
+t=22040 s satellite=2 command H->L; start=22040 complete=22160 s
+t=22100 s satellite=51 transition completed; next command at t>=22400 s
+t=22110 s satellite=1 transition completed; next command at t>=22410 s
+t=22150 s satellite=50 transition completed; next command at t>=22450 s
+t=22160 s satellite=2 transition completed; next command at t>=22460 s
+t=22400 s satellite=51 command H->L; start=22400 complete=22520 s
+t=22410 s satellite=1 command H->L; start=22410 complete=22530 s
+t=22520 s satellite=51 transition completed; next command at t>=22820 s
+t=22530 s satellite=1 transition completed; next command at t>=22830 s
+progress=5% simulated_time_s=25200 estimated_remaining_s=121.163
+progress=10% simulated_time_s=50400 estimated_remaining_s=108.443
+progress=15% simulated_time_s=75600 estimated_remaining_s=98.062
+progress=20% simulated_time_s=100800 estimated_remaining_s=90.923
+progress=25% simulated_time_s=126000 estimated_remaining_s=84.870
+progress=30% simulated_time_s=151200 estimated_remaining_s=78.657
+progress=35% simulated_time_s=176400 estimated_remaining_s=72.861
+progress=40% simulated_time_s=201600 estimated_remaining_s=67.131
+progress=45% simulated_time_s=226800 estimated_remaining_s=61.420
+progress=50% simulated_time_s=252000 estimated_remaining_s=55.807
+progress=55% simulated_time_s=277200 estimated_remaining_s=50.196
+progress=60% simulated_time_s=302400 estimated_remaining_s=44.600
+progress=65% simulated_time_s=327600 estimated_remaining_s=39.027
+t=341620 s satellite=24 command L->H; start=341620 complete=341740 s
+t=341740 s satellite=24 transition completed; next command at t>=342040 s
+t=341990 s satellite=23 command L->H; start=341990 complete=342110 s
+t=342040 s satellite=24 command H->L; start=342040 complete=342160 s
+t=342110 s satellite=23 transition completed; next command at t>=342410 s
+t=342160 s satellite=24 transition completed; next command at t>=342460 s
+t=342360 s satellite=22 command L->H; start=342360 complete=342480 s
+t=342410 s satellite=23 command H->L; start=342410 complete=342530 s
+t=342480 s satellite=22 transition completed; next command at t>=342780 s
+t=342530 s satellite=23 transition completed; next command at t>=342830 s
+t=342730 s satellite=21 command L->H; start=342730 complete=342850 s
+t=342780 s satellite=22 command H->L; start=342780 complete=342900 s
+t=342850 s satellite=21 transition completed; next command at t>=343150 s
+t=342900 s satellite=22 transition completed; next command at t>=343200 s
+t=343100 s satellite=20 command L->H; start=343100 complete=343220 s
+t=343150 s satellite=21 command H->L; start=343150 complete=343270 s
+t=343220 s satellite=20 transition completed; next command at t>=343520 s
+t=343270 s satellite=21 transition completed; next command at t>=343570 s
+t=343470 s satellite=19 command L->H; start=343470 complete=343590 s
+t=343520 s satellite=20 command H->L; start=343520 complete=343640 s
+t=343590 s satellite=19 transition completed; next command at t>=343890 s
+t=343640 s satellite=20 transition completed; next command at t>=343940 s
+t=343840 s satellite=18 command L->H; start=343840 complete=343960 s
+t=343890 s satellite=19 command H->L; start=343890 complete=344010 s
+t=343960 s satellite=18 transition completed; next command at t>=344260 s
+t=344010 s satellite=19 transition completed; next command at t>=344310 s
+t=344210 s satellite=17 command L->H; start=344210 complete=344330 s
+t=344260 s satellite=18 command H->L; start=344260 complete=344380 s
+t=344330 s satellite=17 transition completed; next command at t>=344630 s
+t=344380 s satellite=18 transition completed; next command at t>=344680 s
+t=344580 s satellite=16 command L->H; start=344580 complete=344700 s
+t=344630 s satellite=17 command H->L; start=344630 complete=344750 s
+t=344700 s satellite=16 transition completed; next command at t>=345000 s
+t=344750 s satellite=17 transition completed; next command at t>=345050 s
+t=344950 s satellite=15 command L->H; start=344950 complete=345070 s
+t=345000 s satellite=16 command H->L; start=345000 complete=345120 s
+t=345070 s satellite=15 transition completed; next command at t>=345370 s
+t=345120 s satellite=16 transition completed; next command at t>=345420 s
+t=345320 s satellite=14 command L->H; start=345320 complete=345440 s
+t=345370 s satellite=15 command H->L; start=345370 complete=345490 s
+t=345440 s satellite=14 transition completed; next command at t>=345740 s
+t=345490 s satellite=15 transition completed; next command at t>=345790 s
+t=345690 s satellite=13 command L->H; start=345690 complete=345810 s
+t=345740 s satellite=14 command H->L; start=345740 complete=345860 s
+t=345810 s satellite=13 transition completed; next command at t>=346110 s
+t=345860 s satellite=14 transition completed; next command at t>=346160 s
+t=346060 s satellite=12 command L->H; start=346060 complete=346180 s
+t=346110 s satellite=13 command H->L; start=346110 complete=346230 s
+t=346180 s satellite=12 transition completed; next command at t>=346480 s
+t=346230 s satellite=13 transition completed; next command at t>=346530 s
+t=346350 s satellite=28 command L->H; start=346350 complete=346470 s
+t=346430 s satellite=11 command L->H; start=346430 complete=346550 s
+t=346470 s satellite=28 transition completed; next command at t>=346770 s
+t=346480 s satellite=12 command H->L; start=346480 complete=346600 s
+t=346550 s satellite=11 transition completed; next command at t>=346850 s
+t=346600 s satellite=12 transition completed; next command at t>=346900 s
+t=346720 s satellite=29 command L->H; start=346720 complete=346840 s
+t=346770 s satellite=28 command H->L; start=346770 complete=346890 s
+t=346800 s satellite=10 command L->H; start=346800 complete=346920 s
+t=346840 s satellite=29 transition completed; next command at t>=347140 s
+t=346850 s satellite=11 command H->L; start=346850 complete=346970 s
+t=346890 s satellite=28 transition completed; next command at t>=347190 s
+t=346920 s satellite=10 transition completed; next command at t>=347220 s
+t=346970 s satellite=11 transition completed; next command at t>=347270 s
+t=347090 s satellite=30 command L->H; start=347090 complete=347210 s
+t=347140 s satellite=29 command H->L; start=347140 complete=347260 s
+t=347170 s satellite=9 command L->H; start=347170 complete=347290 s
+t=347210 s satellite=30 transition completed; next command at t>=347510 s
+t=347220 s satellite=10 command H->L; start=347220 complete=347340 s
+t=347260 s satellite=29 transition completed; next command at t>=347560 s
+t=347290 s satellite=9 transition completed; next command at t>=347590 s
+t=347340 s satellite=10 transition completed; next command at t>=347640 s
+t=347460 s satellite=31 command L->H; start=347460 complete=347580 s
+t=347510 s satellite=30 command H->L; start=347510 complete=347630 s
+t=347540 s satellite=8 command L->H; start=347540 complete=347660 s
+t=347580 s satellite=31 transition completed; next command at t>=347880 s
+t=347590 s satellite=9 command H->L; start=347590 complete=347710 s
+t=347630 s satellite=30 transition completed; next command at t>=347930 s
+t=347660 s satellite=8 transition completed; next command at t>=347960 s
+t=347710 s satellite=9 transition completed; next command at t>=348010 s
+t=347830 s satellite=32 command L->H; start=347830 complete=347950 s
+t=347880 s satellite=31 command H->L; start=347880 complete=348000 s
+t=347910 s satellite=7 command L->H; start=347910 complete=348030 s
+t=347950 s satellite=32 transition completed; next command at t>=348250 s
+t=347960 s satellite=8 command H->L; start=347960 complete=348080 s
+t=348000 s satellite=31 transition completed; next command at t>=348300 s
+t=348030 s satellite=7 transition completed; next command at t>=348330 s
+t=348080 s satellite=8 transition completed; next command at t>=348380 s
+t=348200 s satellite=33 command L->H; start=348200 complete=348320 s
+t=348250 s satellite=32 command H->L; start=348250 complete=348370 s
+t=348280 s satellite=6 command L->H; start=348280 complete=348400 s
+t=348320 s satellite=33 transition completed; next command at t>=348620 s
+t=348330 s satellite=7 command H->L; start=348330 complete=348450 s
+t=348370 s satellite=32 transition completed; next command at t>=348670 s
+t=348400 s satellite=6 transition completed; next command at t>=348700 s
+t=348450 s satellite=7 transition completed; next command at t>=348750 s
+t=348570 s satellite=34 command L->H; start=348570 complete=348690 s
+t=348620 s satellite=33 command H->L; start=348620 complete=348740 s
+t=348650 s satellite=5 command L->H; start=348650 complete=348770 s
+t=348690 s satellite=34 transition completed; next command at t>=348990 s
+t=348700 s satellite=6 command H->L; start=348700 complete=348820 s
+t=348740 s satellite=33 transition completed; next command at t>=349040 s
+t=348770 s satellite=5 transition completed; next command at t>=349070 s
+t=348820 s satellite=6 transition completed; next command at t>=349120 s
+t=348940 s satellite=35 command L->H; start=348940 complete=349060 s
+t=348990 s satellite=34 command H->L; start=348990 complete=349110 s
+t=349020 s satellite=4 command L->H; start=349020 complete=349140 s
+t=349060 s satellite=35 transition completed; next command at t>=349360 s
+t=349070 s satellite=5 command H->L; start=349070 complete=349190 s
+t=349110 s satellite=34 transition completed; next command at t>=349410 s
+t=349140 s satellite=4 transition completed; next command at t>=349440 s
+t=349190 s satellite=5 transition completed; next command at t>=349490 s
+t=349310 s satellite=36 command L->H; start=349310 complete=349430 s
+t=349360 s satellite=35 command H->L; start=349360 complete=349480 s
+t=349390 s satellite=3 command L->H; start=349390 complete=349510 s
+t=349430 s satellite=36 transition completed; next command at t>=349730 s
+t=349440 s satellite=4 command H->L; start=349440 complete=349560 s
+t=349480 s satellite=35 transition completed; next command at t>=349780 s
+t=349510 s satellite=3 transition completed; next command at t>=349810 s
+t=349560 s satellite=4 transition completed; next command at t>=349860 s
+t=349680 s satellite=37 command L->H; start=349680 complete=349800 s
+t=349730 s satellite=36 command H->L; start=349730 complete=349850 s
+t=349760 s satellite=2 command L->H; start=349760 complete=349880 s
+t=349800 s satellite=37 transition completed; next command at t>=350100 s
+t=349810 s satellite=3 command H->L; start=349810 complete=349930 s
+t=349850 s satellite=36 transition completed; next command at t>=350150 s
+t=349880 s satellite=2 transition completed; next command at t>=350180 s
+t=349930 s satellite=3 transition completed; next command at t>=350230 s
+t=350050 s satellite=38 command L->H; start=350050 complete=350170 s
+t=350100 s satellite=37 command H->L; start=350100 complete=350220 s
+t=350130 s satellite=1 command L->H; start=350130 complete=350250 s
+t=350170 s satellite=38 transition completed; next command at t>=350470 s
+t=350180 s satellite=2 command H->L; start=350180 complete=350300 s
+t=350220 s satellite=37 transition completed; next command at t>=350520 s
+t=350250 s satellite=1 transition completed; next command at t>=350550 s
+t=350300 s satellite=2 transition completed; next command at t>=350600 s
+t=350420 s satellite=39 command L->H; start=350420 complete=350540 s
+t=350470 s satellite=38 command H->L; start=350470 complete=350590 s
+t=350540 s satellite=39 transition completed; next command at t>=350840 s
+t=350550 s satellite=1 command H->L; start=350550 complete=350670 s
+t=350590 s satellite=38 transition completed; next command at t>=350890 s
+t=350670 s satellite=1 transition completed; next command at t>=350970 s
+t=350790 s satellite=40 command L->H; start=350790 complete=350910 s
+t=350840 s satellite=39 command H->L; start=350840 complete=350960 s
+t=350910 s satellite=40 transition completed; next command at t>=351210 s
+t=350960 s satellite=39 transition completed; next command at t>=351260 s
+t=351160 s satellite=41 command L->H; start=351160 complete=351280 s
+t=351210 s satellite=40 command H->L; start=351210 complete=351330 s
+t=351280 s satellite=41 transition completed; next command at t>=351580 s
+t=351330 s satellite=40 transition completed; next command at t>=351630 s
+t=351530 s satellite=42 command L->H; start=351530 complete=351650 s
+t=351580 s satellite=41 command H->L; start=351580 complete=351700 s
+t=351650 s satellite=42 transition completed; next command at t>=351950 s
+t=351700 s satellite=41 transition completed; next command at t>=352000 s
+t=351900 s satellite=43 command L->H; start=351900 complete=352020 s
+t=351950 s satellite=42 command H->L; start=351950 complete=352070 s
+t=352020 s satellite=43 transition completed; next command at t>=352320 s
+t=352070 s satellite=42 transition completed; next command at t>=352370 s
+t=352270 s satellite=44 command L->H; start=352270 complete=352390 s
+t=352320 s satellite=43 command H->L; start=352320 complete=352440 s
+t=352390 s satellite=44 transition completed; next command at t>=352690 s
+t=352440 s satellite=43 transition completed; next command at t>=352740 s
+t=352640 s satellite=45 command L->H; start=352640 complete=352760 s
+t=352690 s satellite=44 command H->L; start=352690 complete=352810 s
+t=352760 s satellite=45 transition completed; next command at t>=353060 s
+progress=70% simulated_time_s=352800 estimated_remaining_s=34.018
+t=352810 s satellite=44 transition completed; next command at t>=353110 s
+t=353010 s satellite=46 command L->H; start=353010 complete=353130 s
+t=353060 s satellite=45 command H->L; start=353060 complete=353180 s
+t=353130 s satellite=46 transition completed; next command at t>=353430 s
+t=353180 s satellite=45 transition completed; next command at t>=353480 s
+t=353380 s satellite=47 command L->H; start=353380 complete=353500 s
+t=353430 s satellite=46 command H->L; start=353430 complete=353550 s
+t=353500 s satellite=47 transition completed; next command at t>=353800 s
+t=353550 s satellite=46 transition completed; next command at t>=353850 s
+t=353750 s satellite=48 command L->H; start=353750 complete=353870 s
+t=353800 s satellite=47 command H->L; start=353800 complete=353920 s
+t=353870 s satellite=48 transition completed; next command at t>=354170 s
+t=353920 s satellite=47 transition completed; next command at t>=354220 s
+t=354120 s satellite=49 command L->H; start=354120 complete=354240 s
+t=354170 s satellite=48 command H->L; start=354170 complete=354290 s
+t=354240 s satellite=49 transition completed; next command at t>=354540 s
+t=354290 s satellite=48 transition completed; next command at t>=354590 s
+t=354490 s satellite=50 command L->H; start=354490 complete=354610 s
+t=354540 s satellite=49 command H->L; start=354540 complete=354660 s
+t=354610 s satellite=50 transition completed; next command at t>=354910 s
+t=354660 s satellite=49 transition completed; next command at t>=354960 s
+t=354860 s satellite=51 command L->H; start=354860 complete=354980 s
+t=354910 s satellite=50 command H->L; start=354910 complete=355030 s
+t=354980 s satellite=51 transition completed; next command at t>=355280 s
+t=355030 s satellite=50 transition completed; next command at t>=355330 s
+t=355280 s satellite=51 command H->L; start=355280 complete=355400 s
+t=355400 s satellite=51 transition completed; next command at t>=355700 s
+t=369800 s satellite=25 command L->H; start=369800 complete=369920 s
+t=369920 s satellite=25 transition completed; next command at t>=370220 s
+t=370080 s satellite=26 command L->H; start=370080 complete=370200 s
+t=370180 s satellite=27 command L->H; start=370180 complete=370300 s
+t=370200 s satellite=26 transition completed; next command at t>=370500 s
+t=370220 s satellite=25 command H->L; start=370220 complete=370340 s
+t=370300 s satellite=27 transition completed; next command at t>=370600 s
+t=370340 s satellite=25 transition completed; next command at t>=370640 s
+t=370500 s satellite=26 command H->L; start=370500 complete=370620 s
+t=370600 s satellite=27 command H->L; start=370600 complete=370720 s
+t=370620 s satellite=26 transition completed; next command at t>=370920 s
+t=370720 s satellite=27 transition completed; next command at t>=371020 s
+progress=75% simulated_time_s=378000 estimated_remaining_s=28.493
+progress=80% simulated_time_s=403200 estimated_remaining_s=22.821
+progress=85% simulated_time_s=428400 estimated_remaining_s=17.101
+progress=90% simulated_time_s=453600 estimated_remaining_s=11.395
+progress=95% simulated_time_s=478800 estimated_remaining_s=5.695
+progress=100% simulated_time_s=504000 estimated_remaining_s=0.000
+status=completed
+elapsed_s=118.771630

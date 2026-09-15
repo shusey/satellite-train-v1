@@ -1,0 +1,125 @@
+{
+  "format_version": 1,
+  "case": {
+    "name": "controlled_undisturbed",
+    "control_enabled": true,
+    "disturbance_enabled": false
+  },
+  "configuration": {
+    "constants": {
+      "earth_radius_m": 6378137.0,
+      "mu_m3_s2": 398600441800000.0
+    },
+    "spacecraft": {
+      "mass_kg": 4.0,
+      "drag_coefficient": 2.2,
+      "area_low_m2": 0.01,
+      "area_high_m2": 0.03
+    },
+    "formation": {
+      "satellite_count": 21,
+      "reference_altitude_m": 400000.0,
+      "target_spacing_m": 100000.0,
+      "topology": "open_path"
+    },
+    "controller": {
+      "design_time_s": 21600.0,
+      "threshold_on_m_s2": 1.49e-07,
+      "threshold_off_m_s2": 7.45e-08,
+      "control_period_s": 10.0,
+      "command_delay_s": 0.0,
+      "slew_time_s": 120.0,
+      "dwell_time_s": 300.0,
+      "reference_on_error_m": null,
+      "reference_on_rate_m_s": null,
+      "reference_off_error_m": null,
+      "reference_off_rate_m_s": null
+    },
+    "atmosphere": {
+      "reference_density_kg_m3": 3.584968e-12,
+      "effective_scale_height_m": 58310.0
+    },
+    "disturbance": {
+      "enabled": true,
+      "type": "single_pulse",
+      "start_time_s": 10800.0,
+      "duration_s": 3600.0,
+      "amplitude_fraction": 0.5,
+      "center_mode": "center_of_train",
+      "center_s_m": 0.0,
+      "fwhm_m": 100000.0,
+      "propagation_speed_m_s": 0.0
+    },
+    "simulation": {
+      "duration_s": 86400.0,
+      "integration_step_s": 2.0,
+      "output_step_s": 10.0,
+      "integrator": "rk4"
+    },
+    "recovery": {
+      "position_tolerance_m": 50.0,
+      "velocity_tolerance_m_s": 0.001,
+      "hold_time_s": 1800.0
+    },
+    "visualization": {
+      "animation_enabled": true,
+      "animation_frame_step_s": 60.0,
+      "animation_fps": 30
+    },
+    "derived": {
+      "reference_radius_m": 6778137.0,
+      "reference_mean_motion_rad_s": 0.0011313666536110223,
+      "reference_period_s": 5553.624271252229,
+      "target_spacing_rad": 0.014753316434884688,
+      "controller_kp_s2_inv": 2.143347050754458e-09,
+      "controller_kd_s_inv": 9.259259259259259e-05,
+      "disturbance_sigma_m": 42466.09001440095
+    }
+  },
+  "recovery_time_resolution_s": 10.0,
+  "array_shapes": {
+    "time_s": [
+      8641
+    ],
+    "a_m": [
+      8641,
+      21
+    ],
+    "lambda_rad": [
+      8641,
+      21
+    ],
+    "altitude_m": [
+      8641,
+      21
+    ],
+    "area_m2": [
+      8641,
+      21
+    ],
+    "mode": [
+      8641,
+      21
+    ],
+    "density_kg_m3": [
+      8641,
+      21
+    ],
+    "q_m_s2": [
+      8641,
+      21
+    ],
+    "gap_error_m": [
+      8641,
+      20
+    ],
+    "gap_rate_m_s": [
+      8641,
+      20
+    ],
+    "gap_distance_m": [
+      8641,
+      20
+    ]
+  }
+}

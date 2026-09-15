@@ -1,0 +1,148 @@
+2026-08-27 16:18:26,673 INFO Starting case 1/3: controlled_disturbed
+2026-08-27 16:18:28,148 INFO case=controlled_disturbed progress=5% simulated=1.200 h estimated_remaining=28.0 s
+2026-08-27 16:18:30,717 INFO case=controlled_disturbed progress=10% simulated=2.400 h estimated_remaining=36.4 s
+2026-08-27 16:18:33,135 INFO case=controlled_disturbed progress=15% simulated=3.600 h estimated_remaining=36.6 s
+2026-08-27 16:18:34,942 INFO case=controlled_disturbed t=16350 s satellite=12 command L->H; start=16350 complete=16470 s
+2026-08-27 16:18:35,139 INFO case=controlled_disturbed t=16450 s satellite=10 command L->H; start=16450 complete=16570 s
+2026-08-27 16:18:35,159 INFO case=controlled_disturbed t=16470 s satellite=12 transition completed; next command at t>=16770 s
+2026-08-27 16:18:35,305 INFO case=controlled_disturbed t=16570 s satellite=10 transition completed; next command at t>=16870 s
+2026-08-27 16:18:35,480 INFO case=controlled_disturbed t=16770 s satellite=12 command H->L; start=16770 complete=16890 s
+2026-08-27 16:18:35,506 INFO case=controlled_disturbed t=16810 s satellite=13 command L->H; start=16810 complete=16930 s
+2026-08-27 16:18:35,557 INFO case=controlled_disturbed t=16870 s satellite=10 command H->L; start=16870 complete=16990 s
+2026-08-27 16:18:35,571 INFO case=controlled_disturbed t=16890 s satellite=12 transition completed; next command at t>=17190 s
+2026-08-27 16:18:35,585 INFO case=controlled_disturbed t=16910 s satellite=9 command L->H; start=16910 complete=17030 s
+2026-08-27 16:18:35,600 INFO case=controlled_disturbed t=16930 s satellite=13 transition completed; next command at t>=17230 s
+2026-08-27 16:18:35,641 INFO case=controlled_disturbed t=16990 s satellite=10 transition completed; next command at t>=17290 s
+2026-08-27 16:18:35,664 INFO case=controlled_disturbed t=17030 s satellite=9 transition completed; next command at t>=17330 s
+2026-08-27 16:18:35,740 INFO case=controlled_disturbed t=17230 s satellite=13 command H->L; start=17230 complete=17350 s
+2026-08-27 16:18:35,766 INFO case=controlled_disturbed progress=20% simulated=4.800 h estimated_remaining=36.4 s
+2026-08-27 16:18:35,807 INFO case=controlled_disturbed t=17330 s satellite=9 command H->L; start=17330 complete=17450 s
+2026-08-27 16:18:35,816 INFO case=controlled_disturbed t=17350 s satellite=13 transition completed; next command at t>=17650 s
+2026-08-27 16:18:35,863 INFO case=controlled_disturbed t=17450 s satellite=9 transition completed; next command at t>=17750 s
+2026-08-27 16:18:36,110 INFO case=controlled_disturbed t=17940 s satellite=14 command L->H; start=17940 complete=18060 s
+2026-08-27 16:18:36,153 INFO case=controlled_disturbed t=18040 s satellite=8 command L->H; start=18040 complete=18160 s
+2026-08-27 16:18:36,171 INFO case=controlled_disturbed t=18060 s satellite=14 transition completed; next command at t>=18360 s
+2026-08-27 16:18:36,218 INFO case=controlled_disturbed t=18160 s satellite=8 transition completed; next command at t>=18460 s
+2026-08-27 16:18:36,310 INFO case=controlled_disturbed t=18360 s satellite=14 command H->L; start=18360 complete=18480 s
+2026-08-27 16:18:36,388 INFO case=controlled_disturbed t=18460 s satellite=8 command H->L; start=18460 complete=18580 s
+2026-08-27 16:18:36,390 INFO case=controlled_disturbed t=18480 s satellite=14 transition completed; next command at t>=18780 s
+2026-08-27 16:18:36,440 INFO case=controlled_disturbed t=18580 s satellite=8 transition completed; next command at t>=18880 s
+2026-08-27 16:18:36,609 INFO case=controlled_disturbed t=19070 s satellite=15 command L->H; start=19070 complete=19190 s
+2026-08-27 16:18:36,677 INFO case=controlled_disturbed t=19170 s satellite=7 command L->H; start=19170 complete=19290 s
+2026-08-27 16:18:36,690 INFO case=controlled_disturbed t=19190 s satellite=15 transition completed; next command at t>=19490 s
+2026-08-27 16:18:36,754 INFO case=controlled_disturbed t=19290 s satellite=7 transition completed; next command at t>=19590 s
+2026-08-27 16:18:36,871 INFO case=controlled_disturbed t=19490 s satellite=15 command H->L; start=19490 complete=19610 s
+2026-08-27 16:18:36,937 INFO case=controlled_disturbed t=19590 s satellite=7 command H->L; start=19590 complete=19710 s
+2026-08-27 16:18:36,955 INFO case=controlled_disturbed t=19610 s satellite=15 transition completed; next command at t>=19910 s
+2026-08-27 16:18:37,023 INFO case=controlled_disturbed t=19710 s satellite=7 transition completed; next command at t>=20010 s
+2026-08-27 16:18:37,303 INFO case=controlled_disturbed t=20200 s satellite=16 command L->H; start=20200 complete=20320 s
+2026-08-27 16:18:37,395 INFO case=controlled_disturbed t=20300 s satellite=6 command L->H; start=20300 complete=20420 s
+2026-08-27 16:18:37,405 INFO case=controlled_disturbed t=20320 s satellite=16 transition completed; next command at t>=20620 s
+2026-08-27 16:18:37,466 INFO case=controlled_disturbed t=20420 s satellite=6 transition completed; next command at t>=20720 s
+2026-08-27 16:18:37,571 INFO case=controlled_disturbed t=20620 s satellite=16 command H->L; start=20620 complete=20740 s
+2026-08-27 16:18:37,656 INFO case=controlled_disturbed t=20720 s satellite=6 command H->L; start=20720 complete=20840 s
+2026-08-27 16:18:37,678 INFO case=controlled_disturbed t=20740 s satellite=16 transition completed; next command at t>=21040 s
+2026-08-27 16:18:37,760 INFO case=controlled_disturbed t=20840 s satellite=6 transition completed; next command at t>=21140 s
+2026-08-27 16:18:37,937 INFO case=controlled_disturbed t=21330 s satellite=17 command L->H; start=21330 complete=21450 s
+2026-08-27 16:18:37,979 INFO case=controlled_disturbed t=21430 s satellite=5 command L->H; start=21430 complete=21550 s
+2026-08-27 16:18:37,992 INFO case=controlled_disturbed t=21450 s satellite=17 transition completed; next command at t>=21750 s
+2026-08-27 16:18:38,039 INFO case=controlled_disturbed t=21550 s satellite=5 transition completed; next command at t>=21850 s
+2026-08-27 16:18:38,056 INFO case=controlled_disturbed progress=25% simulated=6.000 h estimated_remaining=34.1 s
+2026-08-27 16:18:38,113 INFO case=controlled_disturbed t=21750 s satellite=17 command H->L; start=21750 complete=21870 s
+2026-08-27 16:18:38,158 INFO case=controlled_disturbed t=21850 s satellite=5 command H->L; start=21850 complete=21970 s
+2026-08-27 16:18:38,164 INFO case=controlled_disturbed t=21870 s satellite=17 transition completed; next command at t>=22170 s
+2026-08-27 16:18:38,226 INFO case=controlled_disturbed t=21970 s satellite=5 transition completed; next command at t>=22270 s
+2026-08-27 16:18:38,441 INFO case=controlled_disturbed t=22460 s satellite=18 command L->H; start=22460 complete=22580 s
+2026-08-27 16:18:38,538 INFO case=controlled_disturbed t=22560 s satellite=4 command L->H; start=22560 complete=22680 s
+2026-08-27 16:18:38,540 INFO case=controlled_disturbed t=22580 s satellite=18 transition completed; next command at t>=22880 s
+2026-08-27 16:18:38,603 INFO case=controlled_disturbed t=22680 s satellite=4 transition completed; next command at t>=22980 s
+2026-08-27 16:18:38,672 INFO case=controlled_disturbed t=22880 s satellite=18 command H->L; start=22880 complete=23000 s
+2026-08-27 16:18:38,710 INFO case=controlled_disturbed t=22980 s satellite=4 command H->L; start=22980 complete=23100 s
+2026-08-27 16:18:38,725 INFO case=controlled_disturbed t=23000 s satellite=18 transition completed; next command at t>=23300 s
+2026-08-27 16:18:38,767 INFO case=controlled_disturbed t=23100 s satellite=4 transition completed; next command at t>=23400 s
+2026-08-27 16:18:38,909 INFO case=controlled_disturbed t=23590 s satellite=19 command L->H; start=23590 complete=23710 s
+2026-08-27 16:18:38,963 INFO case=controlled_disturbed t=23690 s satellite=3 command L->H; start=23690 complete=23810 s
+2026-08-27 16:18:38,973 INFO case=controlled_disturbed t=23710 s satellite=19 transition completed; next command at t>=24010 s
+2026-08-27 16:18:39,008 INFO case=controlled_disturbed t=23810 s satellite=3 transition completed; next command at t>=24110 s
+2026-08-27 16:18:39,075 INFO case=controlled_disturbed t=24010 s satellite=19 command H->L; start=24010 complete=24130 s
+2026-08-27 16:18:39,123 INFO case=controlled_disturbed t=24110 s satellite=3 command H->L; start=24110 complete=24230 s
+2026-08-27 16:18:39,124 INFO case=controlled_disturbed t=24130 s satellite=19 transition completed; next command at t>=24430 s
+2026-08-27 16:18:39,174 INFO case=controlled_disturbed t=24230 s satellite=3 transition completed; next command at t>=24530 s
+2026-08-27 16:18:39,323 INFO case=controlled_disturbed t=24710 s satellite=20 command L->H; start=24710 complete=24830 s
+2026-08-27 16:18:39,390 INFO case=controlled_disturbed t=24810 s satellite=2 command L->H; start=24810 complete=24930 s
+2026-08-27 16:18:39,404 INFO case=controlled_disturbed t=24830 s satellite=20 transition completed; next command at t>=25130 s
+2026-08-27 16:18:39,464 INFO case=controlled_disturbed t=24930 s satellite=2 transition completed; next command at t>=25230 s
+2026-08-27 16:18:39,558 INFO case=controlled_disturbed t=25130 s satellite=20 command H->L; start=25130 complete=25250 s
+2026-08-27 16:18:39,623 INFO case=controlled_disturbed t=25230 s satellite=2 command H->L; start=25230 complete=25350 s
+2026-08-27 16:18:39,640 INFO case=controlled_disturbed t=25250 s satellite=20 transition completed; next command at t>=25550 s
+2026-08-27 16:18:39,711 INFO case=controlled_disturbed t=25350 s satellite=2 transition completed; next command at t>=25650 s
+2026-08-27 16:18:39,873 INFO case=controlled_disturbed t=25830 s satellite=21 command L->H; start=25830 complete=25950 s
+2026-08-27 16:18:39,917 INFO case=controlled_disturbed progress=30% simulated=7.200 h estimated_remaining=30.9 s
+2026-08-27 16:18:39,923 INFO case=controlled_disturbed t=25930 s satellite=1 command L->H; start=25930 complete=26050 s
+2026-08-27 16:18:39,929 INFO case=controlled_disturbed t=25950 s satellite=21 transition completed; next command at t>=26250 s
+2026-08-27 16:18:39,990 INFO case=controlled_disturbed t=26050 s satellite=1 transition completed; next command at t>=26350 s
+2026-08-27 16:18:40,061 INFO case=controlled_disturbed t=26250 s satellite=21 command H->L; start=26250 complete=26370 s
+2026-08-27 16:18:40,113 INFO case=controlled_disturbed t=26350 s satellite=1 command H->L; start=26350 complete=26470 s
+2026-08-27 16:18:40,122 INFO case=controlled_disturbed t=26370 s satellite=21 transition completed; next command at t>=26670 s
+2026-08-27 16:18:40,173 INFO case=controlled_disturbed t=26470 s satellite=1 transition completed; next command at t>=26770 s
+2026-08-27 16:18:41,675 INFO case=controlled_disturbed progress=35% simulated=8.400 h estimated_remaining=27.9 s
+2026-08-27 16:18:44,806 INFO case=controlled_disturbed progress=40% simulated=9.600 h estimated_remaining=27.2 s
+2026-08-27 16:18:47,555 INFO case=controlled_disturbed progress=45% simulated=10.800 h estimated_remaining=25.5 s
+2026-08-27 16:18:51,086 INFO case=controlled_disturbed progress=50% simulated=12.000 h estimated_remaining=24.4 s
+2026-08-27 16:18:53,764 INFO case=controlled_disturbed progress=55% simulated=13.200 h estimated_remaining=22.2 s
+2026-08-27 16:18:56,492 INFO case=controlled_disturbed progress=60% simulated=14.400 h estimated_remaining=19.9 s
+2026-08-27 16:18:59,141 INFO case=controlled_disturbed progress=65% simulated=15.600 h estimated_remaining=17.5 s
+2026-08-27 16:19:01,697 INFO case=controlled_disturbed progress=70% simulated=16.800 h estimated_remaining=15.0 s
+2026-08-27 16:19:04,193 INFO case=controlled_disturbed progress=75% simulated=18.000 h estimated_remaining=12.5 s
+2026-08-27 16:19:06,829 INFO case=controlled_disturbed progress=80% simulated=19.200 h estimated_remaining=10.0 s
+2026-08-27 16:19:09,478 INFO case=controlled_disturbed progress=85% simulated=20.400 h estimated_remaining=7.6 s
+2026-08-27 16:19:11,550 INFO case=controlled_disturbed progress=90% simulated=21.600 h estimated_remaining=5.0 s
+2026-08-27 16:19:13,002 INFO case=controlled_disturbed progress=95% simulated=22.800 h estimated_remaining=2.4 s
+2026-08-27 16:19:16,114 INFO case=controlled_disturbed progress=100% simulated=24.000 h estimated_remaining=0.0 s
+2026-08-27 16:19:17,571 INFO Completed case=controlled_disturbed in 50.90 s
+2026-08-27 16:19:17,573 INFO Starting case 2/3: controlled_undisturbed
+2026-08-27 16:19:20,451 INFO case=controlled_undisturbed progress=5% simulated=1.200 h estimated_remaining=54.7 s
+2026-08-27 16:19:22,614 INFO case=controlled_undisturbed progress=10% simulated=2.400 h estimated_remaining=45.3 s
+2026-08-27 16:19:24,909 INFO case=controlled_undisturbed progress=15% simulated=3.600 h estimated_remaining=41.6 s
+2026-08-27 16:19:27,356 INFO case=controlled_undisturbed progress=20% simulated=4.800 h estimated_remaining=39.1 s
+2026-08-27 16:19:29,624 INFO case=controlled_undisturbed progress=25% simulated=6.000 h estimated_remaining=36.2 s
+2026-08-27 16:19:32,656 INFO case=controlled_undisturbed progress=30% simulated=7.200 h estimated_remaining=35.2 s
+2026-08-27 16:19:35,526 INFO case=controlled_undisturbed progress=35% simulated=8.400 h estimated_remaining=33.3 s
+2026-08-27 16:19:38,561 INFO case=controlled_undisturbed progress=40% simulated=9.600 h estimated_remaining=31.5 s
+2026-08-27 16:19:41,727 INFO case=controlled_undisturbed progress=45% simulated=10.800 h estimated_remaining=29.5 s
+2026-08-27 16:19:45,079 INFO case=controlled_undisturbed progress=50% simulated=12.000 h estimated_remaining=27.5 s
+2026-08-27 16:19:47,808 INFO case=controlled_undisturbed progress=55% simulated=13.200 h estimated_remaining=24.7 s
+2026-08-27 16:19:50,621 INFO case=controlled_undisturbed progress=60% simulated=14.400 h estimated_remaining=22.0 s
+2026-08-27 16:19:53,326 INFO case=controlled_undisturbed progress=65% simulated=15.600 h estimated_remaining=19.3 s
+2026-08-27 16:19:56,263 INFO case=controlled_undisturbed progress=70% simulated=16.800 h estimated_remaining=16.6 s
+2026-08-27 16:19:58,980 INFO case=controlled_undisturbed progress=75% simulated=18.000 h estimated_remaining=13.8 s
+2026-08-27 16:20:01,490 INFO case=controlled_undisturbed progress=80% simulated=19.200 h estimated_remaining=11.0 s
+2026-08-27 16:20:04,241 INFO case=controlled_undisturbed progress=85% simulated=20.400 h estimated_remaining=8.2 s
+2026-08-27 16:20:07,284 INFO case=controlled_undisturbed progress=90% simulated=21.600 h estimated_remaining=5.5 s
+2026-08-27 16:20:10,419 INFO case=controlled_undisturbed progress=95% simulated=22.800 h estimated_remaining=2.8 s
+2026-08-27 16:20:14,062 INFO case=controlled_undisturbed progress=100% simulated=24.000 h estimated_remaining=0.0 s
+2026-08-27 16:20:15,394 INFO Completed case=controlled_undisturbed in 57.82 s
+2026-08-27 16:20:15,410 INFO Starting case 3/3: all_low_drag_baseline
+2026-08-27 16:20:19,062 INFO case=all_low_drag_baseline progress=5% simulated=1.200 h estimated_remaining=69.4 s
+2026-08-27 16:20:22,829 INFO case=all_low_drag_baseline progress=10% simulated=2.400 h estimated_remaining=66.8 s
+2026-08-27 16:20:26,220 INFO case=all_low_drag_baseline progress=15% simulated=3.600 h estimated_remaining=61.3 s
+2026-08-27 16:20:29,649 INFO case=all_low_drag_baseline progress=20% simulated=4.800 h estimated_remaining=57.0 s
+2026-08-27 16:20:32,622 INFO case=all_low_drag_baseline progress=25% simulated=6.000 h estimated_remaining=51.6 s
+2026-08-27 16:20:35,857 INFO case=all_low_drag_baseline progress=30% simulated=7.200 h estimated_remaining=47.7 s
+2026-08-27 16:20:39,403 INFO case=all_low_drag_baseline progress=35% simulated=8.400 h estimated_remaining=44.6 s
+2026-08-27 16:20:43,041 INFO case=all_low_drag_baseline progress=40% simulated=9.600 h estimated_remaining=41.5 s
+2026-08-27 16:20:46,526 INFO case=all_low_drag_baseline progress=45% simulated=10.800 h estimated_remaining=38.0 s
+2026-08-27 16:20:49,407 INFO case=all_low_drag_baseline progress=50% simulated=12.000 h estimated_remaining=34.0 s
+2026-08-27 16:20:52,124 INFO case=all_low_drag_baseline progress=55% simulated=13.200 h estimated_remaining=30.0 s
+2026-08-27 16:20:55,429 INFO case=all_low_drag_baseline progress=60% simulated=14.400 h estimated_remaining=26.7 s
+2026-08-27 16:20:59,080 INFO case=all_low_drag_baseline progress=65% simulated=15.600 h estimated_remaining=23.5 s
+2026-08-27 16:21:02,074 INFO case=all_low_drag_baseline progress=70% simulated=16.800 h estimated_remaining=20.0 s
+2026-08-27 16:21:05,024 INFO case=all_low_drag_baseline progress=75% simulated=18.000 h estimated_remaining=16.5 s
+2026-08-27 16:21:08,141 INFO case=all_low_drag_baseline progress=80% simulated=19.200 h estimated_remaining=13.2 s
+2026-08-27 16:21:10,964 INFO case=all_low_drag_baseline progress=85% simulated=20.400 h estimated_remaining=9.8 s
+2026-08-27 16:21:14,092 INFO case=all_low_drag_baseline progress=90% simulated=21.600 h estimated_remaining=6.5 s
+2026-08-27 16:21:17,177 INFO case=all_low_drag_baseline progress=95% simulated=22.800 h estimated_remaining=3.3 s
+2026-08-27 16:21:20,000 INFO case=all_low_drag_baseline progress=100% simulated=24.000 h estimated_remaining=0.0 s
+2026-08-27 16:21:21,187 INFO Completed case=all_low_drag_baseline in 65.78 s
+2026-08-27 16:21:21,195 INFO Building metrics, 300 dpi figures, and animation from saved histories
+2026-08-27 16:22:12,897 INFO Standard suite completed in 226.22 s

@@ -1,0 +1,26 @@
+case=controlled_undisturbed
+status=running
+control_enabled=True
+disturbance_enabled=False
+progress=5% simulated_time_s=4320 estimated_remaining_s=54.705
+progress=10% simulated_time_s=8640 estimated_remaining_s=45.345
+progress=15% simulated_time_s=12960 estimated_remaining_s=41.564
+progress=20% simulated_time_s=17280 estimated_remaining_s=39.134
+progress=25% simulated_time_s=21600 estimated_remaining_s=36.154
+progress=30% simulated_time_s=25920 estimated_remaining_s=35.189
+progress=35% simulated_time_s=30240 estimated_remaining_s=33.341
+progress=40% simulated_time_s=34560 estimated_remaining_s=31.481
+progress=45% simulated_time_s=38880 estimated_remaining_s=29.520
+progress=50% simulated_time_s=43200 estimated_remaining_s=27.505
+progress=55% simulated_time_s=47520 estimated_remaining_s=24.736
+progress=60% simulated_time_s=51840 estimated_remaining_s=22.030
+progress=65% simulated_time_s=56160 estimated_remaining_s=19.250
+progress=70% simulated_time_s=60480 estimated_remaining_s=16.580
+progress=75% simulated_time_s=64800 estimated_remaining_s=13.802
+progress=80% simulated_time_s=69120 estimated_remaining_s=10.979
+progress=85% simulated_time_s=73440 estimated_remaining_s=8.235
+progress=90% simulated_time_s=77760 estimated_remaining_s=5.523
+progress=95% simulated_time_s=82080 estimated_remaining_s=2.781
+progress=100% simulated_time_s=86400 estimated_remaining_s=0.000
+status=completed
+elapsed_s=57.814524

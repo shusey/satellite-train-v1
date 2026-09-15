@@ -1,0 +1,40 @@
+2026-08-24 11:03:46,887 INFO Starting 19 threshold cases
+2026-08-24 11:03:46,888 INFO Case 1/19 h_on=1.000e-07 h_off=9.000e-08
+2026-08-24 11:04:16,613 INFO Completed h_on=1.000e-07 delay=2330 s n_fit=(7,7) in 29.73 s
+2026-08-24 11:04:16,613 INFO Case 2/19 h_on=1.100e-07 h_off=1.000e-07
+2026-08-24 11:04:53,097 INFO Completed h_on=1.100e-07 delay=2520 s n_fit=(7,7) in 36.48 s
+2026-08-24 11:04:53,097 INFO Case 3/19 h_on=1.200e-07 h_off=1.100e-07
+2026-08-24 11:05:31,406 INFO Completed h_on=1.200e-07 delay=2760 s n_fit=(7,7) in 38.31 s
+2026-08-24 11:05:31,406 INFO Case 4/19 h_on=1.300e-07 h_off=1.200e-07
+2026-08-24 11:06:09,984 INFO Completed h_on=1.300e-07 delay=3210 s n_fit=(7,7) in 38.57 s
+2026-08-24 11:06:09,984 INFO Case 5/19 h_on=1.320e-07 h_off=1.220e-07
+2026-08-24 11:06:51,441 INFO Completed h_on=1.320e-07 delay=3510 s n_fit=(7,7) in 41.45 s
+2026-08-24 11:06:51,441 INFO Case 6/19 h_on=1.340e-07 h_off=1.240e-07
+2026-08-24 11:07:43,169 INFO Completed h_on=1.340e-07 delay=4190 s n_fit=(7,7) in 51.73 s
+2026-08-24 11:07:43,169 INFO Case 7/19 h_on=1.360e-07 h_off=1.260e-07
+2026-08-24 11:08:27,755 INFO Completed h_on=1.360e-07 delay=4870 s n_fit=(7,7) in 44.58 s
+2026-08-24 11:08:27,761 INFO Case 8/19 h_on=1.380e-07 h_off=1.280e-07
+2026-08-24 11:09:06,857 INFO Completed h_on=1.380e-07 delay=5550 s n_fit=(7,7) in 39.10 s
+2026-08-24 11:09:06,857 INFO Case 9/19 h_on=1.400e-07 h_off=1.300e-07
+2026-08-24 11:09:42,580 INFO Completed h_on=1.400e-07 delay=6230 s n_fit=(7,7) in 35.72 s
+2026-08-24 11:09:42,583 INFO Case 10/19 h_on=1.420e-07 h_off=1.320e-07
+2026-08-24 11:10:20,022 INFO Completed h_on=1.420e-07 delay=6910 s n_fit=(7,7) in 37.44 s
+2026-08-24 11:10:20,025 INFO Case 11/19 h_on=1.440e-07 h_off=1.340e-07
+2026-08-24 11:10:51,613 INFO Completed h_on=1.440e-07 delay=7590 s n_fit=(7,7) in 31.59 s
+2026-08-24 11:10:51,613 INFO Case 12/19 h_on=1.460e-07 h_off=1.360e-07
+2026-08-24 11:11:29,898 INFO Completed h_on=1.460e-07 delay=8270 s n_fit=(7,7) in 38.28 s
+2026-08-24 11:11:29,900 INFO Case 13/19 h_on=1.480e-07 h_off=1.380e-07
+2026-08-24 11:12:08,815 INFO Completed h_on=1.480e-07 delay=8950 s n_fit=(7,7) in 38.92 s
+2026-08-24 11:12:08,815 INFO Case 14/19 h_on=1.500e-07 h_off=1.400e-07
+2026-08-24 11:12:47,911 INFO Completed h_on=1.500e-07 delay=9630 s n_fit=(7,7) in 39.09 s
+2026-08-24 11:12:47,921 INFO Case 15/19 h_on=1.600e-07 h_off=1.500e-07
+2026-08-24 11:13:25,649 INFO Completed h_on=1.600e-07 delay=13020 s n_fit=(6,6) in 37.73 s
+2026-08-24 11:13:25,656 INFO Case 16/19 h_on=1.700e-07 h_off=1.600e-07
+2026-08-24 11:14:06,257 INFO Completed h_on=1.700e-07 delay=16420 s n_fit=(3,3) in 40.61 s
+2026-08-24 11:14:06,257 INFO Case 17/19 h_on=1.800e-07 h_off=1.700e-07
+2026-08-24 11:14:44,367 INFO Completed h_on=1.800e-07 delay=19820 s n_fit=(2,2) in 38.10 s
+2026-08-24 11:14:44,370 INFO Case 18/19 h_on=1.900e-07 h_off=1.800e-07
+2026-08-24 11:15:27,509 INFO Completed h_on=1.900e-07 delay=23220 s n_fit=(1,1) in 43.14 s
+2026-08-24 11:15:27,512 INFO Case 19/19 h_on=2.000e-07 h_off=1.900e-07
+2026-08-24 11:16:18,667 INFO Completed h_on=2.000e-07 delay=26620 s n_fit=(0,0) in 51.15 s
+2026-08-24 11:16:29,150 INFO Sweep completed in 762.28 s; results=C:\Users\user\Documents\research\satellite_train_v1\runs\switching_wave_sweep\switching_wave_sweep.csv
