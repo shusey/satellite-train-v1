@@ -37,6 +37,8 @@ def main():
         horizon_duration_s=end,horizon_source=str(args.horizon_config),
         only_changed_physical_experiment_field="simulation.duration_s",
         rows=rows))
+    from sat_string.control_cost_plotting import plot_horizon_cost
+    plot_horizon_cost({label:load_case_arrays(directory/label) for label,_,_ in spec}, source, args.output/"plots")
     for row in rows:
         print(row,flush=True)
 

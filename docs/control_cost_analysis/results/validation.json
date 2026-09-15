@@ -1,0 +1,342 @@
+{
+  "unchanged_core_vs_source_commit": {
+    "config.py": true,
+    "controller.py": true,
+    "dynamics.py": true,
+    "simulator.py": true,
+    "integrator.py": true,
+    "atmosphere.py": true,
+    "attitude.py": true,
+    "disturbance.py": true
+  },
+  "before_after": {
+    "controlled_disturbed": {
+      "time_s": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "a_m": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "lambda_rad": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "altitude_m": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "area_m2": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "mode": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "density_kg_m3": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "q_m_s2": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "gap_error_m": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "gap_rate_m_s": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "gap_distance_m": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "switch_events_identical": true
+    },
+    "controlled_undisturbed": {
+      "time_s": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "a_m": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "lambda_rad": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "altitude_m": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "area_m2": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "mode": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "density_kg_m3": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "q_m_s2": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "gap_error_m": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "gap_rate_m_s": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "gap_distance_m": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "switch_events_identical": true
+    },
+    "all_low_drag_baseline": {
+      "time_s": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "a_m": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "lambda_rad": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "altitude_m": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "area_m2": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "mode": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "density_kg_m3": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "q_m_s2": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "gap_error_m": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "gap_rate_m_s": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "gap_distance_m": {
+        "bitwise_equal": true,
+        "max_abs_difference": 0.0
+      },
+      "switch_events_identical": true
+    }
+  },
+  "saved_legacy": {
+    "controlled_disturbed": {
+      "all_metrics_equal": true,
+      "event_log_equal": true
+    },
+    "controlled_undisturbed": {
+      "all_metrics_equal": true,
+      "event_log_equal": true
+    },
+    "all_low_drag_baseline": {
+      "all_metrics_equal": true,
+      "event_log_equal": true
+    }
+  },
+  "refinement": {
+    "baseline/controlled_disturbed": {
+      "integration_steps_s": [
+        2.0,
+        1.0
+      ],
+      "arrays": {
+        "time_s": {
+          "bitwise_equal": true,
+          "max_abs_difference": 0.0
+        },
+        "a_m": {
+          "bitwise_equal": false,
+          "max_abs_difference": 2.2351741790771484e-08
+        },
+        "lambda_rad": {
+          "bitwise_equal": false,
+          "max_abs_difference": 1.0800249583553523e-12
+        },
+        "altitude_m": {
+          "bitwise_equal": false,
+          "max_abs_difference": 2.2351741790771484e-08
+        },
+        "area_m2": {
+          "bitwise_equal": true,
+          "max_abs_difference": 0.0
+        },
+        "mode": {
+          "bitwise_equal": true,
+          "max_abs_difference": 0.0
+        },
+        "density_kg_m3": {
+          "bitwise_equal": false,
+          "max_abs_difference": 2.361180596184082e-24
+        },
+        "q_m_s2": {
+          "bitwise_equal": false,
+          "max_abs_difference": 3.3398349891204036e-14
+        },
+        "gap_error_m": {
+          "bitwise_equal": false,
+          "max_abs_difference": 1.0402896975847398e-05
+        },
+        "gap_rate_m_s": {
+          "bitwise_equal": false,
+          "max_abs_difference": 5.732119271427416e-11
+        },
+        "gap_distance_m": {
+          "bitwise_equal": false,
+          "max_abs_difference": 1.0402902262285352e-05
+        }
+      },
+      "switch_events_identical": true,
+      "delta_e_max_m": 4.141894166309612e-06,
+      "delta_extra_mean_a_loss_m": 0.0,
+      "delta_switch_count": 0,
+      "delta_high_equivalent_s": 0.0
+    },
+    "sweep/h_on_1.380e-07": {
+      "integration_steps_s": [
+        2.0,
+        1.0
+      ],
+      "arrays": {
+        "time_s": {
+          "bitwise_equal": true,
+          "max_abs_difference": 0.0
+        },
+        "a_m": {
+          "bitwise_equal": false,
+          "max_abs_difference": 2.0489096641540527e-08
+        },
+        "lambda_rad": {
+          "bitwise_equal": false,
+          "max_abs_difference": 1.2505552149377763e-12
+        },
+        "altitude_m": {
+          "bitwise_equal": false,
+          "max_abs_difference": 2.0489096641540527e-08
+        },
+        "area_m2": {
+          "bitwise_equal": true,
+          "max_abs_difference": 0.0
+        },
+        "mode": {
+          "bitwise_equal": true,
+          "max_abs_difference": 0.0
+        },
+        "density_kg_m3": {
+          "bitwise_equal": false,
+          "max_abs_difference": 2.361180596184082e-24
+        },
+        "q_m_s2": {
+          "bitwise_equal": false,
+          "max_abs_difference": 3.414916457087507e-14
+        },
+        "gap_error_m": {
+          "bitwise_equal": false,
+          "max_abs_difference": 1.0595543216140868e-05
+        },
+        "gap_rate_m_s": {
+          "bitwise_equal": false,
+          "max_abs_difference": 4.5562999336987153e-11
+        },
+        "gap_distance_m": {
+          "bitwise_equal": false,
+          "max_abs_difference": 1.05955550679937e-05
+        }
+      },
+      "switch_events_identical": true,
+      "delta_e_max_m": -2.6970473641085846e-06,
+      "delta_extra_mean_a_loss_m": -1.596553000915435e-09,
+      "delta_switch_count": 0,
+      "delta_high_equivalent_s": 0.0
+    },
+    "sweep/h_on_2.000e-07": {
+      "integration_steps_s": [
+        2.0,
+        1.0
+      ],
+      "arrays": {
+        "time_s": {
+          "bitwise_equal": true,
+          "max_abs_difference": 0.0
+        },
+        "a_m": {
+          "bitwise_equal": false,
+          "max_abs_difference": 1.955777406692505e-08
+        },
+        "lambda_rad": {
+          "bitwise_equal": false,
+          "max_abs_difference": 9.521272659185342e-13
+        },
+        "altitude_m": {
+          "bitwise_equal": false,
+          "max_abs_difference": 1.955777406692505e-08
+        },
+        "area_m2": {
+          "bitwise_equal": true,
+          "max_abs_difference": 0.0
+        },
+        "mode": {
+          "bitwise_equal": true,
+          "max_abs_difference": 0.0
+        },
+        "density_kg_m3": {
+          "bitwise_equal": false,
+          "max_abs_difference": 2.361180596184082e-24
+        },
+        "q_m_s2": {
+          "bitwise_equal": false,
+          "max_abs_difference": 3.235680623354489e-14
+        },
+        "gap_error_m": {
+          "bitwise_equal": false,
+          "max_abs_difference": 1.0210250735553927e-05
+        },
+        "gap_rate_m_s": {
+          "bitwise_equal": false,
+          "max_abs_difference": 4.5562999336987153e-11
+        },
+        "gap_distance_m": {
+          "bitwise_equal": false,
+          "max_abs_difference": 1.0210249456577003e-05
+        }
+      },
+      "switch_events_identical": true,
+      "delta_e_max_m": 3.949247926016142e-06,
+      "delta_extra_mean_a_loss_m": -4.2131259314626135e-09,
+      "delta_switch_count": 0,
+      "delta_high_equivalent_s": 0.0
+    }
+  }
+}

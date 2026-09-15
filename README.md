@@ -87,3 +87,17 @@ python scripts/run_switching_wave_sweep.py `
 外乱中心衛星は外乱開始時の中心座標に最も近い衛星から自動決定し、必要なら
 `--center-satellite`（1始まり）で明示できます。フィットは中心から4衛星以上離れた点のみを使い、
 3点未満なら速度、R²、RMSEを `NaN` とします。標準偏差は母標準偏差（`ddof=0`）です。
+
+## 制御価値・抗力コスト解析
+
+現在の標準条件から、制御なし／制御あり／無外乱を比較し、7条件の閾値実験を行います。
+
+```powershell
+python scripts/run_control_cost_analysis.py --config configs/baseline.yaml --output outputs/control_cost_analysis
+```
+
+[解析結果・図・研究上の判定](docs/control_cost_analysis/report.md)、
+[実装モデル](docs/control_cost_analysis/model.md)、
+[PD制御の導出と保証範囲](docs/control_cost_analysis/pd_analysis.md)、
+[検証と再現手順](docs/control_cost_analysis/reproduction.md)を参照してください。
+24時間の見かけのコスト削減は、72時間では到達遅れと分かった候補があります。

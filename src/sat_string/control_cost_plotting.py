@@ -53,7 +53,8 @@ def plot_cost_report(cases, rows, config, output, dpi=200):
                         transform=ax.transAxes, fontsize=9)
 
         sm = plt.cm.ScalarMappable(cmap="turbo", norm=plt.Normalize(1,len(colors)))
-        fig.colorbar(sm,ax=list(axes),label="Satellite ID" if offset else "Gap ID")
+        fig.colorbar(sm,ax=list(axes),label="Satellite ID" if offset else "Gap ID",
+                     ticks=np.unique(np.linspace(1,len(colors),5).astype(int)))
         axes[-1].set_xlabel("Time (h)")
         save(fig,fname)
 
@@ -107,9 +108,40 @@ def plot_cost_report(cases, rows, config, output, dpi=200):
     for side,marker in [("left","o"),("right","s")]:
         y=[r[f"speed_{side}_m_s"] if r[f"speed_{side}_m_s"] is not None else np.nan for r in rows]
         ax.plot(x,y,marker+"--",label=side)
-    ax.set(xlabel="h_on (10^-7 m/s²)",ylabel="Accepted first-front speed (m/s)")
+    ax.set(xlabel="h_on (10^-7 m/s²)",ylabel="Accepted first-front speed (m/s)",
+           xlim=(x.min()-0.03,x.max()+0.03))
+    ax.text(0.98,0.80,"Missing speeds: see fit status in case JSON",
+            transform=ax.transAxes,ha="right",fontsize=8)
     ax.legend()
     ax.grid(alpha=0.2)
     save(fig,"10_threshold_front_speed.png")
     return paths
+
+
+
+def plot_horizon_cost(cases, config, output, dpi=200):
+    """Show cumulative area-equivalent exposure and orbital loss at 24/72 hours."""
+    output = Path(output)
+    output.mkdir(parents=True, exist_ok=True)
+    low = cases["A_low"]
+    labels = {"A_low":"A: all LOW", "B_current":"Current h_on=1.5e-7",
+              "h_on_1.800e-07":"h_on=1.8e-7", "h_on_2.000e-07":"h_on=2.0e-7"}
+    fig,axes=plt.subplots(2,1,figsize=(10,7),sharex=True,layout="constrained")
+    for name,arrays in cases.items():
+        t=arrays["time_s"]
+        weights=np.sum((arrays["area_m2"]-config.spacecraft.area_low_m2)/
+                       (config.spacecraft.area_high_m2-config.spacecraft.area_low_m2),axis=1)
+        cumulative=np.concatenate(([0.0],np.cumsum(np.diff(t)*(weights[1:]+weights[:-1])/2)))
+        axes[0].plot(t/3600,cumulative/3600,label=labels[name],lw=1.6)
+        axes[1].plot(t/3600,np.mean(low["a_m"]-arrays["a_m"],axis=1),label=labels[name],lw=1.6)
+    axes[0].set_ylabel("Cumulative equivalent HIGH (satellite h)")
+    axes[1].set(xlabel="Time (h)",ylabel="Extra mean altitude loss vs A (m)")
+    for ax in axes:
+        ax.axvline(config.simulation.duration_s/3600,color="gray",ls=":",label="Original 24 h endpoint")
+        ax.grid(alpha=0.2)
+    axes[0].legend(fontsize=8)
+    path=output/"11_horizon_cost.png"
+    fig.savefig(path,dpi=dpi,bbox_inches="tight")
+    plt.close(fig)
+    return path
 

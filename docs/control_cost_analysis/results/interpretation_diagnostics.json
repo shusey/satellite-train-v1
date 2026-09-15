@@ -1,0 +1,9 @@
+{
+  "accuracy_improvement_percent": 88.54450154214318,
+  "extra_loss_percent_of_all_low_daily_loss": 0.9261165382882562,
+  "distal_max_abs_q_without_control_m_s2": 8.258155019438885e-16,
+  "distal_share_equivalent_exposure": 0.7,
+  "distal_share_extra_loss": 0.6999999314043914,
+  "instantaneous_equal_a_lowering_benchmark_mean_m": 0.8742988493648314,
+  "benchmark_limitation": "Geometry at the 24h all-LOW endpoint, not an optimal-control or lifetime bound."
+}

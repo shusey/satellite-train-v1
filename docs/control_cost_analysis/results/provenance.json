@@ -1,0 +1,23 @@
+{
+  "source_commit": "d9dfdfbb54fcd8ec0d63f3b5b91a31ffc3f78999",
+  "python": "3.11.3",
+  "packages": {
+    "numpy": "2.4.6",
+    "matplotlib": "3.11.2",
+    "PyYAML": "6.0.3",
+    "pytest": "9.1.1",
+    "imageio-ffmpeg": "0.6.0"
+  },
+  "core_sha256": {
+    "simulator.py": "c21274d6c310063b80987244069151a9f8b1efcbaa2544d2ece54f71b4714565",
+    "controller.py": "0eefeff7d596999e97ac1b332756261877409f5a8961b982bea73877830815b1",
+    "config.py": "f87b27d899984ec8fa15048db0f5c92eeaf0eed6e9af84277a38f3832b51fc56",
+    "dynamics.py": "0e7bd8ec47ddaa92721479ecc01c471ff883bdef2b257faae0de55de76dd699a",
+    "attitude.py": "706a3b10ec4b7831b30101bba43509740a83ae46d650b7f3389f6cb0bea7c029",
+    "atmosphere.py": "bdb4b0044c45eac0487e8458bf216ed2dbcd2160e55d12a6826ed1ea2367980f",
+    "disturbance.py": "b1e7182e40bb3b224fe99489b1b6bdee60a80a62747da72bcc45ac0e12e061e2",
+    "integrator.py": "1806c2fb8c2582746260a27395bf7aa11e4944ae8a4a4419df197b74634bf729"
+  },
+  "case_source": "configs\\baseline.yaml",
+  "sweep_rule": "seven values selected from existing grid; off=on-(baseline on-off)"
+}
