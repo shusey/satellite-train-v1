@@ -125,4 +125,3 @@ def test_analysis_cli_roundtrip_and_output_protection(tmp_path, short_config):
     third=subprocess.run(command+["--stage","baseline"],cwd=root,capture_output=True,text=True,timeout=90)
     assert third.returncode!=0
     assert saved.stat().st_mtime_ns==before
-

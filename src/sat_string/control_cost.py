@@ -238,4 +238,3 @@ def linear_modes(config: SimulationConfig):
         "disagreement_stable": bool(kp>0 and kd*rows[1]["laplacian_eigenvalue"]>b),
         "modes": rows,
     }
-

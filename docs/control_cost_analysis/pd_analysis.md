@@ -164,4 +164,3 @@ stability requires an explicit norm, input location and uniform-N bound.
 - [NASA EO-1 differential-drag demonstration](https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20170011151.pdf):
   links differential drag with changes in semi-major axis and along-track motion.
   Operational performance is not inferred from this simplified model.
-

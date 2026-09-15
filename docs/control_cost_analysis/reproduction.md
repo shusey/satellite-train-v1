@@ -111,4 +111,3 @@ provenance.jsonのsource_commitは最初の計算開始時のHEAD=d9dfdfbを記�
 当時は解析コード追加中だった。最終解析コードは作業branchにコミット済みであり、
 計算に用いた元のcoreはprovenanceのSHA256とvalidationの比較で確認できる。
 日本語の研究上の解釈はreport.md、数式の詳細はpd_analysis.md。
-

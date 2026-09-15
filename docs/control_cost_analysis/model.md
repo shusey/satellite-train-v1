@@ -111,4 +111,3 @@ The new analysis will add these without altering simulation dynamics.
    Compare unchanged-core histories before/after analysis additions.
 6. Keep mathematical continuous-input surrogate guarantees separate from
    unproven binary, unilateral, sampled, slew-limited hybrid dynamics.
-

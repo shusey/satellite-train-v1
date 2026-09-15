@@ -144,4 +144,3 @@ def plot_horizon_cost(cases, config, output, dpi=200):
     fig.savefig(path,dpi=dpi,bbox_inches="tight")
     plt.close(fig)
     return path
-
