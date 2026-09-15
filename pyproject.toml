@@ -9,7 +9,7 @@ description = "Along-track CubeSat string simulation using binary differential d
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "numpy>=1.26",
+    "numpy>=2.0",
     "matplotlib>=3.8",
     "PyYAML>=6.0",
     "imageio-ffmpeg>=0.5",
@@ -25,3 +25,4 @@ where = ["src"]
 pythonpath = ["src"]
 testpaths = ["tests"]
 addopts = "-ra"
+

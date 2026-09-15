@@ -1,5 +1,7 @@
 # Virtual environment
 .venv/
+.analysis-venv/
+*.egg-info/
 venv/
 
 # Python cache
