@@ -32,13 +32,24 @@ def build_standard_report(
         case_metrics[case.name] = compute_case_metrics(
             arrays[case.name], config, events
         )
-        save_metrics(case_metrics[case.name], case_directory)
 
     comparison_metrics, comparison_arrays = compute_suite_comparison(
         arrays["controlled_disturbed"],
         arrays["controlled_undisturbed"],
         arrays["all_low_drag_baseline"],
     )
+    # Endpoint satellite mean; positive is extra loss against the matched pulse.
+    extra = comparison_arrays["altitude_loss_m"][-1]
+    case_metrics["controlled_disturbed"]["altitude"].update(
+        extra_loss_vs_all_low_m=float(np.mean(extra)),
+        extra_loss_per_satellite_vs_all_low_m=extra.tolist(),
+    )
+    case_metrics["all_low_drag_baseline"]["altitude"].update(
+        extra_loss_vs_all_low_m=0.0,
+        extra_loss_per_satellite_vs_all_low_m=np.zeros_like(extra).tolist(),
+    )
+    for case in STANDARD_CASES:
+        save_metrics(case_metrics[case.name], run / case.name)
     np.savez_compressed(run / "comparison_results.npz", **comparison_arrays)
     aggregate = {"cases": case_metrics, "comparison": comparison_metrics}
     save_metrics(aggregate, run)

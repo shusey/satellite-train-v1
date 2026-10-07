@@ -26,6 +26,9 @@ def test_report_regenerates_metrics_plots_and_h264_from_saved_data(tmp_path, sho
         save_case(result, short_config, run / name)
     aggregate = build_standard_report(run, short_config, dpi=72)
     assert "comparison" in aggregate
+    assert aggregate["cases"]["controlled_disturbed"]["altitude"]["extra_loss_vs_all_low_m"] == aggregate["comparison"]["final_mean_altitude_loss_vs_all_low_m"]
+    assert aggregate["cases"]["controlled_undisturbed"]["altitude"]["extra_loss_vs_all_low_m"] is None
+    assert aggregate["cases"]["all_low_drag_baseline"]["altitude"]["extra_loss_vs_all_low_m"] == 0
     assert (run / "metrics.json").is_file()
     assert (run / "comparison_results.npz").is_file()
     for filename in REQUIRED_PLOT_FILENAMES:

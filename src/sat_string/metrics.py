@@ -14,6 +14,7 @@ from .attitude import H, SwitchEvent
 from .config import SimulationConfig
 from .disturbance import disturbance_center_m, rotating_coordinate_m
 from .io import write_json
+from .evaluation import EvaluationSettings, compute_evaluation_metrics
 
 
 def detect_order_reversal(
@@ -160,6 +161,8 @@ def compute_case_metrics(
     arrays: Mapping[str, NDArray],
     config: SimulationConfig,
     switch_events: Sequence[SwitchEvent | Mapping[str, Any]] = (),
+    *,
+    evaluation_settings: EvaluationSettings | None = None,
 ) -> dict[str, Any]:
     """Compute all per-case v1 metrics from persisted histories."""
     time = np.asarray(arrays["time_s"], dtype=float)
@@ -279,6 +282,11 @@ def compute_case_metrics(
             "final_relative_altitude_spread_m": float(altitude_spread[-1]),
         },
     }
+    evaluation = compute_evaluation_metrics(
+        arrays, config, switch_events, settings=evaluation_settings
+    )
+    metrics["altitude"].update(evaluation.pop("altitude"))
+    metrics.update(evaluation)
     return metrics
 
 

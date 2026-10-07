@@ -1,0 +1,73 @@
+{
+  "source_commit": "a81426a",
+  "source_histories": "outputs/control_cost_before (pre-analysis simulation)",
+  "purpose": "software regression only; not scientific validation or optimal gain design",
+  "array_tolerances": {
+    "time_s": {
+      "atol": 1e-09,
+      "rtol": 0
+    },
+    "gap_error_m": {
+      "atol": 0.0001,
+      "rtol": 0
+    },
+    "gap_rate_m_s": {
+      "atol": 1e-09,
+      "rtol": 0
+    },
+    "a_m": {
+      "atol": 0.0001,
+      "rtol": 0
+    },
+    "altitude_m": {
+      "atol": 0.0001,
+      "rtol": 0
+    },
+    "area_m2": {
+      "atol": 1e-12,
+      "rtol": 0
+    },
+    "mode": {
+      "atol": 0,
+      "rtol": 0
+    }
+  },
+  "aggregates": {
+    "controlled_disturbed": {
+      "max_abs_error_m": 12.42389825506127,
+      "rms_error_m": 5.991741617697637,
+      "n_transition_starts": 40,
+      "extra_loss_vs_all_low_m": 0.8211498872953511,
+      "left_speed_m_s": 20.26340711406774,
+      "right_speed_m_s": 20.26340711406773
+    },
+    "controlled_undisturbed": {
+      "max_abs_error_m": 2.433593283297092e-07,
+      "rms_error_m": 8.66857410840967e-08,
+      "n_transition_starts": 0,
+      "extra_loss_vs_all_low_m": null,
+      "left_speed_m_s": null,
+      "right_speed_m_s": null
+    },
+    "all_low_drag_baseline": {
+      "max_abs_error_m": 108.45358061691567,
+      "rms_error_m": 18.329162300942247,
+      "n_transition_starts": 0,
+      "extra_loss_vs_all_low_m": 0.0,
+      "left_speed_m_s": null,
+      "right_speed_m_s": null
+    }
+  },
+  "sha256": {
+    "controlled_disturbed/results.npz": "216711954dbb6fad4fe7aa2482d881e4febb1d36fef0ea36cf343b7c4cd5f28d",
+    "controlled_disturbed/switch_events.csv": "d068d2e6fc095285e725dcac36fe2f907c0ac49c615b579eed0c464abaae68c2",
+    "controlled_undisturbed/results.npz": "88b9f528c1b96d6168dc3ecda7e33a685ef1c7d8d8e7226adee503aa947a7863",
+    "controlled_undisturbed/switch_events.csv": "14d2c4e9c430bea02f2e4be0bffda3b8212c5231df6ebc6f5c829126baa71e30",
+    "all_low_drag_baseline/results.npz": "d60a7f8d1295251adfbb5c619c07c3dc5be57820ca6ec195bda7c178a998d08a",
+    "all_low_drag_baseline/switch_events.csv": "14d2c4e9c430bea02f2e4be0bffda3b8212c5231df6ebc6f5c829126baa71e30",
+    "controlled_disturbed/metadata.json": "bb999269db2eb18fca9ecfe5c2b2ba43501cd7157d48fb5041304de79d19f4b7",
+    "controlled_undisturbed/metadata.json": "3891ef58f5e3d1f551e3db8204bcae6ce04d08d0471e57cd38db15cd7c68b2a5",
+    "all_low_drag_baseline/metadata.json": "75f24b4ea6513f98d80a4223cf631098f9203325c17a6debf88e228cb04a9701",
+    "config.yaml": "2b948a81da16f028a08f3b24ff1efd1930929c827d3e629a388c7388497e269e"
+  }
+}
