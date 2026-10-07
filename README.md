@@ -101,3 +101,18 @@ python scripts/run_control_cost_analysis.py --config configs/baseline.yaml --out
 [PD制御の導出と保証範囲](docs/control_cost_analysis/pd_analysis.md)、
 [検証と再現手順](docs/control_cost_analysis/reproduction.md)を参照してください。
 24時間の見かけのコスト削減は、72時間では到達遅れと分かった候補があります。
+
+## 評価基盤・24時間回帰・観測時間
+
+[評価指標の定義](docs/evaluation_observation_horizon/definitions.md)、
+[再現方法](docs/evaluation_observation_horizon/reproduction.md)、
+[観測時間の結果と推奨](docs/evaluation_observation_horizon/report.md)を参照してください。
+固定された24時間基準はsoftware regression referenceであり、暫定ゲインの科学的妥当性を意味しません。
+
+```powershell
+python scripts/check_baseline_regression.py --output outputs/regression_new
+python scripts/evaluate_saved_case.py --run outputs/regression_new/suite/controlled_disturbed --all-low outputs/regression_new/suite/all_low_drag_baseline --output outputs/evaluation_new --epsilon-e 50 1 5 10
+python scripts/run_observation_case.py --hours 168 --output outputs/observation_7d_new
+```
+
+新しいスクリプトは既存の出力先への書込みを拒否します。保存データだけで判定閾値・時間窓・観測終了時刻を変えて比較できます。

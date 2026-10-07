@@ -1,0 +1,47 @@
+{
+  "experiments": [
+    {
+      "label": "central_7d",
+      "source_directory": "outputs/evaluation_20261007/runs/central_7d",
+      "saved_inputs": "run_inputs/central_7d"
+    },
+    {
+      "label": "central_14d",
+      "source_directory": "outputs/evaluation_20261007/runs/central_14d",
+      "saved_inputs": "run_inputs/central_14d"
+    },
+    {
+      "label": "low_7d",
+      "source_directory": "outputs/evaluation_20261007/runs/low_7d",
+      "saved_inputs": "run_inputs/low_7d"
+    },
+    {
+      "label": "low_14d",
+      "source_directory": "outputs/evaluation_20261007/runs/low_14d",
+      "saved_inputs": "run_inputs/low_14d"
+    },
+    {
+      "label": "mid_7d",
+      "source_directory": "outputs/evaluation_20261007/runs/mid_7d",
+      "saved_inputs": "run_inputs/mid_7d"
+    },
+    {
+      "label": "mid_14d",
+      "source_directory": "outputs/evaluation_20261007/runs/mid_14d",
+      "saved_inputs": "run_inputs/mid_14d"
+    },
+    {
+      "label": "end_7d",
+      "source_directory": "outputs/evaluation_20261007/runs/end_7d",
+      "saved_inputs": "run_inputs/end_7d"
+    },
+    {
+      "label": "end_14d",
+      "source_directory": "outputs/evaluation_20261007/runs/end_14d",
+      "saved_inputs": "run_inputs/end_14d"
+    }
+  ],
+  "gain_design_status": "provisional; no physical optimality claim",
+  "reuse": "24h and 72h original histories reused; 7d and 14d staged runs; no 30d simulation",
+  "baseline_fixture": "tests/fixtures/regression_24h"
+}
