@@ -1,0 +1,8 @@
+{
+  "command": "python -m pytest -q",
+  "passed": 118,
+  "existing": 104,
+  "new": 14,
+  "physical_core_changed": false,
+  "regression_uses_saved_actual_24h_suite": true
+}

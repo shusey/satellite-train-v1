@@ -130,3 +130,11 @@ python scripts/continue_observation_case.py --source outputs/evaluation_20261007
 python scripts/continue_observation_case.py --source outputs/evaluation_20261007/runs/low_14d --output outputs/long_horizon_new/low_21d --days 21
 python scripts/analyze_long_horizon.py --run outputs/long_horizon_new/central_21d --all-low outputs/long_horizon_new/low_21d --output outputs/long_horizon_analysis_new/21d
 ```
+
+## dwell・cycle終了時の残留状態
+
+[150/300/600秒の比較と因果仮説の評価](docs/dwell_residual_analysis/report.md)、
+[残留速度・P/D予測の定義](docs/dwell_residual_analysis/definitions.md)、
+[データ再利用・実行・検証手順](docs/dwell_residual_analysis/reproduction.md)を参照してください。
+各衛星のL-H-L終了と、全衛星LOWになる境界を区別して評価します。
+物理・制御・積分coreと凍結24時間基準は維持しています。

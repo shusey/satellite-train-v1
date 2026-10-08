@@ -1,0 +1,9 @@
+{
+  "all_low": "outputs/long_horizon_q_20261008/runs/low_60d",
+  "prefix_analysis_root": "outputs/dwell_residual_20261008/analysis_final",
+  "cases": [
+    {"dwell_s": 150, "run": "outputs/dwell_residual_20261008/runs/dwell_150_60d", "analysis": "outputs/dwell_residual_20261008/analysis_final/dwell_150_60d"},
+    {"dwell_s": 300, "run": "outputs/long_horizon_q_20261008/runs/central_60d", "analysis": "outputs/dwell_residual_20261008/analysis_final/dwell_300_60d"},
+    {"dwell_s": 600, "run": "outputs/dwell_residual_20261008/runs/dwell_600_60d", "analysis": "outputs/dwell_residual_20261008/analysis_final/dwell_600_60d"}
+  ]
+}

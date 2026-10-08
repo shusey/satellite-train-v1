@@ -1,0 +1,29 @@
+{
+  "150": {
+    "n": 209,
+    "off_at_HIGH_complete_count": 202,
+    "first_off_before_dwell_gate_count": 209,
+    "first_off_at_dwell_gate_count": 0,
+    "all_LOW_commands_below_off": true,
+    "local_positive_own_D_count": 6,
+    "local_negative_own_D_count": 201
+  },
+  "300": {
+    "n": 293,
+    "off_at_HIGH_complete_count": 261,
+    "first_off_before_dwell_gate_count": 293,
+    "first_off_at_dwell_gate_count": 0,
+    "all_LOW_commands_below_off": true,
+    "local_positive_own_D_count": 25,
+    "local_negative_own_D_count": 268
+  },
+  "600": {
+    "n": 1375,
+    "off_at_HIGH_complete_count": 201,
+    "first_off_before_dwell_gate_count": 1374,
+    "first_off_at_dwell_gate_count": 1,
+    "all_LOW_commands_below_off": true,
+    "local_positive_own_D_count": 19,
+    "local_negative_own_D_count": 1353
+  }
+}

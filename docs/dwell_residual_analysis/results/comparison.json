@@ -1,0 +1,816 @@
+[
+  {
+    "dwell_s": 150.0,
+    "days": 30.0,
+    "e_max_m": 210.32520646226547,
+    "rms_m": 93.29400424684317,
+    "final_max_error_m": 207.40827527510712,
+    "transitions": 248,
+    "completed_cycles": 124,
+    "cycles_per_satellite": [
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      4,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "incomplete_cycles": [],
+    "last_switch_day": 29.797453703703702,
+    "extra_altitude_loss_m": 3.423280350952631,
+    "mean_initial_altitude_loss_m": 2722.096002965855,
+    "high_stable_total_s": 18600.0,
+    "high_equivalent_total_s": 33480.0,
+    "dwell_limited_returns": 124,
+    "threshold_limited_returns": 0,
+    "high_hold_times_s": [
+      150.0
+    ],
+    "local_V_incident_m_s": {
+      "n": 124,
+      "min": 0.0,
+      "median": 0.000946572667827469,
+      "max": 0.001071400817553863
+    },
+    "local_QD_own_abs_m_s2": {
+      "n": 124,
+      "min": 0.0,
+      "median": 8.75186525826526e-08,
+      "max": 1.7261423818688483e-07
+    },
+    "quiet_V_all_m_s": {
+      "n": 80,
+      "min": 0.0004146456727481284,
+      "median": 0.00095478480099476,
+      "max": 0.0010721659716994708
+    },
+    "quiet_QD_all_abs_m_s2": {
+      "n": 80,
+      "min": 7.664610892151624e-08,
+      "median": 8.993049558978023e-08,
+      "max": 1.7262866061812953e-07
+    },
+    "local_next_start_interval_day": {
+      "n": 103,
+      "min": 1.2248842592592593,
+      "median": 6.631712962962963,
+      "max": 8.881134259259259
+    },
+    "quiet_actual_wait_day": {
+      "n": 79,
+      "min": 0.002199074074074074,
+      "median": 0.1633101851851852,
+      "max": 4.429861111111111
+    },
+    "quiet_finite_uncensored_forecasts": 79,
+    "quiet_valid_forecasts": 79,
+    "quiet_prediction_target_matches": 79,
+    "quiet_abs_relative_prediction_error": {
+      "n": 79,
+      "min": 0.0,
+      "median": 0.0009615384615384616,
+      "max": 0.004389402727700266
+    },
+    "local_valid_forecasts": 0,
+    "off_to_LOW_command_delay_s": {
+      "n": 124,
+      "min": 110.0,
+      "median": 200.0,
+      "max": 200.0
+    },
+    "quiet_kinematic_identity_abs_error_m_s2": {
+      "n": 80,
+      "min": 4.44057287295863e-17,
+      "median": 3.0703587430891555e-15,
+      "max": 7.108525516263205e-13
+    },
+    "settling": {
+      "recovery_time_s": 46030.0,
+      "recovery_entry_time_s": 44230.0,
+      "recovery_time_after_disturbance_s": 31630.0,
+      "settling_time_s": null,
+      "settled_by_tmax": false,
+      "verification_horizon_s": null,
+      "epsilon_e_m": 50.0,
+      "epsilon_v_m_s": 0.001,
+      "hold_window_s": 1800.0,
+      "evaluation_start_time_s": 14400.0,
+      "observation_end_time_s": 2592000.0,
+      "maximum_sample_interval_s": 10.0,
+      "interpretation": "finite observed suffix; no guarantee beyond tmax or between samples"
+    },
+    "first_sat12": {
+      "high_command_s": 20430.0,
+      "high_complete_s": 20550.0,
+      "low_command_s": 20700.0,
+      "low_complete_s": 20820.0,
+      "V_res_seeds_m_s": 0.0010366579458660713,
+      "V_res_all_m_s": 0.0010366579458660713,
+      "own_q_P_m_s2": 2.3379817928847796e-08,
+      "own_q_D_m_s2": -4.698246654148999e-08,
+      "own_q_m_s2": -2.36026486126422e-08,
+      "high_equivalent_time_s": 270.0,
+      "q_at_HIGH_complete_m_s2": 1.1168402985875837e-07,
+      "q_at_LOW_command_m_s2": 1.516083189290605e-08,
+      "nonlow_satellite_ids": [
+        10
+      ]
+    },
+    "analysis_directory": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\dwell_residual_20261008\\analysis_final\\dwell_150_30d"
+  },
+  {
+    "dwell_s": 300.0,
+    "days": 30.0,
+    "e_max_m": 93.52902892218182,
+    "rms_m": 20.977968893200043,
+    "final_max_error_m": 78.35050562561557,
+    "transitions": 225,
+    "completed_cycles": 112,
+    "cycles_per_satellite": [
+      5,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      5,
+      4,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "incomplete_cycles": [
+      {
+        "satellite_id": 1,
+        "local_cycle_number": 6,
+        "start_time_s": 2591750.0
+      }
+    ],
+    "last_switch_day": 29.99849537037037,
+    "extra_altitude_loss_m": 4.829257092527335,
+    "mean_initial_altitude_loss_m": 2723.5019797074297,
+    "high_stable_total_s": 33730.0,
+    "high_equivalent_total_s": 47230.0,
+    "dwell_limited_returns": 112,
+    "threshold_limited_returns": 0,
+    "high_hold_times_s": [
+      300.0
+    ],
+    "local_V_incident_m_s": {
+      "n": 112,
+      "min": 2.939548344321752e-12,
+      "median": 0.001481882793505612,
+      "max": 0.0015601494204761296
+    },
+    "local_QD_own_abs_m_s2": {
+      "n": 112,
+      "min": 2.7218040225201402e-16,
+      "median": 1.3743224096734594e-07,
+      "max": 2.740966668718176e-07
+    },
+    "quiet_V_all_m_s": {
+      "n": 72,
+      "min": 9.867417679162039e-05,
+      "median": 0.0015017249043002816,
+      "max": 0.0015601494204761296
+    },
+    "quiet_QD_all_abs_m_s2": {
+      "n": 72,
+      "min": 9.134248688321951e-09,
+      "median": 1.3908625929326392e-07,
+      "max": 2.740966668718176e-07
+    },
+    "local_next_start_interval_day": {
+      "n": 92,
+      "min": 0.7818287037037037,
+      "median": 8.272048611111112,
+      "max": 10.344444444444445
+    },
+    "quiet_actual_wait_day": {
+      "n": 72,
+      "min": 0.0045138888888888885,
+      "median": 0.027256944444444445,
+      "max": 8.3125
+    },
+    "quiet_finite_uncensored_forecasts": 72,
+    "quiet_valid_forecasts": 72,
+    "quiet_prediction_target_matches": 72,
+    "quiet_abs_relative_prediction_error": {
+      "n": 72,
+      "min": 0.0,
+      "median": 0.0,
+      "max": 0.007365636313004734
+    },
+    "local_valid_forecasts": 0,
+    "off_to_LOW_command_delay_s": {
+      "n": 112,
+      "min": 250.0,
+      "median": 350.0,
+      "max": 350.0
+    },
+    "quiet_kinematic_identity_abs_error_m_s2": {
+      "n": 72,
+      "min": 1.755626578210206e-17,
+      "median": 4.339848784661123e-15,
+      "max": 2.5232508133314476e-13
+    },
+    "settling": {
+      "recovery_time_s": 63460.0,
+      "recovery_entry_time_s": 61660.0,
+      "recovery_time_after_disturbance_s": 49060.0,
+      "settling_time_s": null,
+      "settled_by_tmax": false,
+      "verification_horizon_s": null,
+      "epsilon_e_m": 50.0,
+      "epsilon_v_m_s": 0.001,
+      "hold_window_s": 1800.0,
+      "evaluation_start_time_s": 14400.0,
+      "observation_end_time_s": 2592000.0,
+      "maximum_sample_interval_s": 10.0,
+      "interpretation": "finite observed suffix; no guarantee beyond tmax or between samples"
+    },
+    "first_sat12": {
+      "high_command_s": 20430.0,
+      "high_complete_s": 20550.0,
+      "low_command_s": 20850.0,
+      "low_complete_s": 20970.0,
+      "V_res_seeds_m_s": 0.0015586439763545846,
+      "V_res_all_m_s": 0.0015586439763545846,
+      "own_q_P_m_s2": 2.2914610869229993e-08,
+      "own_q_D_m_s2": -1.4364615731579022e-07,
+      "own_q_m_s2": -1.2073154644656024e-07,
+      "high_equivalent_time_s": 420.0,
+      "q_at_HIGH_complete_m_s2": 1.1168402985875837e-07,
+      "q_at_LOW_command_m_s2": -8.16990367831743e-08,
+      "nonlow_satellite_ids": [
+        10
+      ]
+    },
+    "analysis_directory": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\dwell_residual_20261008\\analysis_final\\dwell_300_30d"
+  },
+  {
+    "dwell_s": 600.0,
+    "days": 30.0,
+    "e_max_m": 119.55405029802452,
+    "rms_m": 38.91898239082383,
+    "final_max_error_m": 84.3657411499764,
+    "transitions": 1594,
+    "completed_cycles": 797,
+    "cycles_per_satellite": [
+      38,
+      38,
+      38,
+      38,
+      38,
+      38,
+      38,
+      38,
+      38,
+      38,
+      37,
+      38,
+      38,
+      38,
+      38,
+      38,
+      38,
+      38,
+      38,
+      38,
+      38
+    ],
+    "incomplete_cycles": [],
+    "last_switch_day": 29.523263888888888,
+    "extra_altitude_loss_m": 58.70199112713869,
+    "mean_initial_altitude_loss_m": 2777.374713742041,
+    "high_stable_total_s": 478200.0,
+    "high_equivalent_total_s": 573840.0,
+    "dwell_limited_returns": 797,
+    "threshold_limited_returns": 0,
+    "high_hold_times_s": [
+      600.0
+    ],
+    "local_V_incident_m_s": {
+      "n": 797,
+      "min": 0.0,
+      "median": 0.0016170005764705984,
+      "max": 0.003645565708696741
+    },
+    "local_QD_own_abs_m_s2": {
+      "n": 797,
+      "min": 0.0,
+      "median": 1.499460174160947e-07,
+      "max": 3.8467800053111827e-07
+    },
+    "quiet_V_all_m_s": {
+      "n": 90,
+      "min": 0.0010386362707204449,
+      "median": 0.00148396259450838,
+      "max": 0.002517589428038752
+    },
+    "quiet_QD_all_abs_m_s2": {
+      "n": 90,
+      "min": 1.287246588072941e-07,
+      "median": 1.9945487898624733e-07,
+      "max": 2.8472397408526206e-07
+    },
+    "local_next_start_interval_day": {
+      "n": 776,
+      "min": 0.016666666666666666,
+      "median": 0.7885416666666667,
+      "max": 2.084375
+    },
+    "quiet_actual_wait_day": {
+      "n": 89,
+      "min": 0.0019675925925925924,
+      "median": 0.2515046296296296,
+      "max": 0.7413194444444444
+    },
+    "quiet_finite_uncensored_forecasts": 89,
+    "quiet_valid_forecasts": 89,
+    "quiet_prediction_target_matches": 89,
+    "quiet_abs_relative_prediction_error": {
+      "n": 89,
+      "min": 0.0,
+      "median": 0.001088139281828074,
+      "max": 0.002849002849002849
+    },
+    "local_valid_forecasts": 0,
+    "off_to_LOW_command_delay_s": {
+      "n": 797,
+      "min": 110.0,
+      "median": 560.0,
+      "max": 650.0
+    },
+    "quiet_kinematic_identity_abs_error_m_s2": {
+      "n": 90,
+      "min": 3.544330454755182e-17,
+      "median": 2.2029050011099402e-14,
+      "max": 2.5346402716560197e-13
+    },
+    "settling": {
+      "recovery_time_s": null,
+      "recovery_entry_time_s": null,
+      "recovery_time_after_disturbance_s": null,
+      "settling_time_s": null,
+      "settled_by_tmax": false,
+      "verification_horizon_s": null,
+      "epsilon_e_m": 50.0,
+      "epsilon_v_m_s": 0.001,
+      "hold_window_s": 1800.0,
+      "evaluation_start_time_s": 14400.0,
+      "observation_end_time_s": 2592000.0,
+      "maximum_sample_interval_s": 10.0,
+      "interpretation": "finite observed suffix; no guarantee beyond tmax or between samples"
+    },
+    "first_sat12": {
+      "high_command_s": 20430.0,
+      "high_complete_s": 20550.0,
+      "low_command_s": 21150.0,
+      "low_complete_s": 21270.0,
+      "V_res_seeds_m_s": 0.0016282669951680738,
+      "V_res_all_m_s": 0.0018035291918947994,
+      "own_q_P_m_s2": 2.1272332535582546e-08,
+      "own_q_D_m_s2": -2.467575911518093e-07,
+      "own_q_m_s2": -2.2548525861622679e-07,
+      "high_equivalent_time_s": 720.0,
+      "q_at_HIGH_complete_m_s2": 1.1168402985875837e-07,
+      "q_at_LOW_command_m_s2": -2.247771238176866e-07,
+      "nonlow_satellite_ids": [
+        9,
+        10,
+        13
+      ]
+    },
+    "analysis_directory": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\dwell_residual_20261008\\analysis_final\\dwell_600_30d"
+  },
+  {
+    "dwell_s": 150.0,
+    "days": 60.0,
+    "e_max_m": 291.90661093884574,
+    "rms_m": 122.77176275729664,
+    "final_max_error_m": 226.87020190580168,
+    "transitions": 418,
+    "completed_cycles": 209,
+    "cycles_per_satellite": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      9,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "incomplete_cycles": [],
+    "last_switch_day": 59.02673611111111,
+    "extra_altitude_loss_m": 6.057867816427634,
+    "mean_initial_altitude_loss_m": 5575.730795739174,
+    "high_stable_total_s": 31350.0,
+    "high_equivalent_total_s": 56430.0,
+    "dwell_limited_returns": 209,
+    "threshold_limited_returns": 0,
+    "high_hold_times_s": [
+      150.0
+    ],
+    "local_V_incident_m_s": {
+      "n": 209,
+      "min": 0.0,
+      "median": 0.0009537566109190927,
+      "max": 0.0011084284429038597
+    },
+    "local_QD_own_abs_m_s2": {
+      "n": 209,
+      "min": 0.0,
+      "median": 8.83593842309294e-08,
+      "max": 1.7911324724390906e-07
+    },
+    "quiet_V_all_m_s": {
+      "n": 106,
+      "min": 0.0004146456727481284,
+      "median": 0.0009539977854281155,
+      "max": 0.0011108335299170877
+    },
+    "quiet_QD_all_abs_m_s2": {
+      "n": 106,
+      "min": 7.664610892151624e-08,
+      "median": 9.105031163230237e-08,
+      "max": 1.7410727384885356e-07
+    },
+    "local_next_start_interval_day": {
+      "n": 188,
+      "min": 1.2248842592592593,
+      "median": 6.6324652777777775,
+      "max": 12.74212962962963
+    },
+    "quiet_actual_wait_day": {
+      "n": 105,
+      "min": 0.002199074074074074,
+      "median": 0.1701388888888889,
+      "max": 4.958796296296296
+    },
+    "quiet_finite_uncensored_forecasts": 105,
+    "quiet_valid_forecasts": 105,
+    "quiet_prediction_target_matches": 105,
+    "quiet_abs_relative_prediction_error": {
+      "n": 105,
+      "min": 0.0,
+      "median": 0.0010452961672473868,
+      "max": 0.004971524600877603
+    },
+    "local_valid_forecasts": 0,
+    "off_to_LOW_command_delay_s": {
+      "n": 209,
+      "min": 110.0,
+      "median": 200.0,
+      "max": 200.0
+    },
+    "quiet_kinematic_identity_abs_error_m_s2": {
+      "n": 106,
+      "min": 4.44057287295863e-17,
+      "median": 7.53663595579785e-15,
+      "max": 9.984087838911056e-13
+    },
+    "settling": {
+      "recovery_time_s": 46030.0,
+      "recovery_entry_time_s": 44230.0,
+      "recovery_time_after_disturbance_s": 31630.0,
+      "settling_time_s": null,
+      "settled_by_tmax": false,
+      "verification_horizon_s": null,
+      "epsilon_e_m": 50.0,
+      "epsilon_v_m_s": 0.001,
+      "hold_window_s": 1800.0,
+      "evaluation_start_time_s": 14400.0,
+      "observation_end_time_s": 5184000.0,
+      "maximum_sample_interval_s": 10.0,
+      "interpretation": "finite observed suffix; no guarantee beyond tmax or between samples"
+    },
+    "first_sat12": {
+      "high_command_s": 20430.0,
+      "high_complete_s": 20550.0,
+      "low_command_s": 20700.0,
+      "low_complete_s": 20820.0,
+      "V_res_seeds_m_s": 0.0010366579458660713,
+      "V_res_all_m_s": 0.0010366579458660713,
+      "own_q_P_m_s2": 2.3379817928847796e-08,
+      "own_q_D_m_s2": -4.698246654148999e-08,
+      "own_q_m_s2": -2.36026486126422e-08,
+      "high_equivalent_time_s": 270.0,
+      "q_at_HIGH_complete_m_s2": 1.1168402985875837e-07,
+      "q_at_LOW_command_m_s2": 1.516083189290605e-08,
+      "nonlow_satellite_ids": [
+        10
+      ]
+    },
+    "analysis_directory": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\dwell_residual_20261008\\analysis_final\\dwell_150_60d"
+  },
+  {
+    "dwell_s": 300.0,
+    "days": 60.0,
+    "e_max_m": 107.81940065121782,
+    "rms_m": 31.479991958817834,
+    "final_max_error_m": 101.94545236620687,
+    "transitions": 586,
+    "completed_cycles": 293,
+    "cycles_per_satellite": [
+      14,
+      14,
+      14,
+      14,
+      14,
+      14,
+      14,
+      14,
+      14,
+      14,
+      13,
+      14,
+      14,
+      14,
+      14,
+      14,
+      14,
+      14,
+      14,
+      14,
+      14
+    ],
+    "incomplete_cycles": [],
+    "last_switch_day": 57.336226851851855,
+    "extra_altitude_loss_m": 13.211532253683323,
+    "mean_initial_altitude_loss_m": 5582.88446017643,
+    "high_stable_total_s": 87900.0,
+    "high_equivalent_total_s": 123060.0,
+    "dwell_limited_returns": 293,
+    "threshold_limited_returns": 0,
+    "high_hold_times_s": [
+      300.0
+    ],
+    "local_V_incident_m_s": {
+      "n": 293,
+      "min": 2.939548344321752e-12,
+      "median": 0.0015099832295302552,
+      "max": 0.0016974933777839153
+    },
+    "local_QD_own_abs_m_s2": {
+      "n": 293,
+      "min": 2.7218040225201402e-16,
+      "median": 1.3953487247586374e-07,
+      "max": 2.8369781150862924e-07
+    },
+    "quiet_V_all_m_s": {
+      "n": 115,
+      "min": 9.867417679162039e-05,
+      "median": 0.0015020539081045101,
+      "max": 0.0016974933777839153
+    },
+    "quiet_QD_all_abs_m_s2": {
+      "n": 115,
+      "min": 9.134248688321951e-09,
+      "median": 1.4134950683872918e-07,
+      "max": 2.8799981220378225e-07
+    },
+    "local_next_start_interval_day": {
+      "n": 272,
+      "min": 0.6512731481481482,
+      "median": 3.8021412037037035,
+      "max": 10.344444444444445
+    },
+    "quiet_actual_wait_day": {
+      "n": 114,
+      "min": 0.0045138888888888885,
+      "median": 0.03657407407407408,
+      "max": 8.3125
+    },
+    "quiet_finite_uncensored_forecasts": 114,
+    "quiet_valid_forecasts": 114,
+    "quiet_prediction_target_matches": 114,
+    "quiet_abs_relative_prediction_error": {
+      "n": 114,
+      "min": 0.0,
+      "median": 0.0,
+      "max": 0.007365636313004734
+    },
+    "local_valid_forecasts": 0,
+    "off_to_LOW_command_delay_s": {
+      "n": 293,
+      "min": 240.0,
+      "median": 340.0,
+      "max": 350.0
+    },
+    "quiet_kinematic_identity_abs_error_m_s2": {
+      "n": 115,
+      "min": 1.755626578210206e-17,
+      "median": 8.531627020165588e-15,
+      "max": 1.4842008329245277e-12
+    },
+    "settling": {
+      "recovery_time_s": 63460.0,
+      "recovery_entry_time_s": 61660.0,
+      "recovery_time_after_disturbance_s": 49060.0,
+      "settling_time_s": null,
+      "settled_by_tmax": false,
+      "verification_horizon_s": null,
+      "epsilon_e_m": 50.0,
+      "epsilon_v_m_s": 0.001,
+      "hold_window_s": 1800.0,
+      "evaluation_start_time_s": 14400.0,
+      "observation_end_time_s": 5184000.0,
+      "maximum_sample_interval_s": 10.0,
+      "interpretation": "finite observed suffix; no guarantee beyond tmax or between samples"
+    },
+    "first_sat12": {
+      "high_command_s": 20430.0,
+      "high_complete_s": 20550.0,
+      "low_command_s": 20850.0,
+      "low_complete_s": 20970.0,
+      "V_res_seeds_m_s": 0.0015586439763545846,
+      "V_res_all_m_s": 0.0015586439763545846,
+      "own_q_P_m_s2": 2.2914610869229993e-08,
+      "own_q_D_m_s2": -1.4364615731579022e-07,
+      "own_q_m_s2": -1.2073154644656024e-07,
+      "high_equivalent_time_s": 420.0,
+      "q_at_HIGH_complete_m_s2": 1.1168402985875837e-07,
+      "q_at_LOW_command_m_s2": -8.16990367831743e-08,
+      "nonlow_satellite_ids": [
+        10
+      ]
+    },
+    "analysis_directory": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\dwell_residual_20261008\\analysis_final\\dwell_300_60d"
+  },
+  {
+    "dwell_s": 600.0,
+    "days": 60.0,
+    "e_max_m": 151.9475083842406,
+    "rms_m": 56.406041351733094,
+    "final_max_error_m": 141.85021923931507,
+    "transitions": 2750,
+    "completed_cycles": 1375,
+    "cycles_per_satellite": [
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      65,
+      66,
+      66,
+      66,
+      66,
+      66,
+      66,
+      66,
+      66,
+      66,
+      66
+    ],
+    "incomplete_cycles": [],
+    "last_switch_day": 59.53611111111111,
+    "extra_altitude_loss_m": 106.3694406611224,
+    "mean_initial_altitude_loss_m": 5676.042368583869,
+    "high_stable_total_s": 825000.0,
+    "high_equivalent_total_s": 990000.0,
+    "dwell_limited_returns": 1375,
+    "threshold_limited_returns": 0,
+    "high_hold_times_s": [
+      600.0
+    ],
+    "local_V_incident_m_s": {
+      "n": 1375,
+      "min": 0.0,
+      "median": 0.001612813633725912,
+      "max": 0.003645565708696741
+    },
+    "local_QD_own_abs_m_s2": {
+      "n": 1375,
+      "min": 0.0,
+      "median": 1.4939221453734635e-07,
+      "max": 3.9652078553607217e-07
+    },
+    "quiet_V_all_m_s": {
+      "n": 165,
+      "min": 0.0010386362707204449,
+      "median": 0.0015070640184511536,
+      "max": 0.0028074179126362626
+    },
+    "quiet_QD_all_abs_m_s2": {
+      "n": 165,
+      "min": 1.287246588072941e-07,
+      "median": 2.0735664969927048e-07,
+      "max": 3.634341259346315e-07
+    },
+    "local_next_start_interval_day": {
+      "n": 1354,
+      "min": 0.016666666666666666,
+      "median": 0.9336226851851852,
+      "max": 2.232291666666667
+    },
+    "quiet_actual_wait_day": {
+      "n": 164,
+      "min": 0.0011574074074074073,
+      "median": 0.257349537037037,
+      "max": 1.0590277777777777
+    },
+    "quiet_finite_uncensored_forecasts": 164,
+    "quiet_valid_forecasts": 164,
+    "quiet_prediction_target_matches": 164,
+    "quiet_abs_relative_prediction_error": {
+      "n": 164,
+      "min": 0.0,
+      "median": 0.0011152940035027664,
+      "max": 0.0037313432835820895
+    },
+    "local_valid_forecasts": 0,
+    "off_to_LOW_command_delay_s": {
+      "n": 1375,
+      "min": 0.0,
+      "median": 560.0,
+      "max": 650.0
+    },
+    "quiet_kinematic_identity_abs_error_m_s2": {
+      "n": 165,
+      "min": 2.247694414671527e-17,
+      "median": 3.464287901911993e-14,
+      "max": 1.514382360134883e-12
+    },
+    "settling": {
+      "recovery_time_s": null,
+      "recovery_entry_time_s": null,
+      "recovery_time_after_disturbance_s": null,
+      "settling_time_s": null,
+      "settled_by_tmax": false,
+      "verification_horizon_s": null,
+      "epsilon_e_m": 50.0,
+      "epsilon_v_m_s": 0.001,
+      "hold_window_s": 1800.0,
+      "evaluation_start_time_s": 14400.0,
+      "observation_end_time_s": 5184000.0,
+      "maximum_sample_interval_s": 10.0,
+      "interpretation": "finite observed suffix; no guarantee beyond tmax or between samples"
+    },
+    "first_sat12": {
+      "high_command_s": 20430.0,
+      "high_complete_s": 20550.0,
+      "low_command_s": 21150.0,
+      "low_complete_s": 21270.0,
+      "V_res_seeds_m_s": 0.0016282669951680738,
+      "V_res_all_m_s": 0.0018035291918947994,
+      "own_q_P_m_s2": 2.1272332535582546e-08,
+      "own_q_D_m_s2": -2.467575911518093e-07,
+      "own_q_m_s2": -2.2548525861622679e-07,
+      "high_equivalent_time_s": 720.0,
+      "q_at_HIGH_complete_m_s2": 1.1168402985875837e-07,
+      "q_at_LOW_command_m_s2": -2.247771238176866e-07,
+      "nonlow_satellite_ids": [
+        9,
+        10,
+        13
+      ]
+    },
+    "analysis_directory": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\dwell_residual_20261008\\analysis_final\\dwell_600_60d"
+  }
+]

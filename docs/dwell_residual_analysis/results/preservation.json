@@ -1,0 +1,94 @@
+{
+  "preserved_old_files": 574,
+  "changed_or_missing_old_files": [],
+  "input_manifest_sha256": "9bf2574901d58b3081ad2da80d8898b92dd8fae00d2e1ffe750dadcce3a905fb",
+  "configuration_checks": {
+    "dwell_150_30d": true,
+    "dwell_150_60d": true,
+    "dwell_600_30d": true,
+    "dwell_600_60d": true
+  },
+  "prefix_checks": [
+    {
+      "source": "outputs\\long_horizon_q_20261008\\regression_24h\\suite\\controlled_disturbed",
+      "destination": "outputs\\dwell_residual_20261008\\runs\\dwell_150_30d",
+      "through_s": 20420.0,
+      "arrays": {
+        "time_s": true,
+        "a_m": true,
+        "lambda_rad": true,
+        "altitude_m": true,
+        "area_m2": true,
+        "mode": true,
+        "density_kg_m3": true,
+        "q_m_s2": true,
+        "gap_error_m": true,
+        "gap_rate_m_s": true,
+        "gap_distance_m": true
+      },
+      "events_unchanged": true,
+      "passed": true
+    },
+    {
+      "source": "outputs\\dwell_residual_20261008\\runs\\dwell_150_30d",
+      "destination": "outputs\\dwell_residual_20261008\\runs\\dwell_150_60d",
+      "through_s": 2592000.0,
+      "arrays": {
+        "time_s": true,
+        "a_m": true,
+        "lambda_rad": true,
+        "altitude_m": true,
+        "area_m2": true,
+        "mode": true,
+        "density_kg_m3": true,
+        "q_m_s2": true,
+        "gap_error_m": true,
+        "gap_rate_m_s": true,
+        "gap_distance_m": true
+      },
+      "events_unchanged": true,
+      "passed": true
+    },
+    {
+      "source": "outputs\\long_horizon_q_20261008\\regression_24h\\suite\\controlled_disturbed",
+      "destination": "outputs\\dwell_residual_20261008\\runs\\dwell_600_30d",
+      "through_s": 20420.0,
+      "arrays": {
+        "time_s": true,
+        "a_m": true,
+        "lambda_rad": true,
+        "altitude_m": true,
+        "area_m2": true,
+        "mode": true,
+        "density_kg_m3": true,
+        "q_m_s2": true,
+        "gap_error_m": true,
+        "gap_rate_m_s": true,
+        "gap_distance_m": true
+      },
+      "events_unchanged": true,
+      "passed": true
+    },
+    {
+      "source": "outputs\\dwell_residual_20261008\\runs\\dwell_600_30d",
+      "destination": "outputs\\dwell_residual_20261008\\runs\\dwell_600_60d",
+      "through_s": 2592000.0,
+      "arrays": {
+        "time_s": true,
+        "a_m": true,
+        "lambda_rad": true,
+        "altitude_m": true,
+        "area_m2": true,
+        "mode": true,
+        "density_kg_m3": true,
+        "q_m_s2": true,
+        "gap_error_m": true,
+        "gap_rate_m_s": true,
+        "gap_distance_m": true
+      },
+      "events_unchanged": true,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

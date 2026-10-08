@@ -1,0 +1,10 @@
+{
+  "source_directory": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\long_horizon_q_20261008\\regression_24h\\suite\\controlled_disturbed",
+  "reused_through_s": 20420.0,
+  "configuration_changes": [
+    "controller.dwell_time_s",
+    "simulation.duration_s"
+  ],
+  "justification": "No commands, all initial LOW, next_allowed_time=0; dwell has not acted on the shared prefix",
+  "elapsed_s": 768.0922812999925
+}
