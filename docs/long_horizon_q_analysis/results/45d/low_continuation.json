@@ -1,0 +1,6 @@
+{
+  "source_directory": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\long_horizon_q_20261008\\runs\\low_30d",
+  "resume_time_s": 2592000.0,
+  "configuration_change": "simulation.duration_s only",
+  "elapsed_s": 664.1084906999895
+}

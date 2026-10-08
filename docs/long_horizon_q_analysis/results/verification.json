@@ -1,0 +1,11 @@
+{
+  "tests": 104,
+  "failures": 0,
+  "physical_core_changed": false,
+  "baseline_reference_purpose": "software regression only",
+  "baseline_reference_commit": "a81426a",
+  "input_parent_commit": "ee25e3c849646ade023e92bb363de4a553e946e1",
+  "new_simulation_days_per_case": 46,
+  "unmodified_old_files": 442,
+  "matched_continuation_prefixes": 8
+}

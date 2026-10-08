@@ -1,0 +1,2 @@
+﻿from_wave,to_wave,error_l2_difference_m,rate_l2_difference_m_s,relative_a_l2_difference_m,tolerance_scaled_state_difference
+1,2,26.77603592602147,1.823826795287419e-06,0.001217331319879012,0.5355238242214965

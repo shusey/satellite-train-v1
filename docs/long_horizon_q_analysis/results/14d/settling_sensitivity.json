@@ -1,0 +1,64 @@
+{
+  "settings_results": [
+    {
+      "recovery_time_s": null,
+      "recovery_entry_time_s": null,
+      "recovery_time_after_disturbance_s": null,
+      "settling_time_s": null,
+      "settled_by_tmax": false,
+      "verification_horizon_s": null,
+      "epsilon_e_m": 1.0,
+      "epsilon_v_m_s": 0.001,
+      "hold_window_s": 1800.0,
+      "evaluation_start_time_s": 14400.0,
+      "observation_end_time_s": 1209600.0,
+      "maximum_sample_interval_s": 10.0,
+      "interpretation": "finite observed suffix; no guarantee beyond tmax or between samples"
+    },
+    {
+      "recovery_time_s": null,
+      "recovery_entry_time_s": null,
+      "recovery_time_after_disturbance_s": null,
+      "settling_time_s": null,
+      "settled_by_tmax": false,
+      "verification_horizon_s": null,
+      "epsilon_e_m": 5.0,
+      "epsilon_v_m_s": 0.001,
+      "hold_window_s": 1800.0,
+      "evaluation_start_time_s": 14400.0,
+      "observation_end_time_s": 1209600.0,
+      "maximum_sample_interval_s": 10.0,
+      "interpretation": "finite observed suffix; no guarantee beyond tmax or between samples"
+    },
+    {
+      "recovery_time_s": null,
+      "recovery_entry_time_s": null,
+      "recovery_time_after_disturbance_s": null,
+      "settling_time_s": null,
+      "settled_by_tmax": false,
+      "verification_horizon_s": null,
+      "epsilon_e_m": 10.0,
+      "epsilon_v_m_s": 0.001,
+      "hold_window_s": 1800.0,
+      "evaluation_start_time_s": 14400.0,
+      "observation_end_time_s": 1209600.0,
+      "maximum_sample_interval_s": 10.0,
+      "interpretation": "finite observed suffix; no guarantee beyond tmax or between samples"
+    },
+    {
+      "recovery_time_s": 63460.0,
+      "recovery_entry_time_s": 61660.0,
+      "recovery_time_after_disturbance_s": 49060.0,
+      "settling_time_s": 785900.0,
+      "settled_by_tmax": true,
+      "verification_horizon_s": 423700.0,
+      "epsilon_e_m": 50.0,
+      "epsilon_v_m_s": 0.001,
+      "hold_window_s": 1800.0,
+      "evaluation_start_time_s": 14400.0,
+      "observation_end_time_s": 1209600.0,
+      "maximum_sample_interval_s": 10.0,
+      "interpretation": "finite observed suffix; no guarantee beyond tmax or between samples"
+    }
+  ]
+}

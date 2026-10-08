@@ -116,3 +116,17 @@ python scripts/run_observation_case.py --hours 168 --output outputs/observation_
 ```
 
 新しいスクリプトは既存の出力先への書込みを拒否します。保存データだけで判定閾値・時間窓・観測終了時刻を変えて比較できます。
+
+## 長時間再切替・qのP/D解析
+
+[長時間結果と次段階への判断](docs/long_horizon_q_analysis/report.md)、
+[波・q・高度損失の定義](docs/long_horizon_q_analysis/definitions.md)、
+[保存runの継続と再現手順](docs/long_horizon_q_analysis/reproduction.md)を参照してください。
+物理・制御・積分coreを変更せず、既存14日の保存状態から段階的に継続します。
+波の時間的群分けと、衛星ごとのL-H-L cycleを区別します。
+
+```powershell
+python scripts/continue_observation_case.py --source outputs/evaluation_20261007/runs/central_14d --output outputs/long_horizon_new/central_21d --days 21
+python scripts/continue_observation_case.py --source outputs/evaluation_20261007/runs/low_14d --output outputs/long_horizon_new/low_21d --days 21
+python scripts/analyze_long_horizon.py --run outputs/long_horizon_new/central_21d --all-low outputs/long_horizon_new/low_21d --output outputs/long_horizon_analysis_new/21d
+```
