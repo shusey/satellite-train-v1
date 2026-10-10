@@ -9,7 +9,7 @@ from numpy.typing import ArrayLike, NDArray
 
 from .atmosphere import background_density
 from .config import SimulationConfig
-from .disturbance import relative_density_increment, rotating_coordinate_m
+from .disturbance import earth_track_increment, relative_density_increment, rotating_coordinate_m
 
 
 def mean_motion_rad_s(mu_m3_s2: float, radius_m: ArrayLike) -> NDArray[np.float64]:
@@ -70,6 +70,18 @@ def density_at_state(
         config.atmosphere.reference_density_kg_m3,
         config.atmosphere.effective_scale_height_m,
     )
+    disturbance = config.disturbance
+    if disturbance.type == "earth_track_gaussian":
+        increment = earth_track_increment(
+            lambda_rad, time_s,
+            reference_radius_m=config.derived.reference_radius_m,
+            center_at_epoch_m=disturbance.center_s_m,
+            propagation_speed_m_s=disturbance.propagation_speed_m_s,
+            sigma_m=config.derived.disturbance_sigma_m,
+            amplitude_fraction=disturbance.amplitude_fraction,
+            enabled=disturbance_enabled and disturbance.enabled,
+        )
+        return background * (1.0 + increment)
     along_track = rotating_coordinate_m(
         lambda_rad,
         time_s,

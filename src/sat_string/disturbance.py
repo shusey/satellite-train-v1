@@ -13,6 +13,25 @@ def fwhm_to_sigma(fwhm_m: float) -> float:
     return fwhm_m / (2.0 * sqrt(2.0 * log(2.0)))
 
 
+def earth_track_increment(
+    lambda_rad: ArrayLike, time_s: float | ArrayLike, *,
+    reference_radius_m: float, center_at_epoch_m: float,
+    propagation_speed_m_s: float, sigma_m: float,
+    amplitude_fraction: float, enabled: bool = True,
+) -> NDArray[np.float64]:
+    """Steady Gaussian on a nonperiodic, unwrapped 1-D Earth-like track.
+
+    x = a_ref * lambda; center = center_at_epoch + speed * t.
+    No rotating-frame subtraction, train-following center, or time envelope.
+    This is a single-pass approximation, not a geographic rotating-Earth model.
+    """
+    position = reference_radius_m * np.asarray(lambda_rad, dtype=float)
+    if not enabled:
+        return np.zeros_like(position)
+    center = center_at_epoch_m + propagation_speed_m_s * np.asarray(time_s)
+    return amplitude_fraction * np.exp(-0.5 * ((position - center) / sigma_m) ** 2)
+
+
 def rotating_coordinate_m(
     lambda_rad: ArrayLike,
     time_s: float | ArrayLike,

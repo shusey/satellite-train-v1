@@ -59,6 +59,11 @@ class AtmosphereConfig:
 
 @dataclass(frozen=True)
 class DisturbanceConfig:
+    """single_pulse uses rotating coordinates and a finite time envelope.
+
+    earth_track_gaussian uses an epoch center and Earth-track speed; legacy
+    start_time_s and duration_s fields do not gate that steady structure.
+    """
     enabled: bool
     type: str
     start_time_s: float
@@ -255,8 +260,10 @@ def _validate(config: SimulationConfig, raw: Mapping[str, Any]) -> None:
         raise ValueError("disturbance.amplitude_fraction must be greater than -1")
     if c.disturbance.fwhm_m <= 0.0:
         raise ValueError("disturbance.fwhm_m must be positive")
-    if c.disturbance.type != "single_pulse":
-        raise ValueError("v1 supports only disturbance.type=single_pulse")
+    if c.disturbance.type not in {"single_pulse", "earth_track_gaussian"}:
+        raise ValueError("Unsupported disturbance.type")
+    if c.disturbance.type == "earth_track_gaussian" and c.disturbance.center_mode != "manual":
+        raise ValueError("earth_track_gaussian requires manual center at epoch")
     if c.disturbance.center_mode not in {"center_of_train", "manual"}:
         raise ValueError("disturbance.center_mode must be center_of_train or manual")
     if c.simulation.integrator.lower() != "rk4":
@@ -265,7 +272,8 @@ def _validate(config: SimulationConfig, raw: Mapping[str, Any]) -> None:
         raise ValueError("simulation.output_step_s must be at least integration_step_s")
     if c.visualization.animation_frame_step_s < c.simulation.output_step_s:
         raise ValueError("animation frame step must be at least the output step")
-    if c.simulation.duration_s <= c.disturbance.start_time_s + c.disturbance.duration_s:
+    if (c.disturbance.type == "single_pulse"
+            and c.simulation.duration_s <= c.disturbance.start_time_s + c.disturbance.duration_s):
         raise ValueError("simulation must end after the disturbance ends")
     if c.visualization.animation_fps <= 0:
         raise ValueError("visualization.animation_fps must be positive")
