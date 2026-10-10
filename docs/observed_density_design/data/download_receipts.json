@@ -1,0 +1,66 @@
+[
+  {
+    "url": "https://download.pangaea.de/dataset/931347/files/champ_TND-IGG_RL01.zip",
+    "archive_content_range": "bytes 863500035-863565570/863565571",
+    "selected": [
+      {
+        "name": "champ_TND-IGG_RL01_2003-10.nc",
+        "path": "outputs\\observed_density_20261010\\raw\\champ_TND-IGG_RL01_2003-10.nc",
+        "bytes": 16622588,
+        "status": "downloaded",
+        "sha256": "cc11120e7050639e0a8e7ad98492faa667c80bdb93d0533ae1d3a90556b1546d"
+      },
+      {
+        "name": "champ_TND-IGG_RL01_2003-11.nc",
+        "path": "outputs\\observed_density_20261010\\raw\\champ_TND-IGG_RL01_2003-11.nc",
+        "bytes": 16086908,
+        "status": "downloaded",
+        "sha256": "9b0450e95a76981602fdd7c09e2abe98df454da7e0e0f572aaf78301cddf20fd"
+      }
+    ]
+  },
+  {
+    "url": "https://download.pangaea.de/dataset/931347/files/grace_TND-IGG_RL01.zip",
+    "archive_content_range": "bytes 1469883396-1469948931/1469948932",
+    "selected": [
+      {
+        "name": "grace_TND-IGG_RL01_2003-10.nc",
+        "path": "outputs\\observed_density_20261010\\raw\\grace_TND-IGG_RL01_2003-10.nc",
+        "bytes": 16622588,
+        "status": "downloaded",
+        "sha256": "2e0eff14b65cb46827a926ea2d93a4bb1a4d834c486a2e33faf77d30deed3406"
+      },
+      {
+        "name": "grace_TND-IGG_RL01_2003-11.nc",
+        "path": "outputs\\observed_density_20261010\\raw\\grace_TND-IGG_RL01_2003-11.nc",
+        "bytes": 16086908,
+        "status": "downloaded",
+        "sha256": "5a9311c5f9278d0791dbb549c53b327ee5af70cc5e6b404f6b45a0f6cc4c94a9"
+      }
+    ]
+  },
+  {
+    "filename": "Density_graceB_3deg_2003_v2.3.ascii.tar.gz",
+    "url": "https://zenodo.org/api/records/13287614/files/Density_graceB_3deg_2003_v2.3.ascii.tar.gz/content",
+    "status": "downloaded",
+    "bytes": 42949543,
+    "sha256": "0ea7e6024caaa1c994abef71c7695c40272183cc14449c0d3746dfe8615de51d",
+    "content_type": "application/octet-stream"
+  },
+  {
+    "filename": "Density_graceA_3deg_2003_v2.3.ascii.tar.gz",
+    "url": "https://zenodo.org/api/records/13287614/files/Density_graceA_3deg_2003_v2.3.ascii.tar.gz/content",
+    "status": "downloaded",
+    "bytes": 43449778,
+    "sha256": "f81e34d6888e7c4f312e2fd31ffbfa5808206730a0cb541a5dad6336bd63da17",
+    "content_type": "application/octet-stream"
+  },
+  {
+    "filename": "omni2_2003.dat",
+    "url": "https://spdf.gsfc.nasa.gov/pub/data/omni/low_res_omni/omni2_2003.dat",
+    "status": "downloaded",
+    "bytes": 2873280,
+    "sha256": "cb1fcee0f95af4c318b239617bbb46f6e41c811bdca8464cf397eb7fd2fb7fc9",
+    "content_type": null
+  }
+]

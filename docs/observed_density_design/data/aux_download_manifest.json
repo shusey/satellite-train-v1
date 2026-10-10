@@ -1,0 +1,17 @@
+[
+  {
+    "filename": "Density_graceB_3deg_2003_v2.3.ascii.tar.gz",
+    "url": "https://zenodo.org/api/records/13287614/files/Density_graceB_3deg_2003_v2.3.ascii.tar.gz/content",
+    "sha256": "0ea7e6024caaa1c994abef71c7695c40272183cc14449c0d3746dfe8615de51d"
+  },
+  {
+    "filename": "Density_graceA_3deg_2003_v2.3.ascii.tar.gz",
+    "url": "https://zenodo.org/api/records/13287614/files/Density_graceA_3deg_2003_v2.3.ascii.tar.gz/content",
+    "sha256": "f81e34d6888e7c4f312e2fd31ffbfa5808206730a0cb541a5dad6336bd63da17"
+  },
+  {
+    "filename": "omni2_2003.dat",
+    "url": "https://spdf.gsfc.nasa.gov/pub/data/omni/low_res_omni/omni2_2003.dat",
+    "sha256": "cb1fcee0f95af4c318b239617bbb46f6e41c811bdca8464cf397eb7fd2fb7fc9"
+  }
+]

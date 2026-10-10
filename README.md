@@ -178,3 +178,11 @@ python scripts/run_nrlmsis_case.py --weather docs/nrlmsis2_necessity/data/driver
 
 lambdaを地理経度として直接使わず、固定軌道面・地球自転・WGS84の測地座標へ変換する。
 密度補間の検証と非作動区間の再利用方法は付録に記載する。NRLMSISは実測密度そのものではない。
+
+## CHAMP・GRACE観測に基づく設計外乱の検討
+
+[研究判断用サマリー](docs/observed_density_design/report.md)、
+[データ仕様・定量結果・留保を含む詳細技術付録](docs/observed_density_design/technical_appendix.md)、
+[選択データ取得と再現手順](docs/observed_density_design/reproduction.md)を参照。
+NRLMSIS 2.0比の観測偏差、400 km規格化、100 kmの短時間差推定、GRACE A/B比較を解析する。
+既存simulation coreと人工外乱は維持。候補の寿命・相対移動が未確定なので、標準外乱は置き換えていない。

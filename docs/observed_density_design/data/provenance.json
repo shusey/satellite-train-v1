@@ -1,0 +1,68 @@
+{
+  "config": {
+    "dataset": "TND-IGG_RL01",
+    "primary_doi": "10.1594/PANGAEA.931347",
+    "background": "NRLMSIS_2.0",
+    "pymsis_version": "0.12.0",
+    "normalization_altitude_km": 400,
+    "selection_fixed_before_density_analysis": true,
+    "windows": [
+      {
+        "name": "prestorm_october",
+        "start_utc": "2003-10-25T00:00:00",
+        "end_utc": "2003-10-28T00:00:00",
+        "reason": "Three complete days before the documented Halloween storm; a context sample, not assumed quiet or a climatological nominal."
+      },
+      {
+        "name": "halloween",
+        "start_utc": "2003-10-29T00:00:00",
+        "end_utc": "2003-11-01T00:00:00",
+        "reason": "Well studied October 2003 storm with CHAMP near 400 km, documented by Sutton et al. 2005."
+      },
+      {
+        "name": "november",
+        "start_utc": "2003-11-20T00:00:00",
+        "end_utc": "2003-11-23T00:00:00",
+        "reason": "Well studied 20-21 November 2003 storm jointly observed by CHAMP and GRACE, documented by Bruinsma et al. 2006."
+      }
+    ],
+    "scales_km": [
+      50,
+      100,
+      200,
+      500,
+      1000
+    ],
+    "quality_policy": "Reject any nonzero product quality flag, nonpositive/nonfinite density, missing position, or discontinuity; never interpolate across rejected samples.",
+    "local_event_method": {
+      "background_window_km": 2400,
+      "sensitivity_windows_km": [
+        1600,
+        3200
+      ],
+      "minimum_prominence_delta": 0.1,
+      "minimum_peak_distance_km": 300,
+      "fit_window_halfwidth_km": 1500,
+      "acceptable_r_squared": 0.8,
+      "minimum_resolved_fwhm_samples": 4,
+      "interpretation": "Track-based apparent structures, not simultaneous spatial maps or atmospheric lifetime."
+    }
+  },
+  "pymsis": "0.12.0",
+  "scipy": "1.17.1",
+  "netCDF4": "1.7.4",
+  "background_version": "2.0",
+  "mass_density_unit": "kg/m3",
+  "gps_minus_utc_s": 13,
+  "normalization": "obs/bg_obs * bg_400",
+  "source_files": {
+    "champ_TND-IGG_RL01_2003-10.nc": "cc11120e7050639e0a8e7ad98492faa667c80bdb93d0533ae1d3a90556b1546d",
+    "champ_TND-IGG_RL01_2003-11.nc": "9b0450e95a76981602fdd7c09e2abe98df454da7e0e0f572aaf78301cddf20fd",
+    "grace_TND-IGG_RL01_2003-10.nc": "2e0eff14b65cb46827a926ea2d93a4bb1a4d834c486a2e33faf77d30deed3406",
+    "grace_TND-IGG_RL01_2003-11.nc": "5a9311c5f9278d0791dbb549c53b327ee5af70cc5e6b404f6b45a0f6cc4c94a9"
+  },
+  "weather_raw_sha256": "2c0fb9064a4c182056bec9fb47052af72eb2de75c7cc87c871d9e7f9d4d9c781",
+  "no_missing_value_filling": true,
+  "cadence_is_not_effective_resolution": true,
+  "NRLMSIS_driver_boundary_pairs_excluded": true
+}

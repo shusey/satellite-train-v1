@@ -1,0 +1,10 @@
+{
+  "total_fit_candidates": 1306,
+  "accepted": 507,
+  "champ_accepted": 151,
+  "champ_positive_candidates": 108,
+  "candidate_selection": "context median fitted D100; documented narrow Halloween pulse; maximum fitted D100 across selected windows",
+  "artificial_gaussian_d100": 0.47302684549069046,
+  "cached_input_directory": "outputs\\observed_density_20261010\\analysis_v2",
+  "satellite_simulations_executed": 0
+}

@@ -1,0 +1,15 @@
+{
+  "branch": "astra/observed-density-design",
+  "expected_tests": 223,
+  "tests_passed": 223,
+  "new_tests": 15,
+  "existing_tests": 208,
+  "regression_passed": true,
+  "prior_files_verified": 1879,
+  "changed_or_missing": 0,
+  "core_modified": false,
+  "sources_modified": false,
+  "satellite_simulations": 0,
+  "figures_visually_checked": 4,
+  "commit_subject": "Analyze observed density disturbances and design limitations"
+}

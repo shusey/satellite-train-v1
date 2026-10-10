@@ -1,0 +1,9 @@
+{
+  "product": "Sutton v2.3 3-degree geographic bins",
+  "background": "NRLMSIS 2.0",
+  "gps_minus_utc_s": 13,
+  "max_interpolation_gap_s": 100,
+  "max_matching_error_km": 50,
+  "same_location_method": "local tangent projection; approximate geographic match, no complete separation of space/time",
+  "resolution_warning": "300-350 km averaging; not direct evidence for 100-km structures"
+}
