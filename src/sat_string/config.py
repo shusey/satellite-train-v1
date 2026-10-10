@@ -54,6 +54,7 @@ class ControllerConfig:
 class AtmosphereConfig:
     reference_density_kg_m3: float
     effective_scale_height_m: float
+    density_model: str = "exponential"
 
 
 @dataclass(frozen=True)
@@ -123,6 +124,8 @@ class SimulationConfig:
             normalized["controller"].pop("kd_s_inv")
         if self.controller.kp_s2_inv is None:
             normalized["controller"].pop("kp_s2_inv")
+        if self.atmosphere.density_model == "exponential":
+            normalized["atmosphere"].pop("density_model")
         return normalized
 
 
@@ -246,6 +249,8 @@ def _validate(config: SimulationConfig, raw: Mapping[str, Any]) -> None:
         raise ValueError("reference altitude and target spacing must be positive")
     if c.atmosphere.reference_density_kg_m3 <= 0.0 or c.atmosphere.effective_scale_height_m <= 0.0:
         raise ValueError("atmosphere density and scale height must be positive")
+    if c.atmosphere.density_model not in {"exponential", "nrlmsis2"}:
+        raise ValueError("density_model must be exponential or nrlmsis2")
     if c.disturbance.amplitude_fraction <= -1.0:
         raise ValueError("disturbance.amplitude_fraction must be greater than -1")
     if c.disturbance.fwhm_m <= 0.0:

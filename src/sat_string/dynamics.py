@@ -48,8 +48,20 @@ def density_at_state(
     config: SimulationConfig,
     *,
     disturbance_enabled: bool,
+    density_provider=None,
 ) -> NDArray[np.float64]:
     """Evaluate altitude and pulse-dependent density for an arbitrary RK stage."""
+    if config.atmosphere.density_model == "nrlmsis2":
+        if density_provider is None:
+            raise ValueError("nrlmsis2 requires an explicit geographic/weather density provider")
+        if disturbance_enabled and config.disturbance.enabled:
+            raise ValueError("Do not silently combine NRLMSIS with the artificial pulse")
+        density = np.asarray(density_provider(time_s, radius_m, lambda_rad), dtype=float)
+        if density.shape != np.asarray(radius_m).shape or not np.all(np.isfinite(density)) or np.any(density <= 0):
+            raise FloatingPointError("Invalid NRLMSIS mass density")
+        return density
+    if density_provider is not None:
+        raise ValueError("A density provider requires density_model=nrlmsis2")
     radius = np.asarray(radius_m, dtype=float)
     altitude = radius - config.constants.earth_radius_m
     background = background_density(
@@ -86,6 +98,7 @@ def state_derivative(
     area_provider: Callable[[float], ArrayLike],
     *,
     disturbance_enabled: bool,
+    density_provider=None,
 ) -> NDArray[np.float64]:
     """Evaluate [da/dt, dlambda/dt] with density and area at an RK stage."""
     state_array = np.asarray(state, dtype=float)
@@ -105,6 +118,7 @@ def state_derivative(
         longitude,
         config,
         disturbance_enabled=disturbance_enabled,
+        density_provider=density_provider,
     )
     area = np.asarray(area_provider(time_s), dtype=float)
     radius_rate, longitude_rate = orbital_rates(

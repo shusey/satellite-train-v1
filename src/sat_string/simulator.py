@@ -91,6 +91,7 @@ def simulate_case(
     *,
     progress_callback: Callable[[float, float], None] | None = None,
     log_callback: Callable[[str], None] | None = None,
+    density_provider=None,
 ) -> SimulationResult:
     """Run one independent case using the required hybrid event ordering."""
     count = config.formation.satellite_count
@@ -183,6 +184,7 @@ def simulate_case(
                 state[1],
                 config,
                 disturbance_enabled=case.disturbance_enabled,
+                density_provider=density_provider,
             )
             stored["time_s"].append(float(time_s))
             stored["a_m"].append(state[0].copy())
@@ -226,6 +228,7 @@ def simulate_case(
                 config,
                 attitude.areas,
                 disturbance_enabled=case.disturbance_enabled,
+                density_provider=density_provider,
             )
 
         state = rk4_step(rhs, time_s, state, step_end - time_s)

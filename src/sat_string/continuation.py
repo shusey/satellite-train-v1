@@ -43,7 +43,7 @@ def restore_attitude(config, events, end_s):
     return attitude
 
 
-def continue_case(arrays, source_config, config, case, events, *, progress_callback=None):
+def continue_case(arrays, source_config, config, case, events, *, progress_callback=None, density_provider=None):
     """Return joined zero-origin history; source arrays are never modified."""
     source, destination = source_config.to_dict(), config.to_dict()
     for data in (source, destination):
@@ -82,7 +82,7 @@ def continue_case(arrays, source_config, config, case, events, *, progress_callb
         if end <= time + 1e-9:
             raise RuntimeError("Continuation scheduler did not advance")
         state = rk4_step(lambda t, x: state_derivative(t, x, config, attitude.areas,
-                         disturbance_enabled=case.disturbance_enabled), time, state, end-time)
+                         disturbance_enabled=case.disturbance_enabled, density_provider=density_provider), time, state, end-time)
         time = end
         if np.any(state[0] <= config.constants.earth_radius_m) or not np.all(np.isfinite(state)):
             raise FloatingPointError("Invalid continued orbital state")
@@ -98,7 +98,7 @@ def continue_case(arrays, source_config, config, case, events, *, progress_callb
             snapshot = dict(time_s=float(time), a_m=state[0].copy(), lambda_rad=state[1].copy(),
                             altitude_m=state[0]-config.constants.earth_radius_m, area_m2=attitude.areas(time),
                             mode=attitude.mode.copy(), density_kg_m3=density_at_state(time,state[0],state[1],config,
-                            disturbance_enabled=case.disturbance_enabled), q_m_s2=q.copy(),
+                            disturbance_enabled=case.disturbance_enabled, density_provider=density_provider), q_m_s2=q.copy(),
                             gap_error_m=error.copy(), gap_rate_m_s=rate.copy(), gap_distance_m=distance.copy())
             for key, value in snapshot.items():
                 stored[key].append(value)
