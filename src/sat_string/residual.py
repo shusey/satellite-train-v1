@@ -120,7 +120,7 @@ def end_state(arrays,time_s,participants,seeds,config):
     return summary,state
 
 
-def _compare(arrays,events,summary,state,j,prediction,actual_s,config,relative_D_tolerance):
+def _compare(arrays,events,summary,state,j,prediction,actual_s,config,relative_D_tolerance,event_times=None):
     t=arrays["time_s"];t0=summary["state_sample_time_s"];end=float(actual_s if actual_s is not None else t[-1])
     k0=summary["source_sample_index"];k1=int(np.searchsorted(t,end+1e-9))
     td=t[k0:k1]
@@ -130,8 +130,14 @@ def _compare(arrays,events,summary,state,j,prediction,actual_s,config,relative_D
     d0=state["q_D_m_s2"][j]
     variation=float(np.max(np.abs(ds-d0))/abs(d0)) if d0!=0 else None
     crossed=np.flatnonzero(arrays["q_m_s2"][k0:k1,j]>=config.controller.threshold_on_m_s2)
-    intervening=[z for z in events if t0+1e-9<z["command_time"]<end-1e-9]
-    pending=[z for z in events if z["command_time"]<=t0+1e-9<z["complete_time"]]
+    if event_times is None:
+        intervening=sum(t0+1e-9<z["command_time"]<end-1e-9 for z in events)
+        pending=sum(z["command_time"]<=t0+1e-9<z["complete_time"] for z in events)
+    else:
+        commands,completions=event_times
+        left=int(np.searchsorted(commands,t0+1e-9,side="right"))
+        intervening=max(0,int(np.searchsorted(commands,end-1e-9,side="left"))-left)
+        pending=left-int(np.searchsorted(completions,t0+1e-9,side="right"))
     reasons=[]
     if not summary["all_low_at_sample"]:reasons.append("other_satellites_not_LOW_at_end")
     if pending:reasons.append("pending_or_active_transition_at_end")
@@ -145,7 +151,7 @@ def _compare(arrays,events,summary,state,j,prediction,actual_s,config,relative_D
     return dict(actual_next_command_s=actual_s,actual_next_wait_s=wait,
         actual_threshold_first_sample_s=float(td[crossed[0]]) if crossed.size else None,
         observation_window_end_s=end,right_censored=actual_s is None,
-        max_relative_D_change=variation,intervening_command_count=len(intervening),
+        max_relative_D_change=variation,intervening_command_count=int(intervening),
         prediction_valid_on_observed_window=valid,invalid_reasons=reasons,
         prediction_error_actual_minus_predicted_s=error,
         relative_prediction_error=error/wait if error is not None and wait and wait>0 else None,
@@ -156,8 +162,10 @@ def _compare(arrays,events,summary,state,j,prediction,actual_s,config,relative_D
 
 def _off_activity(arrays,rise,back,config):
     t=arrays["time_s"];j=rise["satellite_id"]-1
-    mask=(t>=rise["start_time"]-1e-9)&(t<=back["command_time"]+1e-9)
-    tt=t[mask];q=arrays["q_m_s2"][mask,j];m=arrays["mode"][mask,j]
+    # Identical inclusive saved samples, without scanning the whole run per cycle.
+    lo=int(np.searchsorted(t,rise["start_time"]-1e-9,side="left"))
+    hi=int(np.searchsorted(t,back["command_time"]+1e-9,side="right"))
+    tt=t[lo:hi];q=arrays["q_m_s2"][lo:hi,j];m=arrays["mode"][lo:hi,j]
     below=np.flatnonzero(q<=config.controller.threshold_off_m_s2)
     high=np.flatnonzero((q<=config.controller.threshold_off_m_s2)&(m==2))
     first=float(tt[below[0]]) if below.size else None
@@ -196,6 +204,11 @@ def residual_analysis(arrays,config,events,*,groups=None,gap_s=None,relative_D_t
             summary["end_state_row"]=len(frames);frames.append(state)
         return summary,state
     pairs=cycle_pairs(events,end)
+    pair_index={(p["satellite_id"],p["local_cycle_number"]):p for p in pairs}
+    event_times=(np.sort([e["command_time"] for e in events]),np.sort([e["complete_time"] for e in events]))
+    future_rises=sorted((e for e in events if e["to_mode"]=="H" and e["command_time"]<=end+1e-9),
+        key=lambda e:(e["command_time"],e["satellite_id"]))
+    rise_times=np.asarray([e["command_time"] for e in future_rises])
     for pair in pairs:
         rise,back=pair["rise"],pair["return_event"];sat=pair["satellite_id"];j=sat-1
         if back is None or back["complete_time"]>end+1e-9:
@@ -214,11 +227,11 @@ def residual_analysis(arrays,config,events,*,groups=None,gap_s=None,relative_D_t
             ix=[max(0,first_k-1),last_k]
             cost=low_arrays["a_m"][ix,j]-arrays["a_m"][ix,j]
             row["own_extra_loss_active_increment_m"]=float(cost[1]-cost[0])
-        nxt=next((p["rise"] for p in pairs if p["satellite_id"]==sat and p["local_cycle_number"]==pair["local_cycle_number"]+1),None)
+        next_pair=pair_index.get((sat,pair["local_cycle_number"]+1));nxt=next_pair["rise"] if next_pair else None
         actual=nxt["command_time"] if nxt else None
         pred=predict_crossing(state["q_P_m_s2"][j],state["q_D_m_s2"][j],state["time_s"],
             back["complete_time"]+config.controller.dwell_time_s,kp,kd,config.controller.threshold_on_m_s2,config.controller.control_period_s)
-        row.update(prediction=pred,**_compare(arrays,events,row,state,j,pred,actual,config,relative_D_tolerance))
+        row.update(prediction=pred,**_compare(arrays,events,row,state,j,pred,actual,config,relative_D_tolerance,event_times))
         row["next_same_satellite_start_interval_s"]=actual-rise["command_time"] if actual is not None else None
         local.append(row)
     if groups is None:
@@ -247,8 +260,8 @@ def residual_analysis(arrays,config,events,*,groups=None,gap_s=None,relative_D_t
             pred=predict_crossing(state["q_P_m_s2"][j],state["q_D_m_s2"][j],state["time_s"],
                 attitude.next_allowed_time[j],kp,kd,config.controller.threshold_on_m_s2,config.controller.control_period_s)
             if pred["predicted_command_s"] is not None:candidates.append((pred["predicted_command_s"],j,pred))
-        future=[z for z in events if z["to_mode"]=="H" and state["time_s"]+1e-9<z["command_time"]<=end+1e-9]
-        nxt=min(future,key=lambda z:(z["command_time"],z["satellite_id"])) if future else None
+        next_index=int(np.searchsorted(rise_times,state["time_s"]+1e-9,side="right"))
+        nxt=future_rises[next_index] if next_index<len(future_rises) else None
         actual=nxt["command_time"] if nxt else None;actual_j=nxt["satellite_id"]-1 if nxt else None
         if candidates:
             _,j,pred=min(candidates,key=lambda z:(z[0],z[1]));row["predicted_satellite_id"]=j+1
@@ -259,7 +272,7 @@ def residual_analysis(arrays,config,events,*,groups=None,gap_s=None,relative_D_t
             row["predicted_satellite_id"]=None
         row.update(prediction=pred,actual_next_satellite_id=actual_j+1 if actual_j is not None else None,
                    prediction_target_matches_actual=bool(actual_j==j) if actual_j is not None else None)
-        row.update(_compare(arrays,events,row,state,j,pred,actual,config,relative_D_tolerance))
+        row.update(_compare(arrays,events,row,state,j,pred,actual,config,relative_D_tolerance,event_times))
         for key in ["q_P_m_s2","q_D_m_s2","q_m_s2"]:
             row["predicted_satellite_"+key]=float(state[key][j])
             row["actual_next_satellite_"+key]=float(state[key][actual_j]) if actual_j is not None else None
