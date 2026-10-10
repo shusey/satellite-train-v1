@@ -1,0 +1,7 @@
+﻿case,tolerance_m,ever_exceeded,first_exceedance_time_s,exceedance_duration_s,exceedance_fraction,longest_continuous_exceedance_s,exceeds_at_observation_end,maximum_sample_interval_s,duration_convention
+all_low,100.0,False,,0.0,0.0,0.0,False,10.0,left_sample_hold; strict >; final sample zero duration
+all_low,500.0,False,,0.0,0.0,0.0,False,10.0,left_sample_hold; strict >; final sample zero duration
+all_low,1000.0,False,,0.0,0.0,0.0,False,10.0,left_sample_hold; strict >; final sample zero duration
+baseline,100.0,False,,0.0,0.0,0.0,False,10.0,left_sample_hold; strict >; final sample zero duration
+baseline,500.0,False,,0.0,0.0,0.0,False,10.0,left_sample_hold; strict >; final sample zero duration
+baseline,1000.0,False,,0.0,0.0,0.0,False,10.0,left_sample_hold; strict >; final sample zero duration

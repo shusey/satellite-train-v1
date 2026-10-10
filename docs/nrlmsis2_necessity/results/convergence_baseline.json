@@ -1,0 +1,58 @@
+{
+  "case": "baseline",
+  "records": [
+    {
+      "cache_s": 10,
+      "max_error_m": 1.0485299022570205,
+      "rms_error_m": 0.5263916005180579,
+      "short_max_error_m": 0.1978462464861198,
+      "short_rms_error_m": 0.10659917450276334,
+      "short_max_history_difference_m": 3.970920628049157e-05,
+      "direct_density_max_relative_error": 3.840686657596848e-10,
+      "direct_density_rms_relative_error": 2.0851593411799867e-11,
+      "run": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\nrlmsis2_20261010\\convergence\\baseline\\baseline_10s",
+      "passed": true
+    },
+    {
+      "cache_s": 30,
+      "max_error_m": 1.0486789141238875,
+      "rms_error_m": 0.5263930113414944,
+      "short_max_error_m": 0.197883812502977,
+      "short_rms_error_m": 0.10659949862731366,
+      "short_max_history_difference_m": 5.543395564444609e-05,
+      "direct_density_max_relative_error": 6.522147458998262e-06,
+      "direct_density_rms_relative_error": 6.725720040788135e-07,
+      "run": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\nrlmsis2_20261010\\convergence\\baseline\\baseline_30s",
+      "passed": true
+    },
+    {
+      "cache_s": 60,
+      "max_error_m": 1.048699623594719,
+      "rms_error_m": 0.5263915029250059,
+      "short_max_error_m": 0.19787227780933944,
+      "short_rms_error_m": 0.10659955574627593,
+      "short_max_history_difference_m": 7.787724263863538e-05,
+      "direct_density_max_relative_error": 1.8565682338267386e-05,
+      "direct_density_rms_relative_error": 3.709308324344148e-06,
+      "run": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\nrlmsis2_20261010\\convergence\\baseline\\baseline_60s",
+      "passed": true
+    },
+    {
+      "cache_s": 120,
+      "max_error_m": 1.0494877393637596,
+      "rms_error_m": 0.526412098759613,
+      "short_max_error_m": 0.19794851755893558,
+      "short_rms_error_m": 0.1066005737967065,
+      "short_max_history_difference_m": 0.00011057894192845197,
+      "direct_density_max_relative_error": 6.233855514814479e-05,
+      "direct_density_rms_relative_error": 6.030623276085705e-06,
+      "run": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\nrlmsis2_20261010\\convergence\\baseline\\baseline_120s",
+      "passed": true
+    }
+  ],
+  "selected_cache_s": 120,
+  "direct_duration_s": 16670.0,
+  "duration_s": 86400,
+  "direct_reference": "outputs\\nrlmsis2_20261010\\validation\\baseline_direct",
+  "selection_basis": "largest tested interval satisfying pre-registered density and max/RMS tolerances"
+}

@@ -1,0 +1,15 @@
+{
+  "configuration_equal": true,
+  "environment_equal": true,
+  "weather_equal": true,
+  "initial_states_equal": true,
+  "time_grid_equal": true,
+  "only_case_flag_difference": "control_enabled",
+  "artificial_pulse_enabled": false,
+  "physical_control_numerical_settings_equal_frozen_baseline": true,
+  "allowed_changes_vs_frozen_24h": [
+    "atmosphere.density_model",
+    "disturbance.enabled",
+    "simulation.duration_s"
+  ]
+}

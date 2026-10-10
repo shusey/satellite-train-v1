@@ -1,0 +1,5 @@
+{
+  "all_checks_passed": true,
+  "all_low_run": "outputs/nrlmsis2_20261010/runs/all_low_60d",
+  "controlled_run": "outputs/nrlmsis2_20261010/runs/baseline_inactive_prefix"
+}

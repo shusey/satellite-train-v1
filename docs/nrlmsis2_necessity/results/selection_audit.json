@@ -1,0 +1,31 @@
+{
+  "rule": "latest completed year first60days with complete observed support; frozen before formation results",
+  "source_sha256": "2c0fb9064a4c182056bec9fb47052af72eb2de75c7cc87c871d9e7f9d4d9c781",
+  "candidates": [
+    {
+      "year": 2025,
+      "start": "2025-01-01",
+      "end": "2025-03-02",
+      "support_rows": 141,
+      "non_observed_flux": [
+        {
+          "date": "2025-02-12",
+          "qualifier": "INT"
+        },
+        {
+          "date": "2025-02-17",
+          "qualifier": "INT"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "year": 2024,
+      "start": "2024-01-01",
+      "end": "2024-03-01",
+      "support_rows": 141,
+      "non_observed_flux": [],
+      "accepted": true
+    }
+  ]
+}

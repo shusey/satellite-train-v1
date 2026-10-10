@@ -1,0 +1,3 @@
+﻿case,max_abs_error_m,percent_of_100km,rms_error_m,final_max_abs_error_m,transitions,completed_cycles,high_stable_total_s,high_equivalent_total_s,mean_initial_altitude_loss_m,extra_mean_loss_vs_nrl_all_low_m
+all_low,73.17096535485669,0.07317096535485669,36.27436000633882,73.16960296064534,0,0,0.0,0.0,6306.282431995141,0.0
+baseline,73.17096535485669,0.07317096535485669,36.27436000633882,73.16960296064534,0,0,0.0,0.0,6306.282431995141,0.0

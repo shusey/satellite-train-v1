@@ -161,3 +161,20 @@ Kp=2倍・2.5倍を追加し、既存1倍・3倍を再利用した30/60日比較
 普段読む[研究判断用サマリー](docs/kp_intermediate_analysis/report.md)と、
 必要時に読む[詳細技術付録](docs/kp_intermediate_analysis/technical_appendix.md)を分離した。
 数値条件・保存先・再現方法は[再現手順](docs/kp_intermediate_analysis/reproduction.md)を参照。
+
+## NRLMSIS 2.0：経験大気モデル下での制御必要性
+
+[研究判断用サマリー](docs/nrlmsis2_necessity/report.md)、
+[詳細技術付録](docs/nrlmsis2_necessity/technical_appendix.md)、
+[再現手順](docs/nrlmsis2_necessity/reproduction.md)を参照。
+`density_model=nrlmsis2` は任意依存 `pymsis==0.12.0` と明示的なモデル2.0指定を使用する。
+2024年1月1日〜3月1日UTCの歴史的F10.7/Apを固定し、全LOWと既存基準制御を比較する。
+元の指数密度・Gaussian／half-cosine人工外乱モデルと24時間回帰基準は維持する。
+
+```powershell
+python -m pip install -e ".[test,nrlmsis]"
+python scripts/run_nrlmsis_case.py --weather docs/nrlmsis2_necessity/data/drivers.csv --case all_low --cache-seconds 120 --output outputs/nrl_low_new
+```
+
+lambdaを地理経度として直接使わず、固定軌道面・地球自転・WGS84の測地座標へ変換する。
+密度補間の検証と非作動区間の再利用方法は付録に記載する。NRLMSISは実測密度そのものではない。

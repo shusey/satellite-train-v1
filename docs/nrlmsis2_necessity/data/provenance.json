@@ -1,0 +1,18 @@
+{
+  "source_url": "https://celestrak.org/SpaceData/SW-All.csv",
+  "source_snapshot_sha256": "2c0fb9064a4c182056bec9fb47052af72eb2de75c7cc87c871d9e7f9d4d9c781",
+  "support_start": "2023-11-22",
+  "support_end": "2024-04-10",
+  "epoch_utc": "2024-01-01",
+  "end_utc": "2024-03-01",
+  "rows": 481,
+  "missing_value_policy": "reject; no local filling",
+  "F107_qualifiers": [
+    "OBS"
+  ],
+  "pymsis_history_exact_match": true,
+  "selection_changed_after_results": false,
+  "source_description": "CelesTrak consolidated GFZ geomagnetic / Canadian observed solar flux; see documentation",
+  "geomagnetic_activity": -1,
+  "inputs": "previous-day observed F107; current centered81; seven Ap entries"
+}

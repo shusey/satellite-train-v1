@@ -1,0 +1,57 @@
+{
+  "inputs": {
+    "configuration_equal": true,
+    "environment_equal": true,
+    "weather_equal": true,
+    "initial_states_equal": true,
+    "time_grid_equal": true,
+    "only_case_flag_difference": "control_enabled",
+    "artificial_pulse_enabled": false,
+    "physical_control_numerical_settings_equal_frozen_baseline": true,
+    "allowed_changes_vs_frozen_24h": [
+      "atmosphere.density_model",
+      "disturbance.enabled",
+      "simulation.duration_s"
+    ]
+  },
+  "max_error": {
+    "all_low_m": 73.17096535485669,
+    "controlled_m": 73.17096535485669,
+    "reduction_m": 0.0,
+    "reduction_percent": 0.0
+  },
+  "rms": {
+    "all_low_m": 36.27436000633882,
+    "controlled_m": 36.27436000633882,
+    "reduction_m": 0.0,
+    "reduction_percent": 0.0
+  },
+  "cases": [
+    {
+      "case": "all_low",
+      "max_abs_error_m": 73.17096535485669,
+      "percent_of_100km": 0.07317096535485669,
+      "rms_error_m": 36.27436000633882,
+      "final_max_abs_error_m": 73.16960296064534,
+      "transitions": 0,
+      "completed_cycles": 0,
+      "high_stable_total_s": 0.0,
+      "high_equivalent_total_s": 0.0,
+      "mean_initial_altitude_loss_m": 6306.282431995141,
+      "extra_mean_loss_vs_nrl_all_low_m": 0.0
+    },
+    {
+      "case": "baseline",
+      "max_abs_error_m": 73.17096535485669,
+      "percent_of_100km": 0.07317096535485669,
+      "rms_error_m": 36.27436000633882,
+      "final_max_abs_error_m": 73.16960296064534,
+      "transitions": 0,
+      "completed_cycles": 0,
+      "high_stable_total_s": 0.0,
+      "high_equivalent_total_s": 0.0,
+      "mean_initial_altitude_loss_m": 6306.282431995141,
+      "extra_mean_loss_vs_nrl_all_low_m": 0.0
+    }
+  ]
+}

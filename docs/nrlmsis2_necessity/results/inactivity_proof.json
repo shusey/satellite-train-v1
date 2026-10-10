@@ -1,0 +1,11 @@
+{
+  "first_potential_high_time_s": null,
+  "reusable_until_s": 5184000.0,
+  "reusable_control_ticks": 518401,
+  "maximum_q_in_reusable_prefix_m_s2": 1.17606387535447e-07,
+  "threshold_on_m_s2": 1.5e-07,
+  "minimum_margin_m_s2": 3.2393612464553e-08,
+  "all_ticks_checked": true,
+  "exactly_recomputed_q": true,
+  "justification": "No possible LOW->HIGH command; same LOW areas, RHS, RK boundaries and density cache anchors"
+}

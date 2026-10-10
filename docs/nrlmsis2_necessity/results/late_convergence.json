@@ -1,0 +1,26 @@
+{
+  "start_s": 3542400.0,
+  "end_s": 3628800.0,
+  "first_maximum_ap1": 32.0,
+  "selection": "first maximum observed ap1 in frozen weather, independent of formation response",
+  "same_initial_physical_state": true,
+  "control_enabled": false,
+  "records": [
+    {
+      "cache_s": 10,
+      "max_abs_error_m": 48.57134738147469,
+      "rms_error_m": 42.757315482532874,
+      "max_error_history_difference_m": 0.0,
+      "max_gap_rate_history_difference_m_s": 0.0
+    },
+    {
+      "cache_s": 120,
+      "max_abs_error_m": 48.572481682537536,
+      "rms_error_m": 42.757337255457976,
+      "max_error_history_difference_m": 0.002459707196067029,
+      "max_gap_rate_history_difference_m_s": 5.9289220330797573e-08
+    }
+  ],
+  "passed": true,
+  "maximum_acceptable_error_history_difference_m": 0.05
+}

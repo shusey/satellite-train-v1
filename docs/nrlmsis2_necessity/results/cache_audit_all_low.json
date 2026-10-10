@@ -1,0 +1,12 @@
+{
+  "cache_s": 120,
+  "saved_positions_max_relative_error": 4.566193945165775e-05,
+  "saved_positions_rms_relative_error": 4.673792785124782e-06,
+  "interior_max_relative_error": 3.028971516427781e-05,
+  "interior_rms_relative_error": 5.524390978358048e-06,
+  "interior_probe_points": 25326,
+  "saved_probe_points": 25347,
+  "passed": true,
+  "interior_state_convention": "Same linearly interpolated saved state for direct/cache; no claim of exact physical state between outputs",
+  "maximum_acceptable_relative_density_error": 0.001
+}
