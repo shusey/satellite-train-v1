@@ -1,0 +1,9 @@
+{
+  "passed": 231,
+  "existing": 223,
+  "new": 8,
+  "warnings": 0,
+  "command": "PYTHONUTF8=1 python -X utf8 -m pytest -q",
+  "runtime_s": 35.83,
+  "regression_cases_passed": 3
+}
