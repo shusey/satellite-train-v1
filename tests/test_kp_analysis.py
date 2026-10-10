@@ -17,7 +17,7 @@ def test_legacy_Kp_omitted_and_derived_unchanged():
     assert config_from_dict(c.to_dict())==c
 
 
-@pytest.mark.parametrize('factor',[.3,1.,3.])
+@pytest.mark.parametrize('factor',[.3,1.,2.,2.5,3.])
 def test_independent_kp_roundtrip_only_requested_changes(tmp_path,factor):
     c=baseline();fn=runpy.run_path(str(Path(__file__).parents[1]/'scripts/run_kp_case.py'))['kp_config']
     new=fn(c,factor,30);expected=c.to_dict()

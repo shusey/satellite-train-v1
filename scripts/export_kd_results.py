@@ -15,10 +15,12 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--comparison",type=Path,required=True);p.add_argument("--output",type=Path,required=True)
     p.add_argument("--gain-axis",choices=["kd","kp"],default="kd")
+    p.add_argument("--factors",type=float,nargs="+",help="Export only new factors; keep the complete comparison table")
     args=p.parse_args();rows=json.loads((args.comparison/"comparison.json").read_text(encoding="utf-8"))
     out=prepare_output_directory(args.output)
     for name in ["comparison.json","comparison.csv","table.md"]:shutil.copy2(args.comparison/name,out/name)
     for row in rows:
+        if args.factors is not None and row[args.gain_axis+'_factor'] not in args.factors:continue
         analysis=Path(row["analysis_directory"]);r=json.loads((analysis/"residual_metrics.json").read_text(encoding="utf-8"))
         provenance=json.loads((analysis/"provenance.json").read_text(encoding="utf-8"));run=Path(provenance["source"])
         case=prepare_output_directory(out/f"{args.gain_axis}_{row[args.gain_axis+'_factor']:g}_{row['days']:.0f}d")
@@ -53,7 +55,8 @@ def main():
             full_threshold_csv=str(analysis/"threshold_events.csv"),full_return_gate_csv=str(analysis/"return_gates.csv"),
             signed_endpoint_npz=str(analysis/"cycle_end_states.npz"),physics_npz=str(run/"results.npz"),
             sample_policy="first three and last three completed local cycles per satellite; not the full distribution"))
-    print(f"Curated {len(rows)} cases: {out}",flush=True)
+    count=sum(args.factors is None or r[args.gain_axis+'_factor'] in args.factors for r in rows)
+    print(f"Curated {count} cases: {out}",flush=True)
 
 
 if __name__=="__main__":main()

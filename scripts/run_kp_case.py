@@ -20,7 +20,7 @@ def kp_config(reference,multiplier,days):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--kp-factor",type=float,choices=[.3,3.],required=True)
+    p.add_argument("--kp-factor",type=float,choices=[.3,2.,2.5,3.],required=True)
     p.add_argument("--days",type=float,default=30.)
     p.add_argument("--output",type=Path,required=True)
     args=p.parse_args()

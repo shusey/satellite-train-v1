@@ -12,7 +12,9 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--runs",type=Path,required=True);p.add_argument("--output",type=Path,required=True)
     p.add_argument("--gain-axis",choices=["kd","kp"],default="kd")
+    p.add_argument("--factors",type=float,nargs="+",help="Expected new factors; defaults retain existing experiments")
     args=p.parse_args();baseline=load_config("tests/fixtures/regression_24h/config.yaml")
+    factors=args.factors if args.factors is not None else ([.3,2.,2.5,3.] if args.gain_axis=="kp" else [.3,3.])
     checks={}
     for path in sorted(args.runs.glob("*/normalized_config.yaml")):
         cfg=load_config(path);field="kp_s2_inv" if args.gain_axis=="kp" else "kd_s_inv"
@@ -24,7 +26,7 @@ def main():
         checks[path.parent.name]=dict([(args.gain_axis+"_factor",factor),("days",cfg.simulation.duration_s/86400)],
             only_gain_and_duration_changed=cfg.to_dict()==expected,
             control_and_disturbance_enabled=case["control_enabled"] and case["disturbance_enabled"],
-            requested_factor=factor in [.3,3.])
+            requested_factor=factor in factors)
         checks[path.parent.name]["only_"+args.gain_axis+"_and_duration_changed"]=cfg.to_dict()==expected
     passed=bool(checks) and all(all(r[k] for k in ["only_gain_and_duration_changed","control_and_disturbance_enabled","requested_factor"]) for r in checks.values())
     out=prepare_output_directory(args.output);write_json(out/"inputs.json",dict(passed=passed,runs=checks))
