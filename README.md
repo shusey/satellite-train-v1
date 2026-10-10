@@ -138,3 +138,11 @@ python scripts/analyze_long_horizon.py --run outputs/long_horizon_new/central_21
 [データ再利用・実行・検証手順](docs/dwell_residual_analysis/reproduction.md)を参照してください。
 各衛星のL-H-L終了と、全衛星LOWになる境界を区別して評価します。
 物理・制御・積分coreと凍結24時間基準は維持しています。
+
+## Kd単独変更・残留速度・長時間再切替
+
+[0.3/1/3倍の30・60日比較](docs/kd_residual_analysis/report.md)、
+[速度分布・P/D分類・予測の定義](docs/kd_residual_analysis/definitions.md)、
+[再利用と再現手順](docs/kd_residual_analysis/reproduction.md)を参照してください。
+Kpとdwell等を固定してKdだけを指定できます。1倍baselineは保存runを再利用します。
+残留速度最大値だけでなく、RMS・符号・空間分布・再切替コストを比較します。

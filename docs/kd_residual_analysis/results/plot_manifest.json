@@ -1,0 +1,8 @@
+{
+  "all_low": "outputs/long_horizon_q_20261008/runs/low_60d",
+  "cases": [
+    {"kd_factor": 0.3, "run": "outputs/kd_residual_20261010/runs/kd_0.3_60d", "analysis": "outputs/kd_residual_20261010/analysis_release/kd_0.3_60d"},
+    {"kd_factor": 1.0, "run": "outputs/long_horizon_q_20261008/runs/central_60d", "analysis": "outputs/kd_residual_20261010/analysis_release/kd_1_60d"},
+    {"kd_factor": 3.0, "run": "outputs/kd_residual_20261010/runs/kd_3_60d", "analysis": "outputs/kd_residual_20261010/analysis_release/kd_3_60d"}
+  ]
+}

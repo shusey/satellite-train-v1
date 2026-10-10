@@ -1,0 +1,13 @@
+{
+  "kd_factor": 3.0,
+  "Kp_s2_inv": 2.143347050754458e-09,
+  "Kd_s_inv": 0.0002777777777777778,
+  "source_configuration": "tests/fixtures/regression_24h/config.yaml",
+  "configuration_changes": [
+    "controller.kd_s_inv and derived Kd",
+    "simulation.duration_s"
+  ],
+  "prefix_reuse": false,
+  "reason": "Kd changes trigger times; no controlled pre-switch prefix borrowed",
+  "elapsed_s": 1076.3279463000363
+}

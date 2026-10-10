@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "runs": {
+    "kd_0.3_30d": {
+      "kd_factor": 0.3,
+      "days": 30.0,
+      "only_kd_and_duration_changed": true,
+      "control_and_disturbance_enabled": true,
+      "requested_factor": true
+    },
+    "kd_0.3_60d": {
+      "kd_factor": 0.3,
+      "days": 60.0,
+      "only_kd_and_duration_changed": true,
+      "control_and_disturbance_enabled": true,
+      "requested_factor": true
+    },
+    "kd_3_30d": {
+      "kd_factor": 3.0,
+      "days": 30.0,
+      "only_kd_and_duration_changed": true,
+      "control_and_disturbance_enabled": true,
+      "requested_factor": true
+    },
+    "kd_3_60d": {
+      "kd_factor": 3.0,
+      "days": 60.0,
+      "only_kd_and_duration_changed": true,
+      "control_and_disturbance_enabled": true,
+      "requested_factor": true
+    }
+  }
+}

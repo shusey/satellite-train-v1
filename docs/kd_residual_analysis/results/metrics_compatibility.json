@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": {
+    "local_cycles": true,
+    "group_cycles": true,
+    "quiet_cycles": true,
+    "summary": true,
+    "state_time_s": true,
+    "state_gap_error_m": true,
+    "state_gap_rate_m_s": true,
+    "state_q_P_m_s2": true,
+    "state_q_D_m_s2": true,
+    "state_q_m_s2": true,
+    "state_mode": true
+  },
+  "scope": "postprocessing only; no physical simulation",
+  "source": "outputs\\long_horizon_q_20261008\\runs\\central_60d",
+  "cached": "outputs\\dwell_residual_20261008\\analysis_final\\dwell_300_60d"
+}

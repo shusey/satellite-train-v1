@@ -1,0 +1,107 @@
+[
+  {
+    "kd_factor": 0.3,
+    "days": 30.0,
+    "crossing_kinds": {
+      "upward_from_below": 49
+    },
+    "upward_crossing_contribution_counts": {
+      "P_dominant": 48,
+      "mixed": 1
+    },
+    "command_later_than_final_crossing_sample": 0,
+    "opposed_P_D_sign_crossing_states": 0,
+    "ideal_minimum_LH_repeat_interval_s": 840.0,
+    "observed_uncensored_LH_intervals": 28,
+    "LH_intervals_at_dwell_slew_bound": 0,
+    "bound_interpretation": "two slew + two dwell + two delays; control grid can lengthen it; current delays zero"
+  },
+  {
+    "kd_factor": 1.0,
+    "days": 30.0,
+    "crossing_kinds": {
+      "upward_from_below": 113
+    },
+    "upward_crossing_contribution_counts": {
+      "D_dominant": 105,
+      "P_dominant": 8
+    },
+    "command_later_than_final_crossing_sample": 0,
+    "opposed_P_D_sign_crossing_states": 2,
+    "ideal_minimum_LH_repeat_interval_s": 840.0,
+    "observed_uncensored_LH_intervals": 92,
+    "LH_intervals_at_dwell_slew_bound": 0,
+    "bound_interpretation": "two slew + two dwell + two delays; control grid can lengthen it; current delays zero"
+  },
+  {
+    "kd_factor": 3.0,
+    "days": 30.0,
+    "crossing_kinds": {
+      "upward_from_below": 11166
+    },
+    "upward_crossing_contribution_counts": {
+      "D_dominant": 7701,
+      "P_dominant": 750,
+      "mixed": 2715
+    },
+    "command_later_than_final_crossing_sample": 60,
+    "opposed_P_D_sign_crossing_states": 2102,
+    "ideal_minimum_LH_repeat_interval_s": 840.0,
+    "observed_uncensored_LH_intervals": 11145,
+    "LH_intervals_at_dwell_slew_bound": 300,
+    "bound_interpretation": "two slew + two dwell + two delays; control grid can lengthen it; current delays zero"
+  },
+  {
+    "kd_factor": 0.3,
+    "days": 60.0,
+    "crossing_kinds": {
+      "upward_from_below": 62
+    },
+    "upward_crossing_contribution_counts": {
+      "P_dominant": 60,
+      "mixed": 2
+    },
+    "command_later_than_final_crossing_sample": 0,
+    "opposed_P_D_sign_crossing_states": 0,
+    "ideal_minimum_LH_repeat_interval_s": 840.0,
+    "observed_uncensored_LH_intervals": 41,
+    "LH_intervals_at_dwell_slew_bound": 0,
+    "bound_interpretation": "two slew + two dwell + two delays; control grid can lengthen it; current delays zero"
+  },
+  {
+    "kd_factor": 1.0,
+    "days": 60.0,
+    "crossing_kinds": {
+      "upward_from_below": 293
+    },
+    "upward_crossing_contribution_counts": {
+      "D_dominant": 270,
+      "P_dominant": 19,
+      "mixed": 4
+    },
+    "command_later_than_final_crossing_sample": 0,
+    "opposed_P_D_sign_crossing_states": 4,
+    "ideal_minimum_LH_repeat_interval_s": 840.0,
+    "observed_uncensored_LH_intervals": 272,
+    "LH_intervals_at_dwell_slew_bound": 0,
+    "bound_interpretation": "two slew + two dwell + two delays; control grid can lengthen it; current delays zero"
+  },
+  {
+    "kd_factor": 3.0,
+    "days": 60.0,
+    "crossing_kinds": {
+      "upward_from_below": 43555
+    },
+    "upward_crossing_contribution_counts": {
+      "D_dominant": 32496,
+      "P_dominant": 2305,
+      "mixed": 8754
+    },
+    "command_later_than_final_crossing_sample": 4145,
+    "opposed_P_D_sign_crossing_states": 17422,
+    "ideal_minimum_LH_repeat_interval_s": 840.0,
+    "observed_uncensored_LH_intervals": 43534,
+    "LH_intervals_at_dwell_slew_bound": 10978,
+    "bound_interpretation": "two slew + two dwell + two delays; control grid can lengthen it; current delays zero"
+  }
+]

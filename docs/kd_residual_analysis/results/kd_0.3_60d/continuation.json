@@ -1,0 +1,6 @@
+{
+  "source_directory": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\kd_residual_20261010\\runs\\kd_0.3_30d",
+  "resume_time_s": 2592000.0,
+  "configuration_change": "simulation.duration_s only",
+  "elapsed_s": 1076.2561642999644
+}

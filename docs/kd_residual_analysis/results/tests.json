@@ -1,0 +1,10 @@
+{
+  "command": ".analysis-venv/Scripts/python.exe -m pytest -q",
+  "passed": 147,
+  "failed": 0,
+  "existing_tests": 118,
+  "new_kd_tests": 29,
+  "elapsed_s": 53.68,
+  "targeted_command": ".analysis-venv/Scripts/python.exe -m pytest tests/test_kd_analysis.py -q",
+  "targeted_passed": 29
+}
