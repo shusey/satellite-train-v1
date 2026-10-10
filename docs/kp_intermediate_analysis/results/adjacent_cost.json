@@ -1,0 +1,80 @@
+[
+  {
+    "days": 30.0,
+    "from_factor": 1.0,
+    "to_factor": 2.0,
+    "extra_transitions": 299,
+    "extra_altitude_loss_m": 6.42292434624618,
+    "e_max_m_improvement_m": 32.01742600897388,
+    "e_max_m_extra_transitions_per_m": 9.338664510888414,
+    "e_max_m_extra_altitude_loss_per_m": 0.20060714263682397,
+    "rms_m_improvement_m": 3.040131935833248,
+    "rms_m_extra_transitions_per_m": 98.35099473011826,
+    "rms_m_extra_altitude_loss_per_m": 2.1127123696642354
+  },
+  {
+    "days": 30.0,
+    "from_factor": 2.0,
+    "to_factor": 2.5,
+    "extra_transitions": 146,
+    "extra_altitude_loss_m": 3.135532791194107,
+    "e_max_m_improvement_m": 7.953895800512257,
+    "e_max_m_extra_transitions_per_m": 18.355784845785525,
+    "e_max_m_extra_altitude_loss_per_m": 0.3942134609045505,
+    "rms_m_improvement_m": 0.9389838327906332,
+    "rms_m_extra_transitions_per_m": 155.48723513810899,
+    "rms_m_extra_altitude_loss_per_m": 3.339283043751023
+  },
+  {
+    "days": 30.0,
+    "from_factor": 2.5,
+    "to_factor": 3.0,
+    "extra_transitions": 84,
+    "extra_altitude_loss_m": 1.8040822662324434,
+    "e_max_m_improvement_m": 5.598936732824839,
+    "e_max_m_extra_transitions_per_m": 15.002848577933362,
+    "e_max_m_extra_altitude_loss_per_m": 0.3222187269335739,
+    "rms_m_improvement_m": 0.7821860321972629,
+    "rms_m_extra_transitions_per_m": 107.39133216689258,
+    "rms_m_extra_altitude_loss_per_m": 2.3064618798734364
+  },
+  {
+    "days": 60.0,
+    "from_factor": 1.0,
+    "to_factor": 2.0,
+    "extra_transitions": 480,
+    "extra_altitude_loss_m": 10.82395604665258,
+    "e_max_m_improvement_m": 36.583927900589515,
+    "e_max_m_extra_transitions_per_m": 13.120515689411942,
+    "e_max_m_extra_altitude_loss_per_m": 0.2958664273575217,
+    "rms_m_improvement_m": 6.541940323571211,
+    "rms_m_extra_transitions_per_m": 73.37272678421049,
+    "rms_m_extra_altitude_loss_per_m": 1.654548270281964
+  },
+  {
+    "days": 60.0,
+    "from_factor": 2.0,
+    "to_factor": 2.5,
+    "extra_transitions": 150,
+    "extra_altitude_loss_m": 3.3828941961040826,
+    "e_max_m_improvement_m": 7.763890071014437,
+    "e_max_m_extra_transitions_per_m": 19.32021172736683,
+    "e_max_m_extra_altitude_loss_per_m": 0.43572154746674185,
+    "rms_m_improvement_m": 1.8032167613370795,
+    "rms_m_extra_transitions_per_m": 83.18467486336777,
+    "rms_m_extra_altitude_loss_per_m": 1.8760330253339468
+  },
+  {
+    "days": 60.0,
+    "from_factor": 2.5,
+    "to_factor": 3.0,
+    "extra_transitions": 606,
+    "extra_altitude_loss_m": 13.671039969571641,
+    "e_max_m_improvement_m": -2.2170766784007085,
+    "e_max_m_extra_transitions_per_m": null,
+    "e_max_m_extra_altitude_loss_per_m": null,
+    "rms_m_improvement_m": -2.2182752228025215,
+    "rms_m_extra_transitions_per_m": null,
+    "rms_m_extra_altitude_loss_per_m": null
+  }
+]

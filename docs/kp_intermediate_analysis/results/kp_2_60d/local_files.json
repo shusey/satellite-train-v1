@@ -1,0 +1,8 @@
+{
+  "full_cycle_csv": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\kp_intermediate_20261010\\analysis\\kp_2_60d\\local_cycles.csv",
+  "full_threshold_csv": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\kp_intermediate_20261010\\analysis\\kp_2_60d\\threshold_events.csv",
+  "full_return_gate_csv": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\kp_intermediate_20261010\\analysis\\kp_2_60d\\return_gates.csv",
+  "signed_endpoint_npz": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\kp_intermediate_20261010\\analysis\\kp_2_60d\\cycle_end_states.npz",
+  "physics_npz": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\kp_intermediate_20261010\\runs\\kp_2_60d\\results.npz",
+  "sample_policy": "first three and last three completed local cycles per satellite; not the full distribution"
+}

@@ -1,0 +1,45 @@
+{
+  "old_files_checked": 1555,
+  "changed_or_missing_files": [],
+  "prefixes": [
+    {
+      "source_directory": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\kp_intermediate_20261010\\runs\\kp_2.5_30d",
+      "destination_directory": "outputs\\kp_intermediate_20261010\\runs\\kp_2.5_60d",
+      "arrays": {
+        "time_s": true,
+        "a_m": true,
+        "lambda_rad": true,
+        "altitude_m": true,
+        "area_m2": true,
+        "mode": true,
+        "density_kg_m3": true,
+        "q_m_s2": true,
+        "gap_error_m": true,
+        "gap_rate_m_s": true,
+        "gap_distance_m": true
+      },
+      "events_match": true,
+      "passed": true
+    },
+    {
+      "source_directory": "C:\\Users\\user\\.codex\\.chatgpt-projects\\g-p-6aa8d88f55c08191b671b4c74bb916e9\\satellite-train-v1\\outputs\\kp_intermediate_20261010\\runs\\kp_2_30d",
+      "destination_directory": "outputs\\kp_intermediate_20261010\\runs\\kp_2_60d",
+      "arrays": {
+        "time_s": true,
+        "a_m": true,
+        "lambda_rad": true,
+        "altitude_m": true,
+        "area_m2": true,
+        "mode": true,
+        "density_kg_m3": true,
+        "q_m_s2": true,
+        "gap_error_m": true,
+        "gap_rate_m_s": true,
+        "gap_distance_m": true
+      },
+      "events_match": true,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

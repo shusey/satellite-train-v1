@@ -1,0 +1,33 @@
+{
+  "reviewed_horizon_days": 30,
+  "new_factors": [
+    2,
+    2.5
+  ],
+  "decisions": [
+    {
+      "kp_factor": 2.0,
+      "extend_to_days": 60,
+      "last_switch_day": 29.946296296296296,
+      "e_max_m": 61.511602913207945,
+      "rms_m": 17.937836957366795,
+      "transitions": 524,
+      "all_low_no_pending_at_30d": true,
+      "next_conditional_HIGH_day": 30.166666666666668,
+      "error_squared_mean_rate_m2_s": 0.00348636764156815,
+      "reason": "Predicted next HIGH after 30d and increasing error at tmax; needed matched 60d cost/accuracy comparison; quiet state does not prove settling"
+    },
+    {
+      "kp_factor": 2.5,
+      "extend_to_days": 60,
+      "last_switch_day": 29.247337962962963,
+      "e_max_m": 53.55770711269569,
+      "rms_m": 16.99885312457616,
+      "transitions": 670,
+      "all_low_no_pending_at_30d": true,
+      "next_conditional_HIGH_day": 31.069560185185185,
+      "error_squared_mean_rate_m2_s": 0.0009338791246708495,
+      "reason": "Predicted next HIGH after 30d and increasing error at tmax; needed matched 60d cost/accuracy comparison; quiet state does not prove settling"
+    }
+  ]
+}

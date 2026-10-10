@@ -154,3 +154,10 @@ Kpとdwell等を固定してKdだけを指定できます。1倍baselineは保�
 [データ再利用と再現手順](docs/kp_residual_analysis/reproduction.md)を参照してください。
 Kd・dwell・閾値等を固定してKpだけを指定できます。1倍baselineは保存runを再利用します。
 判定量q_Pと物理的な位置誤差を区別し、HIGH起動時にどれだけ誤差が蓄積していたかも評価します。
+
+## Kp中間倍率の精度・コスト比較
+
+Kp=2倍・2.5倍を追加し、既存1倍・3倍を再利用した30/60日比較。
+普段読む[研究判断用サマリー](docs/kp_intermediate_analysis/report.md)と、
+必要時に読む[詳細技術付録](docs/kp_intermediate_analysis/technical_appendix.md)を分離した。
+数値条件・保存先・再現方法は[再現手順](docs/kp_intermediate_analysis/reproduction.md)を参照。

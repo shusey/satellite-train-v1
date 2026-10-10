@@ -1,0 +1,13 @@
+{
+  "kp_factor": 2.5,
+  "Kp_s2_inv": 5.3583676268861455e-09,
+  "Kd_s_inv": 9.259259259259259e-05,
+  "source_configuration": "tests/fixtures/regression_24h/config.yaml",
+  "configuration_changes": [
+    "controller.kp_s2_inv and derived Kp",
+    "simulation.duration_s"
+  ],
+  "prefix_reuse": false,
+  "reason": "Kp changes trigger times; no controlled pre-switch prefix borrowed",
+  "elapsed_s": 1216.9394211999606
+}

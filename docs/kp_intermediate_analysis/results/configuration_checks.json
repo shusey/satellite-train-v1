@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "days": 30.0,
+      "kp_factor": 1.0,
+      "passed": true
+    },
+    {
+      "days": 30.0,
+      "kp_factor": 3.0,
+      "passed": true
+    },
+    {
+      "days": 60.0,
+      "kp_factor": 1.0,
+      "passed": true
+    },
+    {
+      "days": 60.0,
+      "kp_factor": 3.0,
+      "passed": true
+    },
+    {
+      "days": 30.0,
+      "kp_factor": 2.0,
+      "passed": true
+    },
+    {
+      "days": 30.0,
+      "kp_factor": 2.5,
+      "passed": true
+    },
+    {
+      "days": 60.0,
+      "kp_factor": 2.0,
+      "passed": true
+    },
+    {
+      "days": 60.0,
+      "kp_factor": 2.5,
+      "passed": true
+    }
+  ]
+}

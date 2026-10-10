@@ -1,0 +1,11 @@
+{
+  "tests": 177,
+  "duration_s": 41.112,
+  "command": ".analysis-venv/Scripts/python.exe -m pytest -q --junitxml=outputs/kp_intermediate_20261010/tests_release.xml",
+  "prior_tests": 169,
+  "added_cases": 8,
+  "errors": 0,
+  "skipped": 0,
+  "failures": 0,
+  "passed": true
+}

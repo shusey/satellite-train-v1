@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "days": 30.0,
+      "kp_factor": 1.0,
+      "existing_fields_match": true,
+      "first_response_fields_match": true
+    },
+    {
+      "days": 30.0,
+      "kp_factor": 3.0,
+      "existing_fields_match": true,
+      "first_response_fields_match": true
+    },
+    {
+      "days": 60.0,
+      "kp_factor": 1.0,
+      "existing_fields_match": true,
+      "first_response_fields_match": true
+    },
+    {
+      "days": 60.0,
+      "kp_factor": 3.0,
+      "existing_fields_match": true,
+      "first_response_fields_match": true
+    }
+  ],
+  "reason": "reuse saved 1/3 summary rows; no baseline reanalysis or physics integration; large first_local_cycles remain in source file"
+}
