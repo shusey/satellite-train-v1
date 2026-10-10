@@ -1,0 +1,26 @@
+{
+  "all_low": {
+    "results.npz": "58e80e0e38ba9db05b6ab9df94517cc92ce5ea91dce58983a5a5ab4e4981cf05",
+    "metadata.json": "05d7a30f006341516c3e3cd30ff0018ed06fd240712c502c3752a25b767ce957",
+    "normalized_config.yaml": "bf38a32c114650a58904dd8ef101430ac56214b9c089cb2a68ddb8a608efe73d",
+    "switch_events.csv": "bca3418d6f28489b5db66c3e18b56cbd4c829a0400219ac444e95a828b0dcabb"
+  },
+  "kp03": {
+    "results.npz": "3720ba367fbbba86980a58df2a5d0659d617f05d2c2d986732028930533b060d",
+    "metadata.json": "2096bf6e5ceb6b29ea27a2f258a2e98a0166f78002d77e947aaf62f49259af2a",
+    "normalized_config.yaml": "08e735814d393eb42f4812aa1bd4df753a368e896c0e4e2db277c5f9fa8e79db",
+    "switch_events.csv": "14f47d105562ce5a61b16a36b3f32bf65d712f08a86a4747259a522c248dc695"
+  },
+  "baseline": {
+    "results.npz": "46f1f3c8e879f2780cd96c03ee0b767076b96937dcdcac33f575eb2ab46371c7",
+    "metadata.json": "b7b04f0100381d51723b43da56894d69fb93b9ab919d34f8c8610d4151bf9bac",
+    "normalized_config.yaml": "bf38a32c114650a58904dd8ef101430ac56214b9c089cb2a68ddb8a608efe73d",
+    "switch_events.csv": "ffff880dbc573cf3333fbebbef57457f4724a060738aabb5525cb51b240d8a3b"
+  },
+  "kp3": {
+    "results.npz": "f4a33ad93ad4154a5020f3be3da60f10aa5f463d5d5842a51337f35c598e1d5f",
+    "metadata.json": "fabe7bd89b76e96e529b3bcbb0df7c78296feaca163cc2c57cdb29373a235167",
+    "normalized_config.yaml": "2cd4111ff1d8ef394ffcc928c807c6844b6706fb234eefeae9c7ac7646692f30",
+    "switch_events.csv": "6bd11e1aaed27dd60c287d153da4e63bbb6cb911a73b8b47894a23e0108c564e"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "states": [
+    {
+      "time_s": 14400,
+      "max_abs_rate_m_s": 0.0014686389391671373,
+      "radius_spread_m": 0.9226246876642108,
+      "max_abs_error_m": 2.6434481738082214
+    },
+    {
+      "time_s": 86400,
+      "max_abs_rate_m_s": 0.0014705323742746493,
+      "radius_spread_m": 0.923789014108479,
+      "max_abs_error_m": 108.45358061691567
+    },
+    {
+      "time_s": 2592000,
+      "max_abs_rate_m_s": 0.0015395725923542966,
+      "radius_spread_m": 0.9662222247570753,
+      "max_abs_error_m": 3878.204899153717
+    },
+    {
+      "time_s": 5184000,
+      "max_abs_rate_m_s": 0.001618080966310877,
+      "radius_spread_m": 1.0144254378974438,
+      "max_abs_error_m": 7968.855020675293
+    }
+  ],
+  "nondecreasing_envelope_after_pulse_at_saved_samples": true
+}

@@ -1,0 +1,9 @@
+{
+  "target_command": ".analysis-venv/Scripts/python.exe -m pytest tests/test_necessity.py -q",
+  "target_passed": 12,
+  "full_command": ".analysis-venv/Scripts/python.exe -m pytest -q",
+  "full_passed": 189,
+  "failed": 0,
+  "software_reference_passed": true,
+  "new_physics_runs": 0
+}

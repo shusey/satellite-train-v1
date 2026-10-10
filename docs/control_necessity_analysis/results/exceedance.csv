@@ -1,0 +1,21 @@
+﻿case,tolerance_m,ever_exceeded,first_exceedance_time_s,exceedance_duration_s,exceedance_fraction,longest_continuous_exceedance_s,exceeds_at_observation_end,maximum_sample_interval_s,duration_convention
+all_low,50.0,True,46640.0,5137360.0,0.9910030864197531,5137360.0,True,10.0,left_sample_hold; strict >; final sample zero duration
+all_low,100.0,True,80660.0,5103340.0,0.9844405864197531,5103340.0,True,10.0,left_sample_hold; strict >; final sample zero duration
+all_low,200.0,True,148620.0,5035380.0,0.9713310185185186,5035380.0,True,10.0,left_sample_hold; strict >; final sample zero duration
+all_low,500.0,True,352030.0,4831970.0,0.9320929783950618,4831970.0,True,10.0,left_sample_hold; strict >; final sample zero duration
+all_low,1000.0,True,689400.0,4494600.0,0.8670138888888889,4494600.0,True,10.0,left_sample_hold; strict >; final sample zero duration
+kp03,50.0,True,457780.0,4726220.0,0.9116936728395062,4726220.0,True,10.0,left_sample_hold; strict >; final sample zero duration
+kp03,100.0,True,958630.0,3119240.0,0.6017052469135803,1590650.0,False,10.0,left_sample_hold; strict >; final sample zero duration
+kp03,200.0,True,1946830.0,1046220.0,0.20181712962962964,575930.0,False,10.0,left_sample_hold; strict >; final sample zero duration
+kp03,500.0,False,,0.0,0.0,0.0,False,10.0,left_sample_hold; strict >; final sample zero duration
+kp03,1000.0,False,,0.0,0.0,0.0,False,10.0,left_sample_hold; strict >; final sample zero duration
+baseline,50.0,True,496760.0,3794620.0,0.7319868827160494,2529940.0,True,10.0,left_sample_hold; strict >; final sample zero duration
+baseline,100.0,True,3546950.0,472300.0,0.09110725308641976,118450.0,True,10.0,left_sample_hold; strict >; final sample zero duration
+baseline,200.0,False,,0.0,0.0,0.0,False,10.0,left_sample_hold; strict >; final sample zero duration
+baseline,500.0,False,,0.0,0.0,0.0,False,10.0,left_sample_hold; strict >; final sample zero duration
+baseline,1000.0,False,,0.0,0.0,0.0,False,10.0,left_sample_hold; strict >; final sample zero duration
+kp3,50.0,True,2801970.0,1611330.0,0.3108275462962963,523600.0,False,10.0,left_sample_hold; strict >; final sample zero duration
+kp3,100.0,False,,0.0,0.0,0.0,False,10.0,left_sample_hold; strict >; final sample zero duration
+kp3,200.0,False,,0.0,0.0,0.0,False,10.0,left_sample_hold; strict >; final sample zero duration
+kp3,500.0,False,,0.0,0.0,0.0,False,10.0,left_sample_hold; strict >; final sample zero duration
+kp3,1000.0,False,,0.0,0.0,0.0,False,10.0,left_sample_hold; strict >; final sample zero duration

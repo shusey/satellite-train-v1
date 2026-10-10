@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "all_low",
+      "configuration": true,
+      "flags": true,
+      "initial_states": true,
+      "time_grid": true,
+      "saved_metrics": true,
+      "all_low_no_actuation": true
+    },
+    {
+      "case": "kp03",
+      "configuration": true,
+      "flags": true,
+      "initial_states": true,
+      "time_grid": true,
+      "saved_metrics": true,
+      "all_low_no_actuation": null
+    },
+    {
+      "case": "baseline",
+      "configuration": true,
+      "flags": true,
+      "initial_states": true,
+      "time_grid": true,
+      "saved_metrics": true,
+      "all_low_no_actuation": null
+    },
+    {
+      "case": "kp3",
+      "configuration": true,
+      "flags": true,
+      "initial_states": true,
+      "time_grid": true,
+      "saved_metrics": true,
+      "all_low_no_actuation": null
+    }
+  ],
+  "initial_array_keys": [
+    "a_m",
+    "lambda_rad",
+    "area_m2",
+    "mode",
+    "density_kg_m3"
+  ],
+  "allowed_differences": [
+    "Kp override/derived Kp",
+    "control_enabled",
+    "case name"
+  ],
+  "new_physics_runs": 0,
+  "optional_no_disturbance_60d": "not present; no new run"
+}
