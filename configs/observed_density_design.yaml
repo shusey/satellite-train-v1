@@ -1,0 +1,32 @@
+dataset: TND-IGG_RL01
+primary_doi: 10.1594/PANGAEA.931347
+background: NRLMSIS_2.0
+pymsis_version: 0.12.0
+normalization_altitude_km: 400
+selection_fixed_before_density_analysis: true
+windows:
+  - name: prestorm_october
+    start_utc: '2003-10-25T00:00:00'
+    end_utc: '2003-10-28T00:00:00'
+    reason: Three complete days before the documented Halloween storm; a context sample, not assumed quiet or a climatological nominal.
+  - name: halloween
+    start_utc: '2003-10-29T00:00:00'
+    end_utc: '2003-11-01T00:00:00'
+    reason: Well studied October 2003 storm with CHAMP near 400 km, documented by Sutton et al. 2005.
+  - name: november
+    start_utc: '2003-11-20T00:00:00'
+    end_utc: '2003-11-23T00:00:00'
+    reason: Well studied 20-21 November 2003 storm jointly observed by CHAMP and GRACE, documented by Bruinsma et al. 2006.
+scales_km: [50, 100, 200, 500, 1000]
+quality_policy: Reject nonzero gap/thrust flags, nonpositive/nonfinite density, missing position; path is orbit direction, not a quality flag. Exclude eclipse transitions plus a 30 s guard; never interpolate across rejected samples or 3 h driver jumps.
+local_event_method:
+  background_window_km: 2400
+  sensitivity_windows_km: [1600, 3200]
+  minimum_prominence_delta: 0.10
+  minimum_peak_distance_km: 300
+  fit_window_halfwidth_km: 1500
+  acceptable_r_squared: 0.80
+  minimum_resolved_fwhm_samples: 4
+  minimum_fitted_amplitude_delta: 0.10
+  minimum_improvement_vs_linear: 0.25
+  interpretation: Track-based apparent structures, not simultaneous spatial maps or atmospheric lifetime.
