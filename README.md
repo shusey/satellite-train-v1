@@ -146,3 +146,11 @@ python scripts/analyze_long_horizon.py --run outputs/long_horizon_new/central_21
 [再利用と再現手順](docs/kd_residual_analysis/reproduction.md)を参照してください。
 Kpとdwell等を固定してKdだけを指定できます。1倍baselineは保存runを再利用します。
 残留速度最大値だけでなく、RMS・符号・空間分布・再切替コストを比較します。
+
+## Kp単独変更・位置誤差の蓄積と再切替
+
+[0.3/1/3倍の比較と平易な解説](docs/kp_residual_analysis/report.md)、
+[位置誤差・起動・残留状態・予測の定義](docs/kp_residual_analysis/definitions.md)、
+[データ再利用と再現手順](docs/kp_residual_analysis/reproduction.md)を参照してください。
+Kd・dwell・閾値等を固定してKpだけを指定できます。1倍baselineは保存runを再利用します。
+判定量q_Pと物理的な位置誤差を区別し、HIGH起動時にどれだけ誤差が蓄積していたかも評価します。

@@ -1,0 +1,3 @@
+﻿satellite_id,local_cycle_number,high_complete_s,earliest_return_gate_s,gate_observed,q_at_return_gate_m_s2,off_not_met_at_gate,low_command_s,low_complete_s,observed_hold_s,return_right_censored,completed_by_tmax
+1,38,4718710.0,4719010.0,True,1.4104027348758656e-07,True,4719020.0,4719140.0,310.0,False,True
+21,38,4793560.0,4793860.0,True,1.4097294947955318e-07,True,4793870.0,4793990.0,310.0,False,True

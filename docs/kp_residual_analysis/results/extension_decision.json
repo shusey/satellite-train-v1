@@ -1,0 +1,18 @@
+[
+  {
+    "kp_factor": 0.3,
+    "extend_to_day": 60,
+    "all_low": true,
+    "predicted_next_command_day": 54.66064814814815,
+    "error_squared_mean_rate_m2_s": 0.000778539130707663,
+    "reason": "positive error growth at 30d and a finite conditional next crossing after day30; compare against existing 60d baseline"
+  },
+  {
+    "kp_factor": 3.0,
+    "extend_to_day": 60,
+    "all_low": true,
+    "predicted_next_command_day": 30.841782407407408,
+    "error_squared_mean_rate_m2_s": 0.0007742854271140611,
+    "reason": "positive error growth at 30d and a finite conditional next crossing after day30; compare against existing 60d baseline"
+  }
+]

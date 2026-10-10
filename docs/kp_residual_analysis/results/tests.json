@@ -1,0 +1,11 @@
+{
+  "existing_tests": 147,
+  "tests": 169,
+  "passed": true,
+  "duration_s": 42.737,
+  "failures": 0,
+  "errors": 0,
+  "new_tests": 22,
+  "skipped": 0,
+  "command": ".analysis-venv/Scripts/python.exe -m pytest -q --junitxml=outputs/kp_residual_20261010/tests_final.xml"
+}

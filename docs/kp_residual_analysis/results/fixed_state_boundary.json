@@ -1,0 +1,9 @@
+{
+  "source": "outputs\\long_horizon_q_20261008\\runs\\central_60d",
+  "time_s": 20970.0,
+  "satellite_id": 13,
+  "q_P_m_s2": 2.5872707803927438e-09,
+  "q_D_m_s2": 1.4431670775928833e-07,
+  "frozen_state_Kp_factor_on_boundary": 2.196636039714771,
+  "interpretation": "same single baseline physical state and Kd; instantaneous switching surface only, not a real gain stability boundary"
+}

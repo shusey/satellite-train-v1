@@ -1,0 +1,111 @@
+{
+  "passed": true,
+  "cases": {
+    "30": {
+      "rows": {
+        "local_cycles": true,
+        "group_cycles": true,
+        "quiet_cycles": true
+      },
+      "existing_summary_fields": {
+        "schema_version": true,
+        "observation_end_s": true,
+        "dwell_time_s": true,
+        "relative_D_tolerance": true,
+        "local_completed_cycles": true,
+        "incomplete_cycles": true,
+        "complete_response_groups": true,
+        "local_valid_finite_forecasts": true,
+        "group_valid_finite_forecasts": true,
+        "complete_quiet_packets": true,
+        "quiet_valid_finite_forecasts": true,
+        "dwell_limited_returns": true,
+        "threshold_limited_returns": true,
+        "high_hold_times_s": true,
+        "local_definition": true,
+        "group_definition": true,
+        "forecast_definition": true,
+        "formation": true,
+        "switching": true,
+        "altitude": true,
+        "settling": true,
+        "Kp_s2_inv": true,
+        "Kd_s_inv": true,
+        "velocity_distribution_definition": true,
+        "kd_factor": true,
+        "dominance_ratio": true,
+        "command_contribution_counts": true,
+        "crossing_contribution_counts": true,
+        "quiet_onset_command_contribution_counts": true,
+        "later_in_packet_command_contribution_counts": true,
+        "temporal_group_onset_contribution_counts": true,
+        "first_off_gate_blocked_cycles": true,
+        "gate_blocked_completed_cycles": true,
+        "return_gate_censored_cycles": true
+      },
+      "endpoint_arrays": {
+        "time_s": true,
+        "gap_error_m": true,
+        "gap_rate_m_s": true,
+        "q_P_m_s2": true,
+        "q_D_m_s2": true,
+        "q_m_s2": true,
+        "mode": true
+      },
+      "passed": true
+    },
+    "60": {
+      "rows": {
+        "local_cycles": true,
+        "group_cycles": true,
+        "quiet_cycles": true
+      },
+      "existing_summary_fields": {
+        "schema_version": true,
+        "observation_end_s": true,
+        "dwell_time_s": true,
+        "relative_D_tolerance": true,
+        "local_completed_cycles": true,
+        "incomplete_cycles": true,
+        "complete_response_groups": true,
+        "local_valid_finite_forecasts": true,
+        "group_valid_finite_forecasts": true,
+        "complete_quiet_packets": true,
+        "quiet_valid_finite_forecasts": true,
+        "dwell_limited_returns": true,
+        "threshold_limited_returns": true,
+        "high_hold_times_s": true,
+        "local_definition": true,
+        "group_definition": true,
+        "forecast_definition": true,
+        "formation": true,
+        "switching": true,
+        "altitude": true,
+        "settling": true,
+        "Kp_s2_inv": true,
+        "Kd_s_inv": true,
+        "velocity_distribution_definition": true,
+        "kd_factor": true,
+        "dominance_ratio": true,
+        "command_contribution_counts": true,
+        "crossing_contribution_counts": true,
+        "quiet_onset_command_contribution_counts": true,
+        "later_in_packet_command_contribution_counts": true,
+        "temporal_group_onset_contribution_counts": true,
+        "first_off_gate_blocked_cycles": true,
+        "gate_blocked_completed_cycles": true,
+        "return_gate_censored_cycles": true
+      },
+      "endpoint_arrays": {
+        "time_s": true,
+        "gap_error_m": true,
+        "gap_rate_m_s": true,
+        "q_P_m_s2": true,
+        "q_D_m_s2": true,
+        "q_m_s2": true,
+        "mode": true
+      },
+      "passed": true
+    }
+  }
+}
