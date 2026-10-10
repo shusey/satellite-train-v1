@@ -14,20 +14,21 @@ from analyze_dwell_residual import csv_rows
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--comparison",type=Path,required=True);p.add_argument("--output",type=Path,required=True)
+    p.add_argument("--gain-axis",choices=["kd","kp"],default="kd")
     args=p.parse_args();rows=json.loads((args.comparison/"comparison.json").read_text(encoding="utf-8"))
     out=prepare_output_directory(args.output)
     for name in ["comparison.json","comparison.csv","table.md"]:shutil.copy2(args.comparison/name,out/name)
     for row in rows:
         analysis=Path(row["analysis_directory"]);r=json.loads((analysis/"residual_metrics.json").read_text(encoding="utf-8"))
         provenance=json.loads((analysis/"provenance.json").read_text(encoding="utf-8"));run=Path(provenance["source"])
-        case=prepare_output_directory(out/f"kd_{row['kd_factor']:g}_{row['days']:.0f}d")
+        case=prepare_output_directory(out/f"{args.gain_axis}_{row[args.gain_axis+'_factor']:g}_{row['days']:.0f}d")
         for name in ["summary.json","first_response.json","provenance.json"]:shutil.copy2(analysis/name,case/name)
         shutil.copy2(run/"normalized_config.yaml",case/"normalized_config.yaml")
-        for name in ["kd_initialization.json","continuation.json"]:
+        for name in [args.gain_axis+"_initialization.json","continuation.json"]:
             if (run/name).exists():shutil.copy2(run/name,case/name)
         # Sixty-day events include the complete thirty-day prefix; avoid duplicating it.
         if row["days"]==60:shutil.copy2(run/"switch_events.csv",case/"switch_events.csv")
-        for name in ["group_residuals.csv","quiet_residuals.csv","first_local_cycles.csv"]:
+        for name in ["group_residuals.csv","quiet_residuals.csv","first_local_cycles.csv"]+(["threshold_events.csv","off_before_dwell.csv"] if args.gain_axis=="kp" else []):
             if (analysis/name).exists():shutil.copy2(analysis/name,case/name)
         local=r["local_cycles"];summary=[];samples=[]
         for satellite in sorted({x["satellite_id"] for x in local}):

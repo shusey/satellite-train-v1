@@ -47,6 +47,7 @@ class ControllerConfig:
     reference_off_error_m: float | None = None
     reference_off_rate_m_s: float | None = None
     kd_s_inv: float | None = None
+    kp_s2_inv: float | None = None
 
 
 @dataclass(frozen=True)
@@ -120,6 +121,8 @@ class SimulationConfig:
         # Omit an unused override so legacy normalized files stay identical.
         if self.controller.kd_s_inv is None:
             normalized["controller"].pop("kd_s_inv")
+        if self.controller.kp_s2_inv is None:
+            normalized["controller"].pop("kp_s2_inv")
         return normalized
 
 
@@ -231,6 +234,8 @@ def _validate(config: SimulationConfig, raw: Mapping[str, Any]) -> None:
         raise ValueError("controller.command_delay_s must be nonnegative")
     if c.derived.controller_kd_s_inv <= 0.0:
         raise ValueError("controller.kd_s_inv must be positive")
+    if c.derived.controller_kp_s2_inv <= 0.0:
+        raise ValueError("controller.kp_s2_inv must be positive")
     if c.disturbance.start_time_s < 0.0:
         raise ValueError("disturbance.start_time_s must be nonnegative")
     if c.recovery.position_tolerance_m < 0.0 or c.recovery.velocity_tolerance_m_s < 0.0:
@@ -301,7 +306,8 @@ def config_from_dict(data: Mapping[str, Any]) -> SimulationConfig:
         reference_mean_motion_rad_s=mean_motion,
         reference_period_s=2.0 * pi / mean_motion,
         target_spacing_rad=sections["formation"].target_spacing_m / reference_radius,
-        controller_kp_s2_inv=1.0 / design_time**2,
+        controller_kp_s2_inv=(1.0 / design_time**2 if sections["controller"].kp_s2_inv is None
+                              else sections["controller"].kp_s2_inv),
         controller_kd_s_inv=(2.0 / design_time if sections["controller"].kd_s_inv is None
                              else sections["controller"].kd_s_inv),
         disturbance_sigma_m=sections["disturbance"].fwhm_m / (2.0 * sqrt(2.0 * log(2.0))),

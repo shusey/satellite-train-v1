@@ -45,10 +45,28 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--analysis",type=Path,nargs="+",required=True)
     p.add_argument("--output",type=Path,required=True)
+    p.add_argument("--gain-axis",choices=["kd","kp"],default="kd")
     args=p.parse_args();rows=[]
     for directory in args.analysis:
         report=json.loads((directory/"residual_metrics.json").read_text(encoding="utf-8"))
         row=summarize_kd(report)
+        if args.gain_axis=="kp":
+            row["kp_factor"]=report["summary"]["kp_factor"]
+            for key in ["off_before_gate_observed_cycles","off_before_gate_met_cycles"]:
+                row[key]=report["summary"][key]
+            with (directory/"threshold_events.csv").open(encoding="utf-8-sig") as f:triggers=list(csv.DictReader(f))
+            row["activation_statistics"]={}
+            for role,predicate in [("all",lambda x:True),("quiet_onset",lambda x:x["quiet_packet_onset"]=="True"),
+                    ("temporal_group_onset",lambda x:x["temporal_group_onset"]=="True")]:
+                selected=[x for x in triggers if predicate(x)]
+                row["activation_statistics"][role]={key:stats([float(x[key]) for x in selected])
+                    for key in ["command_max_abs_error_m","command_rms_error_m","command_incident_max_abs_error_m",
+                        "command_B_error_m","command_B_rate_m_s","command_q_P_rate_m_s3",
+                        "command_on_margin_m_s2","crossing_max_abs_error_m","crossing_incident_max_abs_error_m"]}
+            threshold_on=load_config(Path(report["source_directory"])/"normalized_config.yaml").controller.threshold_on_m_s2
+            row["quiet_P_growth_m_s3"]=stats([x["prediction"]["q_P_rate_m_s3"] for x in report["quiet_cycles"]])
+            row["quiet_on_margin_m_s2"]=stats([threshold_on-
+                x["predicted_satellite_q_m_s2"] for x in report["quiet_cycles"] if x["predicted_satellite_q_m_s2"] is not None])
         row["first_response"]=json.loads((directory/"first_response.json").read_text(encoding="utf-8"))
         source=Path(report["source_directory"])
         with np.load(source/"results.npz") as f:
@@ -70,15 +88,16 @@ def main():
             earliest_conditional_forecast=min(candidates,key=lambda x:(x["predicted_command_s"],x["satellite_id"])) if candidates else None,
             interpretation="fresh constant-D extrapolation, not validated beyond tmax; invalid no-actuation assumption if any non-LOW/pending")
         row["analysis_directory"]=str(directory.resolve());rows.append(row)
-    rows.sort(key=lambda r:(r["days"],r["kd_factor"]))
+    factor_key=args.gain_axis+"_factor"
+    rows.sort(key=lambda r:(r["days"],r[factor_key]))
     out=prepare_output_directory(args.output);write_json(out/"comparison.json",rows)
     with (out/"comparison.csv").open("w",encoding="utf-8-sig",newline="") as f:
         writer=csv.DictWriter(f,fieldnames=list(rows[0]));writer.writeheader()
         writer.writerows({k:json.dumps(v,ensure_ascii=False) if isinstance(v,(dict,list)) else v for k,v in r.items()} for r in rows)
-    lines=["|日数|Kd倍率|最大誤差 [m]|全体RMS [m]|終了時誤差 [m]|遷移数|完了cycle数|最後の切替 [日]|追加高度損失 [m]|",
+    lines=[f"|日数|{args.gain_axis.capitalize()}倍率|最大誤差 [m]|全体RMS [m]|終了時誤差 [m]|遷移数|完了cycle数|最後の切替 [日]|追加高度損失 [m]|",
         "|---:|---:|---:|---:|---:|---:|---:|---:|---:|"]
     for r in rows:
-        lines.append(f"|{r['days']:.0f}|{r['kd_factor']:.1f}|{r['e_max_m']:.3f}|{r['rms_m']:.3f}|{r['final_max_error_m']:.3f}|{r['transitions']}|{r['completed_cycles']}|{r['last_switch_day']:.5f}|{r['extra_altitude_loss_m']:.3f}|")
+        lines.append(f"|{r['days']:.0f}|{r[factor_key]:.1f}|{r['e_max_m']:.3f}|{r['rms_m']:.3f}|{r['final_max_error_m']:.3f}|{r['transitions']}|{r['completed_cycles']}|{r['last_switch_day']:.5f}|{r['extra_altitude_loss_m']:.3f}|")
     (out/"table.md").write_text("\n".join(lines)+"\n",encoding="utf-8")
     print("\n".join(lines),flush=True)
 

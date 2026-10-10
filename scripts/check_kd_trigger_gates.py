@@ -14,6 +14,7 @@ from sat_string.io import prepare_output_directory,write_json
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--analysis",type=Path,nargs="+",required=True);p.add_argument("--output",type=Path,required=True)
+    p.add_argument("--gain-axis",choices=["kd","kp"],default="kd")
     args=p.parse_args();results=[]
     for directory in args.analysis:
         s=json.loads((directory/"summary.json").read_text(encoding="utf-8"))
@@ -31,7 +32,7 @@ def main():
             for row in csv.DictReader(f):
                 if row["next_same_satellite_start_interval_s"]:
                     observed+=1;at_bound+=abs(float(row["next_same_satellite_start_interval_s"])-bound)<1e-9
-        results.append(dict(kd_factor=s["kd_factor"],days=s["observation_end_s"]/86400,
+        results.append(dict([(args.gain_axis+"_factor",s[args.gain_axis+"_factor"]),("days",s["observation_end_s"]/86400)],
             crossing_kinds=dict(kinds),upward_crossing_contribution_counts=dict(upward),
             command_later_than_final_crossing_sample=delayed,opposed_P_D_sign_crossing_states=opposed,
             ideal_minimum_LH_repeat_interval_s=bound,observed_uncensored_LH_intervals=observed,

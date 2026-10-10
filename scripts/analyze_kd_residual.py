@@ -23,9 +23,13 @@ def main():
     p.add_argument("--reference-14d",type=Path,default=Path("outputs/evaluation_20261007/runs/central_14d"))
     p.add_argument("--dominance-ratio",type=float,default=2.)
     p.add_argument("--relative-D-tolerance",type=float,default=.1)
+    p.add_argument("--gain-axis",choices=["kd","kp"],default="kd")
     args=p.parse_args()
+    if args.gain_axis=="kp":
+        from sat_string.kp_analysis import match_all_low as matcher,fixed_state_forecasts as forecaster,enhance_activations,off_before_dwell
+    else:matcher,forecaster=match_all_low,fixed_state_forecasts
     cfg=load_config(args.run/"normalized_config.yaml");lc=load_config(args.all_low/"normalized_config.yaml")
-    if not match_all_low(cfg,lc) or load_metadata(args.all_low)["case"]["control_enabled"]:
+    if not matcher(cfg,lc) or load_metadata(args.all_low)["case"]["control_enabled"]:
         raise ValueError("All-LOW reference must match all physically active inputs")
     if load_metadata(args.run)["case"]["disturbance_enabled"]!=load_metadata(args.all_low)["case"]["disturbance_enabled"]:
         raise ValueError("Disturbance flags differ")
@@ -48,14 +52,18 @@ def main():
         report["summary"].update({key:metrics[key] for key in ["formation","switching","altitude","settling"]})
     report=enhance_residual(report,states,cfg)
     triggers=threshold_events(a,cfg,events,args.dominance_ratio);gates=return_gates(a,cfg,events)
+    off_rows=[]
+    if args.gain_axis=="kp":
+        triggers=enhance_activations(triggers,a,cfg)
+        off_rows=off_before_dwell(a,cfg,events)
     groups=group_episodes(events,float(a["time_s"][-1]),gap["gap_s"])
     group_starts={min(x["command_time"] for x in group if x["to_mode"]=="H") for group in groups}
     for row in triggers:row["temporal_group_onset"]=row["command_time_s"] in group_starts
     first=first_response(a,cfg,events,gap["gap_s"],report,states)
-    if cfg.derived.controller_kd_s_inv==2/21600. and report["group_cycles"]:
+    if cfg.derived.controller_kd_s_inv==2/21600. and cfg.derived.controller_kp_s2_inv==1/21600.**2 and report["group_cycles"]:
         endpoint=report["group_cycles"][0];k=endpoint["end_state_row"];time=endpoint["state_sample_time_s"]
         attitude=restore_attitude(cfg,events,time)
-        first["fixed_baseline_state_forecasts"]=fixed_state_forecasts(states["gap_error_m"][k],
+        first["fixed_baseline_state_forecasts"]=forecaster(states["gap_error_m"][k],
             states["gap_rate_m_s"][k],time,attitude.next_allowed_time,cfg)
         first["fixed_state_forecast_definition"]="same first-group baseline end-state and clocks; no changed-state simulation"
     report["summary"].update(kd_factor=cfg.derived.controller_kd_s_inv/(2/21600.),
@@ -73,6 +81,10 @@ def main():
         first_off_gate_blocked_cycles=sum(x["off_not_met_at_gate"] is True for x in gates),
         gate_blocked_completed_cycles=sum(x["off_not_met_at_gate"] is True and x["completed_by_tmax"] for x in gates),
         return_gate_censored_cycles=sum(x["return_right_censored"] for x in gates))
+    if args.gain_axis=="kp":
+        report["summary"].update(kp_factor=cfg.derived.controller_kp_s2_inv/(1/21600.**2),
+            off_before_gate_observed_cycles=sum(x["gate_observed"] for x in off_rows),
+            off_before_gate_met_cycles=sum(x["gate_observed"] and x["off_observed_before_gate"] for x in off_rows))
     report["source_directory"]=str(args.run.resolve());report["state_array_file"]="cycle_end_states.npz"
     json.dumps(report,allow_nan=False);json.dumps(first,allow_nan=False)
     out=prepare_output_directory(args.output)
@@ -80,13 +92,15 @@ def main():
     for key,name in [("local_cycles","local_cycles.csv"),("group_cycles","group_residuals.csv"),("quiet_cycles","quiet_residuals.csv")]:
         csv_rows(out/name,report[key])
     csv_rows(out/"threshold_events.csv",triggers);csv_rows(out/"return_gates.csv",gates)
+    if args.gain_axis=="kp":csv_rows(out/"off_before_dwell.csv",off_rows)
     csv_rows(out/"first_local_cycles.csv",first.get("first_local_cycles",[]))
     write_json(out/"first_response.json",first)
     np.savez_compressed(out/"cycle_end_states.npz",**states)
     write_json(out/"provenance.json",dict(source=str(args.run.resolve()),all_low=str(args.all_low.resolve()),
         configuration=cfg.to_dict(),cached_residual=str(args.cached_residual) if args.cached_residual else None,
-        grouping=gap,dominance_ratio=args.dominance_ratio,all_low_reuse_reason="Kd cannot change orbit/area when controller disabled"))
-    s=report["summary"];print(dict(factor=s["kd_factor"],days=s["observation_end_s"]/86400,
+        grouping=gap,dominance_ratio=args.dominance_ratio,gain_axis=args.gain_axis,
+        all_low_reuse_reason=f"{args.gain_axis.upper()} cannot change orbit/area when controller disabled"))
+    s=report["summary"];print(dict(factor=s[args.gain_axis+"_factor"],days=s["observation_end_s"]/86400,
         e_max=s["formation"]["max_abs_error_m"],rms=s["formation"]["rms_error_m"],
         cycles=s["local_completed_cycles"],transitions=s["switching"]["n_transition_starts"],
         extra_loss=s["altitude"]["extra_loss_vs_all_low_m"],blocked_gates=s["first_off_gate_blocked_cycles"],
