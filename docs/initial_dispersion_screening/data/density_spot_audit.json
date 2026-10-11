@@ -1,0 +1,25 @@
+{
+  "stages": [
+    {
+      "stage": "initial_7d",
+      "max_relative_error": 3.0481801420068066e-05,
+      "points": 87801
+    },
+    {
+      "stage": "extended_30d",
+      "max_relative_error": 4.7092744924759344e-05,
+      "points": 46494
+    },
+    {
+      "stage": "combination_7d",
+      "max_relative_error": 1.9014517924409446e-05,
+      "points": 2373
+    }
+  ],
+  "max_relative_error": 4.7092744924759344e-05,
+  "points": 136668,
+  "sampling": "Every6h plus10/50/90s offsets inside120s cache blocks, and final state",
+  "passed": true,
+  "criterion": "Same-coordinate relative density discrepancy <0.001",
+  "caveat": "Sparse point check, not full integrated propagation convergence; previous120s cache error at60d about1m"
+}

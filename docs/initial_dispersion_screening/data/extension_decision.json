@@ -1,0 +1,92 @@
+{
+  "decisions": [
+    {
+      "factor": "a",
+      "sigma": 0.1,
+      "median_seed": 4,
+      "range_7d_m": [
+        233.00724407884158,
+        464.179258634001
+      ],
+      "selected_case_ids": [
+        "a_0.1_random_0",
+        "a_0.1_random_1",
+        "a_0.1_random_2",
+        "a_0.1_random_3",
+        "a_0.1_random_4"
+      ],
+      "reason": "100-500m: extend; below100: representative; smallest B: one growth example; other large levels stop"
+    },
+    {
+      "factor": "a",
+      "sigma": 1.0,
+      "median_seed": 4,
+      "range_7d_m": [
+        2291.2406444862936,
+        4735.933362749497
+      ],
+      "selected_case_ids": [],
+      "reason": "100-500m: extend; below100: representative; smallest B: one growth example; other large levels stop"
+    },
+    {
+      "factor": "a",
+      "sigma": 10.0,
+      "median_seed": 4,
+      "range_7d_m": [
+        22815.911181551488,
+        47453.865878017605
+      ],
+      "selected_case_ids": [],
+      "reason": "100-500m: extend; below100: representative; smallest B: one growth example; other large levels stop"
+    },
+    {
+      "factor": "B",
+      "sigma": 0.003,
+      "median_seed": 2,
+      "range_7d_m": [
+        2299.5426918295675,
+        3899.7425816015902
+      ],
+      "selected_case_ids": [
+        "B_0.003_random_2"
+      ],
+      "reason": "100-500m: extend; below100: representative; smallest B: one growth example; other large levels stop"
+    },
+    {
+      "factor": "B",
+      "sigma": 0.01,
+      "median_seed": 2,
+      "range_7d_m": [
+        7638.465042549701,
+        12974.101051844858
+      ],
+      "selected_case_ids": [],
+      "reason": "100-500m: extend; below100: representative; smallest B: one growth example; other large levels stop"
+    },
+    {
+      "factor": "B",
+      "sigma": 0.05,
+      "median_seed": 2,
+      "range_7d_m": [
+        38140.604168731385,
+        64825.793025257015
+      ],
+      "selected_case_ids": [],
+      "reason": "100-500m: extend; below100: representative; smallest B: one growth example; other large levels stop"
+    },
+    {
+      "factor": "B",
+      "sigma": 0.1,
+      "median_seed": 2,
+      "range_7d_m": [
+        76253.72388032688,
+        129636.17768845064
+      ],
+      "selected_case_ids": [],
+      "reason": "100-500m: extend; below100: representative; smallest B: one growth example; other large levels stop"
+    }
+  ],
+  "additional_seeds": false,
+  "sigma_a_50_m": false,
+  "reason_no50": "10m already large; no need to explore an upper bound"
+}

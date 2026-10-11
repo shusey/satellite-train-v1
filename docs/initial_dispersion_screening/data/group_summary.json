@@ -1,0 +1,208 @@
+{
+  "groups": [
+    {
+      "factor": "a",
+      "sigma": 0.1,
+      "horizons": {
+        "1": {
+          "n": 5,
+          "median_max_error_m": 59.61694861997746,
+          "min_max_error_m": 33.186612943471,
+          "max_max_error_m": 66.0014880465352,
+          "median_rms_m": 11.99862962231844,
+          "representative_seed": 4,
+          "representative_case_id": "a_0.1_random_4"
+        },
+        "7": {
+          "n": 5,
+          "median_max_error_m": 418.8480247584567,
+          "min_max_error_m": 233.00724407884158,
+          "max_max_error_m": 464.179258634001,
+          "median_rms_m": 84.34324121858249,
+          "representative_seed": 4,
+          "representative_case_id": "a_0.1_random_4"
+        },
+        "30": {
+          "n": 5,
+          "median_max_error_m": 1828.0364956614433,
+          "min_max_error_m": 1014.9410653916427,
+          "max_max_error_m": 2027.127628077246,
+          "median_rms_m": 367.24594932625916,
+          "representative_seed": 4,
+          "representative_case_id": "a_0.1_random_4"
+        }
+      },
+      "provisional_rank": "A",
+      "rank_caution": "Dynamical significance within user-specified ranges, NOT proof of real occurrence"
+    },
+    {
+      "factor": "a",
+      "sigma": 1.0,
+      "horizons": {
+        "1": {
+          "n": 5,
+          "median_max_error_m": 610.1712761474081,
+          "min_max_error_m": 325.5925875502661,
+          "max_max_error_m": 673.1103831283939,
+          "median_rms_m": 119.47646297498929,
+          "representative_seed": 4,
+          "representative_case_id": "a_1_random_4"
+        },
+        "7": {
+          "n": 5,
+          "median_max_error_m": 4292.68487052225,
+          "min_max_error_m": 2291.2406444862936,
+          "max_max_error_m": 4735.933362749497,
+          "median_rms_m": 839.5846678010896,
+          "representative_seed": 4,
+          "representative_case_id": "a_1_random_4"
+        }
+      },
+      "provisional_rank": "A",
+      "rank_caution": "Dynamical significance within user-specified ranges, NOT proof of real occurrence"
+    },
+    {
+      "factor": "a",
+      "sigma": 10.0,
+      "horizons": {
+        "1": {
+          "n": 5,
+          "median_max_error_m": 6115.708381733222,
+          "min_max_error_m": 3242.581345594764,
+          "max_max_error_m": 6744.244104162641,
+          "median_rms_m": 1194.542357544382,
+          "representative_seed": 4,
+          "representative_case_id": "a_10_random_4"
+        },
+        "7": {
+          "n": 5,
+          "median_max_error_m": 43030.85117521322,
+          "min_max_error_m": 22815.911181551488,
+          "max_max_error_m": 47453.865878017605,
+          "median_rms_m": 8394.183477353834,
+          "representative_seed": 4,
+          "representative_case_id": "a_10_random_4"
+        }
+      },
+      "provisional_rank": "A",
+      "rank_caution": "Dynamical significance within user-specified ranges, NOT proof of real occurrence"
+    },
+    {
+      "factor": "B",
+      "sigma": 0.003,
+      "horizons": {
+        "1": {
+          "n": 5,
+          "median_max_error_m": 57.76289096303643,
+          "min_max_error_m": 47.94875095033937,
+          "max_max_error_m": 83.40924525146524,
+          "median_rms_m": 12.832919122612772,
+          "representative_seed": 2,
+          "representative_case_id": "B_0.003_random_2"
+        },
+        "7": {
+          "n": 5,
+          "median_max_error_m": 2686.6421864446115,
+          "min_max_error_m": 2299.5426918295675,
+          "max_max_error_m": 3899.7425816015902,
+          "median_rms_m": 607.9737915512397,
+          "representative_seed": 2,
+          "representative_case_id": "B_0.003_random_2"
+        },
+        "30": {
+          "n": 1,
+          "median_max_error_m": 51627.80879124866,
+          "min_max_error_m": 51627.80879124866,
+          "max_max_error_m": 51627.80879124866,
+          "median_rms_m": 11076.80397519787,
+          "representative_seed": 2,
+          "representative_case_id": "B_0.003_random_2"
+        }
+      },
+      "provisional_rank": "A",
+      "rank_caution": "Dynamical significance within user-specified ranges, NOT proof of real occurrence"
+    },
+    {
+      "factor": "B",
+      "sigma": 0.01,
+      "horizons": {
+        "1": {
+          "n": 5,
+          "median_max_error_m": 188.89522087224262,
+          "min_max_error_m": 161.45686518314432,
+          "max_max_error_m": 274.58654755980086,
+          "median_rms_m": 42.51486615210477,
+          "representative_seed": 2,
+          "representative_case_id": "B_0.01_random_2"
+        },
+        "7": {
+          "n": 5,
+          "median_max_error_m": 8928.468868241745,
+          "min_max_error_m": 7638.465042549701,
+          "max_max_error_m": 12974.101051844858,
+          "median_rms_m": 2025.2182869650742,
+          "representative_seed": 2,
+          "representative_case_id": "B_0.01_random_2"
+        }
+      },
+      "provisional_rank": "A",
+      "rank_caution": "Dynamical significance within user-specified ranges, NOT proof of real occurrence"
+    },
+    {
+      "factor": "B",
+      "sigma": 0.05,
+      "horizons": {
+        "1": {
+          "n": 5,
+          "median_max_error_m": 938.2476990191429,
+          "min_max_error_m": 803.9046379629659,
+          "max_max_error_m": 1367.0164359337864,
+          "median_rms_m": 212.2378042017308,
+          "representative_seed": 2,
+          "representative_case_id": "B_0.05_random_2"
+        },
+        "7": {
+          "n": 5,
+          "median_max_error_m": 44604.33786934362,
+          "min_max_error_m": 38140.604168731385,
+          "max_max_error_m": 64825.793025257015,
+          "median_rms_m": 10123.774448957938,
+          "representative_seed": 2,
+          "representative_case_id": "B_0.05_random_2"
+        }
+      },
+      "provisional_rank": "A",
+      "rank_caution": "Dynamical significance within user-specified ranges, NOT proof of real occurrence"
+    },
+    {
+      "factor": "B",
+      "sigma": 0.1,
+      "horizons": {
+        "1": {
+          "n": 5,
+          "median_max_error_m": 1875.0008869846242,
+          "min_max_error_m": 1606.223296630025,
+          "max_max_error_m": 2732.5432291770494,
+          "median_rms_m": 424.3991177071223,
+          "representative_seed": 2,
+          "representative_case_id": "B_0.1_random_2"
+        },
+        "7": {
+          "n": 5,
+          "median_max_error_m": 89219.62325250571,
+          "min_max_error_m": 76253.72388032688,
+          "max_max_error_m": 129636.17768845064,
+          "median_rms_m": 20246.750049065322,
+          "representative_seed": 2,
+          "representative_case_id": "B_0.1_random_2"
+        }
+      },
+      "provisional_rank": "A",
+      "rank_caution": "Dynamical significance within user-specified ranges, NOT proof of real occurrence"
+    }
+  ],
+  "seeds": 5,
+  "stress_excluded_from_random_statistics": true,
+  "matched_scales": "same standardized pattern within each factor",
+  "sample_sigma_not_rescaled": true
+}
