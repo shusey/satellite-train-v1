@@ -1,0 +1,113 @@
+{
+  "residual": {
+    "schema_version": 1,
+    "observation_end_s": 2592000.0,
+    "dwell_time_s": 300.0,
+    "relative_D_tolerance": 0.1,
+    "local_completed_cycles": 2247,
+    "incomplete_cycles": [],
+    "complete_response_groups": 0,
+    "local_valid_finite_forecasts": 0,
+    "group_valid_finite_forecasts": 0,
+    "complete_quiet_packets": 427,
+    "quiet_valid_finite_forecasts": 340,
+    "dwell_limited_returns": 2200,
+    "threshold_limited_returns": 47,
+    "high_hold_times_s": [
+      300.0,
+      310.0,
+      320.0,
+      330.0,
+      340.0,
+      350.0,
+      360.0,
+      370.0,
+      390.0,
+      400.0
+    ],
+    "local_definition": "one satellite L-H-L, sampled at first saved time >= LOW completion; neighbor activity flagged",
+    "group_definition": "existing temporal response group, all returns completed; future events do not define residual values",
+    "forecast_definition": "constant D, then LOW dwell and control-grid gate; raw invalid forecasts retained with reasons",
+    "Kp_s2_inv": 2.143347050754458e-09,
+    "Kd_s_inv": 9.259259259259259e-05,
+    "velocity_distribution_definition": "all gaps at endpoint; strict e*v signs; no engineering zero tolerance"
+  },
+  "quiet_packets": 427,
+  "command_contribution_counts": {
+    "P_dominant": 61,
+    "D_dominant": 1657,
+    "mixed": 529
+  },
+  "first_HIGH_trigger": {
+    "satellite_id": 20,
+    "command_time_s": 22820.0,
+    "LOW_entry_time_s": 0.0,
+    "quiet_packet_onset": true,
+    "sampled_crossing_time_s": 22820.0,
+    "command_minus_crossing_s": 0.0,
+    "crossing_kind": "upward_from_below",
+    "command_q_P_m_s2": 3.6870346058992486e-08,
+    "command_q_D_m_s2": 1.1320027471984093e-07,
+    "command_q_m_s2": 1.5007062077883342e-07,
+    "command_D_magnitude_fraction": 0.7543133634841814,
+    "command_contribution_class": "D_dominant",
+    "command_opposed_signs": false,
+    "command_cancellation_ratio": 1.0,
+    "crossing_q_P_m_s2": 3.6870346058992486e-08,
+    "crossing_q_D_m_s2": 1.1320027471984093e-07,
+    "crossing_q_m_s2": 1.5007062077883342e-07,
+    "crossing_D_magnitude_fraction": 0.7543133634841814,
+    "crossing_contribution_class": "D_dominant",
+    "crossing_opposed_signs": false,
+    "crossing_cancellation_ratio": 1.0,
+    "max_error_at_command_m": 10.90947567894983,
+    "incident_errors_m": [
+      -8.182453161871083,
+      9.019775495412452
+    ],
+    "incident_rates_m_s": [
+      -0.0005951368042095713,
+      0.0006274261627647107
+    ]
+  },
+  "returns_dwell_limited": 2200,
+  "returns_after_dwell": 47,
+  "first_off_gate_blocked": 47,
+  "min_same_satellite_HIGH_start_interval_s": 840.0,
+  "cycles_at_840s": 189,
+  "completed_local_Vres_median_m_s": 0.0023723687980858428,
+  "completed_local_incident_Vres_median_m_s": 0.001275429857673083,
+  "own_extra_loss_per_cycle_median_m": 1.4295819671824574,
+  "initial_max_gap_rate_m_s": 0.0004015825815257652,
+  "final_max_gap_rate_m_s": 0.0011580626314508305,
+  "quiet_valid_origin_matched_predictions": 262,
+  "quiet_forecasts_invalid_D_change": 86,
+  "quiet_onset_contribution_counts": {
+    "P_dominant": 10,
+    "D_dominant": 281,
+    "mixed": 137
+  },
+  "later_in_packet_contribution_counts": {
+    "P_dominant": 51,
+    "D_dominant": 1376,
+    "mixed": 392
+  },
+  "quiet_prediction_status_summary": {
+    "already_at_or_above_on": {
+      "count": 6,
+      "median_absolute_error_s": 0.0,
+      "median_absolute_relative_error": 0.0,
+      "median_actual_wait_s": 105.0,
+      "commands_delayed_by_gate": 6
+    },
+    "future_upward_crossing": {
+      "count": 256,
+      "median_absolute_error_s": 470.0,
+      "median_absolute_relative_error": 0.392764452052912,
+      "median_actual_wait_s": 1765.0,
+      "commands_delayed_by_gate": 0
+    }
+  },
+  "quiet_forecasts_csv": "AB_quiet_cycles.csv",
+  "same_satellite_HIGH_intervals_csv": "AB_local_cycles.csv"
+}

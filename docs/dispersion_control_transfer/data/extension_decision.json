@@ -1,0 +1,36 @@
+{
+  "extend_to_60d": true,
+  "reviewed": true,
+  "all_cases_eligible": true,
+  "cases": [
+    {
+      "case": "A",
+      "extend_to_60d": true,
+      "safe": true,
+      "finite": true,
+      "latter_segment_transitions": 2490,
+      "max_error_m": 317.8217322581108,
+      "reason": "positive signed gaps, finite states, ongoing activity; cost and precision require review"
+    },
+    {
+      "case": "B",
+      "extend_to_60d": true,
+      "safe": true,
+      "finite": true,
+      "latter_segment_transitions": 2976,
+      "max_error_m": 194.14168269027775,
+      "reason": "positive signed gaps, finite states, ongoing activity; cost and precision require review"
+    },
+    {
+      "case": "AB",
+      "extend_to_60d": true,
+      "safe": true,
+      "finite": true,
+      "latter_segment_transitions": 3868,
+      "max_error_m": 170.24999033253673,
+      "reason": "positive signed gaps, finite states, ongoing activity; cost and precision require review"
+    }
+  ],
+  "interpretation": "normal order and meaningful ongoing activity; no tuning or asymptotic stability inference",
+  "review": "All3 ON: finite states, no reversed or nonpositive gaps, max errors170-318m (<500m), mean altitudes still~396km, no numerical failure. HIGH-equivalent ensemble duty~1-2%, rare840s repeats not permanently saturated. Extra loss101-158m at30d; operation budget unknown, cost not hidden. Continued late activity and lack of quiet candidate justify60d observation without tuning. OFF A/B have only30d data, so suffixes required for matched60d reference; fixed-label precision censored if OFF order reverses."
+}

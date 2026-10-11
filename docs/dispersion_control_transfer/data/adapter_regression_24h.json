@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "checks": {
+    "time_s": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "passed": true
+    },
+    "a_m": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "passed": true
+    },
+    "lambda_rad": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "passed": true
+    },
+    "area_m2": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "passed": true
+    },
+    "mode": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "passed": true
+    },
+    "density_kg_m3": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "passed": true
+    },
+    "altitude_m": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "passed": true
+    },
+    "gap_error_m": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "passed": true
+    },
+    "gap_rate_m_s": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "passed": true
+    },
+    "gap_distance_m": {
+      "exact": true,
+      "max_abs_difference": 0.0,
+      "passed": true
+    },
+    "q_m_s2": {
+      "exact": false,
+      "max_abs_difference": 1.0587911840678754e-22,
+      "passed": true
+    }
+  },
+  "events_exact": true
+}

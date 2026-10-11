@@ -1,0 +1,229 @@
+{
+  "passed": true,
+  "verified_utc": "2026-10-11T16:16:23.416013+00:00",
+  "base_commit": "0e32b68d3b5eb07024873616caef91e2d844e12c",
+  "branch": "astra/dispersion-control-transfer",
+  "tests": {
+    "passed": 273,
+    "new_tests": 17,
+    "elapsed_s": 29.51,
+    "log": "........................................................................ [ 26%]\n........................................................................ [ 52%]\n........................................................................ [ 79%]\n.........................................................                [100%]\n273 passed in 29.51s\n"
+  },
+  "old_files_checked": 8570,
+  "old_files_changed": 0,
+  "existing_core_modified": false,
+  "changes_all_additions": true,
+  "checkpoint_checks": [
+    {
+      "source": "batch_30d",
+      "suffix": "batch_60d",
+      "boundary_arrays": {
+        "a_m": true,
+        "lambda_rad": true,
+        "area_m2": true,
+        "mode": true
+      },
+      "boundary_density_cache_reanchoring": {
+        "exact": false,
+        "rtol": 1e-08,
+        "atol": 0.0,
+        "maximum_absolute_difference_kg_m3": 3.3939963703132316e-21,
+        "maximum_relative_difference": 6.121362305933076e-10,
+        "passed": true
+      },
+      "events_through_30d_exact": true,
+      "passed": true
+    },
+    {
+      "source": "reused OFF A/B30d",
+      "suffix": "OFF_A_B_60d",
+      "boundary_arrays": {
+        "a_m": true,
+        "lambda_rad": true
+      },
+      "passed": true
+    }
+  ],
+  "input_checks": [
+    {
+      "case": "A",
+      "on_sources": [
+        "outputs\\dispersion_control_20261011\\batch_30d"
+      ],
+      "off_sources": [
+        "outputs\\initial_dispersion_20261011\\initial_7d",
+        "outputs\\initial_dispersion_20261011\\extended_30d"
+      ],
+      "configuration_identical": true,
+      "initial_a_lambda_exact": true,
+      "profiles_exact": true,
+      "difference": "control_enabled only",
+      "environment_exact": true,
+      "weather_sha256": "c7df89db603ba5b94c5809cc2fec3a6f266a5b1a26df07b16aa7139e6176c59f",
+      "cache_seconds": 120,
+      "OFF_prefix_reused": true,
+      "OFF_AB_new_required": false
+    },
+    {
+      "case": "B",
+      "on_sources": [
+        "outputs\\dispersion_control_20261011\\batch_30d"
+      ],
+      "off_sources": [
+        "outputs\\initial_dispersion_20261011\\initial_7d",
+        "outputs\\initial_dispersion_20261011\\extended_30d"
+      ],
+      "configuration_identical": true,
+      "initial_a_lambda_exact": true,
+      "profiles_exact": true,
+      "difference": "control_enabled only",
+      "environment_exact": true,
+      "weather_sha256": "c7df89db603ba5b94c5809cc2fec3a6f266a5b1a26df07b16aa7139e6176c59f",
+      "cache_seconds": 120,
+      "OFF_prefix_reused": true,
+      "OFF_AB_new_required": false
+    },
+    {
+      "case": "AB",
+      "on_sources": [
+        "outputs\\dispersion_control_20261011\\batch_30d"
+      ],
+      "off_sources": [
+        "outputs\\dispersion_control_20261011\\batch_30d"
+      ],
+      "configuration_identical": true,
+      "initial_a_lambda_exact": true,
+      "profiles_exact": true,
+      "difference": "control_enabled only",
+      "environment_exact": true,
+      "weather_sha256": "c7df89db603ba5b94c5809cc2fec3a6f266a5b1a26df07b16aa7139e6176c59f",
+      "cache_seconds": 120,
+      "OFF_prefix_reused": false,
+      "OFF_AB_new_required": true
+    },
+    {
+      "case": "A",
+      "on_sources": [
+        "outputs\\dispersion_control_20261011\\batch_30d",
+        "outputs\\dispersion_control_20261011\\batch_60d"
+      ],
+      "off_sources": [
+        "outputs\\initial_dispersion_20261011\\initial_7d",
+        "outputs\\initial_dispersion_20261011\\extended_30d",
+        "outputs\\dispersion_control_20261011\\OFF_A_B_60d"
+      ],
+      "configuration_identical": true,
+      "initial_a_lambda_exact": true,
+      "profiles_exact": true,
+      "difference": "control_enabled only",
+      "environment_exact": true,
+      "weather_sha256": "c7df89db603ba5b94c5809cc2fec3a6f266a5b1a26df07b16aa7139e6176c59f",
+      "cache_seconds": 120,
+      "OFF_prefix_reused": true,
+      "OFF_AB_new_required": false
+    },
+    {
+      "case": "B",
+      "on_sources": [
+        "outputs\\dispersion_control_20261011\\batch_30d",
+        "outputs\\dispersion_control_20261011\\batch_60d"
+      ],
+      "off_sources": [
+        "outputs\\initial_dispersion_20261011\\initial_7d",
+        "outputs\\initial_dispersion_20261011\\extended_30d",
+        "outputs\\dispersion_control_20261011\\OFF_A_B_60d"
+      ],
+      "configuration_identical": true,
+      "initial_a_lambda_exact": true,
+      "profiles_exact": true,
+      "difference": "control_enabled only",
+      "environment_exact": true,
+      "weather_sha256": "c7df89db603ba5b94c5809cc2fec3a6f266a5b1a26df07b16aa7139e6176c59f",
+      "cache_seconds": 120,
+      "OFF_prefix_reused": true,
+      "OFF_AB_new_required": false
+    },
+    {
+      "case": "AB",
+      "on_sources": [
+        "outputs\\dispersion_control_20261011\\batch_30d",
+        "outputs\\dispersion_control_20261011\\batch_60d"
+      ],
+      "off_sources": [
+        "outputs\\dispersion_control_20261011\\batch_30d",
+        "outputs\\dispersion_control_20261011\\batch_60d"
+      ],
+      "configuration_identical": true,
+      "initial_a_lambda_exact": true,
+      "profiles_exact": true,
+      "difference": "control_enabled only",
+      "environment_exact": true,
+      "weather_sha256": "c7df89db603ba5b94c5809cc2fec3a6f266a5b1a26df07b16aa7139e6176c59f",
+      "cache_seconds": 120,
+      "OFF_prefix_reused": false,
+      "OFF_AB_new_required": true
+    }
+  ],
+  "density_audits": [
+    {
+      "points": 30240,
+      "interior_offsets_s": [
+        10,
+        50,
+        90
+      ],
+      "selection": "every6h; ALL four profiles and21 satellites",
+      "maximum_relative_density_error": 4.575012000929135e-05,
+      "RMS_relative_density_error": 5.697280097133822e-06,
+      "maximum_saved_density_kg_m3": 1.0026586030569306e-11,
+      "minimum_saved_density_kg_m3": 2.1445448847931618e-12,
+      "msis_version": "2.0",
+      "pymsis_version": "0.12.0",
+      "density_units": "kg/m3",
+      "passed": true,
+      "audit_relative_limit": 0.001,
+      "interpretation": "spot audit, not proof over every RK stage"
+    },
+    {
+      "points": 75600,
+      "interior_offsets_s": [
+        10,
+        50,
+        90
+      ],
+      "selection": "every6h; all saved profiles and21 satellites",
+      "audited_sources": [
+        "batch_30d",
+        "batch_60d",
+        "OFF_A_B_60d"
+      ],
+      "maximum_relative_density_error": 5.482914381738091e-05,
+      "RMS_relative_density_error": 5.634330174784996e-06,
+      "maximum_saved_density_kg_m3": 1.0221659670966867e-11,
+      "minimum_saved_density_kg_m3": 2.1445448847931618e-12,
+      "msis_version": "2.0",
+      "pymsis_version": "0.12.0",
+      "density_units": "kg/m3",
+      "passed": true,
+      "audit_relative_limit": 0.001,
+      "interpretation": "spot audit, not proof over every RK stage"
+    }
+  ],
+  "standard_three_case_regression_passed": true,
+  "adapter24h_physical_states_and_events_exact": true,
+  "adapter_q_decomposition_max_roundoff_m_s2": 1.0587911840678754e-22,
+  "baseline_30d_OFF_A_B_reused": true,
+  "AB_OFF_requires_new_small_profile": true,
+  "observation_horizon_days": 60,
+  "allLOW_precision_censored_at_order_reversal": true,
+  "physics_primitives": [
+    "orbital_rates",
+    "gap_kinematics",
+    "switching_function",
+    "select_commands",
+    "AttitudeStateMachine",
+    "rk4_step"
+  ],
+  "parameter_tuning": false,
+  "large_arrays_committed": false
+}

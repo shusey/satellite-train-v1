@@ -1,0 +1,114 @@
+{
+  "residual": {
+    "schema_version": 1,
+    "observation_end_s": 5184000.0,
+    "dwell_time_s": 300.0,
+    "relative_D_tolerance": 0.1,
+    "local_completed_cycles": 5552,
+    "incomplete_cycles": [],
+    "complete_response_groups": 0,
+    "local_valid_finite_forecasts": 0,
+    "group_valid_finite_forecasts": 0,
+    "complete_quiet_packets": 955,
+    "quiet_valid_finite_forecasts": 788,
+    "dwell_limited_returns": 5439,
+    "threshold_limited_returns": 113,
+    "high_hold_times_s": [
+      300.0,
+      310.0,
+      320.0,
+      330.0,
+      340.0,
+      350.0,
+      360.0,
+      370.0,
+      380.0,
+      390.0,
+      400.0
+    ],
+    "local_definition": "one satellite L-H-L, sampled at first saved time >= LOW completion; neighbor activity flagged",
+    "group_definition": "existing temporal response group, all returns completed; future events do not define residual values",
+    "forecast_definition": "constant D, then LOW dwell and control-grid gate; raw invalid forecasts retained with reasons",
+    "Kp_s2_inv": 2.143347050754458e-09,
+    "Kd_s_inv": 9.259259259259259e-05,
+    "velocity_distribution_definition": "all gaps at endpoint; strict e*v signs; no engineering zero tolerance"
+  },
+  "quiet_packets": 955,
+  "command_contribution_counts": {
+    "P_dominant": 160,
+    "D_dominant": 4129,
+    "mixed": 1263
+  },
+  "quiet_onset_contribution_counts": {
+    "P_dominant": 25,
+    "D_dominant": 631,
+    "mixed": 302
+  },
+  "later_in_packet_contribution_counts": {
+    "P_dominant": 135,
+    "D_dominant": 3498,
+    "mixed": 961
+  },
+  "first_HIGH_trigger": {
+    "satellite_id": 20,
+    "command_time_s": 22820.0,
+    "LOW_entry_time_s": 0.0,
+    "quiet_packet_onset": true,
+    "sampled_crossing_time_s": 22820.0,
+    "command_minus_crossing_s": 0.0,
+    "crossing_kind": "upward_from_below",
+    "command_q_P_m_s2": 3.6870346058992486e-08,
+    "command_q_D_m_s2": 1.1320027471984093e-07,
+    "command_q_m_s2": 1.5007062077883342e-07,
+    "command_D_magnitude_fraction": 0.7543133634841814,
+    "command_contribution_class": "D_dominant",
+    "command_opposed_signs": false,
+    "command_cancellation_ratio": 1.0,
+    "crossing_q_P_m_s2": 3.6870346058992486e-08,
+    "crossing_q_D_m_s2": 1.1320027471984093e-07,
+    "crossing_q_m_s2": 1.5007062077883342e-07,
+    "crossing_D_magnitude_fraction": 0.7543133634841814,
+    "crossing_contribution_class": "D_dominant",
+    "crossing_opposed_signs": false,
+    "crossing_cancellation_ratio": 1.0,
+    "max_error_at_command_m": 10.90947567894983,
+    "incident_errors_m": [
+      -8.182453161871083,
+      9.019775495412452
+    ],
+    "incident_rates_m_s": [
+      -0.0005951368042095713,
+      0.0006274261627647107
+    ]
+  },
+  "returns_dwell_limited": 5439,
+  "returns_after_dwell": 113,
+  "first_off_gate_blocked": 113,
+  "min_same_satellite_HIGH_start_interval_s": 840.0,
+  "cycles_at_840s": 440,
+  "completed_local_Vres_median_m_s": 0.0024772676213530784,
+  "completed_local_incident_Vres_median_m_s": 0.0013444931820724908,
+  "own_extra_loss_per_cycle_median_m": 1.5098294005729258,
+  "initial_max_gap_rate_m_s": 0.0004015825815257652,
+  "final_max_gap_rate_m_s": 0.0015888850429256589,
+  "quiet_valid_origin_matched_predictions": 609,
+  "quiet_forecasts_invalid_D_change": 167,
+  "quiet_prediction_status_summary": {
+    "already_at_or_above_on": {
+      "count": 13,
+      "median_absolute_error_s": 0.0,
+      "median_absolute_relative_error": 0.0,
+      "median_actual_wait_s": 90.0,
+      "commands_delayed_by_gate": 13
+    },
+    "future_upward_crossing": {
+      "count": 596,
+      "median_absolute_error_s": 490.0,
+      "median_absolute_relative_error": 0.41745724817209495,
+      "median_actual_wait_s": 1555.0,
+      "commands_delayed_by_gate": 0
+    }
+  },
+  "quiet_forecasts_csv": "AB_quiet_cycles.csv",
+  "same_satellite_HIGH_intervals_csv": "AB_local_cycles.csv"
+}
