@@ -1,0 +1,20 @@
+# Screening ranges supplied by the user; not measured CubeSat populations.
+epoch_environment: configs/real_environment_applicability/active.yaml
+weather: docs/real_environment_applicability/data/active_drivers.csv
+baseline_run: outputs/real_environment_20261011/runs/active_60d
+seeds: [0, 1, 2, 3, 4]
+sigma_a_m: [0.0, 0.1, 1.0, 10.0]
+sigma_B_fraction: [0.0, 0.003, 0.01, 0.05, 0.10]
+stress_sigma_a_m: 1.0
+stress_sigma_B_fraction: 0.01
+initial_days: 7
+optional_days: 30
+control_enabled: false
+area_mode: all_low
+integration_step_s: 2.0
+output_step_s: 10.0
+cache_seconds: 120
+random_definition: Gaussian samples then subtract mean; no sample-std rescaling
+random_coupling: same standardized pattern across scales; B seed is seed+10000
+representative_seed_rule: median7-day maximum-error seed within a parameter level
+extension_rule: all100-500m cases; for small levels median seed only; large levels at most representative case
