@@ -1,0 +1,14 @@
+# Fixed-controller transfer test. These dispersions are provisional, not measured populations.
+baseline_run: outputs/real_environment_20261011/runs/active_60d
+environment: configs/real_environment_applicability/active.yaml
+weather: docs/real_environment_applicability/data/active_drivers.csv
+cache_seconds: 120
+screening_output: outputs/initial_dispersion_20261011
+screening_profiles: docs/initial_dispersion_screening/data/profiles.json
+combination_profile: docs/initial_dispersion_screening/data/combination_profile.json
+sigma_a_m: 0.1
+sigma_B_fraction: 0.003
+initial_days: 30
+optional_days: 60
+selection: median7-day maximum-error seed; AB scales the previous combination pattern
+controller: unchanged baseline; no tuning
