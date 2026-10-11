@@ -1,0 +1,24 @@
+{
+  "branch": "astra/real-environment-applicability",
+  "base_core_commit": "e759c99a66cd15b5d3dfd6b0d676a064d246f4f7",
+  "analysis_code_commit": "1523e21",
+  "new_physical_runs": [
+    "active_60d",
+    "strong_60d"
+  ],
+  "reused_run": "outputs/nrlmsis2_20261010/runs/all_low_60d",
+  "new_control_or_parameter_sweeps": 0,
+  "new_A_t_cases": 0,
+  "phase3": "Three weather-selected GRACE one-day support-integral examples; no density-field reconstruction",
+  "tests_passed": 245,
+  "regression_passed": true,
+  "preserved_files": 8404,
+  "failed_supplemental_cache_audits": [
+    "quiet",
+    "strong"
+  ],
+  "failed_audit_disclosed": true,
+  "science_decision": "Class C: applicability/requirements before control optimization; real-world necessity not established",
+  "large_arrays_local_only": true,
+  "merged_to_main": false
+}

@@ -1,0 +1,155 @@
+{
+  "results": [
+    {
+      "window": "quiet",
+      "rows": 1865,
+      "paired_rows": 1145,
+      "median_separation_km": 215.63714739639474,
+      "median_time_shift_s": 28.268148014736063,
+      "median_altitude_a_km": 492.406,
+      "median_altitude_b_km": 493.141,
+      "simultaneous_abs_difference_p95_kg_m3": 2.984765418266702e-13,
+      "matched_abs_difference_p95_kg_m3": 9.626740975909219e-14,
+      "modeled_abs_difference_p95_kg_m3": 1.0131854971552679e-13,
+      "simultaneous_obs": {
+        "integral_observed_support": -3.1431231217586547e-09,
+        "absolute_interval_area": 4.11549097631727e-09,
+        "coverage_s": 45034.67999994755,
+        "coverage_fraction": 0.5213554063434539,
+        "max_contiguous_coverage_s": 1914.0,
+        "fully_correlated_error_envelope": 1.710690370695998e-08
+      },
+      "matched_obs": {
+        "integral_observed_support": -3.0322232106796597e-09,
+        "absolute_interval_area": 3.0672202003834306e-09,
+        "coverage_s": 45034.67999994755,
+        "coverage_fraction": 0.5213554063434539,
+        "max_contiguous_coverage_s": 1914.0,
+        "fully_correlated_error_envelope": 1.710115958905423e-08
+      },
+      "simultaneous_model": {
+        "integral_observed_support": -7.157918659070338e-11,
+        "absolute_interval_area": 2.438912183588437e-09,
+        "coverage_s": 45034.67999994755,
+        "coverage_fraction": 0.5213554063434539,
+        "max_contiguous_coverage_s": 1914.0,
+        "fully_correlated_error_envelope": null
+      },
+      "obs_minus_model": {
+        "integral_observed_support": -3.0715439351679513e-09,
+        "absolute_interval_area": 3.9796857133763036e-09,
+        "coverage_s": 45034.67999994755,
+        "coverage_fraction": 0.5213554063434539,
+        "max_contiguous_coverage_s": 1914.0,
+        "fully_correlated_error_envelope": 1.710690370695998e-08
+      },
+      "constant_relative_calibration_offset_equivalent": 0.01911375067359065,
+      "calibration_offset_definition": "Magnitude of constant A/B relative density offset that would produce this net integral on the same observed support; no bias removed"
+    },
+    {
+      "window": "disturbed",
+      "rows": 1840,
+      "paired_rows": 1040,
+      "median_separation_km": 217.05917891746026,
+      "median_time_shift_s": 28.391404749946524,
+      "median_altitude_a_km": 487.15,
+      "median_altitude_b_km": 488.055,
+      "simultaneous_abs_difference_p95_kg_m3": 2.8340468067225484e-13,
+      "matched_abs_difference_p95_kg_m3": 1.0297959703933572e-13,
+      "modeled_abs_difference_p95_kg_m3": 1.505134404248253e-13,
+      "simultaneous_obs": {
+        "integral_observed_support": -2.830832521407313e-09,
+        "absolute_interval_area": 3.77646463211435e-09,
+        "coverage_s": 40485.98999989033,
+        "coverage_fraction": 0.46868277718160883,
+        "max_contiguous_coverage_s": 2222.5,
+        "fully_correlated_error_envelope": 1.4176236861046856e-08
+      },
+      "matched_obs": {
+        "integral_observed_support": -2.875442854485405e-09,
+        "absolute_interval_area": 2.877019836033892e-09,
+        "coverage_s": 40485.98999989033,
+        "coverage_fraction": 0.46868277718160883,
+        "max_contiguous_coverage_s": 2222.5,
+        "fully_correlated_error_envelope": 1.4181740269021721e-08
+      },
+      "simultaneous_model": {
+        "integral_observed_support": -7.244032380693903e-11,
+        "absolute_interval_area": 3.129476740904033e-09,
+        "coverage_s": 40485.98999989033,
+        "coverage_fraction": 0.46868277718160883,
+        "max_contiguous_coverage_s": 2222.5,
+        "fully_correlated_error_envelope": null
+      },
+      "obs_minus_model": {
+        "integral_observed_support": -2.7583921976003738e-09,
+        "absolute_interval_area": 3.795324576606517e-09,
+        "coverage_s": 40485.98999989033,
+        "coverage_fraction": 0.46868277718160883,
+        "max_contiguous_coverage_s": 2222.5,
+        "fully_correlated_error_envelope": 1.4176236861046856e-08
+      },
+      "constant_relative_calibration_offset_equivalent": 0.021170316672377003,
+      "calibration_offset_definition": "Magnitude of constant A/B relative density offset that would produce this net integral on the same observed support; no bias removed"
+    },
+    {
+      "window": "severe",
+      "rows": 1863,
+      "paired_rows": 1102,
+      "median_separation_km": 216.23279728279738,
+      "median_time_shift_s": 28.308429240913732,
+      "median_altitude_a_km": 489.851,
+      "median_altitude_b_km": 490.605,
+      "simultaneous_abs_difference_p95_kg_m3": 1.2715567700924193e-12,
+      "matched_abs_difference_p95_kg_m3": 2.3219693971783945e-13,
+      "modeled_abs_difference_p95_kg_m3": 1.8253837677506605e-13,
+      "simultaneous_obs": {
+        "integral_observed_support": -1.900671076451849e-10,
+        "absolute_interval_area": 1.3075461130200261e-08,
+        "coverage_s": 43151.95999991894,
+        "coverage_fraction": 0.49973317892204905,
+        "max_contiguous_coverage_s": 1619.0,
+        "fully_correlated_error_envelope": 3.648879830678814e-08
+      },
+      "matched_obs": {
+        "integral_observed_support": -1.894780309495183e-09,
+        "absolute_interval_area": 2.8727221164965174e-09,
+        "coverage_s": 43151.95999991894,
+        "coverage_fraction": 0.49973317892204905,
+        "max_contiguous_coverage_s": 1619.0,
+        "fully_correlated_error_envelope": 3.658822534983024e-08
+      },
+      "simultaneous_model": {
+        "integral_observed_support": -4.471144819952579e-11,
+        "absolute_interval_area": 4.03123986399478e-09,
+        "coverage_s": 43151.95999991894,
+        "coverage_fraction": 0.49973317892204905,
+        "max_contiguous_coverage_s": 1619.0,
+        "fully_correlated_error_envelope": null
+      },
+      "obs_minus_model": {
+        "integral_observed_support": -1.4535565944565892e-10,
+        "absolute_interval_area": 1.2925766722167106e-08,
+        "coverage_s": 43151.95999991894,
+        "coverage_fraction": 0.49973317892204905,
+        "max_contiguous_coverage_s": 1619.0,
+        "fully_correlated_error_envelope": 3.648879830678814e-08
+      },
+      "constant_relative_calibration_offset_equivalent": 0.0005510144440787272,
+      "calibration_offset_definition": "Magnitude of constant A/B relative density offset that would produce this net integral on the same observed support; no bias removed"
+    }
+  ],
+  "source": "https://zenodo.org/records/13287614",
+  "product": "Sutton v2.3, three-degree averages; NOT100km spatial resolution",
+  "sign": "rho400_A-rho400_B; simultaneous or local tangent time-match",
+  "normalization": "rho400=rho_obs*NRLMSIS2(400)/NRLMSIS2(observation height); preserve model-relative discrepancy; assumption altitude-independent discrepancy",
+  "support": "only consecutive valid paired samples within100s; no rejected-bin/gap bridging; no full24h or60day force reconstruction",
+  "uncertainty": "integrated sum of supplied individual density errors, fully correlated envelope; not confidence interval; missing-data/NRLMSIS errors not included",
+  "event_selection": "First eligible weather-only quiet/disturbed/severe24h in cached driver support; quiet only geomagnetic; disturbed is storm recovery; no inferred climatology",
+  "raw_sha256": {
+    "Density_graceA_3deg_2003_v2.3.ascii.tar.gz": "f81e34d6888e7c4f312e2fd31ffbfa5808206730a0cb541a5dad6336bd63da17",
+    "Density_graceB_3deg_2003_v2.3.ascii.tar.gz": "0ea7e6024caaa1c994abef71c7695c40272183cc14449c0d3746dfe8615de51d"
+  },
+  "weather_sha256": "1877d5205b98b500f867c7e45f9a07d6c2527c62b1ef14ed8b0954c7f24ae0ec",
+  "new_fleet_simulation": false
+}

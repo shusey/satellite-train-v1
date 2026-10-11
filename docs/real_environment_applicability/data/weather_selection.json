@@ -1,0 +1,123 @@
+{
+  "selection_rule": "2024 calendar-anchored starts Jan/Mar/May/Jul/Sep/Nov 1, exactly60d; earliest eligible in each weather class; no formation results read",
+  "class_definitions": {
+    "quiet": "max Kp<5 AND min Dst>-50 nT",
+    "active": "at least2 Kp>=5 days AND -250<min Dst<=-100 nT",
+    "strong": "min Dst<=-250 nT; overrides other classes"
+  },
+  "retreat_criteria": {
+    "A": "km scale: return to control research",
+    "B": "several100m to1km: requirements/control boundary",
+    "C": "100 toseveral100m: applicability/environment/lifetime before optimization",
+    "D": "strong/severe nearbelow100m: withdraw blanket control necessity claim"
+  },
+  "phase1_decision": "No new A(t) model without measured envelope change over4-5min; wave period/phase movement alone insufficient",
+  "raw_weather_sha256": "2c0fb9064a4c182056bec9fb47052af72eb2de75c7cc87c871d9e7f9d4d9c781",
+  "omni_sha256": "41f3b5891ce3f1220719d5c1ea808f3014f28a1704557d3363eefb5ee7c249b1",
+  "candidates": [
+    {
+      "start": "2024-01-01",
+      "end_exclusive": "2024-03-01",
+      "group": "quiet",
+      "eligible": true,
+      "max_kp": 4.3,
+      "min_dst_nT": -27.0,
+      "days_kp_ge5": 0,
+      "max_daily_ap": 14.0,
+      "mean_f107_observed": 168.43333333333334
+    },
+    {
+      "start": "2024-03-01",
+      "end_exclusive": "2024-04-30",
+      "group": "active",
+      "eligible": true,
+      "max_kp": 8.3,
+      "min_dst_nT": -128.0,
+      "days_kp_ge5": 7,
+      "max_daily_ap": 68.0,
+      "mean_f107_observed": 158.675
+    },
+    {
+      "start": "2024-05-01",
+      "end_exclusive": "2024-06-30",
+      "group": "strong",
+      "eligible": true,
+      "max_kp": 9.0,
+      "min_dst_nT": -406.0,
+      "days_kp_ge5": 10,
+      "max_daily_ap": 271.0,
+      "mean_f107_observed": 186.92333333333332
+    },
+    {
+      "start": "2024-07-01",
+      "end_exclusive": "2024-08-30",
+      "group": "active",
+      "eligible": false,
+      "max_kp": 8.0,
+      "min_dst_nT": -188.0,
+      "days_kp_ge5": 8,
+      "max_daily_ap": 127.0,
+      "mean_f107_observed": 225.12666666666664
+    },
+    {
+      "start": "2024-09-01",
+      "end_exclusive": "2024-10-31",
+      "group": "strong",
+      "eligible": false,
+      "max_kp": 8.7,
+      "min_dst_nT": -333.0,
+      "days_kp_ge5": 8,
+      "max_daily_ap": 116.0,
+      "mean_f107_observed": 208.36
+    },
+    {
+      "start": "2024-11-01",
+      "end_exclusive": "2024-12-31",
+      "group": "active",
+      "eligible": true,
+      "max_kp": 5.7,
+      "min_dst_nT": -101.0,
+      "days_kp_ge5": 3,
+      "max_daily_ap": 31.0,
+      "mean_f107_observed": 199.04166666666666
+    }
+  ],
+  "selected": {
+    "quiet": {
+      "start": "2024-01-01",
+      "end_exclusive": "2024-03-01",
+      "group": "quiet",
+      "eligible": true,
+      "max_kp": 4.3,
+      "min_dst_nT": -27.0,
+      "days_kp_ge5": 0,
+      "max_daily_ap": 14.0,
+      "mean_f107_observed": 168.43333333333334
+    },
+    "active": {
+      "start": "2024-03-01",
+      "end_exclusive": "2024-04-30",
+      "group": "active",
+      "eligible": true,
+      "max_kp": 8.3,
+      "min_dst_nT": -128.0,
+      "days_kp_ge5": 7,
+      "max_daily_ap": 68.0,
+      "mean_f107_observed": 158.675
+    },
+    "strong": {
+      "start": "2024-05-01",
+      "end_exclusive": "2024-06-30",
+      "group": "strong",
+      "eligible": true,
+      "max_kp": 9.0,
+      "min_dst_nT": -406.0,
+      "days_kp_ge5": 10,
+      "max_daily_ap": 271.0,
+      "mean_f107_observed": 186.92333333333332
+    }
+  },
+  "missing_policy": "reject; no imputation",
+  "fixed_before_new_formation_results": true,
+  "confounders": "Different solar activity, date/season and Earth rotation phase; not a pure geomagnetic-only causal experiment"
+}

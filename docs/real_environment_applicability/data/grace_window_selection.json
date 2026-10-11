@@ -1,0 +1,265 @@
+{
+  "selected": [
+    {
+      "name": "quiet",
+      "start_utc": "2003-10-25T00:00:00",
+      "end_utc": "2003-10-26T00:00:00",
+      "max_kp": 4.3,
+      "min_dst_nT": -49.0,
+      "mean_f107_adjusted": 219.0
+    },
+    {
+      "name": "disturbed",
+      "start_utc": "2003-11-01T00:00:00",
+      "end_utc": "2003-11-02T00:00:00",
+      "max_kp": 5.0,
+      "min_dst_nT": -69.0,
+      "mean_f107_adjusted": 207.19999999999996
+    },
+    {
+      "name": "severe",
+      "start_utc": "2003-10-29T00:00:00",
+      "end_utc": "2003-10-30T00:00:00",
+      "max_kp": 9.0,
+      "min_dst_nT": -350.0,
+      "mean_f107_adjusted": 275.4
+    }
+  ],
+  "candidates": [
+    {
+      "name": "quiet",
+      "start_utc": "2003-10-25T00:00:00",
+      "end_utc": "2003-10-26T00:00:00",
+      "max_kp": 4.3,
+      "min_dst_nT": -49.0,
+      "mean_f107_adjusted": 219.0
+    },
+    {
+      "name": "quiet",
+      "start_utc": "2003-10-26T00:00:00",
+      "end_utc": "2003-10-27T00:00:00",
+      "max_kp": 3.7,
+      "min_dst_nT": -33.0,
+      "mean_f107_adjusted": 240.6
+    },
+    {
+      "name": "unclassified",
+      "start_utc": "2003-10-27T00:00:00",
+      "end_utc": "2003-10-28T00:00:00",
+      "max_kp": 3.7,
+      "min_dst_nT": -52.0,
+      "mean_f107_adjusted": 254.0
+    },
+    {
+      "name": "quiet",
+      "start_utc": "2003-10-28T00:00:00",
+      "end_utc": "2003-10-29T00:00:00",
+      "max_kp": 4.7,
+      "min_dst_nT": -32.0,
+      "mean_f107_adjusted": 270.9
+    },
+    {
+      "name": "severe",
+      "start_utc": "2003-10-29T00:00:00",
+      "end_utc": "2003-10-30T00:00:00",
+      "max_kp": 9.0,
+      "min_dst_nT": -350.0,
+      "mean_f107_adjusted": 275.4
+    },
+    {
+      "name": "severe",
+      "start_utc": "2003-10-30T00:00:00",
+      "end_utc": "2003-10-31T00:00:00",
+      "max_kp": 9.0,
+      "min_dst_nT": -383.0,
+      "mean_f107_adjusted": 267.6
+    },
+    {
+      "name": "severe",
+      "start_utc": "2003-10-31T00:00:00",
+      "end_utc": "2003-11-01T00:00:00",
+      "max_kp": 8.3,
+      "min_dst_nT": -307.0,
+      "mean_f107_adjusted": 245.19999999999996
+    },
+    {
+      "name": "disturbed",
+      "start_utc": "2003-11-01T00:00:00",
+      "end_utc": "2003-11-02T00:00:00",
+      "max_kp": 5.0,
+      "min_dst_nT": -69.0,
+      "mean_f107_adjusted": 207.19999999999996
+    },
+    {
+      "name": "quiet",
+      "start_utc": "2003-11-02T00:00:00",
+      "end_utc": "2003-11-03T00:00:00",
+      "max_kp": 4.3,
+      "min_dst_nT": -41.0,
+      "mean_f107_adjusted": 187.4
+    },
+    {
+      "name": "quiet",
+      "start_utc": "2003-11-03T00:00:00",
+      "end_utc": "2003-11-04T00:00:00",
+      "max_kp": 3.3,
+      "min_dst_nT": -38.0,
+      "mean_f107_adjusted": 164.2
+    },
+    {
+      "name": "disturbed",
+      "start_utc": "2003-11-04T00:00:00",
+      "end_utc": "2003-11-05T00:00:00",
+      "max_kp": 7.0,
+      "min_dst_nT": -69.0,
+      "mean_f107_adjusted": 165.6
+    },
+    {
+      "name": "quiet",
+      "start_utc": "2003-11-05T00:00:00",
+      "end_utc": "2003-11-06T00:00:00",
+      "max_kp": 3.3,
+      "min_dst_nT": -41.0,
+      "mean_f107_adjusted": 112.09999999999998
+    },
+    {
+      "name": "unclassified",
+      "start_utc": "2003-11-06T00:00:00",
+      "end_utc": "2003-11-07T00:00:00",
+      "max_kp": 5.7,
+      "min_dst_nT": -25.0,
+      "mean_f107_adjusted": 96.09999999999998
+    },
+    {
+      "name": "quiet",
+      "start_utc": "2003-11-07T00:00:00",
+      "end_utc": "2003-11-08T00:00:00",
+      "max_kp": 3.3,
+      "min_dst_nT": -20.0,
+      "mean_f107_adjusted": 89.40000000000002
+    },
+    {
+      "name": "quiet",
+      "start_utc": "2003-11-08T00:00:00",
+      "end_utc": "2003-11-09T00:00:00",
+      "max_kp": 3.3,
+      "min_dst_nT": -5.0,
+      "mean_f107_adjusted": 91.0
+    },
+    {
+      "name": "unclassified",
+      "start_utc": "2003-11-09T00:00:00",
+      "end_utc": "2003-11-10T00:00:00",
+      "max_kp": 5.7,
+      "min_dst_nT": -33.0,
+      "mean_f107_adjusted": 91.2
+    },
+    {
+      "name": "quiet",
+      "start_utc": "2003-11-10T00:00:00",
+      "end_utc": "2003-11-11T00:00:00",
+      "max_kp": 4.7,
+      "min_dst_nT": -37.0,
+      "mean_f107_adjusted": 92.8
+    },
+    {
+      "name": "disturbed",
+      "start_utc": "2003-11-11T00:00:00",
+      "end_utc": "2003-11-12T00:00:00",
+      "max_kp": 6.0,
+      "min_dst_nT": -62.0,
+      "mean_f107_adjusted": 93.7
+    },
+    {
+      "name": "unclassified",
+      "start_utc": "2003-11-12T00:00:00",
+      "end_utc": "2003-11-13T00:00:00",
+      "max_kp": 5.0,
+      "min_dst_nT": -47.0,
+      "mean_f107_adjusted": 96.7
+    },
+    {
+      "name": "disturbed",
+      "start_utc": "2003-11-13T00:00:00",
+      "end_utc": "2003-11-14T00:00:00",
+      "max_kp": 6.0,
+      "min_dst_nT": -59.0,
+      "mean_f107_adjusted": 100.0
+    },
+    {
+      "name": "disturbed",
+      "start_utc": "2003-11-14T00:00:00",
+      "end_utc": "2003-11-15T00:00:00",
+      "max_kp": 5.3,
+      "min_dst_nT": -55.0,
+      "mean_f107_adjusted": 96.8
+    },
+    {
+      "name": "disturbed",
+      "start_utc": "2003-11-15T00:00:00",
+      "end_utc": "2003-11-16T00:00:00",
+      "max_kp": 6.0,
+      "min_dst_nT": -50.0,
+      "mean_f107_adjusted": 95.59999999999998
+    },
+    {
+      "name": "unclassified",
+      "start_utc": "2003-11-16T00:00:00",
+      "end_utc": "2003-11-17T00:00:00",
+      "max_kp": 5.3,
+      "min_dst_nT": -49.0,
+      "mean_f107_adjusted": 102.0
+    },
+    {
+      "name": "unclassified",
+      "start_utc": "2003-11-17T00:00:00",
+      "end_utc": "2003-11-18T00:00:00",
+      "max_kp": 5.3,
+      "min_dst_nT": -48.0,
+      "mean_f107_adjusted": 118.2
+    },
+    {
+      "name": "unclassified",
+      "start_utc": "2003-11-18T00:00:00",
+      "end_utc": "2003-11-19T00:00:00",
+      "max_kp": 5.0,
+      "min_dst_nT": -31.0,
+      "mean_f107_adjusted": 141.0
+    },
+    {
+      "name": "quiet",
+      "start_utc": "2003-11-19T00:00:00",
+      "end_utc": "2003-11-20T00:00:00",
+      "max_kp": 3.0,
+      "min_dst_nT": -27.0,
+      "mean_f107_adjusted": 151.5
+    },
+    {
+      "name": "severe",
+      "start_utc": "2003-11-20T00:00:00",
+      "end_utc": "2003-11-21T00:00:00",
+      "max_kp": 8.7,
+      "min_dst_nT": -422.0,
+      "mean_f107_adjusted": 171.0
+    },
+    {
+      "name": "severe",
+      "start_utc": "2003-11-21T00:00:00",
+      "end_utc": "2003-11-22T00:00:00",
+      "max_kp": 6.7,
+      "min_dst_nT": -309.0,
+      "mean_f107_adjusted": 172.80000000000004
+    },
+    {
+      "name": "disturbed",
+      "start_utc": "2003-11-22T00:00:00",
+      "end_utc": "2003-11-23T00:00:00",
+      "max_kp": 6.0,
+      "min_dst_nT": -87.0,
+      "mean_f107_adjusted": 171.9
+    }
+  ],
+  "rule": "First eligible24h in frozen2003-10-25..11-23 support: quiet Kp<5/Dst>-50; disturbed Kp>=5/-250<Dst<=-50; severe Dst<=-250; no density read",
+  "qualifications": "Geomagnetic quiet only, not low solar activity. Disturbed sample is recovery from Halloween storm. No population quantiles.",
+  "source": "https://spdf.gsfc.nasa.gov/pub/data/omni/low_res_omni/omni2_2003.dat"
+}

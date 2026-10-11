@@ -1,0 +1,39 @@
+{
+  "epoch": "2024-05-01T00:00:00",
+  "start_s": 864000.0,
+  "end_s": 880680.0,
+  "ap1": 400.0,
+  "reference": "direct NRLMSIS2.0 at2s on prescribed400km circular positions; no coupled physics rerun",
+  "records": [
+    {
+      "cache_s": 10,
+      "max_relative_density_error": 2.6818165816511197e-05,
+      "max_adjacent_integral_error_kg_s_m3": 3.16465650309261e-14,
+      "max_implied_gap_rate_error_m_s": 1.535352001928133e-08,
+      "max_implied_end_spacing_error_m": 0.00014500224516500666
+    },
+    {
+      "cache_s": 30,
+      "max_relative_density_error": 3.654388298812705e-05,
+      "max_adjacent_integral_error_kg_s_m3": 6.287981862793868e-14,
+      "max_implied_gap_rate_error_m_s": 3.050651952808742e-08,
+      "max_implied_end_spacing_error_m": 0.00031588444890619564
+    },
+    {
+      "cache_s": 60,
+      "max_relative_density_error": 6.14677286194798e-05,
+      "max_adjacent_integral_error_kg_s_m3": 8.482175281249914e-14,
+      "max_implied_gap_rate_error_m_s": 4.1151779935818434e-08,
+      "max_implied_end_spacing_error_m": 0.000385294114146601
+    },
+    {
+      "cache_s": 120,
+      "max_relative_density_error": 0.00011651792488476254,
+      "max_adjacent_integral_error_kg_s_m3": 1.2475502372848397e-13,
+      "max_implied_gap_rate_error_m_s": 6.052564480376856e-08,
+      "max_implied_end_spacing_error_m": 0.0005082980665847827
+    }
+  ],
+  "passed": true,
+  "limitations": "Fixed-a density-field quadrature only; actual60d-state density audited separately;3h jump quadrature shared by reference/candidate"
+}
