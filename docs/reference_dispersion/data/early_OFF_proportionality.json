@@ -1,0 +1,46 @@
+{
+  "results": [
+    {
+      "case": "A",
+      "days": 1,
+      "actual_saved_profile_scale": 4.4080613910355675,
+      "old_max_error_m": 59.61694861997746,
+      "reference_max_error_m": 268.0968564160932,
+      "max_incremental_scaling_difference_m": 0.007060757377303162,
+      "RMS_incremental_scaling_difference_m": 0.0013950840595358038,
+      "RMS_relative_incremental_scaling_difference": 1.9909748925467027e-05
+    },
+    {
+      "case": "A",
+      "days": 7,
+      "actual_saved_profile_scale": 4.4080613910355675,
+      "old_max_error_m": 418.8480247584567,
+      "reference_max_error_m": 1885.7307488374586,
+      "max_incremental_scaling_difference_m": 0.25860508120535997,
+      "RMS_incremental_scaling_difference_m": 0.04072315833904747,
+      "RMS_relative_incremental_scaling_difference": 8.270526934778122e-05
+    },
+    {
+      "case": "B",
+      "days": 1,
+      "actual_saved_profile_scale": 2.169944473472558,
+      "old_max_error_m": 57.76289096303643,
+      "reference_max_error_m": 123.51248350555778,
+      "max_incremental_scaling_difference_m": 0.0021233905641224737,
+      "RMS_incremental_scaling_difference_m": 0.0004064451764878746,
+      "RMS_relative_incremental_scaling_difference": 1.5004352202149492e-05
+    },
+    {
+      "case": "B",
+      "days": 7,
+      "actual_saved_profile_scale": 2.169944473472558,
+      "old_max_error_m": 2686.6421864446115,
+      "reference_max_error_m": 5816.272526596903,
+      "max_incremental_scaling_difference_m": 0.1596762242825207,
+      "RMS_incremental_scaling_difference_m": 0.026164586199600878,
+      "RMS_relative_incremental_scaling_difference": 2.0223907416486392e-05
+    }
+  ],
+  "definition": "Compare e_ref-e_zero with profile_scale*(e_old-e_zero); no new physical run",
+  "interpretation": "early fixed-label windows before ordering reversal; not a long-term linearity guarantee"
+}

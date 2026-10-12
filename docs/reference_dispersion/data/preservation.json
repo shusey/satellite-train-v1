@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "changed": [],
+  "base_commit": "4f34e5e7b7ad5de26b7c761aa6057528ea41ab24",
+  "tracked_hashes_checked": 7185,
+  "old_run_files_stat_checked": 1693,
+  "limitation": "Tracked contents checked by SHA256; large old local runs checked by size+mtime, not duplicate full hashing"
+}

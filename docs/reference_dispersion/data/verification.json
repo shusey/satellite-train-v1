@@ -1,0 +1,194 @@
+{
+  "passed": true,
+  "branch": "astra/reference-dispersion-baseline",
+  "base_commit": "4f34e5e7b7ad5de26b7c761aa6057528ea41ab24",
+  "tests_passed": 283,
+  "tests_elapsed_s": 41.55,
+  "tests_log": "........................................................................ [ 25%]\n........................................................................ [ 50%]\n........................................................................ [ 76%]\n...................................................................      [100%]\n283 passed in 41.55s\n",
+  "checkpoint_state_checks": {
+    "a_m": true,
+    "lambda_rad": true,
+    "area_m2": true,
+    "mode": true
+  },
+  "checkpoint_density": {
+    "passed": true,
+    "rtol": 1e-08,
+    "atol": 0,
+    "max_relative_difference": 6.160725263271161e-10,
+    "interpretation": "cache is reanchored; physical/actuator states must match exactly"
+  },
+  "events_through_30d_exact": true,
+  "configuration_change": "duration only",
+  "profiles_sha256": "5eae9a2eaaa58bf94e0e4629eedc62465c27f7e0da81326aac27440b24963cfc",
+  "frozen_profile_hashes_match": true,
+  "input_checks": [
+    {
+      "case": "A",
+      "on_sources": [
+        "outputs\\reference_dispersion_20261012\\batch_30d"
+      ],
+      "off_sources": [
+        "outputs\\reference_dispersion_20261012\\batch_30d"
+      ],
+      "configuration_identical": true,
+      "initial_a_lambda_exact": true,
+      "profiles_exact": true,
+      "difference": "control_enabled only",
+      "environment_exact": true,
+      "weather_sha256": "c7df89db603ba5b94c5809cc2fec3a6f266a5b1a26df07b16aa7139e6176c59f",
+      "cache_seconds": 120,
+      "OFF_prefix_reused": false,
+      "OFF_AB_new_required": false
+    },
+    {
+      "case": "B",
+      "on_sources": [
+        "outputs\\reference_dispersion_20261012\\batch_30d"
+      ],
+      "off_sources": [
+        "outputs\\reference_dispersion_20261012\\batch_30d"
+      ],
+      "configuration_identical": true,
+      "initial_a_lambda_exact": true,
+      "profiles_exact": true,
+      "difference": "control_enabled only",
+      "environment_exact": true,
+      "weather_sha256": "c7df89db603ba5b94c5809cc2fec3a6f266a5b1a26df07b16aa7139e6176c59f",
+      "cache_seconds": 120,
+      "OFF_prefix_reused": false,
+      "OFF_AB_new_required": false
+    },
+    {
+      "case": "AB",
+      "on_sources": [
+        "outputs\\reference_dispersion_20261012\\batch_30d"
+      ],
+      "off_sources": [
+        "outputs\\reference_dispersion_20261012\\batch_30d"
+      ],
+      "configuration_identical": true,
+      "initial_a_lambda_exact": true,
+      "profiles_exact": true,
+      "difference": "control_enabled only",
+      "environment_exact": true,
+      "weather_sha256": "c7df89db603ba5b94c5809cc2fec3a6f266a5b1a26df07b16aa7139e6176c59f",
+      "cache_seconds": 120,
+      "OFF_prefix_reused": false,
+      "OFF_AB_new_required": true
+    },
+    {
+      "case": "A",
+      "on_sources": [
+        "outputs\\reference_dispersion_20261012\\batch_30d",
+        "outputs\\reference_dispersion_20261012\\batch_60d"
+      ],
+      "off_sources": [
+        "outputs\\reference_dispersion_20261012\\batch_30d",
+        "outputs\\reference_dispersion_20261012\\batch_60d"
+      ],
+      "configuration_identical": true,
+      "initial_a_lambda_exact": true,
+      "profiles_exact": true,
+      "difference": "control_enabled only",
+      "environment_exact": true,
+      "weather_sha256": "c7df89db603ba5b94c5809cc2fec3a6f266a5b1a26df07b16aa7139e6176c59f",
+      "cache_seconds": 120,
+      "OFF_prefix_reused": false,
+      "OFF_AB_new_required": false
+    },
+    {
+      "case": "B",
+      "on_sources": [
+        "outputs\\reference_dispersion_20261012\\batch_30d",
+        "outputs\\reference_dispersion_20261012\\batch_60d"
+      ],
+      "off_sources": [
+        "outputs\\reference_dispersion_20261012\\batch_30d",
+        "outputs\\reference_dispersion_20261012\\batch_60d"
+      ],
+      "configuration_identical": true,
+      "initial_a_lambda_exact": true,
+      "profiles_exact": true,
+      "difference": "control_enabled only",
+      "environment_exact": true,
+      "weather_sha256": "c7df89db603ba5b94c5809cc2fec3a6f266a5b1a26df07b16aa7139e6176c59f",
+      "cache_seconds": 120,
+      "OFF_prefix_reused": false,
+      "OFF_AB_new_required": false
+    },
+    {
+      "case": "AB",
+      "on_sources": [
+        "outputs\\reference_dispersion_20261012\\batch_30d",
+        "outputs\\reference_dispersion_20261012\\batch_60d"
+      ],
+      "off_sources": [
+        "outputs\\reference_dispersion_20261012\\batch_30d",
+        "outputs\\reference_dispersion_20261012\\batch_60d"
+      ],
+      "configuration_identical": true,
+      "initial_a_lambda_exact": true,
+      "profiles_exact": true,
+      "difference": "control_enabled only",
+      "environment_exact": true,
+      "weather_sha256": "c7df89db603ba5b94c5809cc2fec3a6f266a5b1a26df07b16aa7139e6176c59f",
+      "cache_seconds": 120,
+      "OFF_prefix_reused": false,
+      "OFF_AB_new_required": true
+    }
+  ],
+  "density_audits": [
+    {
+      "points": 45360,
+      "interior_offsets_s": [
+        10,
+        50,
+        90
+      ],
+      "selection": "every6h; all saved profiles and21 satellites",
+      "audited_sources": [
+        "batch_30d"
+      ],
+      "maximum_relative_density_error": 5.16075724441567e-05,
+      "RMS_relative_density_error": 5.698094978544891e-06,
+      "maximum_saved_density_kg_m3": 1.003054977846712e-11,
+      "minimum_saved_density_kg_m3": 2.1445387974502277e-12,
+      "msis_version": "2.0",
+      "pymsis_version": "0.12.0",
+      "density_units": "kg/m3",
+      "passed": true,
+      "audit_relative_limit": 0.001,
+      "interpretation": "spot audit, not proof over every RK stage"
+    },
+    {
+      "points": 90720,
+      "interior_offsets_s": [
+        10,
+        50,
+        90
+      ],
+      "selection": "every6h; all saved profiles and21 satellites",
+      "audited_sources": [
+        "batch_30d",
+        "batch_60d"
+      ],
+      "maximum_relative_density_error": 5.16075724441567e-05,
+      "RMS_relative_density_error": 5.644424202217757e-06,
+      "maximum_saved_density_kg_m3": 1.0233928217986235e-11,
+      "minimum_saved_density_kg_m3": 2.1445387974502277e-12,
+      "msis_version": "2.0",
+      "pymsis_version": "0.12.0",
+      "density_units": "kg/m3",
+      "passed": true,
+      "audit_relative_limit": 0.001,
+      "interpretation": "spot audit, not proof over every RK stage"
+    }
+  ],
+  "baseline_24h_passed": true,
+  "old_tracked_contents_sha256_unchanged": true,
+  "old_local_run_stats_unchanged": true,
+  "physical_controller_integrator_core_modified": false,
+  "new_parameter_sweeps": false,
+  "local_only_arrays": "outputs\\reference_dispersion_20261012"
+}

@@ -1,0 +1,23 @@
+{
+  "points": 90720,
+  "interior_offsets_s": [
+    10,
+    50,
+    90
+  ],
+  "selection": "every6h; all saved profiles and21 satellites",
+  "audited_sources": [
+    "batch_30d",
+    "batch_60d"
+  ],
+  "maximum_relative_density_error": 5.16075724441567e-05,
+  "RMS_relative_density_error": 5.644424202217757e-06,
+  "maximum_saved_density_kg_m3": 1.0233928217986235e-11,
+  "minimum_saved_density_kg_m3": 2.1445387974502277e-12,
+  "msis_version": "2.0",
+  "pymsis_version": "0.12.0",
+  "density_units": "kg/m3",
+  "passed": true,
+  "audit_relative_limit": 0.001,
+  "interpretation": "spot audit, not proof over every RK stage"
+}

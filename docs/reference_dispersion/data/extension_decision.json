@@ -1,0 +1,36 @@
+{
+  "extend_to_60d": true,
+  "reviewed": true,
+  "all_cases_eligible": true,
+  "cases": [
+    {
+      "case": "A",
+      "extend_to_60d": true,
+      "safe": true,
+      "finite": true,
+      "latter_segment_transitions": 2852,
+      "max_error_m": 270.0454731417647,
+      "reason": "positive signed gaps, finite states, ongoing activity; cost and precision require review"
+    },
+    {
+      "case": "B",
+      "extend_to_60d": true,
+      "safe": true,
+      "finite": true,
+      "latter_segment_transitions": 3868,
+      "max_error_m": 206.9167152754495,
+      "reason": "positive signed gaps, finite states, ongoing activity; cost and precision require review"
+    },
+    {
+      "case": "AB",
+      "extend_to_60d": true,
+      "safe": true,
+      "finite": true,
+      "latter_segment_transitions": 4256,
+      "max_error_m": 193.88800457988938,
+      "reason": "positive signed gaps, finite states, ongoing activity; cost and precision require review"
+    }
+  ],
+  "interpretation": "normal order and meaningful ongoing activity; no tuning or asymptotic stability inference",
+  "review_reason": "All ON states finite, all signed gaps positive (>99.7km), errors <500m, no formation breakdown, ongoing switching in days7-30. Extra losses120-171m are non-negligible and warrant the requested long-term cost assessment. OFF B/AB continue only as labelled diagnostics/counterfactual altitude references after reversal."
+}

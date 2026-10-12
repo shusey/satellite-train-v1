@@ -1,0 +1,118 @@
+{
+  "local_files": [
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_30d\\a_m.npy",
+      "bytes": 261274736,
+      "sha256": "2d08031a658d311b496e5c31a4877649e893d3eca95d772de2dd5f6c450dfb72"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_30d\\area_m2.npy",
+      "bytes": 261274736,
+      "sha256": "a48854724df11238f670d8effda9d7989bd1533579b9e11140a219dc6b23fd6c"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_30d\\checkpoint.json",
+      "bytes": 2574745,
+      "sha256": "87029eb55993959d6ac148a068eaf9b58a91cc914b66d6c4f73d134f5bcca7e0"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_30d\\completion.json",
+      "bytes": 241,
+      "sha256": "ef2036a6b7e86fbe0fd32397485f54156c6706de691f50da8d613d856c4a6897"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_30d\\density_kg_m3.npy",
+      "bytes": 261274736,
+      "sha256": "7a19fa7429e534f138f9b7de5f1171f3484b84b1c45ea6852c694ef371b37807"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_30d\\environment.json",
+      "bytes": 1880,
+      "sha256": "400c19a9b037f9682e9b1b9e669d8553cdb3270e2abc9b314ab7de1fe7c858b1"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_30d\\lambda_rad.npy",
+      "bytes": 261274736,
+      "sha256": "2a9067d233536acb27d16b61acfd5b0b945b05f1b2cd3ddbdf0ff1810bdb4e2e"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_30d\\metadata.json",
+      "bytes": 12813,
+      "sha256": "12b74078bf9d65ba693aef49be937f3568c3c7e31954139144e9ed5becdb028b"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_30d\\mode.npy",
+      "bytes": 32659454,
+      "sha256": "e3924be7b92c0df6944090b6f71b1ba75be42fd6f301f6522cb90ced59413999"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_30d\\normalized_config.yaml",
+      "bytes": 1514,
+      "sha256": "99411fded052f0a6c34ffcd1557f9e112d43efff8591949fc555323b13ea3641"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_30d\\time_s.npy",
+      "bytes": 2073736,
+      "sha256": "362a74622961dd0fe8e31745d79bbb3a54bbba527301e057853ceb5a1f807669"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_60d\\a_m.npy",
+      "bytes": 261274736,
+      "sha256": "96db21807ab3d0b9e68e3990b86ab8c117024c06156094aaa1aef78a175716b9"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_60d\\area_m2.npy",
+      "bytes": 261274736,
+      "sha256": "e41594a81ceb61b56533b51bb20836b779064cfbfe704709174880def24d255c"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_60d\\checkpoint.json",
+      "bytes": 6721486,
+      "sha256": "c0382f480fd4fe9aff39dd914ddb72cbdd498e6ad243d32f8b0619b5732a60e6"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_60d\\completion.json",
+      "bytes": 247,
+      "sha256": "0fe8bbb3f25045aabb5cc31feecef8fc6f67c4e64ab2b23f691ea57276794012"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_60d\\density_kg_m3.npy",
+      "bytes": 261274736,
+      "sha256": "2e1b0a278e76e5bf82c8ec5c86c061e0779ccaebc9f9b5348ea45ab4cebb4b32"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_60d\\environment.json",
+      "bytes": 1928,
+      "sha256": "c24a577c099b7f53e28ec01b8eb430ab0592c9f8ab6067b743fbaf73c547e685"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_60d\\lambda_rad.npy",
+      "bytes": 261274736,
+      "sha256": "d7209e273d8c682574a0004155fc0205acf83b39aa2202217767ec96bf4f935f"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_60d\\metadata.json",
+      "bytes": 12819,
+      "sha256": "7427a5217db9deb95de497439fb6218a39f68ce7674f70b1a3c6581c1349a596"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_60d\\mode.npy",
+      "bytes": 32659454,
+      "sha256": "08c0cf1337faf264de5f5b365146d9a7cfb851ba922e88105b7c5b210db930d3"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_60d\\normalized_config.yaml",
+      "bytes": 1514,
+      "sha256": "29e67eaf3c27c40c59e0efb69884fd83e86ce9212e85788b6e913d090bb21d6f"
+    },
+    {
+      "local_path": "outputs\\reference_dispersion_20261012\\batch_60d\\time_s.npy",
+      "bytes": 2073736,
+      "sha256": "8ed6fb6c0fe0de7f3587f9c44deb3e03b63bbdada0d61b7d455f2d6a49b23814"
+    }
+  ],
+  "python": "3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]",
+  "numpy": "2.4.6",
+  "pymsis": "0.12.0",
+  "note": "Large trajectories/checkpoints remain local. Fingerprints identify the frozen reference; floating tolerances apply to future numerical comparisons."
+}

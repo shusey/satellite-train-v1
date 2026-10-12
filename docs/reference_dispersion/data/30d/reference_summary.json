@@ -1,0 +1,435 @@
+{
+  "comparison": [
+    {
+      "case": "A",
+      "days": 30,
+      "ON_max_error_m": 270.0454731417647,
+      "ON_RMS_m": 84.32497318298375,
+      "ON_final_error_m": 113.43219866632424,
+      "ON_max_gap_rate_m_s": 0.005395295361752247,
+      "OFF_full_fixed_label_max_diagnostic_m": 8247.555366625256,
+      "OFF_max_before_order_reversal_m": 8247.555366625256,
+      "OFF_reversal_day": null,
+      "common_window_max_error": {
+        "last_valid_sample_s": 2592000.0,
+        "all_low_m": 8247.555366625256,
+        "controlled_m": 270.0454731417647,
+        "reduction_m": 7977.509893483491,
+        "reduction_percent": 96.72575131493464
+      },
+      "common_window_RMS": {
+        "all_low_m": 2142.558132998863,
+        "controlled_m": 84.32497318298375,
+        "reduction_m": 2058.2331598158794,
+        "reduction_percent": 96.06428540331099
+      },
+      "transitions": 3498,
+      "completed_cycles": 1749,
+      "extra_mean_altitude_loss_m": 120.01109934828821
+    },
+    {
+      "case": "B",
+      "days": 30,
+      "ON_max_error_m": 206.9167152754495,
+      "ON_RMS_m": 72.95050677624144,
+      "ON_final_error_m": 141.47957200978155,
+      "ON_max_gap_rate_m_s": 0.004508207532379245,
+      "OFF_full_fixed_label_max_diagnostic_m": 111973.34388365968,
+      "OFF_max_before_order_reversal_m": 99999.36484688692,
+      "OFF_reversal_day": 28.49675925925926,
+      "common_window_max_error": {
+        "last_valid_sample_s": 2462110.0,
+        "all_low_m": 99999.36484688692,
+        "controlled_m": 206.9167152754495,
+        "reduction_m": 99792.44813161147,
+        "reduction_percent": 99.79308197047826
+      },
+      "common_window_RMS": {
+        "all_low_m": 21507.695496062275,
+        "controlled_m": 71.65783819965425,
+        "reduction_m": 21436.03765786262,
+        "reduction_percent": 99.66682698193875
+      },
+      "transitions": 4544,
+      "completed_cycles": 2272,
+      "extra_mean_altitude_loss_m": 158.03619734388553
+    },
+    {
+      "case": "AB",
+      "days": 30,
+      "ON_max_error_m": 193.88800457988938,
+      "ON_RMS_m": 58.9300363780234,
+      "ON_final_error_m": 193.88800457988938,
+      "ON_max_gap_rate_m_s": 0.004745080284308344,
+      "OFF_full_fixed_label_max_diagnostic_m": 112420.65255182986,
+      "OFF_max_before_order_reversal_m": 99999.17031733698,
+      "OFF_reversal_day": 28.442013888888887,
+      "common_window_max_error": {
+        "last_valid_sample_s": 2457380.0,
+        "all_low_m": 99999.17031733698,
+        "controlled_m": 162.96221696797303,
+        "reduction_m": 99836.208100369,
+        "reduction_percent": 99.83703643095154
+      },
+      "common_window_RMS": {
+        "all_low_m": 21817.91688222912,
+        "controlled_m": 56.497165678192545,
+        "reduction_m": 21761.41971655093,
+        "reduction_percent": 99.74105151292325
+      },
+      "transitions": 4934,
+      "completed_cycles": 2467,
+      "extra_mean_altitude_loss_m": 171.3547392061335
+    }
+  ],
+  "low_reference": [
+    {
+      "case": "A",
+      "old_profiles_same_shape": true,
+      "old_a_sample_std_m": 0.11342854730127455,
+      "old_B_sample_std": 0.0,
+      "old_control_max_error_m": 317.8217322581108,
+      "reference_control_max_error_m": 270.0454731417647,
+      "old_cycles": 1554,
+      "reference_cycles": 1749,
+      "old_transitions": 3108,
+      "reference_transitions": 3498,
+      "old_extra_altitude_loss_m": 101.04613352345214,
+      "reference_extra_altitude_loss_m": 120.01109934828821
+    },
+    {
+      "case": "B",
+      "old_profiles_same_shape": true,
+      "old_a_sample_std_m": 0.0,
+      "old_B_sample_std": 0.0023042064260743547,
+      "old_control_max_error_m": 194.14168269027775,
+      "reference_control_max_error_m": 206.9167152754495,
+      "old_cycles": 1831,
+      "reference_cycles": 2272,
+      "old_transitions": 3662,
+      "reference_transitions": 4544,
+      "old_extra_altitude_loss_m": 124.27893829039697,
+      "reference_extra_altitude_loss_m": 158.03619734388553
+    },
+    {
+      "case": "AB",
+      "old_profiles_same_shape": false,
+      "old_a_sample_std_m": 0.08509592390507817,
+      "old_B_sample_std": 0.0028987991754406742,
+      "old_control_max_error_m": 170.24999033253673,
+      "reference_control_max_error_m": 193.88800457988938,
+      "old_cycles": 2247,
+      "reference_cycles": 2467,
+      "old_transitions": 4494,
+      "reference_transitions": 4934,
+      "old_extra_altitude_loss_m": 158.4751714612579,
+      "reference_extra_altitude_loss_m": 171.3547392061335
+    }
+  ],
+  "representative_triggers": [
+    {
+      "case": "A",
+      "command_time_s": 0.0,
+      "satellite_id": 3,
+      "qP_m_s2": 0.0,
+      "qD_m_s2": 1.969236972569405e-07,
+      "q_m_s2": 1.969236972569405e-07,
+      "pre_command_mode": "LOW",
+      "post_command_mode": 1,
+      "last_completion_s": null,
+      "dwell_release_s": 0,
+      "pre_command_dwell_remaining_s": 0,
+      "incident_gap_ids": [
+        2,
+        3
+      ],
+      "error_m": [
+        -1.1758193377287007e-11,
+        -1.1758193377287007e-11
+      ],
+      "rate_m_s": [
+        -0.0013752826816479393,
+        0.0007514932487270181
+      ]
+    },
+    {
+      "case": "A",
+      "command_time_s": 1300180.0,
+      "satellite_id": 17,
+      "qP_m_s2": -4.7691690872333565e-08,
+      "qD_m_s2": 1.9770024808591524e-07,
+      "q_m_s2": 1.5000855721358167e-07,
+      "pre_command_mode": "LOW",
+      "post_command_mode": 1,
+      "last_completion_s": 1266840.0,
+      "dwell_release_s": 1267140.0,
+      "pre_command_dwell_remaining_s": 0,
+      "incident_gap_ids": [
+        16,
+        17
+      ],
+      "error_m": [
+        -27.026337441205474,
+        -49.27737273460142
+      ],
+      "rate_m_s": [
+        -0.0007033240502372778,
+        0.001431838629090607
+      ]
+    },
+    {
+      "case": "B",
+      "command_time_s": 26610.0,
+      "satellite_id": 18,
+      "qP_m_s2": 3.559854585002914e-08,
+      "qD_m_s2": 1.1445300461819478e-07,
+      "q_m_s2": 1.500515504682239e-07,
+      "pre_command_mode": "LOW",
+      "post_command_mode": 1,
+      "last_completion_s": null,
+      "dwell_release_s": 0,
+      "pre_command_dwell_remaining_s": 0,
+      "incident_gap_ids": [
+        17,
+        18
+      ],
+      "error_m": [
+        -10.311628197254871,
+        6.297229354534724
+      ],
+      "rate_m_s": [
+        -0.0007494898289484291,
+        0.0004866026209280746
+      ]
+    },
+    {
+      "case": "B",
+      "command_time_s": 1307920.0,
+      "satellite_id": 18,
+      "qP_m_s2": 7.995120229674127e-08,
+      "qD_m_s2": 7.005916041787738e-08,
+      "q_m_s2": 1.5001036271461866e-07,
+      "pre_command_mode": "LOW",
+      "post_command_mode": 1,
+      "last_completion_s": 1292090.0,
+      "dwell_release_s": 1292390.0,
+      "pre_command_dwell_remaining_s": 0,
+      "incident_gap_ids": [
+        17,
+        18
+      ],
+      "error_m": [
+        29.930118393149055,
+        67.23215133671667
+      ],
+      "rate_m_s": [
+        -0.0013798588852634774,
+        -0.0006232199527504015
+      ]
+    },
+    {
+      "case": "AB",
+      "command_time_s": 0.0,
+      "satellite_id": 3,
+      "qP_m_s2": 0.0,
+      "qD_m_s2": 1.969236972569405e-07,
+      "q_m_s2": 1.969236972569405e-07,
+      "pre_command_mode": "LOW",
+      "post_command_mode": 1,
+      "last_completion_s": null,
+      "dwell_release_s": 0,
+      "pre_command_dwell_remaining_s": 0,
+      "incident_gap_ids": [
+        2,
+        3
+      ],
+      "error_m": [
+        -1.1758193377287007e-11,
+        -1.1758193377287007e-11
+      ],
+      "rate_m_s": [
+        -0.0013752826816479393,
+        0.0007514932487270181
+      ]
+    },
+    {
+      "case": "AB",
+      "command_time_s": 1297490.0,
+      "satellite_id": 18,
+      "qP_m_s2": 3.92163595889315e-09,
+      "qD_m_s2": 1.4613137274244905e-07,
+      "q_m_s2": 1.500530087013422e-07,
+      "pre_command_mode": "LOW",
+      "post_command_mode": 1,
+      "last_completion_s": 1281970.0,
+      "dwell_release_s": 1282270.0,
+      "pre_command_dwell_remaining_s": 0,
+      "incident_gap_ids": [
+        17,
+        18
+      ],
+      "error_m": [
+        -62.54236866739124,
+        -60.71269019441005
+      ],
+      "rate_m_s": [
+        -0.0008012109072190001,
+        0.0007770079183994495
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "case": "A",
+      "start_day": 0,
+      "end_day": 7.0,
+      "transitions": 646,
+      "transitions_per_day": 92.28571428571429,
+      "high_stable_satellite_s_per_day": 13862.857142857143,
+      "high_equivalent_satellite_s_per_day": 19400.0,
+      "error_rms_m": 103.21116531413834,
+      "max_error_m": 270.0454731417647,
+      "extra_mean_altitude_loss_per_day_m": 2.4535359235695835,
+      "mean_natural_plus_control_altitude_loss_per_day_m": 104.50031942110762,
+      "completed_cycles": 323,
+      "cycles_per_day": 46.142857142857146,
+      "high_equivalent_satellite_hours_per_day": 5.388888888888889
+    },
+    {
+      "case": "A",
+      "start_day": 7,
+      "end_day": 30.0,
+      "transitions": 2852,
+      "transitions_per_day": 124.0,
+      "high_stable_satellite_s_per_day": 18665.217391304348,
+      "high_equivalent_satellite_s_per_day": 26105.217391304348,
+      "error_rms_m": 77.67121793898164,
+      "max_error_m": 255.69926636761195,
+      "extra_mean_altitude_loss_per_day_m": 4.471145560143527,
+      "mean_natural_plus_control_altitude_loss_per_day_m": 125.47152947822265,
+      "completed_cycles": 1426,
+      "cycles_per_day": 62.0,
+      "high_equivalent_satellite_hours_per_day": 7.251449275362319
+    },
+    {
+      "case": "B",
+      "start_day": 0,
+      "end_day": 7.0,
+      "transitions": 676,
+      "transitions_per_day": 96.57142857142857,
+      "high_stable_satellite_s_per_day": 14491.42857142857,
+      "high_equivalent_satellite_s_per_day": 20285.714285714286,
+      "error_rms_m": 70.82113405948873,
+      "max_error_m": 206.9167152754495,
+      "extra_mean_altitude_loss_per_day_m": 2.6336587674561,
+      "mean_natural_plus_control_altitude_loss_per_day_m": 104.68045276333102,
+      "completed_cycles": 338,
+      "cycles_per_day": 48.285714285714285,
+      "high_equivalent_satellite_hours_per_day": 5.634920634920635
+    },
+    {
+      "case": "B",
+      "start_day": 7,
+      "end_day": 30.0,
+      "transitions": 3868,
+      "transitions_per_day": 168.17391304347825,
+      "high_stable_satellite_s_per_day": 25258.260869565216,
+      "high_equivalent_satellite_s_per_day": 35348.69565217391,
+      "error_rms_m": 73.58635729437808,
+      "max_error_m": 198.49946548047976,
+      "extra_mean_altitude_loss_per_day_m": 6.069590694421427,
+      "mean_natural_plus_control_altitude_loss_per_day_m": 127.07007975136673,
+      "completed_cycles": 1934,
+      "cycles_per_day": 84.08695652173913,
+      "high_equivalent_satellite_hours_per_day": 9.819082125603865
+    },
+    {
+      "case": "AB",
+      "start_day": 0,
+      "end_day": 7.0,
+      "transitions": 678,
+      "transitions_per_day": 96.85714285714286,
+      "high_stable_satellite_s_per_day": 14528.57142857143,
+      "high_equivalent_satellite_s_per_day": 20340.0,
+      "error_rms_m": 32.03657582065628,
+      "max_error_m": 105.17470346316523,
+      "extra_mean_altitude_loss_per_day_m": 2.6028257265725,
+      "mean_natural_plus_control_altitude_loss_per_day_m": 104.64961921927981,
+      "completed_cycles": 339,
+      "cycles_per_day": 48.42857142857143,
+      "high_equivalent_satellite_hours_per_day": 5.65
+    },
+    {
+      "case": "AB",
+      "start_day": 7,
+      "end_day": 30.0,
+      "transitions": 4256,
+      "transitions_per_day": 185.04347826086956,
+      "high_stable_satellite_s_per_day": 27800.0,
+      "high_equivalent_satellite_s_per_day": 38902.608695652176,
+      "error_rms_m": 64.9407717093297,
+      "max_error_m": 193.88800457988938,
+      "extra_mean_altitude_loss_per_day_m": 6.658041700875044,
+      "mean_natural_plus_control_altitude_loss_per_day_m": 127.65853166999007,
+      "completed_cycles": 2128,
+      "cycles_per_day": 92.52173913043478,
+      "high_equivalent_satellite_hours_per_day": 10.806280193236715
+    }
+  ],
+  "correction_diagnostics": [
+    {
+      "case": "A",
+      "first_local_LOW_return_s": 540.0,
+      "first_local_return_max_gap_rate_m_s": 0.0016287819922798056,
+      "first_local_next_HIGH_s": 930.0,
+      "first_allLOW_boundary_s": 1850.0,
+      "longest_observed_allLOW_interval_s": 44050.0,
+      "latter_segment_transitions": 2852,
+      "quiet_candidate": {
+        "candidate_start_s": null,
+        "verification_horizon_s": null,
+        "epsilon_e_m": 50.0,
+        "epsilon_v_m_s": 0.001,
+        "hold_window_s": 1800.0,
+        "definition": "all LOW and accepted final sampled suffix; finite observation only"
+      },
+      "last_completion_s": 2590030.0
+    },
+    {
+      "case": "B",
+      "first_local_LOW_return_s": 27150.0,
+      "first_local_return_max_gap_rate_m_s": 0.0013869526533003165,
+      "first_local_next_HIGH_s": 55690.0,
+      "first_allLOW_boundary_s": 27510.0,
+      "longest_observed_allLOW_interval_s": 25300.0,
+      "latter_segment_transitions": 3868,
+      "quiet_candidate": {
+        "candidate_start_s": null,
+        "verification_horizon_s": null,
+        "epsilon_e_m": 50.0,
+        "epsilon_v_m_s": 0.001,
+        "hold_window_s": 1800.0,
+        "definition": "all LOW and accepted final sampled suffix; finite observation only"
+      },
+      "last_completion_s": 2589000.0
+    },
+    {
+      "case": "AB",
+      "first_local_LOW_return_s": 540.0,
+      "first_local_return_max_gap_rate_m_s": 0.0016269336351461537,
+      "first_local_next_HIGH_s": 920.0,
+      "first_allLOW_boundary_s": 1740.0,
+      "longest_observed_allLOW_interval_s": 24370.0,
+      "latter_segment_transitions": 4256,
+      "quiet_candidate": {
+        "candidate_start_s": null,
+        "verification_horizon_s": null,
+        "epsilon_e_m": 50.0,
+        "epsilon_v_m_s": 0.001,
+        "hold_window_s": 1800.0,
+        "definition": "all LOW and accepted final sampled suffix; finite observation only"
+      },
+      "last_completion_s": 2590110.0
+    }
+  ]
+}
