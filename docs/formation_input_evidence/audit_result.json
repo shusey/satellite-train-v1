@@ -1,0 +1,78 @@
+{
+  "type": "arithmetic_and_evidence_ledger_audit_not_new_physics_run",
+  "reference_count": 20,
+  "summary_characters_including_markdown": 2355,
+  "B_definition": "Cd*A/m [m^2/kg]",
+  "B0_m2_kg": 0.0055000000000000005,
+  "inverse_B0_kg_m2": 181.8181818181818,
+  "inverse_B_conversion_example": 0.010101010101010166,
+  "mass_difference_examples": [
+    {
+      "relative_difference": 0.001,
+      "first_order_mass_difference_g": 4.0,
+      "exact_B_change_for_heavier_satellite": -0.0009990009990008542
+    },
+    {
+      "relative_difference": 0.003,
+      "first_order_mass_difference_g": 12.0,
+      "exact_B_change_for_heavier_satellite": -0.0029910269192421346
+    },
+    {
+      "relative_difference": 0.01,
+      "first_order_mass_difference_g": 40.0,
+      "exact_B_change_for_heavier_satellite": -0.00990099009900991
+    }
+  ],
+  "low_face_rectangular_geometry_examples": [
+    {
+      "area_fraction": 0.003,
+      "angle_deg_first_order": 0.057295779513082325,
+      "exact_area_fraction_at_angle": 0.002999499500041747
+    },
+    {
+      "area_fraction": 0.01,
+      "angle_deg_first_order": 0.19098593171027442,
+      "exact_area_fraction_at_angle": 0.009994425931080242
+    }
+  ],
+  "baseline_mean_motion_rad_s": 0.0011313666536110223,
+  "baseline_speed_m_s": 7668.558175407055,
+  "drift_per_day_for_pair_delta_a_0p1m_m": 14.662511830798849,
+  "typical_pair_drift_per_day_for_generated_sigma_a_0p1m_m": 20.735923089571695,
+  "typical_pair_sigma_for_generated_B_sigma_0p003": 0.004242640687119286,
+  "generated_B_sigma_for_pair_sigma_0p003": 0.0021213203435596424,
+  "atrain_orbital_distance_conversion_m": {
+    "target": 93770.46722142896,
+    "tolerance": 18754.093444285794
+  },
+  "requirement_sensitivity": [
+    {
+      "error_m": 10,
+      "percent_of_100km": 0.01,
+      "orbital_time_difference_s": 0.0013040260986830407
+    },
+    {
+      "error_m": 100,
+      "percent_of_100km": 0.1,
+      "orbital_time_difference_s": 0.013040260986830407
+    },
+    {
+      "error_m": 500,
+      "percent_of_100km": 0.5,
+      "orbital_time_difference_s": 0.06520130493415204
+    },
+    {
+      "error_m": 1000,
+      "percent_of_100km": 1.0,
+      "orbital_time_difference_s": 0.13040260986830407
+    },
+    {
+      "error_m": 5000,
+      "percent_of_100km": 5.0,
+      "orbital_time_difference_s": 0.6520130493415204
+    }
+  ],
+  "TDX_Tsx_B_difference_from_2024_masses": 0.02945859872611467,
+  "ANSER_max_flap_area_difference_relative_FLW2": -0.1428571428571429,
+  "validated": true
+}

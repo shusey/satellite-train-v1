@@ -1,0 +1,65 @@
+{
+  "review_date": "2026-10-12",
+  "status": "provisional sensitivity inputs; not measured population distributions",
+  "execute_new_runs": false,
+  "baseline_config": "configs/baseline.yaml",
+  "levels": [
+    {
+      "name": "optimistic",
+      "sigma_a_m": 0.01,
+      "sigma_b_relative": 0.001
+    },
+    {
+      "name": "nominal_sensitivity",
+      "sigma_a_m": 0.1,
+      "sigma_b_relative": 0.003
+    },
+    {
+      "name": "conservative_sensitivity",
+      "sigma_a_m": 1,
+      "sigma_b_relative": 0.01
+    }
+  ],
+  "requirement_sensitivity": {
+    "strict_m": 100,
+    "comparison_reference_m": 500,
+    "loose_m": 1000,
+    "status": "hypothetical maximum absolute gap-error limits, not literature-certified mission requirements"
+  },
+  "evidence_strength": {
+    "sigma_a_levels": "Engineering assumption; order-of-magnitude support moderate",
+    "sigma_b_levels": "Engineering assumption; persistent-difference mechanism support moderate",
+    "requirement_levels": "Engineering assumption; actual mission requirements vary widely"
+  },
+  "generation": {
+    "distribution": "normal, per satellite",
+    "center_mean": true,
+    "rescale_sample_sigma": false,
+    "independent_raw_profiles": true,
+    "pair_difference_std_factor": "sqrt(2)",
+    "preserve_initial_mean_longitude": true
+  },
+  "scope": "One factor at a time; no proposed 3x3 sweep; no controller tuning",
+  "references_a": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A6"
+  ],
+  "references_b": [
+    "B1",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B11"
+  ],
+  "references_requirements": [
+    "A2",
+    "B5",
+    "C1",
+    "C2"
+  ]
+}
