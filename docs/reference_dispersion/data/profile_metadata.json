@@ -1,0 +1,81 @@
+{
+  "reference": [
+    {
+      "case": "A",
+      "specified_a_sample_std_m": 0.5,
+      "initialized_a_sample_std_m": 0.4999999999490437,
+      "a_mean_m": 1.586032892321652e-17,
+      "B_mean": 0.0,
+      "B_sample_std": 0.0,
+      "initial_max_error_m": 8.230735364100905e-11,
+      "initial_max_rate_m_s": 0.0031182361393022103,
+      "initial_drift_first_order_max_absolute_difference_m_s": 2.0111262915428751e-10
+    },
+    {
+      "case": "B",
+      "specified_a_sample_std_m": 0.0,
+      "initialized_a_sample_std_m": 0.0,
+      "a_mean_m": 0.0,
+      "B_mean": 4.130293990420969e-20,
+      "B_sample_std": 0.005000000000000001,
+      "initial_max_error_m": 8.230735364100905e-11,
+      "initial_max_rate_m_s": 0.0,
+      "initial_drift_first_order_max_absolute_difference_m_s": 0.0
+    },
+    {
+      "case": "AB",
+      "specified_a_sample_std_m": 0.5,
+      "initialized_a_sample_std_m": 0.4999999999490437,
+      "a_mean_m": 1.586032892321652e-17,
+      "B_mean": 4.130293990420969e-20,
+      "B_sample_std": 0.005000000000000001,
+      "initial_max_error_m": 8.230735364100905e-11,
+      "initial_max_rate_m_s": 0.0031182361393022103,
+      "initial_drift_first_order_max_absolute_difference_m_s": 2.0111262915428751e-10
+    }
+  ],
+  "old_low": [
+    {
+      "case": "A",
+      "id": "a_0.1_random_4",
+      "seed": 4,
+      "a_population_std_m": 0.11069492758575997,
+      "a_sample_std_m": 0.11342854730127455,
+      "B_population_std": 0.0,
+      "B_sample_std": 0.0,
+      "profile_shape_comparable_to_reference": true,
+      "nominal_a_m": 0.1,
+      "nominal_B_fraction": 0
+    },
+    {
+      "case": "B",
+      "id": "B_0.003_random_2",
+      "seed": 2,
+      "a_population_std_m": 0.0,
+      "a_sample_std_m": 0.0,
+      "B_population_std": 0.002248675219294442,
+      "B_sample_std": 0.0023042064260743547,
+      "profile_shape_comparable_to_reference": true,
+      "nominal_a_m": 0,
+      "nominal_B_fraction": 0.003
+    },
+    {
+      "case": "AB",
+      "id": "AB_a0.1m_B0.3percent_seed0",
+      "seed": 0,
+      "a_population_std_m": 0.08304511834658862,
+      "a_sample_std_m": 0.08509592390507817,
+      "B_population_std": 0.002828938326775702,
+      "B_sample_std": 0.0028987991754406742,
+      "profile_shape_comparable_to_reference": false,
+      "nominal_a_m": 0.1,
+      "nominal_B_fraction": 0.003
+    }
+  ],
+  "A_reference_to_old_profile_scale": 4.4080613910355675,
+  "B_reference_to_old_profile_scale": 2.169944473472558,
+  "B_model": "fixed multiplier of Cd*A/m through LOW/HIGH/slew; not a detailed attitude-error model",
+  "initial_position": "fixed-reference 100km, unchanged mean longitudes; error zero to floating-point precision",
+  "ddof": 1,
+  "statement": "0.5 m・0.5%は実機母集団から推定された統計的nominal値ではなく、文献で確認された現実的な桁を踏まえた工学的Reference sensitivity conditionである"
+}

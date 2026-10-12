@@ -1,0 +1,11 @@
+# Engineering sensitivity reference; not a measured population standard deviation.
+source_profiles: docs/dispersion_control_transfer/data/profiles.json
+frozen_profiles: docs/reference_dispersion/data/profiles.json
+baseline_run: outputs/real_environment_20261011/runs/active_60d
+environment: configs/real_environment_applicability/active.yaml
+weather: docs/real_environment_applicability/data/active_drivers.csv
+cache_seconds: 120
+sigma_a_m: 0.5
+sigma_B_fraction: 0.005
+std_ddof: 1
+output: outputs/reference_dispersion_20261012
