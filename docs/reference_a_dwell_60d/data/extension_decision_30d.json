@@ -1,0 +1,9 @@
+{
+  "reviewed": true,
+  "extend_to_60d": true,
+  "reason": "User requested 60d; complete checkpoint, finite state and positive signed gaps, no ordering reversal",
+  "max_error_m": 264.53634857288336,
+  "RMS_m": 69.14746537356777,
+  "cycles": 777,
+  "extra_altitude_loss_m": 33.17866936428029
+}

@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "tests_passed": 293,
+  "checkpoint_chain": [
+    {
+      "from_day": 7.0,
+      "to_day": 30.0,
+      "prefix_checkpoint_sha256": "d79e908b6b3541a31d6c89b075676f37134f06224eb3eeca99f0b84ea1ede4e2",
+      "prefix_events_exact": true
+    },
+    {
+      "from_day": 30.0,
+      "to_day": 60.0,
+      "prefix_checkpoint_sha256": "f967a7c53cd95fbae1de18ec40f6c7a8afdf3fadfe2f44a33919300bbca00b2d",
+      "prefix_events_exact": true
+    }
+  ],
+  "old_input_files_unchanged": 34,
+  "regression_24h_passed": true,
+  "core_and_config_changes": false,
+  "new_physics": "D150 suffix 7–30d and 30–60d only; D300/allLOW reused",
+  "new_physics_elapsed_s": 2132.221522199994
+}

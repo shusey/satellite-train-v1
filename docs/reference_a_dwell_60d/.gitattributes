@@ -1,0 +1,2 @@
+# Preserve checkpoint bytes referenced by the continuation SHA256 chain.
+data/**/D150_checkpoint.json -text

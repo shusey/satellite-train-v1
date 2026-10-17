@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "physical_input_changes": {
+    "controller.dwell_time_s": {
+      "D300": 300,
+      "D150": 150
+    }
+  },
+  "observation_window": {
+    "D300_saved_days": 60,
+    "compared_days": 60
+  },
+  "same_profile": true,
+  "same_initial_state": true,
+  "same_weather": true,
+  "same_environment": true,
+  "same_cache_method": true,
+  "note": "The same density field and evaluation method are used; densities need not match after trajectories diverge."
+}
