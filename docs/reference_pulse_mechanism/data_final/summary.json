@@ -1,0 +1,271 @@
+{
+  "definition": "observed-trajectory force attribution; not shorter-pulse counterfactual",
+  "minimum_equivalent_s": 420.0,
+  "minimum_cycle_s": 540.0,
+  "minimum_restart_s": 840.0,
+  "cases": {
+    "A": {
+      "cycles": 4198,
+      "incident_gap_records": 7989,
+      "quiet_intervals": 784,
+      "minimum_pulse_count": 4073,
+      "incident_max_velocity_reduced_fraction": 0.5764649833253931,
+      "physical_gap_sign_reversal_fraction": 0.5381149079984979,
+      "physical_gap_abs_speed_grew_fraction": 0.4965577669295281,
+      "own_alone_reversal_fraction": 0.7085993240705971,
+      "neighbor_control_absolute_ratio_of_sums": 0.4283330660407692,
+      "own_excess_radius_loss_m": {
+        "n": 4198,
+        "min": 0.48375928390340484,
+        "p10": 0.8516207314273669,
+        "median": 1.4986886234973396,
+        "p90": 2.1887668127490514,
+        "max": 2.948513379476953
+      },
+      "own_excess_g_impulse_m_s": {
+        "n": 4198,
+        "min": 0.0008221907308465226,
+        "p10": 0.0014468004770755367,
+        "median": 0.002547747369621031,
+        "p90": 0.003720176538556158,
+        "max": 0.005008799665902786
+      },
+      "own_impulse_after_first_off_ratio": 0.7885717048719489,
+      "V_incident_before_m_s": {
+        "n": 4198,
+        "min": 9.360287680664154e-05,
+        "p10": 0.0005825637361371389,
+        "median": 0.0013422987504424877,
+        "p90": 0.002504396202423277,
+        "max": 0.005373918537018281
+      },
+      "V_incident_after_m_s": {
+        "n": 4198,
+        "min": 7.32301753311607e-07,
+        "p10": 0.00033908474908275147,
+        "median": 0.0012910931800301732,
+        "p90": 0.002512974468535979,
+        "max": 0.005374514797943991
+      },
+      "pulse_closure_max_m_s": 4.0470721073388415e-06,
+      "cumulative_60d_closure_max_m_s": 7.959395662817705e-06,
+      "quiet_delta_qD_B_abs": {
+        "n": 784,
+        "min": 0.0,
+        "p10": 0.0,
+        "median": 0.0,
+        "p90": 0.0,
+        "max": 0.0
+      },
+      "quiet_delta_qD_common_LOW_abs": {
+        "n": 784,
+        "min": 1.5002484851131023e-14,
+        "p10": 2.4519599642850408e-12,
+        "median": 2.060037778222139e-11,
+        "p90": 5.788271078493384e-11,
+        "max": 2.447897386397773e-09
+      },
+      "quiet_B_exceeds_common_LOW_fraction": 0.0,
+      "quiet_delta_qP_positive_fraction": 1.0,
+      "quiet_D_change_exceeds_P_change_fraction": 0.003826530612244898,
+      "validated_existing_prediction_abs_error_s": {
+        "n": 784,
+        "min": 0.0,
+        "p10": 0.0,
+        "median": 10.0,
+        "p90": 30.0,
+        "max": 1820.0
+      },
+      "quiet_duration_s": {
+        "n": 784,
+        "min": 10.0,
+        "p10": 423.0000000000001,
+        "median": 3520.0,
+        "p90": 12870.0,
+        "max": 44050.0
+      },
+      "local_LOW_to_next_HIGH": {
+        "n": 4177,
+        "neighbor_D_change_exceeds_natural_D_fraction": 0.9966483121857793,
+        "D_change_exceeds_P_change_fraction": 0.983720373473785
+      }
+    },
+    "B": {
+      "cycles": 6213,
+      "incident_gap_records": 11807,
+      "quiet_intervals": 1030,
+      "minimum_pulse_count": 6117,
+      "incident_max_velocity_reduced_fraction": 0.5755673587638822,
+      "physical_gap_sign_reversal_fraction": 0.5553485220631829,
+      "physical_gap_abs_speed_grew_fraction": 0.4927585330736004,
+      "own_alone_reversal_fraction": 0.7248242567968155,
+      "neighbor_control_absolute_ratio_of_sums": 0.42502885520038686,
+      "own_excess_radius_loss_m": {
+        "n": 6213,
+        "min": 0.45461116434703464,
+        "p10": 0.8729725494221553,
+        "median": 1.5457319966038616,
+        "p90": 2.214757395015691,
+        "max": 2.9407506187530523
+      },
+      "own_excess_g_impulse_m_s": {
+        "n": 6213,
+        "min": 0.000772673874346097,
+        "p10": 0.0014833215170693137,
+        "median": 0.002627534563456546,
+        "p90": 0.003768036278115222,
+        "max": 0.005002073062573831
+      },
+      "own_impulse_after_first_off_ratio": 0.8034342349263798,
+      "V_incident_before_m_s": {
+        "n": 6213,
+        "min": 0.0001841471800169514,
+        "p10": 0.0006996736041669588,
+        "median": 0.001370142559487349,
+        "p90": 0.002498338649870017,
+        "max": 0.006118457874069811
+      },
+      "V_incident_after_m_s": {
+        "n": 6213,
+        "min": 8.991578662061704e-07,
+        "p10": 0.0004329714635333112,
+        "median": 0.0013127174846043607,
+        "p90": 0.0025115383042777217,
+        "max": 0.006104424257156764
+      },
+      "pulse_closure_max_m_s": 3.93384542745007e-06,
+      "cumulative_60d_closure_max_m_s": 1.0499197812340044e-05,
+      "quiet_delta_qD_B_abs": {
+        "n": 1030,
+        "min": 3.293435069495882e-12,
+        "p10": 3.336186039713432e-10,
+        "median": 4.487920664576566e-09,
+        "p90": 2.1694938441511136e-08,
+        "max": 9.003820350977467e-08
+      },
+      "quiet_delta_qD_common_LOW_abs": {
+        "n": 1030,
+        "min": 7.351814630325222e-15,
+        "p10": 2.6747593276057714e-12,
+        "median": 2.2361165141759895e-11,
+        "p90": 3.766089467052807e-10,
+        "max": 3.185602871614969e-09
+      },
+      "quiet_B_exceeds_common_LOW_fraction": 0.9883495145631068,
+      "quiet_delta_qP_positive_fraction": 1.0,
+      "quiet_D_change_exceeds_P_change_fraction": 0.43592233009708736,
+      "validated_existing_prediction_abs_error_s": {
+        "n": 786,
+        "min": 0.0,
+        "p10": 80.0,
+        "median": 920.0,
+        "p90": 3540.0,
+        "max": 25990.0
+      },
+      "quiet_duration_s": {
+        "n": 1030,
+        "min": 10.0,
+        "p10": 360.0,
+        "median": 2380.0,
+        "p90": 8101.0,
+        "max": 31660.0
+      },
+      "local_LOW_to_next_HIGH": {
+        "n": 6192,
+        "neighbor_D_change_exceeds_natural_D_fraction": 0.9483204134366925,
+        "D_change_exceeds_P_change_fraction": 0.9953165374677002
+      }
+    },
+    "AB": {
+      "cycles": 6572,
+      "incident_gap_records": 12491,
+      "quiet_intervals": 1039,
+      "minimum_pulse_count": 6474,
+      "incident_max_velocity_reduced_fraction": 0.5774497869750457,
+      "physical_gap_sign_reversal_fraction": 0.5858618205107677,
+      "physical_gap_abs_speed_grew_fraction": 0.49307501401008724,
+      "own_alone_reversal_fraction": 0.7506204467216396,
+      "neighbor_control_absolute_ratio_of_sums": 0.42014035005983164,
+      "own_excess_radius_loss_m": {
+        "n": 6572,
+        "min": 0.4976046336896507,
+        "p10": 0.9365857419075995,
+        "median": 1.5672477128333542,
+        "p90": 2.2063077549216734,
+        "max": 3.2207338138942636
+      },
+      "own_excess_g_impulse_m_s": {
+        "n": 6572,
+        "min": 0.0008448151622149624,
+        "p10": 0.0015917884587642928,
+        "median": 0.0026641301180631016,
+        "p90": 0.0037497439497222924,
+        "max": 0.005478347788896332
+      },
+      "own_impulse_after_first_off_ratio": 0.7996258515127853,
+      "V_incident_before_m_s": {
+        "n": 6572,
+        "min": 0.00016628072717142007,
+        "p10": 0.0007129964322642748,
+        "median": 0.0013488658013883462,
+        "p90": 0.002441844066086948,
+        "max": 0.005531170841228691
+      },
+      "V_incident_after_m_s": {
+        "n": 6572,
+        "min": 2.9557158602155215e-07,
+        "p10": 0.00043335477755088495,
+        "median": 0.0012903412112286639,
+        "p90": 0.0024404698897013783,
+        "max": 0.005488851733434307
+      },
+      "pulse_closure_max_m_s": 4.221434676981908e-06,
+      "cumulative_60d_closure_max_m_s": 1.015605208319224e-05,
+      "quiet_delta_qD_B_abs": {
+        "n": 1039,
+        "min": 4.676717148751531e-13,
+        "p10": 3.9949302936131564e-10,
+        "median": 4.22574040939851e-09,
+        "p90": 2.1844282109606048e-08,
+        "max": 1.2890166598577128e-07
+      },
+      "quiet_delta_qD_common_LOW_abs": {
+        "n": 1039,
+        "min": 4.410414420506101e-14,
+        "p10": 2.623526877224928e-12,
+        "median": 2.2552104217010293e-11,
+        "p90": 1.7847428183485712e-10,
+        "max": 3.937516898294896e-09
+      },
+      "quiet_B_exceeds_common_LOW_fraction": 0.9942252165543792,
+      "quiet_delta_qP_positive_fraction": 1.0,
+      "quiet_D_change_exceeds_P_change_fraction": 0.4215591915303176,
+      "validated_existing_prediction_abs_error_s": {
+        "n": 830,
+        "min": 0.0,
+        "p10": 80.0,
+        "median": 915.0,
+        "p90": 3220.0,
+        "max": 18110.0
+      },
+      "quiet_duration_s": {
+        "n": 1039,
+        "min": 10.0,
+        "p10": 340.0,
+        "median": 2430.0,
+        "p90": 7900.000000000002,
+        "max": 27760.0
+      },
+      "local_LOW_to_next_HIGH": {
+        "n": 6551,
+        "neighbor_D_change_exceeds_natural_D_fraction": 0.953442222561441,
+        "D_change_exceeds_P_change_fraction": 0.9961837887345444
+      }
+    }
+  },
+  "preservation": {
+    "passed": true,
+    "files": 75,
+    "large_file_check": "size and nanosecond mtime; small inputs SHA256"
+  }
+}

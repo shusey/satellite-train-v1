@@ -1,0 +1,20 @@
+{
+  "A": {
+    "HIGH_completion_already_below_off_fraction": 0.413530252501191,
+    "first_off_during_up_slew_fraction": 0.3696998570747975,
+    "validated_target_matched_forecasts": 776,
+    "matched_prediction_median_abs_error_s": 10.0
+  },
+  "B": {
+    "HIGH_completion_already_below_off_fraction": 0.41187831965234184,
+    "first_off_during_up_slew_fraction": 0.36809914694994367,
+    "validated_target_matched_forecasts": 576,
+    "matched_prediction_median_abs_error_s": 690.0
+  },
+  "AB": {
+    "HIGH_completion_already_below_off_fraction": 0.411442483262325,
+    "first_off_during_up_slew_fraction": 0.36609860012172857,
+    "validated_target_matched_forecasts": 596,
+    "matched_prediction_median_abs_error_s": 740.0
+  }
+}
