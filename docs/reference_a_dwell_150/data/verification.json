@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "tests_passed": 291,
+  "new_tests": 3,
+  "physics_runs_added": 1,
+  "new_physics_run": "D150 only, seven days",
+  "new_physics_run_elapsed_s": 372.60196509999514,
+  "D300_reused": true,
+  "allLOW_reused": true,
+  "regression_24h_passed": true,
+  "old_inputs_unchanged": 13,
+  "old_large_array_check": "size and mtime, small files SHA256",
+  "same_trajectory_through_270s": {
+    "a_m": 0.0,
+    "lambda_rad": 0.0,
+    "density_kg_m3": 0.0,
+    "area_m2": 0.0,
+    "gap_error_m": 0.0,
+    "gap_rate_m_s": 0.0
+  },
+  "checks": {
+    "D300": {
+      "cycles": 323,
+      "HIGH_equivalent_cycle_sum_s": 135800.0,
+      "physical_gap_m": 99718.93202774224,
+      "no_order_reversal": true,
+      "maximum_pulse_velocity_closure_m_s": 1.2612692408355865e-06
+    },
+    "D150": {
+      "cycles": 114,
+      "HIGH_equivalent_cycle_sum_s": 30900.0,
+      "physical_gap_m": 99901.67743283023,
+      "no_order_reversal": true,
+      "maximum_pulse_velocity_closure_m_s": 6.421059322440133e-07
+    }
+  },
+  "profile_sha256": "5eae9a2eaaa58bf94e0e4629eedc62465c27f7e0da81326aac27440b24963cfc"
+}

@@ -1,0 +1,11 @@
+{
+  "complete": true,
+  "start_s": 0.0,
+  "end_s": 604800.0,
+  "samples": 60481,
+  "elapsed_s": 372.60196509999514,
+  "event_counts": [
+    228
+  ],
+  "minimum_signed_gap_m": 99905.86098825048
+}

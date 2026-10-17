@@ -1,0 +1,62 @@
+{
+  "outputs\\reference_dispersion_20261012\\batch_30d\\area_m2.npy": {
+    "size": 261274736,
+    "mtime_ns": 1791772864770844800
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\a_m.npy": {
+    "size": 261274736,
+    "mtime_ns": 1791772864760836600
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\checkpoint.json": {
+    "size": 2574745,
+    "mtime_ns": 1791774763461349300,
+    "sha256": "87029eb55993959d6ac148a068eaf9b58a91cc914b66d6c4f73d134f5bcca7e0"
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\completion.json": {
+    "size": 241,
+    "mtime_ns": 1791774763461349300,
+    "sha256": "ef2036a6b7e86fbe0fd32397485f54156c6706de691f50da8d613d856c4a6897"
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\density_kg_m3.npy": {
+    "size": 261274736,
+    "mtime_ns": 1791772864770844800
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\environment.json": {
+    "size": 1880,
+    "mtime_ns": 1791774763553610600,
+    "sha256": "400c19a9b037f9682e9b1b9e669d8553cdb3270e2abc9b314ab7de1fe7c858b1"
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\lambda_rad.npy": {
+    "size": 261274736,
+    "mtime_ns": 1791772864760836600
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\metadata.json": {
+    "size": 12813,
+    "mtime_ns": 1791772864770844800,
+    "sha256": "12b74078bf9d65ba693aef49be937f3568c3c7e31954139144e9ed5becdb028b"
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\mode.npy": {
+    "size": 32659454,
+    "mtime_ns": 1791772864770844800
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\normalized_config.yaml": {
+    "size": 1514,
+    "mtime_ns": 1791774763552609900,
+    "sha256": "99411fded052f0a6c34ffcd1557f9e112d43efff8591949fc555323b13ea3641"
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\time_s.npy": {
+    "size": 2073736,
+    "mtime_ns": 1791772864745111400,
+    "sha256": "362a74622961dd0fe8e31745d79bbb3a54bbba527301e057853ceb5a1f807669"
+  },
+  "docs\\reference_dispersion\\data\\profiles.json": {
+    "size": 12494,
+    "mtime_ns": 1791772864595527300,
+    "sha256": "5eae9a2eaaa58bf94e0e4629eedc62465c27f7e0da81326aac27440b24963cfc"
+  },
+  "docs\\real_environment_applicability\\data\\active_drivers.csv": {
+    "size": 31552,
+    "mtime_ns": 1791679469013356000,
+    "sha256": "c7df89db603ba5b94c5809cc2fec3a6f266a5b1a26df07b16aa7139e6176c59f"
+  }
+}
