@@ -1,0 +1,50 @@
+{
+  "300": {
+    "a_m": {
+      "exact": true,
+      "max_abs_difference": 0.0
+    },
+    "lambda_rad": {
+      "exact": true,
+      "max_abs_difference": 0.0
+    },
+    "area_m2": {
+      "exact": true,
+      "max_abs_difference": 0.0
+    },
+    "mode": {
+      "exact": true,
+      "max_abs_difference": 0.0
+    },
+    "density_kg_m3": {
+      "exact": true,
+      "max_abs_difference": 0.0
+    },
+    "events_exact": true,
+    "passed": true
+  },
+  "150": {
+    "a_m": {
+      "exact": true,
+      "max_abs_difference": 0.0
+    },
+    "lambda_rad": {
+      "exact": true,
+      "max_abs_difference": 0.0
+    },
+    "area_m2": {
+      "exact": true,
+      "max_abs_difference": 0.0
+    },
+    "mode": {
+      "exact": true,
+      "max_abs_difference": 0.0
+    },
+    "density_kg_m3": {
+      "exact": true,
+      "max_abs_difference": 0.0
+    },
+    "events_exact": true,
+    "passed": true
+  }
+}

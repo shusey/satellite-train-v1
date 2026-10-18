@@ -108,6 +108,8 @@ def simulate_case(
         config.controller.slew_time_s,
         config.controller.dwell_time_s,
         config.controller.command_delay_s,
+        dwell_high_time_s=config.controller.dwell_high_time_s,
+        dwell_low_time_s=config.controller.dwell_low_time_s,
     )
 
     stored: dict[str, list[NDArray | float]] = {

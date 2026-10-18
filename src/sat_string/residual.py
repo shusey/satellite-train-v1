@@ -169,7 +169,7 @@ def _off_activity(arrays,rise,back,config):
     below=np.flatnonzero(q<=config.controller.threshold_off_m_s2)
     high=np.flatnonzero((q<=config.controller.threshold_off_m_s2)&(m==2))
     first=float(tt[below[0]]) if below.size else None
-    allowed=rise["complete_time"]+config.controller.dwell_time_s
+    allowed=rise["complete_time"]+config.controller.effective_dwell_high_s
     earliest=ceil((allowed-1e-9)/config.controller.control_period_s)*config.controller.control_period_s
     hold=back["command_time"]-rise["complete_time"]
     high_stable=back["start_time"]-rise["complete_time"]
@@ -230,7 +230,7 @@ def residual_analysis(arrays,config,events,*,groups=None,gap_s=None,relative_D_t
         next_pair=pair_index.get((sat,pair["local_cycle_number"]+1));nxt=next_pair["rise"] if next_pair else None
         actual=nxt["command_time"] if nxt else None
         pred=predict_crossing(state["q_P_m_s2"][j],state["q_D_m_s2"][j],state["time_s"],
-            back["complete_time"]+config.controller.dwell_time_s,kp,kd,config.controller.threshold_on_m_s2,config.controller.control_period_s)
+            back["complete_time"]+config.controller.effective_dwell_low_s,kp,kd,config.controller.threshold_on_m_s2,config.controller.control_period_s)
         row.update(prediction=pred,**_compare(arrays,events,row,state,j,pred,actual,config,relative_D_tolerance,event_times))
         row["next_same_satellite_start_interval_s"]=actual-rise["command_time"] if actual is not None else None
         local.append(row)
@@ -285,6 +285,8 @@ def residual_analysis(arrays,config,events,*,groups=None,gap_s=None,relative_D_t
         (global_rows if scope=="response_group" else quiet_rows).append(row)
     packed={key:np.asarray([s[key] for s in frames]) for key in frames[0]} if frames else {}
     summary=dict(schema_version=1,observation_end_s=end,dwell_time_s=config.controller.dwell_time_s,
+        dwell_high_time_s=config.controller.effective_dwell_high_s,
+        dwell_low_time_s=config.controller.effective_dwell_low_s,
         relative_D_tolerance=relative_D_tolerance,local_completed_cycles=len(local),incomplete_cycles=incomplete,
         complete_response_groups=len(global_rows),
         local_valid_finite_forecasts=sum(r["prediction_valid_on_observed_window"] and not r["right_censored"] for r in local),

@@ -112,7 +112,7 @@ def return_gates(arrays,config,events):
     rows=[]
     for pair in cycle_pairs(events,float(t[-1])):
         rise=pair["rise"];back=pair["return_event"];j=pair["satellite_id"]-1
-        gate=np.ceil((rise["complete_time"]+config.controller.dwell_time_s-1e-9)/period)*period
+        gate=np.ceil((rise["complete_time"]+config.controller.effective_dwell_high_s-1e-9)/period)*period
         k=int(np.searchsorted(t,gate-1e-9));observed=k<len(t)
         rows.append(dict(satellite_id=j+1,local_cycle_number=pair["local_cycle_number"],
             high_complete_s=rise["complete_time"],earliest_return_gate_s=float(gate),

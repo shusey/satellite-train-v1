@@ -1,0 +1,37 @@
+{
+  "environment": {
+    "density_model": "nrlmsis2",
+    "msis_version": "2.0",
+    "pymsis_version": "0.12.0",
+    "epoch_utc": "2024-03-01T00:00:00",
+    "duration_s": 5184000,
+    "inclination_deg": 51.6,
+    "raan_deg": 0.0,
+    "initial_phase_deg": 0.0,
+    "geomagnetic_activity": -1,
+    "selection_rule": "2024 calendar-anchored starts Jan/Mar/May/Jul/Sep/Nov 1, exactly60d; earliest eligible in each weather class; no formation results read",
+    "epoch_reason": "First eligible active weather class; preregistered protocol.json",
+    "inclination_reason": "ISS-like 400 km Earth-observation plane; NASA reference, one illustrative orbit",
+    "raan_reason": "zero defines the reference inertial plane; not fitted to density or performance",
+    "phase_reason": "central satellite at ascending equator crossing at epoch",
+    "geometry_assumptions": "circular orbit; lambda interpreted as orbital phase plus fixed offset; fixed inclination/RAAN; ERA with UT1 approximated by UTC; no polar motion/precession/nutation/J2",
+    "weather_source": "https://celestrak.org/SpaceData/SW-All.csv",
+    "weather_interpolation": "none; previous-day observed F107, centered81 F107, seven-component 3-hour Ap history",
+    "cache_candidates_s": [
+      10,
+      30,
+      60,
+      120
+    ],
+    "cache_acceptance": "short-case max/RMS errors within 1 percent or 0.05 m; sampled direct-density relative error below 0.001"
+  },
+  "weather_sha256": "c7df89db603ba5b94c5809cc2fec3a6f266a5b1a26df07b16aa7139e6176c59f",
+  "frozen_profiles_sha256": "5eae9a2eaaa58bf94e0e4629eedc62465c27f7e0da81326aac27440b24963cfc",
+  "cache_seconds": 120,
+  "pymsis_version": "0.12.0",
+  "msis_version": "2.0",
+  "density_units": "kg/m3",
+  "backend_points": 2721726,
+  "maximum_cache_radius_offset_m": 1.2698098523542285,
+  "maximum_cache_phase_offset_rad": 1.8985701899509877e-08
+}

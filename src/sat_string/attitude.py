@@ -46,11 +46,16 @@ class AttitudeStateMachine:
         slew_time_s: float,
         dwell_time_s: float,
         command_delay_s: float = 0.0,
+        *,
+        dwell_high_time_s: float | None = None,
+        dwell_low_time_s: float | None = None,
     ) -> None:
         self.area_low_m2 = float(area_low_m2)
         self.area_high_m2 = float(area_high_m2)
         self.slew_time_s = float(slew_time_s)
         self.dwell_time_s = float(dwell_time_s)
+        self.dwell_high_time_s = float(dwell_time_s if dwell_high_time_s is None else dwell_high_time_s)
+        self.dwell_low_time_s = float(dwell_time_s if dwell_low_time_s is None else dwell_low_time_s)
         self.command_delay_s = float(command_delay_s)
         self.mode = np.full(satellite_count, L, dtype=np.int8)
         self.transition_start_time = np.full(satellite_count, np.nan)
@@ -159,7 +164,8 @@ class AttitudeStateMachine:
             self.mode[index] = H if self.mode[index] == L_TO_H else L
             self.transition_start_time[index] = np.nan
             self.transition_complete_time[index] = np.nan
-            self.next_allowed_time[index] = completion + self.dwell_time_s
+            dwell = self.dwell_high_time_s if self.mode[index] == H else self.dwell_low_time_s
+            self.next_allowed_time[index] = completion + dwell
             completed.append(index)
         return completed
 

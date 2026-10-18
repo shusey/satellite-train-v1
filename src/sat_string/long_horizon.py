@@ -196,7 +196,7 @@ def analyze_long_horizon(arrays, config, events, low_arrays, gap_s):
                         previous_sample_q_m_s2=float(arrays["q_m_s2"][k-1,j]) if k else None,
                         previous_same_satellite_completion_s=max(previous,default=None),
                         return_command_s=own_return["command_time"] if own_return else None,
-                        earliest_return_allowed_s=r["complete_time"]+config.controller.dwell_time_s)
+                        earliest_return_allowed_s=r["complete_time"]+config.controller.effective_dwell_high_s)
             record["local_cycle_number"]=sum(z["satellite_id"]==j+1 and z["to_mode"]=="H"
                 and z["command_time"]<=r["command_time"] for z in all_events)
             record["P_magnitude_exceeds_D_at_trigger"]=bool(abs(qp[k,j])>abs(qd[k,j]))

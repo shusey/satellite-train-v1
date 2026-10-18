@@ -186,3 +186,10 @@ lambdaを地理経度として直接使わず、固定軌道面・地球自転�
 [選択データ取得と再現手順](docs/observed_density_design/reproduction.md)を参照。
 NRLMSIS 2.0比の観測偏差、400 km規格化、100 kmの短時間差推定、GRACE A/B比較を解析する。
 既存simulation coreと人工外乱は維持。候補の寿命・相対移動が未確定なので、標準外乱は置き換えていない。
+
+## A-ref：HIGH側・LOW側dwellの2×2分離実験
+
+[30日結果と研究判断](docs/reference_dwell_factorial_30d/REPORT.md)、[再現手順](docs/reference_dwell_factorial_30d/REPRODUCTION.md)。
+HIGH側短縮は主に操作量・高度コストを減らし、LOW側短縮は精度と負荷の交換条件へ作用する。
+`dwell_high_time_s` / `dwell_low_time_s` は独立指定でき、未指定の側は既存 `dwell_time_s` を使う。
+対角2条件は保存runを再利用し、新規の交差2条件だけ30日計算した。60日へは延長していない。

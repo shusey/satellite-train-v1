@@ -1,0 +1,4 @@
+data/*.csv text eol=lf
+data/*.json text eol=lf
+*.md text eol=lf
+figures/*.png binary

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "changes": {
+    "controller.dwell_high_time_s": 150,
+    "controller.dwell_low_time_s": 300
+  },
+  "same_initial_state": true,
+  "same_profile": true,
+  "same_environment": true,
+  "same_weather": true,
+  "same_cache_method": true,
+  "compared_days": 30,
+  "no_automatic_extension": true
+}

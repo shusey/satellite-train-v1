@@ -63,7 +63,8 @@ def integrate_control_profiles(config, profiles, provider, output, *, checkpoint
         if checkpoint is None:
             c = config.controller; s = config.spacecraft
             attitude = AttitudeStateMachine(n, s.area_low_m2, s.area_high_m2,
-                c.slew_time_s, c.dwell_time_s, c.command_delay_s)
+                c.slew_time_s, c.dwell_time_s, c.command_delay_s,
+                dwell_high_time_s=c.dwell_high_time_s, dwell_low_time_s=c.dwell_low_time_s)
         else:
             attitude = restore_attitude(config, checkpoint['events'][i], start)
             if attitude.mode.tolist() != checkpoint['modes'][i] or not np.allclose(

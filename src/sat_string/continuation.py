@@ -20,7 +20,9 @@ def restore_attitude(config, events, end_s):
     attitude = AttitudeStateMachine(config.formation.satellite_count,
         config.spacecraft.area_low_m2, config.spacecraft.area_high_m2,
         config.controller.slew_time_s, config.controller.dwell_time_s,
-        config.controller.command_delay_s)
+        config.controller.command_delay_s,
+        dwell_high_time_s=config.controller.dwell_high_time_s,
+        dwell_low_time_s=config.controller.dwell_low_time_s)
     for value in sorted(events, key=lambda e: e.command_time if isinstance(e, SwitchEvent) else e["command_time"]):
         event = value if isinstance(value, SwitchEvent) else SwitchEvent(**value)
         if event.command_time > end_s + 1e-9:
@@ -30,7 +32,8 @@ def restore_attitude(config, events, end_s):
         attitude.events.append(event)
         if event.complete_time <= end_s + 1e-9:
             attitude.mode[i] = target
-            attitude.next_allowed_time[i] = event.complete_time + config.controller.dwell_time_s
+            attitude.next_allowed_time[i] = event.complete_time + (config.controller.effective_dwell_high_s
+                if target == H else config.controller.effective_dwell_low_s)
             attitude.transition_start_time[i] = np.nan
             attitude.transition_complete_time[i] = np.nan
         elif event.start_time <= end_s + 1e-9:

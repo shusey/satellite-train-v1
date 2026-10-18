@@ -58,7 +58,7 @@ def off_before_dwell(arrays,config,events):
     """
     t=arrays['time_s'];off=config.controller.threshold_off_m_s2;rows=[]
     for pair in cycle_pairs(events,float(t[-1])):
-        rise=pair['rise'];gate=rise['complete_time']+config.controller.dwell_time_s
+        rise=pair['rise'];gate=rise['complete_time']+config.controller.effective_dwell_high_s
         observed_end=min(pair['return_event']['command_time'],float(t[-1])) if pair['return_event'] else float(t[-1])
         k0=int(np.searchsorted(t,rise['start_time']-1e-9));k1=int(np.searchsorted(t,observed_end+1e-9))
         indices=np.flatnonzero(arrays['q_m_s2'][k0:k1,pair['satellite_id']-1]<=off)

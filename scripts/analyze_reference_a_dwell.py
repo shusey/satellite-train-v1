@@ -81,7 +81,7 @@ def diagnose(arrays,config,events,low,out,label):
             follow['next_qD_closure']=follow['next_delta_qD']-sum(follow[key] for key in ['next_qD_own','next_qD_neighbor','next_qD_natural'])
             assert abs(follow['next_qD_own'])<1e-15
             qclosures.append(abs(follow['next_qD_closure']))
-            kr=int(np.searchsorted(t,t[k1]+c.dwell_time_s))
+            kr=int(np.searchsorted(t,t[k1]+c.effective_dwell_low_s))
             follow['q_at_LOW_dwell_release']=float(p[kr,j]+d[kr,j])
             hit=np.flatnonzero(p[k1:k2+1,j]+d[k1:k2+1,j]>=c.threshold_on_m_s2)
             if len(hit):
@@ -90,7 +90,7 @@ def diagnose(arrays,config,events,low,out,label):
         row=dict(label=label,satellite_id=j+1,cycle=num,start_s=float(t[k0]),end_s=float(t[k1]),
             high_complete_s=rise['complete_time'],low_command_s=back['command_time'],
             high_equivalent_s=source['high_equivalent_time_s'],high_stable_s=source['high_stable_time_s'],
-            minimum_pulse=bool(abs(source['high_equivalent_time_s']-(c.slew_time_s+c.dwell_time_s))<1e-9),
+            minimum_pulse=bool(abs(source['high_equivalent_time_s']-(c.slew_time_s+c.effective_dwell_high_s))<1e-9),
             return_driver=source['return_driver'],first_q_below_off_s=source['first_q_below_off_s'],
             pulse_g_impulse_m_s=float(impulse['control'][j]),
             V_incident_before_m_s=float(np.max(abs(v[k0,incident]))),V_incident_after_m_s=float(np.max(abs(v[k1,incident]))),
@@ -99,7 +99,7 @@ def diagnose(arrays,config,events,low,out,label):
             next_HIGH_s=next_t,next_wait_s=float(next_t-t[k1]) if next_t is not None else None,
             next_HIGH_start_interval_s=float(next_t-t[k0]) if next_t is not None else None,
             right_censored=nxt is None,observed_followup_s=float((next_t if next_t is not None else end)-t[k1]),
-            LOW_dwell_release_s=float(t[k1]+c.dwell_time_s),**follow)
+            LOW_dwell_release_s=float(t[k1]+c.effective_dwell_low_s),**follow)
         rows.append(row);closures.append(float(np.max(abs(closure[incident]))))
         # The physical state is continuous across a zero-delay command. The saved
         # attitude mode is post-command, while e/v equal the just-before state.
@@ -132,11 +132,11 @@ def diagnose(arrays,config,events,low,out,label):
     matched=[x for x in completedquiet if x['prediction_valid_on_observed_window'] and x['prediction_target_matches_actual']]
     followed=[x for x in rows if x['next_HIGH_s'] is not None]
     low_extra=low['a_m']-a
-    stat=dict(label=label,dwell_s=c.dwell_time_s,days=end/86400,formation=metric,
+    stat=dict(label=label,dwell_s=c.dwell_time_s,dwell_high_s=c.effective_dwell_high_s,dwell_low_s=c.effective_dwell_low_s,days=end/86400,formation=metric,
         completed_cycles=len(rows),incomplete_cycles=incomplete,
-        theoretical_minimum_HIGH_equivalent_s=c.slew_time_s+c.dwell_time_s,
-        theoretical_minimum_cycle_s=2*c.slew_time_s+c.dwell_time_s,
-        theoretical_minimum_HIGH_restart_s=2*(c.slew_time_s+c.dwell_time_s),
+        theoretical_minimum_HIGH_equivalent_s=c.slew_time_s+c.effective_dwell_high_s,
+        theoretical_minimum_cycle_s=2*c.slew_time_s+c.effective_dwell_high_s,
+        theoretical_minimum_HIGH_restart_s=(2*c.slew_time_s+c.effective_dwell_high_s+c.effective_dwell_low_s),
         minimum_pulse_count=sum(x['minimum_pulse'] for x in rows),minimum_pulse_fraction=float(np.mean([x['minimum_pulse'] for x in rows])),
         high_equivalent_s_per_cycle=distribution(x['high_equivalent_s'] for x in rows),
         pulse_velocity_contribution_m_s=distribution(x['pulse_g_impulse_m_s'] for x in rows),
@@ -150,8 +150,8 @@ def diagnose(arrays,config,events,low,out,label):
         ev_sign_change_fraction=float(np.mean([x['e_v_sign_before']!=x['e_v_sign_after'] for x in edges])),
         re_trigger=followup_statistics(rows,end),
         same_satellite_HIGH_start_interval_s=distribution(x['next_HIGH_start_interval_s'] for x in followed),
-        next_HIGH_at_LOW_dwell_release_count=sum(abs(x['next_wait_s']-c.dwell_time_s)<1e-8 for x in followed),
-        same_HIGH_interval_at_minimum_count=sum(abs(x['next_HIGH_start_interval_s']-2*(c.slew_time_s+c.dwell_time_s))<1e-8 for x in followed),
+        next_HIGH_at_LOW_dwell_release_count=sum(abs(x['next_wait_s']-c.effective_dwell_low_s)<1e-8 for x in followed),
+        same_HIGH_interval_at_minimum_count=sum(abs(x['next_HIGH_start_interval_s']-(2*c.slew_time_s+c.effective_dwell_high_s+c.effective_dwell_low_s))<1e-8 for x in followed),
         LOW_release_already_above_on_fraction=float(np.mean([x['q_at_LOW_dwell_release']>=c.threshold_on_m_s2 for x in followed])),
         neighbor_D_exceeds_natural_fraction=float(np.mean([abs(x['next_qD_neighbor'])>abs(x['next_qD_natural']) for x in followed])),
         neighbor_D_change_abs_m_s2=distribution(abs(x['next_qD_neighbor']) for x in followed),

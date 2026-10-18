@@ -48,6 +48,16 @@ class ControllerConfig:
     reference_off_rate_m_s: float | None = None
     kd_s_inv: float | None = None
     kp_s2_inv: float | None = None
+    dwell_high_time_s: float | None = None
+    dwell_low_time_s: float | None = None
+
+    @property
+    def effective_dwell_high_s(self) -> float:
+        return self.dwell_time_s if self.dwell_high_time_s is None else self.dwell_high_time_s
+
+    @property
+    def effective_dwell_low_s(self) -> float:
+        return self.dwell_time_s if self.dwell_low_time_s is None else self.dwell_low_time_s
 
 
 @dataclass(frozen=True)
@@ -129,6 +139,9 @@ class SimulationConfig:
             normalized["controller"].pop("kd_s_inv")
         if self.controller.kp_s2_inv is None:
             normalized["controller"].pop("kp_s2_inv")
+        for name in ("dwell_high_time_s", "dwell_low_time_s"):
+            if getattr(self.controller, name) is None:
+                normalized["controller"].pop(name)
         if self.atmosphere.density_model == "exponential":
             normalized["atmosphere"].pop("density_model")
         return normalized
@@ -228,6 +241,8 @@ def _validate(config: SimulationConfig, raw: Mapping[str, Any]) -> None:
         "controller.control_period_s": c.controller.control_period_s,
         "controller.slew_time_s": c.controller.slew_time_s,
         "controller.dwell_time_s": c.controller.dwell_time_s,
+        "controller.dwell_high_time_s": c.controller.effective_dwell_high_s,
+        "controller.dwell_low_time_s": c.controller.effective_dwell_low_s,
         "disturbance.duration_s": c.disturbance.duration_s,
         "simulation.duration_s": c.simulation.duration_s,
         "simulation.integration_step_s": c.simulation.integration_step_s,
