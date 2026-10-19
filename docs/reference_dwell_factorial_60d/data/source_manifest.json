@@ -1,0 +1,422 @@
+{
+  "outputs\\reference_dispersion_20261012\\batch_30d\\area_m2.npy": {
+    "size": 261274736,
+    "mtime_ns": 1791772864770844800,
+    "sha256": null
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\a_m.npy": {
+    "size": 261274736,
+    "mtime_ns": 1791772864760836600,
+    "sha256": null
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\checkpoint.json": {
+    "size": 2574745,
+    "mtime_ns": 1791774763461349300,
+    "sha256": "87029eb55993959d6ac148a068eaf9b58a91cc914b66d6c4f73d134f5bcca7e0"
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\completion.json": {
+    "size": 241,
+    "mtime_ns": 1791774763461349300,
+    "sha256": "ef2036a6b7e86fbe0fd32397485f54156c6706de691f50da8d613d856c4a6897"
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\density_kg_m3.npy": {
+    "size": 261274736,
+    "mtime_ns": 1791772864770844800,
+    "sha256": null
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\environment.json": {
+    "size": 1880,
+    "mtime_ns": 1791774763553610600,
+    "sha256": "400c19a9b037f9682e9b1b9e669d8553cdb3270e2abc9b314ab7de1fe7c858b1"
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\lambda_rad.npy": {
+    "size": 261274736,
+    "mtime_ns": 1791772864760836600,
+    "sha256": null
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\metadata.json": {
+    "size": 12813,
+    "mtime_ns": 1791772864770844800,
+    "sha256": "12b74078bf9d65ba693aef49be937f3568c3c7e31954139144e9ed5becdb028b"
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\mode.npy": {
+    "size": 32659454,
+    "mtime_ns": 1791772864770844800,
+    "sha256": null
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\normalized_config.yaml": {
+    "size": 1514,
+    "mtime_ns": 1791774763552609900,
+    "sha256": "99411fded052f0a6c34ffcd1557f9e112d43efff8591949fc555323b13ea3641"
+  },
+  "outputs\\reference_dispersion_20261012\\batch_30d\\time_s.npy": {
+    "size": 2073736,
+    "mtime_ns": 1791772864745111400,
+    "sha256": "362a74622961dd0fe8e31745d79bbb3a54bbba527301e057853ceb5a1f807669"
+  },
+  "outputs\\reference_a_dwell_20261017\\D150_7d\\area_m2.npy": {
+    "size": 10160936,
+    "mtime_ns": 1792242062968552100,
+    "sha256": "2d293faa721ad52b290cf0627aae8de2608d5548b08b1e9a898f6b6fe6d6daae"
+  },
+  "outputs\\reference_a_dwell_20261017\\D150_7d\\a_m.npy": {
+    "size": 10160936,
+    "mtime_ns": 1792242062949260800,
+    "sha256": "826c0a315bc6bf766d325fe0e925df5b06732f56e9437e3dfbf1b56e464c0056"
+  },
+  "outputs\\reference_a_dwell_20261017\\D150_7d\\checkpoint.json": {
+    "size": 49171,
+    "mtime_ns": 1792242435593915200,
+    "sha256": "d79e908b6b3541a31d6c89b075676f37134f06224eb3eeca99f0b84ea1ede4e2"
+  },
+  "outputs\\reference_a_dwell_20261017\\D150_7d\\completion.json": {
+    "size": 195,
+    "mtime_ns": 1792242435594915500,
+    "sha256": "3292f0b7cccf97e0bac862600883a58636827e21e45fc267c99a8b9896d2f6e6"
+  },
+  "outputs\\reference_a_dwell_20261017\\D150_7d\\density_kg_m3.npy": {
+    "size": 10160936,
+    "mtime_ns": 1792242062960014600,
+    "sha256": "1203ac1917d2ae5d9bab6e9680145dc099ff44f29e0c68aa971a33455cea72ba"
+  },
+  "outputs\\reference_a_dwell_20261017\\D150_7d\\environment.json": {
+    "size": 1950,
+    "mtime_ns": 1792242435614148400,
+    "sha256": "53e09e59ef4b6d48d19d39c3672388ec59908c5424f2413488d6178843e85aa7"
+  },
+  "outputs\\reference_a_dwell_20261017\\D150_7d\\input_difference.json": {
+    "size": 469,
+    "mtime_ns": 1792242435615150500,
+    "sha256": "aec4ff2755b670b0b247ad739ebf2ff92acb3824228888ae2667768a0d671914"
+  },
+  "outputs\\reference_a_dwell_20261017\\D150_7d\\lambda_rad.npy": {
+    "size": 10160936,
+    "mtime_ns": 1792242062955698900,
+    "sha256": "5626341be1b8e065fa12e8d65db63cd419f3a9e9bc3c43b84ba0ec27cd8de2ad"
+  },
+  "outputs\\reference_a_dwell_20261017\\D150_7d\\metadata.json": {
+    "size": 3545,
+    "mtime_ns": 1792242062992437900,
+    "sha256": "06178c77dfcb64679e923a3acadf468881ec5970aa6c201189aea5240280397a"
+  },
+  "outputs\\reference_a_dwell_20261017\\D150_7d\\mode.npy": {
+    "size": 1270229,
+    "mtime_ns": 1792242062983469600,
+    "sha256": "b87d199645804c9e01da9b80fbb82911056cbd81de69e7c97d1a54984d2f6b94"
+  },
+  "outputs\\reference_a_dwell_20261017\\D150_7d\\normalized_config.yaml": {
+    "size": 1513,
+    "mtime_ns": 1792242435604853100,
+    "sha256": "b4dd643a87a4c074153d08385102825f132b4012f74ea4635ed8c2b051cb6058"
+  },
+  "outputs\\reference_a_dwell_20261017\\D150_7d\\time_s.npy": {
+    "size": 483976,
+    "mtime_ns": 1792242062929357700,
+    "sha256": "67e9b712be16c021c2c9ffd25d67049ece8fcb022ce204ae2538c33d741a61e9"
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_30d\\area_m2.npy": {
+    "size": 33385256,
+    "mtime_ns": 1792246738972218700,
+    "sha256": null
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_30d\\a_m.npy": {
+    "size": 33385256,
+    "mtime_ns": 1792246738947766400,
+    "sha256": null
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_30d\\checkpoint.json": {
+    "size": 310671,
+    "mtime_ns": 1792247617431460100,
+    "sha256": "f967a7c53cd95fbae1de18ec40f6c7a8afdf3fadfe2f44a33919300bbca00b2d"
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_30d\\completion.json": {
+    "size": 202,
+    "mtime_ns": 1792247617439776200,
+    "sha256": "d47178f3e21a697d0f9534b1a4b8fd1c21a2f5f5a685311d453252b00943ab0b"
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_30d\\density_kg_m3.npy": {
+    "size": 33385256,
+    "mtime_ns": 1792246738965530200,
+    "sha256": null
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_30d\\environment.json": {
+    "size": 2110,
+    "mtime_ns": 1792247617466133400,
+    "sha256": "a40d831c852e48d7b22ebcd811a83a68b95222ea438ba9cf76582edcffe89b85"
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_30d\\input_difference.json": {
+    "size": 470,
+    "mtime_ns": 1792247617467135300,
+    "sha256": "ab39cafee8535a0bee3258d912238f0e20faae0f91d777c1d9131f3916b473e4"
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_30d\\lambda_rad.npy": {
+    "size": 33385256,
+    "mtime_ns": 1792246738959983800,
+    "sha256": null
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_30d\\metadata.json": {
+    "size": 3552,
+    "mtime_ns": 1792246738993209600,
+    "sha256": "185d400001048e45df17bf056e62050bff6b6fe27b82f4256b2157083b3509d4"
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_30d\\mode.npy": {
+    "size": 4173269,
+    "mtime_ns": 1792246738981760400,
+    "sha256": "e55a979c228f02c1cd42f7d8a34130477692ce50623938edb80c76e3e12e7327"
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_30d\\normalized_config.yaml": {
+    "size": 1514,
+    "mtime_ns": 1792247617465129500,
+    "sha256": "4c9e481c4864060dbf62a997ed75e5952f23904cc792a0604eb1984f2abeb4c2"
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_30d\\time_s.npy": {
+    "size": 1589896,
+    "mtime_ns": 1792246738935260300,
+    "sha256": "97e0bb03f51872fc0a31478cae042ec73ebd35eee61cc3604c6dcbef2494f9ab"
+  },
+  "docs\\reference_dispersion\\data\\profiles.json": {
+    "size": 12494,
+    "mtime_ns": 1791772864595527300,
+    "sha256": "5eae9a2eaaa58bf94e0e4629eedc62465c27f7e0da81326aac27440b24963cfc"
+  },
+  "docs\\real_environment_applicability\\data\\active_drivers.csv": {
+    "size": 31552,
+    "mtime_ns": 1791679469013356000,
+    "sha256": "c7df89db603ba5b94c5809cc2fec3a6f266a5b1a26df07b16aa7139e6176c59f"
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H150-L300\\area_m2.npy": {
+    "size": 43545896,
+    "mtime_ns": 1792303926452913700,
+    "sha256": null
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H150-L300\\a_m.npy": {
+    "size": 43545896,
+    "mtime_ns": 1792303926441037600,
+    "sha256": null
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H150-L300\\checkpoint.json": {
+    "size": 261451,
+    "mtime_ns": 1792305184031468400,
+    "sha256": "ff8f70d4a28c2b2c6b97130f83e59eeaf314211ac04727cb25bc59270a44824e"
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H150-L300\\completion.json": {
+    "size": 198,
+    "mtime_ns": 1792305184036019300,
+    "sha256": "3a442d5bfd0360065527427bcf8d54fe26e577ba647ffb57acd776719ca3d944"
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H150-L300\\density_kg_m3.npy": {
+    "size": 43545896,
+    "mtime_ns": 1792303926448375200,
+    "sha256": null
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H150-L300\\environment.json": {
+    "size": 1861,
+    "mtime_ns": 1792305184075874000,
+    "sha256": "42b971be674a6484626fd8abd999868a4f1ae49ec7b85ef65b30873d6b1bd845"
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H150-L300\\input_difference.json": {
+    "size": 313,
+    "mtime_ns": 1792305184076873700,
+    "sha256": "ac11387d31bcc43abb4326574c1ab80cc7630dd19add2c75a743705a19037cfa"
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H150-L300\\lambda_rad.npy": {
+    "size": 43545896,
+    "mtime_ns": 1792303926445535800,
+    "sha256": null
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H150-L300\\metadata.json": {
+    "size": 3614,
+    "mtime_ns": 1792303926466190800,
+    "sha256": "9e2a8489223aa998a3093cedf2523ca562a2b4a082b111035609dbb619439b46"
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H150-L300\\mode.npy": {
+    "size": 5443349,
+    "mtime_ns": 1792303926457886300,
+    "sha256": "6bab47a9490281668721eeba369c502b1242cb6298f3e882d7fdcb839fe1765d"
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H150-L300\\normalized_config.yaml": {
+    "size": 1567,
+    "mtime_ns": 1792305184067246900,
+    "sha256": "4906a19797163ed091b7418281d218be39e6c21f07ff61a582f124b714b3d4e6"
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H150-L300\\time_s.npy": {
+    "size": 2073736,
+    "mtime_ns": 1792303926427927900,
+    "sha256": "362a74622961dd0fe8e31745d79bbb3a54bbba527301e057853ceb5a1f807669"
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H300-L150\\area_m2.npy": {
+    "size": 43545896,
+    "mtime_ns": 1792303936719564100,
+    "sha256": null
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H300-L150\\a_m.npy": {
+    "size": 43545896,
+    "mtime_ns": 1792303936709364500,
+    "sha256": null
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H300-L150\\checkpoint.json": {
+    "size": 797612,
+    "mtime_ns": 1792305242263029500,
+    "sha256": "cd34dee2745421095d96c3104c383eec4a21461369353938d54f29eb7cc80a23"
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H300-L150\\completion.json": {
+    "size": 197,
+    "mtime_ns": 1792305242264030800,
+    "sha256": "d6ea503bcba3b41ad51c97584259ff86a067cc6f57a4bc1a5ee543507ea598ec"
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H300-L150\\density_kg_m3.npy": {
+    "size": 43545896,
+    "mtime_ns": 1792303936716483300,
+    "sha256": null
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H300-L150\\environment.json": {
+    "size": 1862,
+    "mtime_ns": 1792305242290136200,
+    "sha256": "d092fa9ae16a16790ea92e1330e5b2dad92d30c5c7669f5948c982dcee257cc0"
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H300-L150\\input_difference.json": {
+    "size": 313,
+    "mtime_ns": 1792305242290136200,
+    "sha256": "e3258624246b9a99916469ddf5c5fba7e4097a67cf8db1837de9acad0f9f9d63"
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H300-L150\\lambda_rad.npy": {
+    "size": 43545896,
+    "mtime_ns": 1792303936712998700,
+    "sha256": null
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H300-L150\\metadata.json": {
+    "size": 3614,
+    "mtime_ns": 1792303936725026200,
+    "sha256": "9070c13d7510530cb49e2a41e89f3c9a335d0ee8fef3c0a51d8a080f714d5274"
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H300-L150\\mode.npy": {
+    "size": 5443349,
+    "mtime_ns": 1792303936723724700,
+    "sha256": "52d9198eb6ddc9e3586d5a7b51b9b858ffeeeec006355c61bea9096ca7b5c112"
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H300-L150\\normalized_config.yaml": {
+    "size": 1567,
+    "mtime_ns": 1792305242285521100,
+    "sha256": "b50b9964ac8bb25116a89f5394b844e1c97f3b8f5606be86e86872b29aeb69a5"
+  },
+  "outputs\\reference_dwell_factorial_20261018\\H300-L150\\time_s.npy": {
+    "size": 2073736,
+    "mtime_ns": 1792303936706260300,
+    "sha256": "362a74622961dd0fe8e31745d79bbb3a54bbba527301e057853ceb5a1f807669"
+  },
+  "outputs\\reference_dispersion_20261012\\batch_60d\\area_m2.npy": {
+    "size": 261274736,
+    "mtime_ns": 1791774945972379900,
+    "sha256": null
+  },
+  "outputs\\reference_dispersion_20261012\\batch_60d\\a_m.npy": {
+    "size": 261274736,
+    "mtime_ns": 1791774945963377500,
+    "sha256": null
+  },
+  "outputs\\reference_dispersion_20261012\\batch_60d\\checkpoint.json": {
+    "size": 6721486,
+    "mtime_ns": 1791776793884700300,
+    "sha256": "c0382f480fd4fe9aff39dd914ddb72cbdd498e6ad243d32f8b0619b5732a60e6"
+  },
+  "outputs\\reference_dispersion_20261012\\batch_60d\\completion.json": {
+    "size": 247,
+    "mtime_ns": 1791776793885698800,
+    "sha256": "0fe8bbb3f25045aabb5cc31feecef8fc6f67c4e64ab2b23f691ea57276794012"
+  },
+  "outputs\\reference_dispersion_20261012\\batch_60d\\density_kg_m3.npy": {
+    "size": 261274736,
+    "mtime_ns": 1791774945969379900,
+    "sha256": null
+  },
+  "outputs\\reference_dispersion_20261012\\batch_60d\\environment.json": {
+    "size": 1928,
+    "mtime_ns": 1791776793981749100,
+    "sha256": "c24a577c099b7f53e28ec01b8eb430ab0592c9f8ab6067b743fbaf73c547e685"
+  },
+  "outputs\\reference_dispersion_20261012\\batch_60d\\lambda_rad.npy": {
+    "size": 261274736,
+    "mtime_ns": 1791774945966379800,
+    "sha256": null
+  },
+  "outputs\\reference_dispersion_20261012\\batch_60d\\metadata.json": {
+    "size": 12819,
+    "mtime_ns": 1791774945984380300,
+    "sha256": "7427a5217db9deb95de497439fb6218a39f68ce7674f70b1a3c6581c1349a596"
+  },
+  "outputs\\reference_dispersion_20261012\\batch_60d\\mode.npy": {
+    "size": 32659454,
+    "mtime_ns": 1791774945981379900,
+    "sha256": null
+  },
+  "outputs\\reference_dispersion_20261012\\batch_60d\\normalized_config.yaml": {
+    "size": 1514,
+    "mtime_ns": 1791776793980745100,
+    "sha256": "29e67eaf3c27c40c59e0efb69884fd83e86ce9212e85788b6e913d090bb21d6f"
+  },
+  "outputs\\reference_dispersion_20261012\\batch_60d\\time_s.npy": {
+    "size": 2073736,
+    "mtime_ns": 1791774945951380800,
+    "sha256": "8ed6fb6c0fe0de7f3587f9c44deb3e03b63bbdada0d61b7d455f2d6a49b23814"
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_60d\\area_m2.npy": {
+    "size": 43545896,
+    "mtime_ns": 1792247672777970800,
+    "sha256": null
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_60d\\a_m.npy": {
+    "size": 43545896,
+    "mtime_ns": 1792247672763902900,
+    "sha256": null
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_60d\\checkpoint.json": {
+    "size": 665082,
+    "mtime_ns": 1792248926572893000,
+    "sha256": "06b3a1325bc7a170f7b574d7acc677685750699154f2565a474e897f9eb6dd1c"
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_60d\\completion.json": {
+    "size": 203,
+    "mtime_ns": 1792248926573938400,
+    "sha256": "7be0df26d02c8c803d3e138f248bb5a40c9e60e7b3031f04e653f23aa2188627"
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_60d\\density_kg_m3.npy": {
+    "size": 43545896,
+    "mtime_ns": 1792247672772712800,
+    "sha256": null
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_60d\\environment.json": {
+    "size": 2113,
+    "mtime_ns": 1792248926605501900,
+    "sha256": "9eeaf7cb7177de00096d315fa0ecbfcc84638f31f223407e63dea13452ec62e9"
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_60d\\input_difference.json": {
+    "size": 470,
+    "mtime_ns": 1792248926606680100,
+    "sha256": "14febfe8a1edcb39abc318581ce1bb5e48880a7ed46d91035bc889feeb8fd8e6"
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_60d\\lambda_rad.npy": {
+    "size": 43545896,
+    "mtime_ns": 1792247672767624100,
+    "sha256": null
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_60d\\metadata.json": {
+    "size": 3553,
+    "mtime_ns": 1792247672796180400,
+    "sha256": "d1e0a9b6f7c659d3ae6239a5bcf3212ed82cb75444490bde96018dcd22ac921b"
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_60d\\mode.npy": {
+    "size": 5443349,
+    "mtime_ns": 1792247672794194500,
+    "sha256": "7062e08e9ef354dffd98d2d8889c547c276d0d7312044005471cee208c9ac58e"
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_60d\\normalized_config.yaml": {
+    "size": 1514,
+    "mtime_ns": 1792248926599658700,
+    "sha256": "0beab2e29634fc98591a69db3db008e473ebf6888094a66cb6b8d4fa8c5f8b73"
+  },
+  "outputs\\reference_a_dwell_60d_20261017\\D150_60d\\time_s.npy": {
+    "size": 2073736,
+    "mtime_ns": 1792247672749211400,
+    "sha256": "8ed6fb6c0fe0de7f3587f9c44deb3e03b63bbdada0d61b7d455f2d6a49b23814"
+  }
+}

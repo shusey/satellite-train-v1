@@ -3,16 +3,17 @@ import os
 from pathlib import Path
 from run_reference_dwell_factorial import OUTPUT
 from sat_string.dwell_factorial import CASE_ORDER
-os.environ.setdefault('MPLCONFIGDIR',str(OUTPUT/'matplotlib'))
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
 import numpy as np
 import json
 import csv
 
 
-def main():
+def plot_results(output=OUTPUT,days=30):
+    os.environ.setdefault('MPLCONFIGDIR',str(output/'matplotlib'))
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    OUTPUT=output
     dest=OUTPUT/'figures';dest.mkdir(exist_ok=True) # Regenerate this experiment's figures only; never touch raw runs.
     plt.rcParams.update({'font.family':'Yu Gothic','axes.unicode_minus':False,'font.size':11})
     colors=['#4c566a','#0072b2','#d55e00','#009e73']
@@ -29,7 +30,9 @@ def main():
         ('instantaneous_RMS_m','瞬間RMS：全20間隔の誤差','瞬間RMS間隔誤差 [m]','02_RMS.png')]:
         fig,ax=plt.subplots(figsize=(10,4.6))
         for label,color,h in zip(CASE_ORDER,colors,histories):ax.plot(h['time_s']/86400,h[key],label=label,color=color,lw=1)
-        ax.axvline(7,color='grey',ls=':',lw=1);ax.set(xlabel='経過時間 [日]',ylabel=ylabel,title=title,xlim=(0,30))
+        ax.axvline(7,color='grey',ls=':',lw=1)
+        if days>30:ax.axvline(30,color='grey',ls='--',lw=1)
+        ax.set(xlabel='経過時間 [日]',ylabel=ylabel,title=title,xlim=(0,days))
         ax.grid(alpha=.25);ax.legend(ncol=1);save(fig,name)
     fig,axs=plt.subplots(1,2,figsize=(11,4.8))
     for ax,key,title in [(axs[0],'residual_abs_incident_gap_velocity_m_s','接続間隔を個別に集計'),
@@ -48,11 +51,11 @@ def main():
         bars=ax.bar(range(4),values,color=colors)
         ax.bar_label(bars,fmt='%.1f',fontsize=10,padding=3)
         ax.set_xticks(range(4),CASE_ORDER,rotation=20,ha='right');ax.set(ylabel=ylabel);ax.margins(y=.16)
-    fig.suptitle('30日間の操作回数と抗力投入量');save(fig,'04_activity.png')
+    fig.suptitle(f'{days}日間の操作回数と抗力投入量');save(fig,'04_activity.png')
     fig,ax=plt.subplots(figsize=(10,4.6))
     for label,color,h in zip(CASE_ORDER,colors,histories):
         ax.plot(h['time_s']/86400,h['extra_mean_altitude_loss_m'],color=color,label=label)
-    ax.set(title='同じA-ref全LOWからの追加平均高度損失',xlabel='経過時間 [日]',ylabel='追加平均高度損失 [m]',xlim=(0,30))
+    ax.set(title='同じA-ref全LOWからの追加平均高度損失',xlabel='経過時間 [日]',ylabel='追加平均高度損失 [m]',xlim=(0,days))
     ax.legend(ncol=1);ax.grid(alpha=.25);save(fig,'05_altitude_cost.png')
     names=['最大誤差','RMS','完了cycle','HIGH換算量','追加高度損失','残留速度中央値']
     keys=['max_error_m','RMS_m','cycles','HIGH_equivalent_satellite_hours','extra_altitude_loss_m','residual_cycle_max_velocity_median_mm_s']
@@ -75,4 +78,11 @@ def _columns(rows):
     return result
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    import argparse
+    ap=argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--days',type=int,choices=[30,60],default=30)
+    ap.add_argument('--root',type=Path)
+    args=ap.parse_args()
+    output=args.root or (OUTPUT if args.days==30 else OUTPUT.parent/'reference_dwell_factorial_60d_20261019')
+    plot_results(output,args.days)

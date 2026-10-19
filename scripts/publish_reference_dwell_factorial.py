@@ -12,10 +12,8 @@ from sat_string.io import write_json
 import numpy as np
 
 
-def main():
-    parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output',type=Path,default=ROOT/'docs/reference_dwell_factorial_30d')
-    args=parser.parse_args()
+def publish_results(output,destination,*,days=30,tests_passed=311,new_test_cases=18):
+    OUTPUT=output
     before=json.loads((OUTPUT/'source_manifest_before.json').read_text())
     for name,record in before.items():
         p=ROOT/name;stat=p.stat()
@@ -58,11 +56,23 @@ def main():
             neighbor_exceeds_natural_fraction=s['neighbor_D_exceeds_natural_fraction'],
             neighbor_abs_D_median_m_s2=s['neighbor_D_change_abs_m_s2']['median'],
             neighbor_qualifying_per_day=s['neighbor_qualifying_intervals_per_day']))
-    destination=args.output
     data=destination/'data';data.mkdir(parents=True,exist_ok=False)
     for name in ['comparison.json','comparison.csv','contrasts.csv','direct_comparisons.csv']:
         shutil.copyfile(OUTPUT/'analysis'/name,data/name)
     write_csv(data/'segments.csv',segments);write_csv(data/'pulse_summary.csv',pulses);write_csv(data/'retrigger_summary.csv',retrigger)
+    if days==60:
+        late_rows=[]
+        for label in CASE_ORDER:
+            s=report['cases'][label];late=s['late_30_60d'];seg=s['formation']['segments'][-1]
+            late_rows.append(dict(case=label,RMS_m=seg['error_rms_m'],max_error_m=seg['max_error_m'],
+                cycles_per_day=seg['cycles_per_day'],transitions_per_day=seg['transitions_per_day'],
+                HIGH_equivalent_satellite_hours_per_day=seg['HIGH_equivalent_satellite_hours_per_day'],
+                extra_altitude_loss_m_per_day=seg['extra_mean_altitude_loss_per_day_m'],
+                residual_cycle_max_velocity_median_mm_s=late['residual_max_incident_velocity_per_cycle_m_s']['median']*1000,
+                pulse_velocity_median_mm_s=late['pulse_velocity_contribution_m_s']['median']*1000,
+                all_LOW_time_fraction=late['all_LOW_time_fraction'],
+                neighbor_qualifying_intervals_per_day=late['neighbor_qualifying_intervals_per_day']))
+        write_csv(data/'late_30_60d.csv',late_rows)
     keys=['satellite_id','cycle','start_s','end_s','high_equivalent_s','minimum_pulse','return_driver','pulse_g_impulse_m_s',
           'V_incident_before_m_s','V_incident_after_m_s','qP_before','qD_before','qP_after','qD_after',
           'next_HIGH_s','next_wait_s','right_censored','next_qD_neighbor','next_qD_natural']
@@ -83,12 +93,20 @@ def main():
     shutil.copyfile(OUTPUT/'source_manifest_before.json',data/'source_manifest.json')
     figures=destination/'figures';figures.mkdir()
     for p in (OUTPUT/'figures').glob('*.png'):shutil.copyfile(p,figures/p.name)
-    write_json(data/'verification.json',dict(passed=True,tests_passed=311,new_test_cases=18,
+    write_json(data/'verification.json',dict(passed=True,tests_passed=tests_passed,new_test_cases=new_test_cases,
         baseline_24h_passed=True,explicit_diagonal_6h_exact=True,unchanged_input_files=len(before),
         large_file_preservation='Read-only use; unchanged size and nanosecond mtime; small files additionally SHA256',
-        new_30day_physics_cases=['H150-L300','H300-L150'],diagonal_30day_physics_reused=True,
-        no_60day_extension=True,checks=checks))
+        new_physics_segments=dict(cases=['H150-L300','H300-L150'],start_day=0 if days==30 else 30,end_day=days),
+        diagonal_physics_reused=True,observed_days=days,checks=checks))
     print('Verified and published compact artifacts to '+str(destination),flush=True)
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output',type=Path)
+    parser.add_argument('--root',type=Path)
+    parser.add_argument('--days',type=int,choices=[30,60],default=30)
+    args=parser.parse_args()
+    output=args.root or (OUTPUT if args.days==30 else OUTPUT.parent/'reference_dwell_factorial_60d_20261019')
+    dest=args.output or ROOT/f'docs/reference_dwell_factorial_{args.days}d'
+    publish_results(output,dest,days=args.days,tests_passed=311 if args.days==30 else 323,new_test_cases=18 if args.days==30 else 12)

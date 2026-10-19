@@ -193,3 +193,9 @@ NRLMSIS 2.0比の観測偏差、400 km規格化、100 kmの短時間差推定、
 HIGH側短縮は主に操作量・高度コストを減らし、LOW側短縮は精度と負荷の交換条件へ作用する。
 `dwell_high_time_s` / `dwell_low_time_s` は独立指定でき、未指定の側は既存 `dwell_time_s` を使う。
 対角2条件は保存runを再利用し、新規の交差2条件だけ30日計算した。60日へは延長していない。
+
+## A-ref：HIGH/LOW dwell分離実験の60日検証
+
+[60日結果と30日判断の再評価](docs/reference_dwell_factorial_60d/REPORT.md)、[checkpoint延長・再現手順](docs/reference_dwell_factorial_60d/REPRODUCTION.md)。
+交差2条件の30–60日だけを新規計算し、対角条件・全LOW・最初の30日は再利用した。
+HIGH側短縮の低負荷効果は持続したが、LOW側短縮のRMS改善は後半には持続しなかった。

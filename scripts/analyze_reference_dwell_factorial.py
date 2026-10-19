@@ -1,4 +1,4 @@
-"""One common postprocessor for the four 30-day factorial cells; no integration."""
+"""One common postprocessor for four 30/60-day factorial cells; no integration."""
 import argparse
 import csv
 import gc
@@ -17,14 +17,16 @@ from sat_string.config import load_config,config_from_dict,dump_normalized_confi
 from sat_string.dwell_horizon import joined_saved_parts
 from sat_string.dispersion_control import derived_histories
 from sat_string.dwell_intervention_metrics import distribution
-from sat_string.dwell_factorial import CASE_ORDER,contrasts
+from sat_string.dwell_factorial import CASE_ORDER,contrasts,period_cycle_diagnostics
 from sat_string.long_horizon import decompose_q
 from sat_string.control_cost import clean_json
+from sat_string.controller import gap_kinematics
 from sat_string.io import write_json
 
 D150_PARTS=[ROOT/'outputs/reference_a_dwell_20261017/D150_7d',
             ROOT/'outputs/reference_a_dwell_60d_20261017/D150_30d']
 KEYS=['a_m','lambda_rad','area_m2','mode','density_kg_m3']
+LONG_OUTPUT=ROOT/'outputs/reference_dwell_factorial_60d_20261019'
 
 
 def read_csv(path):
@@ -36,12 +38,18 @@ def equal_environment(left,right):
     if any(left[k]!=right[k] for k in keys):raise ValueError('Environment changed')
 
 
-def analyze(label):
-    out=OUTPUT/'analysis'/label;out.mkdir(parents=True,exist_ok=False)
+def analyze(label,days=30,output=OUTPUT):
+    out=output/'analysis'/label;out.mkdir(parents=True,exist_ok=False)
     base=load_config(SOURCE/'normalized_config.yaml')
-    folder=SOURCE if label=='H300-L300' else D150_PARTS[-1] if label=='H150-L150' else OUTPUT/label
+    if label=='H300-L300':
+        parts=[SOURCE]+([SOURCE.parent/'batch_60d'] if days==60 else [])
+    elif label=='H150-L150':
+        parts=D150_PARTS+([ROOT/'outputs/reference_a_dwell_60d_20261017/D150_60d'] if days==60 else [])
+    else:
+        parts=[OUTPUT/label]+([output/label] if days==60 else [])
+    folder=parts[-1]
     cfg=load_config(folder/'normalized_config.yaml')
-    raw=cfg.to_dict();raw['simulation']['duration_s']=30*86400.;cfg=config_from_dict(raw)
+    raw=cfg.to_dict();raw['simulation']['duration_s']=days*86400.;cfg=config_from_dict(raw)
     b,c=base.to_dict(),cfg.to_dict()
     for x in [b,c]:
         x['simulation'].pop('duration_s')
@@ -52,19 +60,28 @@ def analyze(label):
     baseline_meta=json.loads((SOURCE/'metadata.json').read_text())
     meta=json.loads((folder/'metadata.json').read_text())
     assert meta['profiles'][0]==baseline_meta['profiles'][0]
-    equal_environment(json.loads((SOURCE/'environment.json').read_text()),json.loads((folder/'environment.json').read_text()))
-    off=load_arrays(SOURCE,3,base,days=30)
-    checks=[]
-    if label=='H150-L150':
-        for part in D150_PARTS:
-            equal_environment(json.loads((SOURCE/'environment.json').read_text()),json.loads((part/'environment.json').read_text()))
-        t,x,checks=joined_saved_parts(D150_PARTS,0,KEYS)
-        arrays=derived_histories(t,x['a_m'],x['lambda_rad'],x['area_m2'],x['mode'],x['density_kg_m3'],cfg)
-        del x
-    else:arrays=load_arrays(folder,0,cfg,days=30)
+    for part in parts:
+        equal_environment(json.loads((SOURCE/'environment.json').read_text()),json.loads((part/'environment.json').read_text()))
+        assert json.loads((part/'metadata.json').read_text())['profiles'][0]==baseline_meta['profiles'][0]
+    offparts=[SOURCE]+([SOURCE.parent/'batch_60d'] if days==60 else [])
+    t,raw,offchecks=joined_saved_parts(offparts,3,['a_m','lambda_rad'])
+    e,_,gap=gap_kinematics(raw['a_m'],raw['lambda_rad'],reference_radius_m=cfg.derived.reference_radius_m,
+        target_spacing_rad=cfg.derived.target_spacing_rad,mu_m3_s2=cfg.constants.mu_m3_s2)
+    off=dict(time_s=t,a_m=raw['a_m'],lambda_rad=raw['lambda_rad'],gap_error_m=e,gap_distance_m=gap)
+    del raw,e,gap
+    t,x,checks=joined_saved_parts(parts,0,KEYS)
+    arrays=derived_histories(t,x['a_m'],x['lambda_rad'],x['area_m2'],x['mode'],x['density_kg_m3'],cfg)
+    del x
     for key in KEYS:
         np.testing.assert_array_equal(arrays[key][0],load_arrays_initial(SOURCE,key))
-    events=events_for(folder,0,30*86400.)
+    events=events_for(folder,0,days*86400.)
+    prefix_events=events_for(parts[-2] if len(parts)>1 else parts[0],0,30*86400.)
+    assert events[:len(prefix_events)]==prefix_events
+    if days==60:
+        prior=json.loads((OUTPUT/'analysis'/label/f'{label}_metrics.json').read_text())['formation']
+        prefix=arrays['gap_error_m'][:int(np.searchsorted(t,30*86400,side='right'))]
+        assert np.isclose(np.max(abs(prefix)),prior['max_error_m'],rtol=0,atol=1e-9)
+        assert np.isclose(np.sqrt(np.mean(prefix**2)),prior['rms_error_m'],rtol=0,atol=1e-9)
     print('Analyze '+label,flush=True)
     stat,cycles,edges=diagnose(arrays,cfg,events,off,out,label)
     t=arrays['time_s'];end=float(t[-1]);qP,qD=decompose_q(arrays['gap_error_m'],arrays['gap_rate_m_s'],
@@ -101,7 +118,16 @@ def analyze(label):
     followed=[r for r in cycles if r['next_HIGH_s'] is not None]
     qualifying=[r for r in followed if abs(r['next_qD_neighbor'])>abs(r['next_qD_natural'])]
     stat['neighbor_qualifying_intervals']=len(qualifying)
-    stat['neighbor_qualifying_intervals_per_day']=len(qualifying)/30
+    stat['neighbor_qualifying_intervals_per_day']=len(qualifying)/days
+    if days==60:
+        late=period_cycle_diagnostics(cycles,edges,30*86400.,end)
+        late['all_LOW_time_fraction']=sum(max(0,r['end_s']-max(r['start_s'],30*86400.)) for r in actual_rows)/(30*86400.)
+        late_valid=[r for r in actual_rows if r['start_s']>=30*86400 and r['forecast_valid'] and not r['right_censored']]
+        late_matched=[r for r in late_valid if r['target_matches']]
+        late['valid_observed_quiet_forecasts']=len(late_valid)
+        late['forecast_target_matches']=len(late_matched)
+        late['matched_abs_timing_error_s']=distribution(abs(r['timing_error_s']) for r in late_matched)
+        stat['late_30_60d']=late
     stat['theoretical_minimum_LOW_complete_to_HIGH_s']=low
     stat['re_trigger']['observed_wait_count']=len(followed)
     for seg in stat['formation']['segments']:
@@ -119,7 +145,8 @@ def analyze(label):
     assert stat['closure']['pulse_max_m_s']<1e-5
     assert stat['closure']['local_LOW_followup_max_qD_m_s2']<1e-9
     stat['verification']=dict(inputs_match_except_resolved_dwell=True,profile_exact=True,environment_exact=True,
-        continuation_boundaries=checks,profile_sha256=hashlib.sha256(PROFILE.read_bytes()).hexdigest(),
+        continuation_boundaries=checks+offchecks,prefix_events_exact=True,
+        saved_30day_metrics_preserved=days==60,profile_sha256=hashlib.sha256(PROFILE.read_bytes()).hexdigest(),
         no_order_reversal=stat['formation']['first_label_order_reversal_s'] is None)
     write_json(out/f'{label}_metrics.json',clean_json(stat))
     dump_normalized_config(cfg,out/'evaluation_config.yaml')
@@ -131,8 +158,8 @@ def load_arrays_initial(folder,key):
     return np.load(folder/f'{key}.npy',mmap_mode='r')[0,0]
 
 
-def summarize():
-    stats={label:json.loads((OUTPUT/'analysis'/label/f'{label}_metrics.json').read_text()) for label in CASE_ORDER}
+def summarize(output=OUTPUT):
+    stats={label:json.loads((output/'analysis'/label/f'{label}_metrics.json').read_text()) for label in CASE_ORDER}
     metrics={
         'max_error_m':lambda s:s['formation']['max_error_m'],
         'RMS_m':lambda s:s['formation']['rms_error_m'],
@@ -158,10 +185,10 @@ def summarize():
                 before,after=fn(stats[CASE_ORDER[i]]),fn(stats[CASE_ORDER[j]])
                 direct.append(dict(factor=factor,baseline=CASE_ORDER[i],intervention=CASE_ORDER[j],metric=name,
                     before=before,after=after,difference=after-before,change_percent=100*(after/before-1) if before else None))
-    write_csv(OUTPUT/'analysis/comparison.csv',rows)
-    write_csv(OUTPUT/'analysis/contrasts.csv',contrasts_rows)
-    write_csv(OUTPUT/'analysis/direct_comparisons.csv',direct)
-    write_json(OUTPUT/'analysis/comparison.json',dict(case_order=list(CASE_ORDER),cases=stats,
+    write_csv(output/'analysis/comparison.csv',rows)
+    write_csv(output/'analysis/contrasts.csv',contrasts_rows)
+    write_csv(output/'analysis/direct_comparisons.csv',direct)
+    write_json(output/'analysis/comparison.json',dict(days=stats[CASE_ORDER[0]]['days'],case_order=list(CASE_ORDER),cases=stats,
         contrasts=contrasts_rows,direct_comparisons=direct,
         inference='Deterministic single-profile descriptive contrasts; no statistical ANOVA or permanent stability claim'))
     print(json.dumps(rows,indent=2),flush=True)
@@ -170,7 +197,10 @@ def summarize():
 if __name__=='__main__':
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--case',choices=CASE_ORDER);ap.add_argument('--summarize',action='store_true')
+    ap.add_argument('--days',type=int,choices=[30,60],default=30)
+    ap.add_argument('--root',type=Path)
     args=ap.parse_args()
-    if args.summarize:summarize()
-    elif args.case:analyze(args.case)
+    output=args.root or (OUTPUT if args.days==30 else LONG_OUTPUT)
+    if args.summarize:summarize(output)
+    elif args.case:analyze(args.case,args.days,output)
     else:ap.error('Choose one case or --summarize')

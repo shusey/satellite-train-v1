@@ -1,0 +1,328 @@
+{
+  "passed": true,
+  "tests_passed": 323,
+  "new_test_cases": 12,
+  "baseline_24h_passed": true,
+  "explicit_diagonal_6h_exact": true,
+  "unchanged_input_files": 84,
+  "large_file_preservation": "Read-only use; unchanged size and nanosecond mtime; small files additionally SHA256",
+  "new_physics_segments": {
+    "cases": [
+      "H150-L300",
+      "H300-L150"
+    ],
+    "start_day": 30,
+    "end_day": 60
+  },
+  "diagonal_physics_reused": true,
+  "observed_days": 60,
+  "checks": {
+    "H300-L300": {
+      "cycles": 4198,
+      "min_physical_gap_m": 99689.53038340299,
+      "impulse_quadrature_closure": {
+        "pulse_max_m_s": 4.0470721073388415e-06,
+        "local_LOW_followup_max_qD_m_s2": 3.9312253673064734e-10
+      },
+      "input_verification": {
+        "inputs_match_except_resolved_dwell": true,
+        "profile_exact": true,
+        "environment_exact": true,
+        "continuation_boundaries": [
+          {
+            "key": "a_m",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "lambda_rad",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "area_m2",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "mode",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "density_kg_m3",
+            "time_s": 2592000.0,
+            "max_abs_difference": 3.364796248455256e-21,
+            "max_relative_difference": 6.08533685520177e-10,
+            "tolerance": "density rtol=1e-8"
+          },
+          {
+            "key": "a_m",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "lambda_rad",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          }
+        ],
+        "prefix_events_exact": true,
+        "saved_30day_metrics_preserved": true,
+        "profile_sha256": "5eae9a2eaaa58bf94e0e4629eedc62465c27f7e0da81326aac27440b24963cfc",
+        "no_order_reversal": true
+      }
+    },
+    "H150-L300": {
+      "cycles": 1498,
+      "min_physical_gap_m": 99702.93695070724,
+      "impulse_quadrature_closure": {
+        "pulse_max_m_s": 3.6047178515448506e-06,
+        "local_LOW_followup_max_qD_m_s2": 3.334171008507447e-10
+      },
+      "input_verification": {
+        "inputs_match_except_resolved_dwell": true,
+        "profile_exact": true,
+        "environment_exact": true,
+        "continuation_boundaries": [
+          {
+            "key": "a_m",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "lambda_rad",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "area_m2",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "mode",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "density_kg_m3",
+            "time_s": 2592000.0,
+            "max_abs_difference": 3.311110287996004e-21,
+            "max_relative_difference": 6.0661874686448e-10,
+            "tolerance": "density rtol=1e-8"
+          },
+          {
+            "key": "a_m",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "lambda_rad",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          }
+        ],
+        "prefix_events_exact": true,
+        "saved_30day_metrics_preserved": true,
+        "profile_sha256": "5eae9a2eaaa58bf94e0e4629eedc62465c27f7e0da81326aac27440b24963cfc",
+        "no_order_reversal": true
+      }
+    },
+    "H300-L150": {
+      "cycles": 4782,
+      "min_physical_gap_m": 99668.65491969053,
+      "impulse_quadrature_closure": {
+        "pulse_max_m_s": 2.8075218512666963e-06,
+        "local_LOW_followup_max_qD_m_s2": 5.134238680821381e-10
+      },
+      "input_verification": {
+        "inputs_match_except_resolved_dwell": true,
+        "profile_exact": true,
+        "environment_exact": true,
+        "continuation_boundaries": [
+          {
+            "key": "a_m",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "lambda_rad",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "area_m2",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "mode",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "density_kg_m3",
+            "time_s": 2592000.0,
+            "max_abs_difference": 3.3746149792614886e-21,
+            "max_relative_difference": 6.092015778796486e-10,
+            "tolerance": "density rtol=1e-8"
+          },
+          {
+            "key": "a_m",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "lambda_rad",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          }
+        ],
+        "prefix_events_exact": true,
+        "saved_30day_metrics_preserved": true,
+        "profile_sha256": "5eae9a2eaaa58bf94e0e4629eedc62465c27f7e0da81326aac27440b24963cfc",
+        "no_order_reversal": true
+      }
+    },
+    "H150-L150": {
+      "cycles": 1674,
+      "min_physical_gap_m": 99688.22595635247,
+      "impulse_quadrature_closure": {
+        "pulse_max_m_s": 3.078987287988451e-06,
+        "local_LOW_followup_max_qD_m_s2": 2.9423300747026217e-10
+      },
+      "input_verification": {
+        "inputs_match_except_resolved_dwell": true,
+        "profile_exact": true,
+        "environment_exact": true,
+        "continuation_boundaries": [
+          {
+            "key": "a_m",
+            "time_s": 604800.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "a_m",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "lambda_rad",
+            "time_s": 604800.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "lambda_rad",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "area_m2",
+            "time_s": 604800.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "area_m2",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "mode",
+            "time_s": 604800.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "mode",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "density_kg_m3",
+            "time_s": 604800.0,
+            "max_abs_difference": 7.510258740291637e-22,
+            "max_relative_difference": 1.204121058743612e-10,
+            "tolerance": "density rtol=1e-8"
+          },
+          {
+            "key": "density_kg_m3",
+            "time_s": 2592000.0,
+            "max_abs_difference": 3.314765553886436e-21,
+            "max_relative_difference": 6.068425667605026e-10,
+            "tolerance": "density rtol=1e-8"
+          },
+          {
+            "key": "a_m",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          },
+          {
+            "key": "lambda_rad",
+            "time_s": 2592000.0,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": null,
+            "tolerance": "exact"
+          }
+        ],
+        "prefix_events_exact": true,
+        "saved_30day_metrics_preserved": true,
+        "profile_sha256": "5eae9a2eaaa58bf94e0e4629eedc62465c27f7e0da81326aac27440b24963cfc",
+        "no_order_reversal": true
+      }
+    }
+  }
+}

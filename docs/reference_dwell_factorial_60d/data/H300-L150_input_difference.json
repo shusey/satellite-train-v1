@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "changed_only": "simulation.duration_s: 30d -> 60d",
+  "exact_checkpoint_state": true,
+  "exact_checkpoint_actuator": true,
+  "same_profile": true,
+  "same_environment": true,
+  "same_weather": true,
+  "same_density_method": true,
+  "prefix_reused": true
+}
