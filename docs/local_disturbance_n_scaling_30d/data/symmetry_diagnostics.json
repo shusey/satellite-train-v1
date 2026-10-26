@@ -1,0 +1,32 @@
+{
+  "results": [
+    {
+      "N": 21,
+      "max_mirror_peak_difference_m": 1.5411699223477626e-05,
+      "unequal_mirror_command_counts": [],
+      "mirror_command_start_mismatches": 0,
+      "maximum_start_difference_s": 0,
+      "first_mismatch": null
+    },
+    {
+      "N": 301,
+      "max_mirror_peak_difference_m": 0.015300734989068587,
+      "unequal_mirror_command_counts": [],
+      "mirror_command_start_mismatches": 108,
+      "maximum_start_difference_s": 10.0,
+      "first_mismatch": {
+        "satellite_ids": [
+          58,
+          244
+        ],
+        "command_index": 8,
+        "first_start_s": 1261770.0,
+        "start_difference_s": 10.0,
+        "q_minus_h_on_m_s2": [
+          -9.756717271337586e-15,
+          1.0062854751400653e-14
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "source": "outputs\\local_disturbance_n_scaling_20261026\\N301",
+  "source_checkpoint_sha256": "d69f49918613b84f4e76760a302ef20e8b38c955064660515f0719ca1342d6f1",
+  "only_change": "simulation.duration_s: 14d -> 30d",
+  "fresh_physics_interval_days": [
+    14,
+    30
+  ],
+  "unchanged_controller": true,
+  "unchanged_pulse": true,
+  "pulse_replayed": false,
+  "initial_state_from_checkpoint": true
+}

@@ -58,6 +58,35 @@ def gap_graph_coordinates(count):
     return distance, np.where(left, 'left', 'right')
 
 
+def thirty_day_extension(checkpoint):
+    """Only extend the completed 14-day, zero-dispersion controlled pair.
+
+    Input metadata is preserved; absolute time prevents replaying the pulse.
+    The integrator additionally validates config/profile/actuator consistency.
+    """
+    from .config import config_from_dict
+    cfg=config_from_dict(checkpoint['configuration'])
+    n=cfg.formation.satellite_count
+    if n not in (21,301) or checkpoint['time_s']!=14*86400 or cfg.simulation.duration_s!=14*86400:
+        raise ValueError('A completed N=21/301 14-day checkpoint is required')
+    if checkpoint['disturbance_enabled'] or cfg.disturbance.enabled:
+        raise ValueError('Density pulse must remain disabled')
+    profiles=checkpoint['profiles']
+    if len(profiles)!=2 or any(not p['control_enabled'] or p['delta_a_m']!=[0.]*n
+        or p['B_multiplier']!=[1.]*n for p in profiles):
+        raise ValueError('Identical nominal/disturbed controlled zero-dispersion pair required')
+    pulse=CentralNodePulse(n)
+    if checkpoint['node_input']!=pulse.metadata():
+        raise ValueError('Frozen generalized pulse changed')
+    state=np.asarray(checkpoint['state'],float)
+    if state.shape!=(2,2*n) or not np.all(np.isfinite(state)) or np.any(state[0]<=cfg.constants.earth_radius_m):
+        raise ValueError('Invalid checkpoint orbital state')
+    if np.any(np.diff(state[1].reshape(2,n),axis=-1)<=0):
+        raise ValueError('Satellite ordering lost')
+    raw=cfg.to_dict();raw['simulation']['duration_s']=30*86400.
+    return config_from_dict(raw),pulse
+
+
 def response_summary(time_s, response, *, amplitude, terminal_window_s,
                      pulse_end_s, recovery_band_m=5., hold_s=86400.):
     """Full saved 10-s response, not downsampled plot data. Final peak is censored."""

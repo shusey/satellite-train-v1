@@ -204,5 +204,9 @@ HIGH側短縮は主に操作量・高度コストを減らし、LOW側短縮は�
 21機以上の最大追加gap errorは約88.92 mで横ばいでしたが、再切替と時間方向のpeak更新は残っています。
 有限時間の探索結果であり、string stabilityの証明ではありません。
 [研究判断と6図](docs/local_disturbance_n_scaling/REPORT.md)、[入力定義と実行前固定条件](docs/local_disturbance_n_scaling/DESIGN.md)、[再現手順](docs/local_disturbance_n_scaling/REPRODUCTION.md)。
+
+N=21/301を保存checkpointから30日へ延長した結果、最大追加誤差は両者109.92 mへ更新されました。
+最大値の機数依存は未確認ですが、終盤RMSは301機の方が大きく、時間方向の収束も未確認です。
+[30日比較と4図](docs/local_disturbance_n_scaling_30d/REPORT.md)、[14日を再計算しない継続手順](docs/local_disturbance_n_scaling_30d/REPRODUCTION.md)。
 交差2条件の30–60日だけを新規計算し、対角条件・全LOW・最初の30日は再利用した。
 HIGH側短縮の低負荷効果は持続したが、LOW側短縮のRMS改善は後半には持続しなかった。

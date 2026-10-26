@@ -1,0 +1,29 @@
+{
+  "parts": [
+    "outputs\\local_disturbance_n_scaling_20261026\\N021",
+    "outputs\\local_disturbance_n_scaling_30d_20261026\\N021"
+  ],
+  "boundary_checks": [
+    {
+      "key": "a_m",
+      "exact_boundary_match": true
+    },
+    {
+      "key": "lambda_rad",
+      "exact_boundary_match": true
+    },
+    {
+      "key": "density_kg_m3",
+      "exact_boundary_match": true
+    },
+    {
+      "key": "area_m2",
+      "exact_boundary_match": true
+    },
+    {
+      "key": "mode",
+      "exact_boundary_match": true
+    }
+  ],
+  "duplicate_boundary_removed": 1
+}

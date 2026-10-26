@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "tests_passed": 345,
+  "new_tests": 10,
+  "unchanged_old_files": 2552,
+  "frozen_fixture_hashes_unchanged": true,
+  "exact_checkpoint_boundaries": true,
+  "old_14d_response_exact": true,
+  "old_event_prefix_exact": true,
+  "pulse_replayed": false,
+  "fresh_physics_days": [
+    14,
+    30
+  ],
+  "nominal_transitions": [
+    0,
+    0
+  ],
+  "regression_24h_passed": true,
+  "physical_core_changed": false
+}

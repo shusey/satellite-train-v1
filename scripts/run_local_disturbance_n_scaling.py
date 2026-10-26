@@ -18,12 +18,12 @@ OUTPUT = ROOT/'outputs/local_disturbance_n_scaling_20261026'
 SPEC = ROOT/'configs/local_disturbance_n_scaling.yaml'
 
 
-def old_artifacts():
+def old_artifacts(exclude=OUTPUT):
     """Size/mtime of all old local artifacts; hash all frozen fixture files."""
     rows = {}
     for base in ['runs', 'outputs']:
         for p in (ROOT/base).rglob('*'):
-            if p.is_file() and OUTPUT not in p.parents:
+            if p.is_file() and exclude not in p.parents:
                 s = p.stat()
                 rows[str(p.relative_to(ROOT))] = [s.st_size, s.st_mtime_ns]
     hashes = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()

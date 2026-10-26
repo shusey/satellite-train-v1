@@ -25,8 +25,8 @@ def csv_write(path,rows):
         w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
 
 
-def analyze(n,spec):
-    src=OUTPUT/f'N{n:03d}'; out=src/'analysis'
+def analyze(n,spec,*,output=OUTPUT,parts=None):
+    src=output/f'N{n:03d}'; out=src/'analysis'
     if (out/'metrics.json').exists():
         m=json.loads((out/'metrics.json').read_text(encoding='utf-8'))
         if 'endpoint_first_1m_s' not in m:
@@ -39,19 +39,37 @@ def analyze(n,spec):
         return m
     out.mkdir(exist_ok=False)
     cfg=load_config(src/'normalized_config.yaml')
-    t=np.load(src/'time_s.npy'); a=np.load(src/'a_m.npy',mmap_mode='r')
-    u=np.load(src/'lambda_rad.npy',mmap_mode='r')
+    parts=[src] if parts is None else list(parts)
+    times=[np.load(p/'time_s.npy') for p in parts]
+    checks=[]
+    for previous,current in zip(parts,parts[1:]):
+        assert np.load(previous/'time_s.npy',mmap_mode='r')[-1]==np.load(current/'time_s.npy',mmap_mode='r')[0]
+        for key in ['a_m','lambda_rad','density_kg_m3','area_m2','mode']:
+            left=np.load(previous/f'{key}.npy',mmap_mode='r')[-1]
+            right=np.load(current/f'{key}.npy',mmap_mode='r')[0]
+            np.testing.assert_array_equal(left,right)
+            checks.append(dict(key=key,exact_boundary_match=True))
+    t=np.concatenate([time if k==0 else time[1:] for k,time in enumerate(times)])
+    assert np.all(np.diff(t)>0)
+    np.save(out/'time_s.npy',t)
+    write_json(out/'join_checks.json',dict(parts=[str(p.relative_to(ROOT)) for p in parts],
+        boundary_checks=checks,duplicate_boundary_removed=len(parts)-1))
     error=np.lib.format.open_memmap(out/'raw_gap_error_m.npy',mode='w+',dtype='float64',shape=(len(t),2,n-1))
     delta=np.lib.format.open_memmap(out/'delta_gap_error_m.npy',mode='w+',dtype='float64',shape=(len(t),n-1))
     maxrate=0.; min_gap=float('inf')
-    for start in range(0,len(t),4096):
-        sl=slice(start,start+4096)
-        e,v,gap=gap_kinematics(a[sl],u[sl],reference_radius_m=cfg.derived.reference_radius_m,
-                target_spacing_rad=cfg.derived.target_spacing_rad,mu_m3_s2=cfg.constants.mu_m3_s2)
-        error[sl]=e
-        delta[sl]=e[:,1]-e[:,0]
-        maxrate=max(maxrate,float(np.max(abs(v[:,1]-v[:,0]))))
-        min_gap=min(min_gap,float(np.min(gap)))
+    offset=0
+    for part_index,part in enumerate(parts):
+        a=np.load(part/'a_m.npy',mmap_mode='r');u=np.load(part/'lambda_rad.npy',mmap_mode='r')
+        skip=0 if part_index==0 else 1
+        for start in range(skip,len(a),4096):
+            sl=slice(start,min(start+4096,len(a)))
+            e,v,gap=gap_kinematics(a[sl],u[sl],reference_radius_m=cfg.derived.reference_radius_m,
+                    target_spacing_rad=cfg.derived.target_spacing_rad,mu_m3_s2=cfg.constants.mu_m3_s2)
+            dest=slice(offset,offset+len(e));error[dest]=e;delta[dest]=e[:,1]-e[:,0]
+            offset+=len(e)
+            maxrate=max(maxrate,float(np.max(abs(v[:,1]-v[:,0]))))
+            min_gap=min(min_gap,float(np.min(gap)))
+    assert offset==len(t)
     error.flush();delta.flush()
     end=spec['input']['start_time_s']+spec['input']['duration_s']
     m=response_summary(t,delta,amplitude=spec['input']['amplitude_m_s2'],
@@ -85,9 +103,10 @@ def analyze(n,spec):
             max_nominal_raw_m=np.max(abs(error[k,0])),max_disturbed_raw_m=np.max(abs(error[k,1]))))
     csv_write(out/'history_60s.csv',history)
     p0=max(peak[r==0]); remote=max(peak[r>0])
-    prefixes={str(day):float(np.max(envelope[t<=day*86400])) for day in [1,3,7,14]}
+    prefixes={str(day):float(np.max(envelope[t<=day*86400])) for day in [1,3,7,14,21,30] if day<=t[-1]/86400}
     blocks=[]
-    for left,right in [(0,1),(1,3),(3,7),(7,11),(11,14)]:
+    for left,right in [(0,1),(1,3),(3,7),(7,11),(11,14),(14,21),(21,27),(27,30)]:
+        if right>t[-1]/86400:continue
         select=(t>=left*86400)&(t<=right*86400)
         blocks.append(dict(start_day=left,end_day=right,max_response_m=float(np.max(envelope[select])),
             rms_response_m=float(np.sqrt(np.mean(np.asarray(delta[select])**2)))))
