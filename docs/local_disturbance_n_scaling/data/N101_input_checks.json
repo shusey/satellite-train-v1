@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "only_changes_from_baseline": [
+    "formation.satellite_count",
+    "simulation.duration_s",
+    "disturbance.enabled"
+  ],
+  "pair_difference": "central node acceleration only",
+  "zero_initial_radius_dispersion": true,
+  "zero_B_dispersion": true,
+  "identical_initial_longitudes": true,
+  "unchanged_controller": true,
+  "input": {
+    "count": 101,
+    "amplitude_m_s2": 1e-06,
+    "start_time_s": 10800.0,
+    "duration_s": 3600.0,
+    "units": "m/s^2",
+    "waveform": "raised_cosine",
+    "definition": "d_j = d/dt[a_ref*n(a_j)]_external; w_i=d_(i+1)-d_i",
+    "members": [
+      "nominal",
+      "disturbed"
+    ],
+    "central_satellite_id": 51,
+    "positive_edge_id": 50,
+    "negative_edge_id": 51,
+    "boundaries_s": [
+      10800.0,
+      14400.0
+    ]
+  },
+  "spec_sha256": "3387e7aea2fca27e27691810fecaff872c19a209ea8b9801e5383d38cc4c00e4"
+}

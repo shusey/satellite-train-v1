@@ -1,0 +1,8 @@
+{
+  "diagnostic_log_log_R_squared": 0.451815640639026,
+  "fit_acceptance": "R2>=0.95, positive slope, strictly increasing six peaks, >=1% peak range",
+  "approximate_power_law_supported": false,
+  "exploratory_exponent": null,
+  "reason": "Only six finite-horizon samples; no theoretical scaling law",
+  "common_horizon_days": 14
+}

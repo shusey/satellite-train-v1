@@ -18,6 +18,22 @@ def mean_motion_rad_s(mu_m3_s2: float, radius_m: ArrayLike) -> NDArray[np.float6
     return np.sqrt(mu_m3_s2 / radius**3)
 
 
+def node_acceleration_radius_rate(radius_m, acceleration_m_s2, *,
+                                  reference_radius_m, mu_m3_s2):
+    """Map generalized d/dt[a_ref*n(a)] input d to an additive radius rate.
+
+    g=a_ref*n(a), dg/da=-3*g/(2*a), hence da_ext=-2*a*d/(3*g).
+    This is NOT a density perturbation or a Cartesian thrust acceleration.
+    Consequently its exact contribution to gap acceleration is diff(d).
+    """
+    a = np.asarray(radius_m, float)
+    d = np.asarray(acceleration_m_s2, float)
+    if d.shape != a.shape or not np.all(np.isfinite(d)):
+        raise ValueError('Node acceleration must be finite and match radii')
+    g = reference_radius_m * mean_motion_rad_s(mu_m3_s2, a)
+    return -2.0 * a * d / (3.0 * g)
+
+
 def orbital_rates(
     radius_m: ArrayLike,
     density_kg_m3: ArrayLike,

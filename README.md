@@ -197,5 +197,12 @@ HIGH側短縮は主に操作量・高度コストを減らし、LOW側短縮は�
 ## A-ref：HIGH/LOW dwell分離実験の60日検証
 
 [60日結果と30日判断の再評価](docs/reference_dwell_factorial_60d/REPORT.md)、[checkpoint延長・再現手順](docs/reference_dwell_factorial_60d/REPRODUCTION.md)。
+
+## 中央局所入力に対する衛星数スケーリング
+
+既存300秒dwellの制御則を固定し、N=11/21/51/101/201/301でnominalと中央nodeパルスを各14日比較しました。
+21機以上の最大追加gap errorは約88.92 mで横ばいでしたが、再切替と時間方向のpeak更新は残っています。
+有限時間の探索結果であり、string stabilityの証明ではありません。
+[研究判断と6図](docs/local_disturbance_n_scaling/REPORT.md)、[入力定義と実行前固定条件](docs/local_disturbance_n_scaling/DESIGN.md)、[再現手順](docs/local_disturbance_n_scaling/REPRODUCTION.md)。
 交差2条件の30–60日だけを新規計算し、対角条件・全LOW・最初の30日は再利用した。
 HIGH側短縮の低負荷効果は持続したが、LOW側短縮のRMS改善は後半には持続しなかった。

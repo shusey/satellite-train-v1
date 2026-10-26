@@ -1,0 +1,169 @@
+{
+  "P_max_m": 83.46049593961175,
+  "gain_s2": 83460495.93961175,
+  "max_response_gap_id": 6,
+  "peak_time_s": 1152400.0,
+  "peak_at_observation_end": false,
+  "E_ult_m": 83.46049593961175,
+  "final_max_response_m": 29.12050123529616,
+  "rms_response_m": 26.156498860122518,
+  "recovery_band_m": 5.0,
+  "recovery_hold_s": 86400.0,
+  "recovery_candidate_s": null,
+  "verification_horizon_s": null,
+  "N": 11,
+  "central_satellite_id": 6,
+  "source_gap_ids": [
+    5,
+    6
+  ],
+  "simulation_days": 14.0,
+  "terminal_window_days": 3,
+  "source_peak_m": 83.46049593961175,
+  "remote_peak_m": 29.12050123529616,
+  "remote_to_source_ratio": 0.3489135896863882,
+  "nominal": {
+    "switch_count_by_satellite": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "switch_count": 0,
+    "high_stable_s_by_satellite": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "high_stable_total_s": 0.0,
+    "high_equivalent_s_by_satellite": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "high_equivalent_total_s": 0.0
+  },
+  "disturbed": {
+    "switch_count_by_satellite": [
+      12,
+      12,
+      12,
+      12,
+      12,
+      8,
+      12,
+      12,
+      12,
+      12,
+      12
+    ],
+    "switch_count": 128,
+    "high_stable_s_by_satellite": [
+      1800.0,
+      1800.0,
+      1800.0,
+      1800.0,
+      1800.0,
+      1200.0,
+      1800.0,
+      1800.0,
+      1800.0,
+      1800.0,
+      1800.0
+    ],
+    "high_stable_total_s": 19200.0,
+    "high_equivalent_s_by_satellite": [
+      2520.0,
+      2520.0,
+      2520.0,
+      2520.0,
+      2520.0,
+      1680.0,
+      2520.0,
+      2520.0,
+      2520.0,
+      2520.0,
+      2520.0
+    ],
+    "high_equivalent_total_s": 26880.0
+  },
+  "transitions_per_satellite": 11.636363636363637,
+  "high_stable_satellite_hours": 5.333333333333333,
+  "high_stable_hours_per_satellite": 0.4848484848484848,
+  "high_equivalent_satellite_hours": 7.466666666666667,
+  "high_equivalent_hours_per_satellite": 0.6787878787878788,
+  "minimum_signed_gap_m": 99916.5395045876,
+  "max_delta_gap_rate_m_s": 0.001599229134236878,
+  "nominal_raw_max_m": 1.7845292506774718e-06,
+  "disturbed_raw_max_m": 83.46049541238611,
+  "maximum_reached_graph_distance_1m": 4,
+  "end_gap_1m_reached": true,
+  "max_mirror_peak_difference_m": 4.623509767043288e-06,
+  "max_response_percent_of_target": 0.08346049593961175,
+  "prefix_peak_m": {
+    "1": 26.58892707031829,
+    "3": 62.592054008512235,
+    "7": 69.58879265229353,
+    "14": 83.46049593961175
+  },
+  "time_blocks": [
+    {
+      "start_day": 0,
+      "end_day": 1,
+      "max_response_m": 26.58892707031829,
+      "rms_response_m": 8.536852264274609
+    },
+    {
+      "start_day": 1,
+      "end_day": 3,
+      "max_response_m": 62.592054008512235,
+      "rms_response_m": 20.57061992426521
+    },
+    {
+      "start_day": 3,
+      "end_day": 7,
+      "max_response_m": 69.58879265229353,
+      "rms_response_m": 24.468117235402786
+    },
+    {
+      "start_day": 7,
+      "end_day": 11,
+      "max_response_m": 82.77301317240574,
+      "rms_response_m": 29.79906518336853
+    },
+    {
+      "start_day": 11,
+      "end_day": 14,
+      "max_response_m": 83.46049593961175,
+      "rms_response_m": 30.06863497291466
+    }
+  ],
+  "latest_first_1m_s": 29240.0,
+  "endpoint_first_1m_s": [
+    29240.0,
+    29240.0
+  ]
+}

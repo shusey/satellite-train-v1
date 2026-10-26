@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "pairs": [
+    {
+      "N": 11,
+      "passed": true,
+      "samples": 120961,
+      "nominal_transitions": 0,
+      "identical_initial_state": true,
+      "only_local_node_input_differs": true
+    },
+    {
+      "N": 21,
+      "passed": true,
+      "samples": 120961,
+      "nominal_transitions": 0,
+      "identical_initial_state": true,
+      "only_local_node_input_differs": true
+    },
+    {
+      "N": 51,
+      "passed": true,
+      "samples": 120961,
+      "nominal_transitions": 0,
+      "identical_initial_state": true,
+      "only_local_node_input_differs": true
+    },
+    {
+      "N": 101,
+      "passed": true,
+      "samples": 120961,
+      "nominal_transitions": 0,
+      "identical_initial_state": true,
+      "only_local_node_input_differs": true
+    },
+    {
+      "N": 201,
+      "passed": true,
+      "samples": 120961,
+      "nominal_transitions": 0,
+      "identical_initial_state": true,
+      "only_local_node_input_differs": true
+    },
+    {
+      "N": 301,
+      "passed": true,
+      "samples": 120961,
+      "nominal_transitions": 0,
+      "identical_initial_state": true,
+      "only_local_node_input_differs": true
+    }
+  ],
+  "full_test_count": 335,
+  "new_test_count": 12,
+  "regression_24h_passed": true,
+  "regression_fresh_three_case_simulation": true,
+  "unchanged_old_run_files": 2409,
+  "frozen_fixture_hashes_unchanged": true,
+  "raw_history_and_metrics_cadence_s": 10,
+  "plot_cadence_s": 60,
+  "published_history_cadence_s": 600,
+  "no_gaussian_density_pulse": true,
+  "no_nrlmsis_spatial_forcing": true,
+  "no_initial_or_B_dispersion": true,
+  "unchanged_controller": true
+}

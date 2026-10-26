@@ -10,14 +10,15 @@ import numpy as np
 from .attitude import AttitudeStateMachine
 from .continuation import restore_attitude
 from .controller import gap_kinematics, select_commands, switching_function
-from .dynamics import density_at_state, orbital_rates
+from .dynamics import density_at_state, orbital_rates, node_acceleration_radius_rate
 from .integrator import next_step_end, rk4_step
 from .io import prepare_output_directory, write_json
 from .control_cost import clean_json
 from .passive_dispersion import initial_profile_state
 
 
-def profile_rhs(t, state, config, provider, factors, areas, disturbance_enabled=False):
+def profile_rhs(t, state, config, provider, factors, areas, disturbance_enabled=False,
+                node_acceleration=None):
     """The original orbital_rates with fixed satellite-specific Cd*A/m factors."""
     a, u = state
     if not np.all(np.isfinite(state)) or np.any(a <= config.constants.earth_radius_m):
@@ -27,11 +28,16 @@ def profile_rhs(t, state, config, provider, factors, areas, disturbance_enabled=
     da, du = orbital_rates(a, rho, areas(t), mu_m3_s2=config.constants.mu_m3_s2,
         drag_coefficient=config.spacecraft.drag_coefficient*factors,
         mass_kg=config.spacecraft.mass_kg)
+    if node_acceleration is not None:
+        da = da + node_acceleration_radius_rate(a, node_acceleration(t),
+            reference_radius_m=config.derived.reference_radius_m,
+            mu_m3_s2=config.constants.mu_m3_s2)
     return np.vstack((da, du))
 
 
 def integrate_control_profiles(config, profiles, provider, output, *, checkpoint=None,
-                               disturbance_enabled=False, progress=None):
+                               disturbance_enabled=False, progress=None,
+                               node_acceleration=None, node_input_metadata=None):
     """Same pre-event/control/post-event-output ordering as simulate_case.
 
     Resume a post-event regular output/control boundary. Prefix is never changed;
@@ -39,6 +45,10 @@ def integrate_control_profiles(config, profiles, provider, output, *, checkpoint
     profiles and disturbance flags are checked before accepting a checkpoint.
     """
     n = config.formation.satellite_count
+    if (node_acceleration is None) != (node_input_metadata is None):
+        raise ValueError('Node input and reproducible metadata must be supplied together')
+    if checkpoint is not None and checkpoint.get('node_input') != node_input_metadata:
+        raise ValueError('Checkpoint node input differs')
     state, factors = initial_profile_state(config, [p['delta_a_m'] for p in profiles],
                                           [p['B_multiplier'] for p in profiles])
     end = config.simulation.duration_s
@@ -79,14 +89,16 @@ def integrate_control_profiles(config, profiles, provider, output, *, checkpoint
               dtype='int8' if key == 'mode' else 'float64', shape=shape)
               for key in ('a_m', 'lambda_rad', 'density_kg_m3', 'area_m2', 'mode')}
     write_json(out/'metadata.json', dict(configuration=config.to_dict(), profiles=profiles,
-               start_s=start, end_s=end, disturbance_enabled=disturbance_enabled))
+               start_s=start, end_s=end, disturbance_enabled=disturbance_enabled,
+               **({'node_input': node_input_metadata} if node_input_metadata is not None else {})))
     stable_areas = np.concatenate([a.areas(start) for a in attitudes])
     active_slews = any(np.any((a.mode==1)|(a.mode==3)) for a in attitudes)
     def areas(t):
         # Stable attitudes have time-independent area; avoid repeated no-op array
         # construction at four RK stages. During slews use the ORIGINAL actuator.
         return np.concatenate([a.areas(t) for a in attitudes]) if active_slews else stable_areas
-    rhs = lambda t, x: profile_rhs(t, x, config, provider, factors, areas, disturbance_enabled)
+    rhs = lambda t, x: profile_rhs(t, x, config, provider, factors, areas, disturbance_enabled,
+                                  node_acceleration)
     t = start; k = 0; began = perf_counter(); next_progress = start+86400.
     next_control = start+(period if checkpoint is not None else 0.)
     if not any(p['control_enabled'] for p in profiles): next_control = float('inf')
@@ -125,7 +137,8 @@ def integrate_control_profiles(config, profiles, provider, output, *, checkpoint
             k += 1; next_output += save
         if t >= end-1e-9: break
         stop = next_step_end(t, config.simulation.integration_step_s, end,
-            [next_control, next_output, next_actuator])
+            [next_control, next_output, next_actuator] +
+            ([] if node_input_metadata is None else node_input_metadata.get('boundaries_s', [])))
         if stop <= t+1e-9: raise RuntimeError('Scheduler did not advance')
         state = rk4_step(rhs, t, state, stop-t); t = stop
         if t >= next_progress:
@@ -137,7 +150,8 @@ def integrate_control_profiles(config, profiles, provider, output, *, checkpoint
     events = clean_json([[e.to_dict() for e in a.events] for a in attitudes])
     write_json(out/'checkpoint.json', dict(configuration=config.to_dict(), profiles=profiles,
         disturbance_enabled=disturbance_enabled, time_s=t, state=state.tolist(), events=events,
-        modes=[a.mode.tolist() for a in attitudes], areas=[a.areas(t).tolist() for a in attitudes]))
+        modes=[a.mode.tolist() for a in attitudes], areas=[a.areas(t).tolist() for a in attitudes],
+        **({'node_input': node_input_metadata} if node_input_metadata is not None else {})))
     write_json(out/'completion.json', dict(complete=True, start_s=start, end_s=t,
         samples=k, elapsed_s=perf_counter()-began, event_counts=[len(a.events) for a in attitudes],
         minimum_signed_gap_m=minimum_gap))

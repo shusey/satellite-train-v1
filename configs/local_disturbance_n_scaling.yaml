@@ -1,0 +1,14 @@
+# Exploratory generalized input; NOT an observed atmospheric disturbance.
+base_configuration: configs/baseline.yaml
+satellite_counts: [11, 21, 51, 101, 201, 301]
+duration_days: 14
+terminal_window_days: 3
+input:
+  definition: derivative_of_reference_mean_motion_velocity
+  waveform: raised_cosine
+  amplitude_m_s2: 1.0e-6
+  start_time_s: 10800.0
+  duration_s: 3600.0
+recovery:
+  error_band_m: 5.0
+  hold_time_s: 86400.0
